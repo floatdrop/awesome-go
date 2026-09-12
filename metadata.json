@@ -1,6 +1,15 @@
 {
   "updated_at": "2026-09-12",
   "repos": {
+    "alitto/pond": {
+      "stars": 2192,
+      "archived": false,
+      "is_go": true,
+      "language": "Go",
+      "license": "MIT",
+      "created_at": "2020-03-21T14:56:33Z",
+      "pushed_at": "2026-06-22T23:33:00Z"
+    },
     "allegro/bigcache": {
       "stars": 8161,
       "archived": false,
@@ -63,6 +72,15 @@
       "license": "BSD-2-Clause",
       "created_at": "2024-01-04T18:21:37Z",
       "pushed_at": "2026-09-08T01:16:27Z"
+    },
+    "sourcegraph/conc": {
+      "stars": 10429,
+      "archived": false,
+      "is_go": true,
+      "language": "Go",
+      "license": "MIT",
+      "created_at": "2023-01-02T22:52:07Z",
+      "pushed_at": "2026-09-01T10:25:09Z"
     },
     "yandex/confetti": {
       "stars": 7,

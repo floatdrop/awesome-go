@@ -2,5 +2,6 @@
   "$schema": "../schema/entry.schema.json",
   "repo": "sourcegraph/conc",
   "description": "Structured concurrency: scoped groups with panic propagation, bounded pools and ordered streams.",
-  "category": "concurrency"
+  "category": "concurrency",
+  "added": "2026-09-12"
 }

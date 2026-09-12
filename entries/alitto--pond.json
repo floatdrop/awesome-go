@@ -2,5 +2,6 @@
   "$schema": "../schema/entry.schema.json",
   "repo": "alitto/pond",
   "description": "Bounded worker pool with generics, result groups, context cancellation and subpools.",
-  "category": "concurrency"
+  "category": "concurrency",
+  "added": "2026-09-12"
 }

@@ -51,16 +51,16 @@ footer{margin:48px 0 40px;color:var(--muted);font-size:.9rem;border-top:1px soli
 <header class="hero"><div class="wrap">
 <h1>Awesome Go</h1>
 <p class="lede">A short, hand-curated list of Go libraries and tools that are actually worth using. Not a directory of everything that exists.</p>
-<p class="meta">8 projects in 5 categories · stars refreshed 2026-09-12 · <a href="https://github.com/floatdrop/awesome-go">GitHub</a> · <a href="https://github.com/floatdrop/awesome-go/blob/main/CONTRIBUTING.md">Contribute</a></p>
+<p class="meta">10 projects in 6 categories · stars refreshed 2026-09-12 · <a href="https://github.com/floatdrop/awesome-go">GitHub</a> · <a href="https://github.com/floatdrop/awesome-go/blob/main/CONTRIBUTING.md">Contribute</a></p>
 </div></header>
 <div class="controls"><div class="wrap">
 <input id="q" type="search" placeholder="Search projects…" aria-label="Search projects" autocomplete="off">
-<select id="cat" aria-label="Category"><option value="">All categories</option><option value="web-frameworks">Web Frameworks &amp; Routers</option><option value="configuration">Configuration</option><option value="logging">Logging</option><option value="dependency-injection">Dependency Injection</option><option value="caching">Caching</option></select>
+<select id="cat" aria-label="Category"><option value="">All categories</option><option value="web-frameworks">Web Frameworks &amp; Routers</option><option value="configuration">Configuration</option><option value="logging">Logging</option><option value="dependency-injection">Dependency Injection</option><option value="concurrency">Concurrency</option><option value="caching">Caching</option></select>
 <select id="sort" aria-label="Sort"><option value="stars">Most stars</option><option value="added">Recently added</option><option value="name">Name</option></select>
 <span id="count"></span>
 </div></div>
 <div class="wrap">
-<nav class="toc"><a href="#web-frameworks">Web Frameworks &amp; Routers<small>1</small></a><a href="#configuration">Configuration<small>2</small></a><a href="#logging">Logging<small>1</small></a><a href="#dependency-injection">Dependency Injection<small>1</small></a><a href="#caching">Caching<small>3</small></a></nav>
+<nav class="toc"><a href="#web-frameworks">Web Frameworks &amp; Routers<small>1</small></a><a href="#configuration">Configuration<small>2</small></a><a href="#logging">Logging<small>1</small></a><a href="#dependency-injection">Dependency Injection<small>1</small></a><a href="#concurrency">Concurrency<small>2</small></a><a href="#caching">Caching<small>3</small></a></nav>
 <main>
 <section class="category" id="web-frameworks" data-id="web-frameworks">
 <h2><a href="#web-frameworks">Web Frameworks &amp; Routers</a></h2>
@@ -108,6 +108,22 @@ footer{margin:48px 0 40px;color:var(--muted);font-size:.9rem;border-top:1px soli
 <span class="rank">🥇</span>
 <div class="body"><a class="name" href="https://github.com/floatdrop/di">di</a><span class="repo">floatdrop/di</span><p>Dependency injection container with typed constructors, lifecycle hooks and scopes.</p></div>
 <span class="stars" title="GitHub stars">★ 2</span>
+</li>
+</ol>
+</section>
+<section class="category" id="concurrency" data-id="concurrency">
+<h2><a href="#concurrency">Concurrency</a></h2>
+<p class="desc">Goroutine pools, structured concurrency and synchronization helpers.</p>
+<ol class="entries">
+<li class="entry podium" id="sourcegraph--conc" data-name="conc" data-stars="10429" data-added="2026-09-12" data-search="conc sourcegraph/conc structured concurrency: scoped groups with panic propagation, bounded pools and ordered streams.">
+<span class="rank">🥇</span>
+<div class="body"><a class="name" href="https://github.com/sourcegraph/conc">conc</a><span class="repo">sourcegraph/conc</span><p>Structured concurrency: scoped groups with panic propagation, bounded pools and ordered streams.</p></div>
+<span class="stars" title="GitHub stars">★ 10k</span>
+</li>
+<li class="entry podium" id="alitto--pond" data-name="pond" data-stars="2192" data-added="2026-09-12" data-search="pond alitto/pond bounded worker pool with generics, result groups, context cancellation and subpools.">
+<span class="rank">🥈</span>
+<div class="body"><a class="name" href="https://github.com/alitto/pond">pond</a><span class="repo">alitto/pond</span><p>Bounded worker pool with generics, result groups, context cancellation and subpools.</p></div>
+<span class="stars" title="GitHub stars">★ 2.2k</span>
 </li>
 </ol>
 </section>
