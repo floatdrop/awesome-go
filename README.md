@@ -3,12 +3,19 @@
 
 > A short, hand-curated list of Go libraries and tools that are actually worth using. Not a directory of everything that exists.
 
-0 projects in 0 categories. Every entry is added by a human through a pull request and checked against the [entry rules](CONTRIBUTING.md#entry-rules) by CI. Within each category the 5 most-starred projects are shown first and the rest are folded under More. Archived repositories are removed automatically. Stars were last refreshed on 2026-09-12.
+1 projects in 1 categories. Every entry is added by a human through a pull request and checked against the [entry rules](CONTRIBUTING.md#entry-rules) by CI. Within each category the 5 most-starred projects are shown first and the rest are folded under More. Archived repositories are removed automatically. Stars were last refreshed on 2026-09-12.
 
 Search, filter and sort the full list at [floatdrop.github.io/awesome-go](https://floatdrop.github.io/awesome-go/).
 
 ## Contents
 
+- [Logging](#logging)
+
+## Logging
+
+Structured and leveled logging.
+
+- 🥇 [log](https://github.com/charmbracelet/log) - Minimal, colorful logger with a slog handler and structured key-value output. ★ 3.4k
 
 ## Contributing
 

@@ -2,5 +2,6 @@
   "$schema": "../schema/entry.schema.json",
   "repo": "charmbracelet/log",
   "description": "Minimal, colorful logger with a slog handler and structured key-value output.",
-  "category": "logging"
+  "category": "logging",
+  "added": "2026-09-12"
 }
