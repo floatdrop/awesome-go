@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-12T16:52:55.641298124Z",
+  "updated_at": "2026-09-12",
   "repos": {
     "charmbracelet/log": {
       "stars": 3390,
@@ -8,8 +8,7 @@
       "language": "Go",
       "license": "MIT",
       "created_at": "2022-12-02T18:04:11Z",
-      "pushed_at": "2026-09-03T10:40:42Z",
-      "fetched_at": "2026-09-12T16:52:55.641298124Z"
+      "pushed_at": "2026-09-03T10:40:42Z"
     }
   }
 }
