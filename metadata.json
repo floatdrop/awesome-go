@@ -27,6 +27,15 @@
       "license": "MIT",
       "created_at": "2015-10-15T20:46:29Z",
       "pushed_at": "2026-09-08T16:04:08Z"
+    },
+    "knadh/koanf": {
+      "stars": 4194,
+      "archived": false,
+      "is_go": true,
+      "language": "Go",
+      "license": "MIT",
+      "created_at": "2019-06-18T06:34:05Z",
+      "pushed_at": "2026-09-02T07:23:56Z"
     }
   }
 }

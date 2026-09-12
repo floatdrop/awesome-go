@@ -3,13 +3,14 @@
 
 > A short, hand-curated list of Go libraries and tools that are actually worth using. Not a directory of everything that exists.
 
-3 projects in 3 categories. Every entry is added by a human through a pull request and checked against the [entry rules](CONTRIBUTING.md#entry-rules) by CI. Within each category the 5 most-starred projects are shown first and the rest are folded under More. Archived repositories are removed automatically. Stars were last refreshed on 2026-09-12.
+4 projects in 4 categories. Every entry is added by a human through a pull request and checked against the [entry rules](CONTRIBUTING.md#entry-rules) by CI. Within each category the 5 most-starred projects are shown first and the rest are folded under More. Archived repositories are removed automatically. Stars were last refreshed on 2026-09-12.
 
 Search, filter and sort the full list at [floatdrop.github.io/awesome-go](https://floatdrop.github.io/awesome-go/).
 
 ## Contents
 
 - [Web Frameworks & Routers](#web-frameworks--routers)
+- [Configuration](#configuration)
 - [Logging](#logging)
 - [Dependency Injection](#dependency-injection)
 
@@ -18,6 +19,12 @@ Search, filter and sort the full list at [floatdrop.github.io/awesome-go](https:
 HTTP servers, routers and full-stack web frameworks.
 
 - 🥇 [chi](https://github.com/go-chi/chi) - Lightweight, idiomatic and composable router built on net/http. ★ 23k
+
+## Configuration
+
+Loading settings from files, environment variables and flags.
+
+- 🥇 [koanf](https://github.com/knadh/koanf) - Configuration management with pluggable providers and parsers merged in explicit layers. ★ 4.2k
 
 ## Logging
 
