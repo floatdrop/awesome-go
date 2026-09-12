@@ -2,5 +2,6 @@
   "$schema": "../schema/entry.schema.json",
   "repo": "spf13/cobra",
   "description": "Framework for CLI applications with subcommands, flags, shell completions and generated docs.",
-  "category": "cli"
+  "category": "cli",
+  "added": "2026-09-12"
 }

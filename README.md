@@ -3,7 +3,7 @@
 
 > A short, hand-curated list of Go libraries and tools that are actually worth using. Not a directory of everything that exists.
 
-16 projects in 10 categories. Every entry is added by a human through a pull request and checked against the [entry rules](CONTRIBUTING.md#entry-rules) by CI. Within each category the 5 most-starred projects are shown first and the rest are folded under More. Archived repositories are removed automatically. Stars were last refreshed on 2026-09-12.
+18 projects in 11 categories. Every entry is added by a human through a pull request and checked against the [entry rules](CONTRIBUTING.md#entry-rules) by CI. Within each category the 5 most-starred projects are shown first and the rest are folded under More. Archived repositories are removed automatically. Stars were last refreshed on 2026-09-12.
 
 Search, filter and sort the full list at [floatdrop.github.io/awesome-go](https://floatdrop.github.io/awesome-go/).
 
@@ -14,6 +14,7 @@ Search, filter and sort the full list at [floatdrop.github.io/awesome-go](https:
 - [GUI & Desktop](#gui--desktop)
 - [Configuration](#configuration)
 - [Logging](#logging)
+- [Databases & SQL](#databases--sql)
 - [Dependency Injection](#dependency-injection)
 - [Concurrency](#concurrency)
 - [Caching](#caching)
@@ -32,6 +33,7 @@ HTTP servers, routers and full-stack web frameworks.
 Argument parsing, terminal UIs and everything else for building CLIs.
 
 - 🥇 [bubbletea](https://github.com/charmbracelet/bubbletea) - Framework for terminal user interfaces based on The Elm Architecture. ★ 45k
+- 🥈 [cobra](https://github.com/spf13/cobra) - Framework for CLI applications with subcommands, flags, shell completions and generated docs. ★ 45k
 
 ## GUI & Desktop
 
@@ -51,6 +53,12 @@ Loading settings from files, environment variables and flags.
 Structured and leveled logging.
 
 - 🥇 [log](https://github.com/charmbracelet/log) - Minimal, colorful logger with a slog handler and structured key-value output. ★ 3.4k
+
+## Databases & SQL
+
+Drivers, query builders, ORMs, migrations and embedded stores.
+
+- 🥇 [sqlc](https://github.com/sqlc-dev/sqlc) - Compiler that generates type-safe code from SQL queries. ★ 18k
 
 ## Dependency Injection
 
