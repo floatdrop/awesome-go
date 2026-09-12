@@ -115,7 +115,7 @@
     {
       "id": "developer-tools",
       "name": "Developer Tools",
-      "description": "Linters, build tools, debuggers and code generators."
+      "description": "Linters, build tools, debuggers, code generators and terminal tools for daily development work."
     }
   ]
 }
