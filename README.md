@@ -295,7 +295,7 @@ Linters, build tools, debuggers and code generators.
 
 ## Contributing
 
-Read the [contribution guidelines](CONTRIBUTING.md) first. Every listed project gets its own [badge of proof](CONTRIBUTING.md#badge) to show off.
+Read the [contribution guidelines](CONTRIBUTING.md) first. Every listed project gets its own [badge](CONTRIBUTING.md#badge) to show off.
 
 ## License
 

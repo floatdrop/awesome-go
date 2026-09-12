@@ -2,11 +2,9 @@ package main
 
 import (
 	"context"
-	"encoding/json"
 	"fmt"
 	"os"
 	"path/filepath"
-	"sort"
 	"strings"
 	"time"
 
@@ -144,15 +142,6 @@ func runPrune(args []string) error {
 	return nil
 }
 
-// indexEntry is one row of badges/index.json: how to verify a badge id.
-type indexEntry struct {
-	Repo  string `json:"repo"`
-	Name  string `json:"name"`
-	Since string `json:"since"`
-	Badge string `json:"badge"`
-	URL   string `json:"url"`
-}
-
 func runGenerate(args []string) error {
 	fs, p := newFlags("generate")
 	if err := fs.Parse(args); err != nil {
@@ -185,45 +174,25 @@ func runGenerate(args []string) error {
 			return err
 		}
 	}
-	index := map[string]indexEntry{}
+	generated := 0
 	skipped := 0
 	for _, e := range l.Entries {
 		if e.Added == "" {
-			skipped++ // refresh assigns the acceptance date; no date, no proof.
+			skipped++ // refresh assigns the acceptance date; the badge title mentions it.
 			continue
 		}
-		id := badge.ID(l.Meta.Repo, e.Repo, e.Added)
-		file := list.Slug(e.Repo) + ".svg"
 		svg := badge.SVG(badge.Options{
 			Name:  e.DisplayName(),
-			ID:    id,
-			Title: fmt.Sprintf("%s is listed in %s since %s (proof id %s)", e.Repo, l.Meta.Title, e.Added, id),
+			Seed:  e.Repo,
+			Title: fmt.Sprintf("%s is listed in %s since %s", e.Repo, l.Meta.Title, e.Added),
 		})
-		if err := os.WriteFile(filepath.Join(dir, file), svg, 0o644); err != nil {
+		if err := os.WriteFile(filepath.Join(dir, list.Slug(e.Repo)+".svg"), svg, 0o644); err != nil {
 			return err
 		}
-		index[id] = indexEntry{
-			Repo:  e.Repo,
-			Name:  e.DisplayName(),
-			Since: e.Added,
-			Badge: "badges/" + file,
-			URL:   fmt.Sprintf("https://raw.githubusercontent.com/%s/%s/badges/%s", l.Meta.Repo, l.Meta.BranchOrMain(), file),
-		}
-	}
-	data, err := json.MarshalIndent(index, "", "  ")
-	if err != nil {
-		return err
-	}
-	if err := os.WriteFile(filepath.Join(dir, "index.json"), append(data, '\n'), 0o644); err != nil {
-		return err
+		generated++
 	}
 
-	ids := make([]string, 0, len(index))
-	for id := range index {
-		ids = append(ids, id)
-	}
-	sort.Strings(ids)
-	fmt.Printf("✓ README.md and %d badges generated", len(ids))
+	fmt.Printf("✓ README.md and %d badges generated", generated)
 	if skipped > 0 {
 		fmt.Printf(" (%d entries have no added date yet; run refresh)", skipped)
 	}

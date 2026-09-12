@@ -1,28 +1,18 @@
-// Package badge generates the per-project "badge of proof": a flat SVG in the
-// style of shields.io, with the project name, a colour derived from its id and
-// the id itself, so anyone can verify the badge against badges/index.json.
+// Package badge generates the per-project badge: a flat SVG in the style of
+// shields.io with "awesome go" on the left and the project name on the right,
+// coloured per project so no two badges look alike.
 package badge
 
 import (
 	"crypto/sha256"
-	"encoding/hex"
 	"fmt"
 	"html"
-	"strconv"
 	"strings"
 	"unicode"
 )
 
 // Label is the left-hand text of every badge.
 const Label = "awesome go"
-
-// ID derives a stable 7-hex-character identifier for a listing. It changes if
-// the entry is removed and re-added later, which is the point: the id proves
-// a specific act of acceptance.
-func ID(listRepo, repo, since string) string {
-	sum := sha256.Sum256([]byte(strings.ToLower(listRepo) + "\n" + strings.ToLower(repo) + "\n" + since))
-	return hex.EncodeToString(sum[:])[:7]
-}
 
 var palette = []string{
 	"#007ec6", // blue
@@ -37,19 +27,17 @@ var palette = []string{
 	"#2f80ed", // azure
 }
 
-// Color picks a palette colour from the id so every badge looks distinct.
-func Color(id string) string {
-	n, err := strconv.ParseUint(id, 16, 64)
-	if err != nil {
-		return palette[0]
-	}
-	return palette[n%uint64(len(palette))]
+// Color picks a palette colour deterministically from a seed such as the
+// repository name.
+func Color(seed string) string {
+	sum := sha256.Sum256([]byte(strings.ToLower(seed)))
+	return palette[int(sum[0])%len(palette)]
 }
 
 // Options describe a single badge.
 type Options struct {
-	Name  string // project name shown in the middle segment
-	ID    string // proof id shown in the right segment
+	Name  string // project name shown in the right segment
+	Seed  string // what the colour is derived from, normally the repository
 	Title string // accessible description embedded in the SVG
 }
 
@@ -63,8 +51,7 @@ type segment struct {
 func SVG(o Options) []byte {
 	segs := []segment{
 		{text: Label, color: "#555"},
-		{text: o.Name, color: Color(o.ID)},
-		{text: o.ID, color: "#2b2b2b"},
+		{text: o.Name, color: Color(o.Seed)},
 	}
 	total := 0
 	for i := range segs {
@@ -74,7 +61,7 @@ func SVG(o Options) []byte {
 
 	var b strings.Builder
 	w := func(format string, args ...any) { fmt.Fprintf(&b, format, args...) }
-	aria := html.EscapeString(fmt.Sprintf("%s: %s, id %s", Label, o.Name, o.ID))
+	aria := html.EscapeString(fmt.Sprintf("%s: %s", Label, o.Name))
 	w(`<svg xmlns="http://www.w3.org/2000/svg" width="%d" height="20" role="img" aria-label="%s">`, total, aria)
 	w(`<title>%s</title>`, html.EscapeString(o.Title))
 	w(`<linearGradient id="s" x2="0" y2="100%%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient>`)

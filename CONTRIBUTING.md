@@ -77,7 +77,7 @@ Archived and deleted repositories are removed automatically every night. Anythin
 
 ## Badge
 
-Every listed project gets its own badge of proof: a small SVG with the project name and a 7-character id derived from the list, the repository and the acceptance date.
+Every listed project gets its own badge: a small SVG with the project name in a colour of its own.
 
 ![badge example](badges/gin-gonic--gin.svg)
 
@@ -87,7 +87,7 @@ Embed it in your README:
 [![Awesome Go](https://raw.githubusercontent.com/floatdrop/awesome-go/main/badges/OWNER--NAME.svg)](https://github.com/floatdrop/awesome-go)
 ```
 
-Replace `OWNER--NAME` with your repository slug in lowercase. The badge only exists while the project is listed; if the entry is removed the image disappears with the next sync. Anyone can verify an id by looking it up in [`badges/index.json`](badges/index.json).
+Replace `OWNER--NAME` with your repository slug in lowercase. The badge only exists while the project is listed; if the entry is removed the image disappears with the next sync.
 
 ## Tooling
 
@@ -99,7 +99,7 @@ Everything is stdlib Go, run through `go run ./cmd/awesome <command>`:
 | `fmt` | Rewrites `awesome.json` in canonical form; `-check` only verifies. |
 | `refresh` | Fetches stars, activity and status into `metadata.json`, follows renames, stamps `added` dates. |
 | `prune` | Removes archived, disabled and deleted repositories; reports stale ones. |
-| `generate` | Writes `README.md`, `badges/*.svg` and `badges/index.json`. |
+| `generate` | Writes `README.md` and `badges/*.svg`. |
 | `sync` | `refresh`, `prune` and `generate` in sequence; what the nightly job runs. |
 
 Set `GITHUB_TOKEN` for anything that talks to GitHub. Unauthenticated requests are limited to 60 per hour.

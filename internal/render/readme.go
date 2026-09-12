@@ -93,7 +93,7 @@ func README(l *list.List, m *list.Metadata, now time.Time) []byte {
 	}
 
 	w("\n## Contributing\n\n")
-	w("Read the [contribution guidelines](CONTRIBUTING.md) first. Every listed project gets its own [badge of proof](CONTRIBUTING.md#badge) to show off.\n")
+	w("Read the [contribution guidelines](CONTRIBUTING.md) first. Every listed project gets its own [badge](CONTRIBUTING.md#badge) to show off.\n")
 	w("\n## License\n\n")
 	w("[![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)\n\n")
 	w("To the extent possible under law, the maintainers have waived all copyright and related or neighboring rights to this work.\n")
