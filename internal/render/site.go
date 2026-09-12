@@ -63,9 +63,7 @@ func Site(l *list.List, m *list.Metadata, now time.Time) ([]byte, error) {
 		Total:       len(l.Entries),
 		Podium:      l.Meta.Podium,
 	}
-	if !m.UpdatedAt.IsZero() {
-		page.Updated = m.UpdatedAt.UTC().Format("2006-01-02")
-	}
+	page.Updated = m.UpdatedAt
 
 	byCategory := map[string][]list.Entry{}
 	for _, e := range l.Entries {

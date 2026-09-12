@@ -31,7 +31,7 @@ func runRefresh(args []string) error {
 
 	client := gh.New(os.Getenv("GITHUB_TOKEN"))
 	fmt.Printf("refreshing %d repositories\n", len(l.Entries))
-	results := fetchAll(context.Background(), client, l.Entries, now)
+	results := fetchAll(context.Background(), client, l.Entries)
 
 	var failures []string
 	seen := map[string]bool{}
@@ -71,7 +71,7 @@ func runRefresh(args []string) error {
 			delete(meta.Repos, repo)
 		}
 	}
-	meta.UpdatedAt = now
+	meta.UpdatedAt = now.Format("2006-01-02")
 
 	if err := l.Save(p.root); err != nil {
 		return err
