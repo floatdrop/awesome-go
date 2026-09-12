@@ -3,6 +3,7 @@
   "repo": "floatdrop/moq-go",
   "description": "Media over QUIC transport library and relay tracking the IETF MoQ drafts.",
   "category": "networking",
+  "added": "2026-09-12",
   "exempt": [
     "age",
     "stars"
