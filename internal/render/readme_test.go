@@ -58,7 +58,7 @@ func TestREADMEOrderAndPodium(t *testing.T) {
 func TestREADMEPadsPodiumEntriesWithoutMedal(t *testing.T) {
 	l, m := fixture(4)
 	out := string(README(l, m, time.Now()))
-	if !strings.Contains(out, "- 🥉 [small](") || !strings.Contains(out, "- &emsp; [unknown](") {
+	if !strings.Contains(out, "- 🥉 [small](") || !strings.Contains(out, "- &emsp;&thinsp; [unknown](") {
 		t.Fatalf("fourth podium entry must be padded:\n%s", out)
 	}
 	if strings.Contains(out, "<details>") {
