@@ -78,6 +78,11 @@
       "description": "Making requests with retries, tracing and convenience."
     },
     {
+      "id": "networking",
+      "name": "Networking & Protocols",
+      "description": "Protocol implementations, transports and low-level network plumbing."
+    },
+    {
       "id": "messaging",
       "name": "Messaging & Queues",
       "description": "Message brokers, streaming platforms and task queues."

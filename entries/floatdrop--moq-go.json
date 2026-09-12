@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "repo": "floatdrop/moq-go",
+  "description": "Media over QUIC transport library and relay tracking the IETF MoQ drafts.",
+  "category": "networking",
+  "exempt": [
+    "age",
+    "stars"
+  ]
+}
