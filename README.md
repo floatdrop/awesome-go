@@ -3,7 +3,7 @@
 
 > A short, hand-curated list of Go libraries and tools that are actually worth using. Not a directory of everything that exists.
 
-4 projects in 4 categories. Every entry is added by a human through a pull request and checked against the [entry rules](CONTRIBUTING.md#entry-rules) by CI. Within each category the 5 most-starred projects are shown first and the rest are folded under More. Archived repositories are removed automatically. Stars were last refreshed on 2026-09-12.
+5 projects in 4 categories. Every entry is added by a human through a pull request and checked against the [entry rules](CONTRIBUTING.md#entry-rules) by CI. Within each category the 5 most-starred projects are shown first and the rest are folded under More. Archived repositories are removed automatically. Stars were last refreshed on 2026-09-12.
 
 Search, filter and sort the full list at [floatdrop.github.io/awesome-go](https://floatdrop.github.io/awesome-go/).
 
@@ -25,6 +25,7 @@ HTTP servers, routers and full-stack web frameworks.
 Loading settings from files, environment variables and flags.
 
 - 🥇 [koanf](https://github.com/knadh/koanf) - Configuration management with pluggable providers and parsers merged in explicit layers. ★ 4.2k
+- 🥈 [confetti](https://github.com/yandex/confetti) - Configuration loader that chains sources per value or struct, with backends as plain functions. ★ 7
 
 ## Logging
 
