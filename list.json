@@ -70,7 +70,7 @@
     {
       "id": "concurrency",
       "name": "Concurrency",
-      "description": "Goroutine pools, structured concurrency and synchronization helpers."
+      "description": "Goroutine pools, structured concurrency, synchronization helpers and actor frameworks."
     },
     {
       "id": "caching",
