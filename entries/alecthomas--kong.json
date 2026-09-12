@@ -1,0 +1,6 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "repo": "alecthomas/kong",
+  "description": "Command-line parser where the whole grammar is a struct and commands are typed Run methods.",
+  "category": "cli"
+}
