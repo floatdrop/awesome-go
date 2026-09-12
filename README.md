@@ -3,7 +3,7 @@
 
 > A short, hand-curated list of Go libraries and tools that are actually worth using. Not a directory of everything that exists.
 
-24 projects in 13 categories. Every entry is added by a human through a pull request and checked against the [entry rules](CONTRIBUTING.md#entry-rules) by CI. An entry earns its place by covering something no listed project does, or by doing it better. Within each category the 5 most-starred projects are shown first and the rest are folded under More. Archived repositories are removed automatically. Stars were last refreshed on 2026-09-12.
+25 projects in 13 categories. Every entry is added by a human through a pull request and checked against the [entry rules](CONTRIBUTING.md#entry-rules) by CI. An entry earns its place by covering something no listed project does, or by doing it better. Within each category the 5 most-starred projects are shown first and the rest are folded under More. Archived repositories are removed automatically. Stars were last refreshed on 2026-09-12.
 
 Search, filter and sort the full list at [floatdrop.github.io/awesome-go](https://floatdrop.github.io/awesome-go/).
 
@@ -66,10 +66,11 @@ Assertions, mocks, fixtures and integration test helpers.
 
 ## Databases & SQL
 
-Drivers, query builders, ORMs, migrations and embedded stores.
+Drivers, query builders, ORMs, migrations, embedded and distributed stores.
 
-- 🥇 [sqlc](https://github.com/sqlc-dev/sqlc) - Compiler that generates type-safe code from SQL queries. ★ 18k
-- 🥈 [scan](https://github.com/blockloop/scan) - Map database/sql rows onto structs, slices and primitives using struct tags. ★ 615
+- 🥇 [etcd](https://github.com/etcd-io/etcd) - Distributed key-value store with Raft consensus, watches and leases, plus its client. ★ 52k
+- 🥈 [sqlc](https://github.com/sqlc-dev/sqlc) - Compiler that generates type-safe code from SQL queries. ★ 18k
+- 🥉 [scan](https://github.com/blockloop/scan) - Map database/sql rows onto structs, slices and primitives using struct tags. ★ 615
 
 ## Dependency Injection
 

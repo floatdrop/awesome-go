@@ -2,5 +2,6 @@
   "$schema": "../schema/entry.schema.json",
   "repo": "etcd-io/etcd",
   "description": "Distributed key-value store with Raft consensus, watches and leases, plus its client.",
-  "category": "databases"
+  "category": "databases",
+  "added": "2026-09-12"
 }
