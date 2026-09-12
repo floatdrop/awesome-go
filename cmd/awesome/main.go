@@ -23,7 +23,7 @@ commands:
   fmt        rewrite list.json and entries/ in canonical form (-check only verifies)
   refresh    fetch stars and status of every repository into metadata.json
   prune      remove archived, disabled and deleted repositories
-  generate   write README.md and badges/ from list.json, entries/ and metadata.json
+  generate   write README.md, docs/ and badges/ from list.json, entries/ and metadata.json
   sync       refresh, prune and generate in one go (what the nightly job runs)
 
 flags common to all commands:
@@ -68,6 +68,7 @@ type paths struct{ root string }
 func (p paths) metadata() string { return filepath.Join(p.root, list.MetadataFileName) }
 func (p paths) readme() string   { return filepath.Join(p.root, "README.md") }
 func (p paths) badges() string   { return filepath.Join(p.root, "badges") }
+func (p paths) docs() string     { return filepath.Join(p.root, "docs") }
 
 func newFlags(name string) (*flag.FlagSet, *paths) {
 	fs := flag.NewFlagSet(name, flag.ExitOnError)

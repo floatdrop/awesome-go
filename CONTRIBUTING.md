@@ -6,7 +6,8 @@ Thanks for helping keep this list short and honest. The whole point of the list 
 
 - `entries/<owner>--<name>.json` is one file per listed project. That is the file you add, edit or delete.
 - `list.json` holds the categories, the policy thresholds and the list metadata. It changes rarely.
-- `README.md`, `metadata.json` and everything under `badges/` are generated. CI rejects pull requests that touch them.
+- `README.md`, `docs/index.html`, `metadata.json` and everything under `badges/` are generated. CI rejects pull requests that touch them.
+- The generated `docs/` folder is published with GitHub Pages at [floatdrop.github.io/awesome-go](https://floatdrop.github.io/awesome-go/), with search, filtering and sorting over the same data.
 - A nightly job refreshes star counts, removes repositories that were archived or deleted, and regenerates the README and badges. Nobody has to remember to clean up.
 - Within each category the five most-starred projects are shown first, the top three with medals (🥇🥈🥉), and the rest are folded under a collapsed "More" block. Stars decide the order, humans decide who is on the list at all.
 
@@ -86,10 +87,10 @@ Every listed project gets its own badge: a small SVG with the project name in a 
 Embed it in your README:
 
 ```markdown
-[![Awesome Go](https://raw.githubusercontent.com/floatdrop/awesome-go/main/badges/OWNER--NAME.svg)](https://github.com/floatdrop/awesome-go)
+[![Awesome Go](https://raw.githubusercontent.com/floatdrop/awesome-go/main/badges/OWNER--NAME.svg)](https://floatdrop.github.io/awesome-go/#OWNER--NAME)
 ```
 
-Replace `OWNER--NAME` with your repository slug in lowercase. The badge only exists while the project is listed; if the entry is removed the image disappears with the next sync.
+Replace `OWNER--NAME` with your repository slug in lowercase, in both places. The link lands on your entry in the published list. The badge only exists while the project is listed; if the entry is removed the image disappears with the next sync.
 
 ## Tooling
 
@@ -101,7 +102,7 @@ Everything is stdlib Go, run through `go run ./cmd/awesome <command>`:
 | `fmt` | Rewrites `list.json` and `entries/` in canonical form and fixes file names; `-check` only verifies. |
 | `refresh` | Fetches stars, activity and status into `metadata.json`, follows renames, stamps `added` dates. |
 | `prune` | Removes archived, disabled and deleted repositories; reports stale ones. |
-| `generate` | Writes `README.md` and `badges/*.svg`. |
+| `generate` | Writes `README.md`, `docs/index.html` and `badges/*.svg`. |
 | `sync` | `refresh`, `prune` and `generate` in sequence; what the nightly job runs. |
 
 Set `GITHUB_TOKEN` for anything that talks to GitHub. Unauthenticated requests are limited to 60 per hour.

@@ -1,0 +1,687 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Awesome Go</title>
+<meta name="description" content="A short, hand-curated list of Go libraries and tools that are actually worth using. Not a directory of everything that exists.">
+<link rel="canonical" href="https://floatdrop.github.io/awesome-go/">
+<style>
+:root{--bg:#ffffff;--fg:#1f2328;--muted:#656d76;--line:#d0d7de;--accent:#0969da;--card:#f6f8fa;--podium:#fff8e1}
+@media (prefers-color-scheme:dark){:root{--bg:#0d1117;--fg:#e6edf3;--muted:#8b949e;--line:#30363d;--accent:#58a6ff;--card:#161b22;--podium:#1c1a12}}
+*{box-sizing:border-box}
+html{scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:920px;margin:0 auto;padding:0 20px}
+header.hero{padding:48px 0 16px}
+h1{margin:0 0 8px;font-size:2.2rem;letter-spacing:-.02em}
+.lede{margin:0 0 8px;font-size:1.1rem;color:var(--muted);max-width:60ch}
+.meta{margin:0;color:var(--muted);font-size:.9rem}
+.meta a{color:inherit;text-decoration:underline}
+.controls{position:sticky;top:0;z-index:2;background:var(--bg);border-bottom:1px solid var(--line);padding:12px 0}
+.controls .wrap{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.controls input,.controls select{font:inherit;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;padding:8px 10px}
+.controls input{flex:1;min-width:200px}
+#count{color:var(--muted);font-size:.9rem;margin-left:auto}
+nav.toc{display:flex;flex-wrap:wrap;gap:6px;padding:20px 0 4px}
+nav.toc a{font-size:.85rem;padding:4px 10px;border:1px solid var(--line);border-radius:999px;color:var(--fg);background:var(--card)}
+nav.toc a small{color:var(--muted);margin-left:4px}
+section.category{padding:28px 0 4px}
+section.category h2{margin:0 0 4px;font-size:1.4rem}
+section.category h2 a{color:inherit}
+section.category .desc{margin:0 0 12px;color:var(--muted)}
+ol.entries{list-style:none;margin:0;padding:0;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+li.entry{display:flex;gap:12px;align-items:flex-start;padding:10px 14px;border-top:1px solid var(--line)}
+li.entry:first-child{border-top:0}
+li.entry.podium{background:var(--podium)}
+li.entry:target{outline:2px solid var(--accent);outline-offset:-2px}
+.rank{flex:0 0 2em;text-align:center;font-variant-numeric:tabular-nums;color:var(--muted);line-height:1.5}
+.body{flex:1;min-width:0}
+.name{font-weight:600}
+.repo{color:var(--muted);font-size:.85rem;margin-left:6px}
+.body p{margin:2px 0 0}
+.stars{flex:0 0 auto;font-variant-numeric:tabular-nums;color:var(--muted);white-space:nowrap}
+.empty{display:none;color:var(--muted);padding:40px 0;text-align:center}
+footer{margin:48px 0 40px;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line);padding-top:16px}
+@media (max-width:600px){.stars{display:none}h1{font-size:1.8rem}}
+</style>
+</head>
+<body>
+<header class="hero"><div class="wrap">
+<h1>Awesome Go</h1>
+<p class="lede">A short, hand-curated list of Go libraries and tools that are actually worth using. Not a directory of everything that exists.</p>
+<p class="meta">95 projects in 19 categories · stars refreshed 2026-09-12 · <a href="https://github.com/floatdrop/awesome-go">GitHub</a> · <a href="https://github.com/floatdrop/awesome-go/blob/main/CONTRIBUTING.md">Contribute</a></p>
+</div></header>
+<div class="controls"><div class="wrap">
+<input id="q" type="search" placeholder="Search projects…" aria-label="Search projects" autocomplete="off">
+<select id="cat" aria-label="Category"><option value="">All categories</option><option value="web-frameworks">Web Frameworks &amp; Routers</option><option value="cli">Command Line</option><option value="configuration">Configuration</option><option value="logging">Logging</option><option value="testing">Testing</option><option value="databases">Databases &amp; SQL</option><option value="serialization">Serialization</option><option value="validation">Validation</option><option value="dependency-injection">Dependency Injection</option><option value="concurrency">Concurrency</option><option value="caching">Caching</option><option value="http-clients">HTTP Clients</option><option value="messaging">Messaging &amp; Queues</option><option value="rpc-and-api">RPC &amp; API</option><option value="auth">Authentication &amp; Authorization</option><option value="observability">Observability</option><option value="text-and-templates">Text, HTML &amp; Templates</option><option value="utilities">Utilities</option><option value="developer-tools">Developer Tools</option></select>
+<select id="sort" aria-label="Sort"><option value="stars">Most stars</option><option value="added">Recently added</option><option value="name">Name</option></select>
+<span id="count"></span>
+</div></div>
+<div class="wrap">
+<nav class="toc"><a href="#web-frameworks">Web Frameworks &amp; Routers<small>6</small></a><a href="#cli">Command Line<small>7</small></a><a href="#configuration">Configuration<small>4</small></a><a href="#logging">Logging<small>2</small></a><a href="#testing">Testing<small>5</small></a><a href="#databases">Databases &amp; SQL<small>14</small></a><a href="#serialization">Serialization<small>3</small></a><a href="#validation">Validation<small>1</small></a><a href="#dependency-injection">Dependency Injection<small>3</small></a><a href="#concurrency">Concurrency<small>2</small></a><a href="#caching">Caching<small>4</small></a><a href="#http-clients">HTTP Clients<small>3</small></a><a href="#messaging">Messaging &amp; Queues<small>6</small></a><a href="#rpc-and-api">RPC &amp; API<small>5</small></a><a href="#auth">Authentication &amp; Authorization<small>6</small></a><a href="#observability">Observability<small>2</small></a><a href="#text-and-templates">Text, HTML &amp; Templates<small>3</small></a><a href="#utilities">Utilities<small>10</small></a><a href="#developer-tools">Developer Tools<small>9</small></a></nav>
+<main>
+<section class="category" id="web-frameworks" data-id="web-frameworks">
+<h2><a href="#web-frameworks">Web Frameworks &amp; Routers</a></h2>
+<p class="desc">HTTP servers, routers and full-stack web frameworks.</p>
+<ol class="entries">
+<li class="entry podium" id="gin-gonic--gin" data-name="gin" data-stars="89207" data-added="2026-09-12" data-search="gin gin-gonic/gin http web framework with a martini-like api and strong routing performance.">
+<span class="rank">🥇</span>
+<div class="body"><a class="name" href="https://github.com/gin-gonic/gin">gin</a><span class="repo">gin-gonic/gin</span><p>HTTP web framework with a martini-like API and strong routing performance.</p></div>
+<span class="stars" title="GitHub stars">★ 89k</span>
+</li>
+<li class="entry podium" id="gofiber--fiber" data-name="fiber" data-stars="40151" data-added="2026-09-12" data-search="fiber gofiber/fiber express-inspired web framework built on top of fasthttp.">
+<span class="rank">🥈</span>
+<div class="body"><a class="name" href="https://github.com/gofiber/fiber">fiber</a><span class="repo">gofiber/fiber</span><p>Express-inspired web framework built on top of Fasthttp.</p></div>
+<span class="stars" title="GitHub stars">★ 40k</span>
+</li>
+<li class="entry podium" id="labstack--echo" data-name="echo" data-stars="32704" data-added="2026-09-12" data-search="echo labstack/echo minimalist web framework with a focus on performance and extensibility.">
+<span class="rank">🥉</span>
+<div class="body"><a class="name" href="https://github.com/labstack/echo">echo</a><span class="repo">labstack/echo</span><p>Minimalist web framework with a focus on performance and extensibility.</p></div>
+<span class="stars" title="GitHub stars">★ 33k</span>
+</li>
+<li class="entry" id="valyala--fasthttp" data-name="fasthttp" data-stars="23467" data-added="2026-09-12" data-search="fasthttp valyala/fasthttp http implementation tuned for high-throughput workloads.">
+<span class="rank">4</span>
+<div class="body"><a class="name" href="https://github.com/valyala/fasthttp">fasthttp</a><span class="repo">valyala/fasthttp</span><p>HTTP implementation tuned for high-throughput workloads.</p></div>
+<span class="stars" title="GitHub stars">★ 23k</span>
+</li>
+<li class="entry" id="go-chi--chi" data-name="chi" data-stars="22818" data-added="2026-09-12" data-search="chi go-chi/chi lightweight, idiomatic and composable router built on net/http.">
+<span class="rank">5</span>
+<div class="body"><a class="name" href="https://github.com/go-chi/chi">chi</a><span class="repo">go-chi/chi</span><p>Lightweight, idiomatic and composable router built on net/http.</p></div>
+<span class="stars" title="GitHub stars">★ 23k</span>
+</li>
+<li class="entry" id="gorilla--mux" data-name="mux" data-stars="21837" data-added="2026-09-12" data-search="mux gorilla/mux request router and dispatcher for matching incoming requests to their handlers.">
+<span class="rank">6</span>
+<div class="body"><a class="name" href="https://github.com/gorilla/mux">mux</a><span class="repo">gorilla/mux</span><p>Request router and dispatcher for matching incoming requests to their handlers.</p></div>
+<span class="stars" title="GitHub stars">★ 22k</span>
+</li>
+</ol>
+</section>
+<section class="category" id="cli" data-id="cli">
+<h2><a href="#cli">Command Line</a></h2>
+<p class="desc">Argument parsing, terminal UIs and everything else for building CLIs.</p>
+<ol class="entries">
+<li class="entry podium" id="charmbracelet--bubbletea" data-name="bubbletea" data-stars="44916" data-added="2026-09-12" data-search="bubbletea charmbracelet/bubbletea framework for terminal user interfaces based on the elm architecture.">
+<span class="rank">🥇</span>
+<div class="body"><a class="name" href="https://github.com/charmbracelet/bubbletea">bubbletea</a><span class="repo">charmbracelet/bubbletea</span><p>Framework for terminal user interfaces based on The Elm Architecture.</p></div>
+<span class="stars" title="GitHub stars">★ 45k</span>
+</li>
+<li class="entry podium" id="spf13--cobra" data-name="cobra" data-stars="44601" data-added="2026-09-12" data-search="cobra spf13/cobra framework for cli applications with subcommands, flags and shell completions.">
+<span class="rank">🥈</span>
+<div class="body"><a class="name" href="https://github.com/spf13/cobra">cobra</a><span class="repo">spf13/cobra</span><p>Framework for CLI applications with subcommands, flags and shell completions.</p></div>
+<span class="stars" title="GitHub stars">★ 45k</span>
+</li>
+<li class="entry podium" id="urfave--cli" data-name="cli" data-stars="24236" data-added="2026-09-12" data-search="cli urfave/cli declarative library for building command line applications.">
+<span class="rank">🥉</span>
+<div class="body"><a class="name" href="https://github.com/urfave/cli">cli</a><span class="repo">urfave/cli</span><p>Declarative library for building command line applications.</p></div>
+<span class="stars" title="GitHub stars">★ 24k</span>
+</li>
+<li class="entry" id="charmbracelet--lipgloss" data-name="lipgloss" data-stars="11819" data-added="2026-09-12" data-search="lipgloss charmbracelet/lipgloss style definitions for nice terminal layouts.">
+<span class="rank">4</span>
+<div class="body"><a class="name" href="https://github.com/charmbracelet/lipgloss">lipgloss</a><span class="repo">charmbracelet/lipgloss</span><p>Style definitions for nice terminal layouts.</p></div>
+<span class="stars" title="GitHub stars">★ 12k</span>
+</li>
+<li class="entry" id="schollz--progressbar" data-name="progressbar" data-stars="4702" data-added="2026-09-12" data-search="progressbar schollz/progressbar thread-safe progress bar for terminal applications.">
+<span class="rank">5</span>
+<div class="body"><a class="name" href="https://github.com/schollz/progressbar">progressbar</a><span class="repo">schollz/progressbar</span><p>Thread-safe progress bar for terminal applications.</p></div>
+<span class="stars" title="GitHub stars">★ 4.7k</span>
+</li>
+<li class="entry" id="alecthomas--kong" data-name="kong" data-stars="3173" data-added="2026-09-12" data-search="kong alecthomas/kong command-line parser driven by struct tags.">
+<span class="rank">6</span>
+<div class="body"><a class="name" href="https://github.com/alecthomas/kong">kong</a><span class="repo">alecthomas/kong</span><p>Command-line parser driven by struct tags.</p></div>
+<span class="stars" title="GitHub stars">★ 3.2k</span>
+</li>
+<li class="entry" id="spf13--pflag" data-name="pflag" data-stars="2765" data-added="2026-09-12" data-search="pflag spf13/pflag drop-in replacement for the flag package implementing posix and gnu style flags.">
+<span class="rank">7</span>
+<div class="body"><a class="name" href="https://github.com/spf13/pflag">pflag</a><span class="repo">spf13/pflag</span><p>Drop-in replacement for the flag package implementing POSIX and GNU style flags.</p></div>
+<span class="stars" title="GitHub stars">★ 2.8k</span>
+</li>
+</ol>
+</section>
+<section class="category" id="configuration" data-id="configuration">
+<h2><a href="#configuration">Configuration</a></h2>
+<p class="desc">Loading settings from files, environment variables and flags.</p>
+<ol class="entries">
+<li class="entry podium" id="spf13--viper" data-name="viper" data-stars="30458" data-added="2026-09-12" data-search="viper spf13/viper complete configuration solution with files, environment variables, flags and remote stores.">
+<span class="rank">🥇</span>
+<div class="body"><a class="name" href="https://github.com/spf13/viper">viper</a><span class="repo">spf13/viper</span><p>Complete configuration solution with files, environment variables, flags and remote stores.</p></div>
+<span class="stars" title="GitHub stars">★ 30k</span>
+</li>
+<li class="entry podium" id="joho--godotenv" data-name="godotenv" data-stars="10623" data-added="2026-09-12" data-search="godotenv joho/godotenv load environment variables from .env files.">
+<span class="rank">🥈</span>
+<div class="body"><a class="name" href="https://github.com/joho/godotenv">godotenv</a><span class="repo">joho/godotenv</span><p>Load environment variables from .env files.</p></div>
+<span class="stars" title="GitHub stars">★ 11k</span>
+</li>
+<li class="entry podium" id="caarlos0--env" data-name="env" data-stars="6308" data-added="2026-09-12" data-search="env caarlos0/env parse environment variables into structs using tags.">
+<span class="rank">🥉</span>
+<div class="body"><a class="name" href="https://github.com/caarlos0/env">env</a><span class="repo">caarlos0/env</span><p>Parse environment variables into structs using tags.</p></div>
+<span class="stars" title="GitHub stars">★ 6.3k</span>
+</li>
+<li class="entry" id="knadh--koanf" data-name="koanf" data-stars="4194" data-added="2026-09-12" data-search="koanf knadh/koanf lightweight, extensible configuration management with pluggable providers and parsers.">
+<span class="rank">4</span>
+<div class="body"><a class="name" href="https://github.com/knadh/koanf">koanf</a><span class="repo">knadh/koanf</span><p>Lightweight, extensible configuration management with pluggable providers and parsers.</p></div>
+<span class="stars" title="GitHub stars">★ 4.2k</span>
+</li>
+</ol>
+</section>
+<section class="category" id="logging" data-id="logging">
+<h2><a href="#logging">Logging</a></h2>
+<p class="desc">Structured and leveled logging.</p>
+<ol class="entries">
+<li class="entry podium" id="charmbracelet--log" data-name="log" data-stars="3390" data-added="2026-09-12" data-search="log charmbracelet/log minimal, colorful logger with a slog handler and structured key-value output.">
+<span class="rank">🥇</span>
+<div class="body"><a class="name" href="https://github.com/charmbracelet/log">log</a><span class="repo">charmbracelet/log</span><p>Minimal, colorful logger with a slog handler and structured key-value output.</p></div>
+<span class="stars" title="GitHub stars">★ 3.4k</span>
+</li>
+<li class="entry podium" id="lmittmann--tint" data-name="tint" data-stars="1352" data-added="2026-09-12" data-search="tint lmittmann/tint colorized slog handler for human-readable terminal output.">
+<span class="rank">🥈</span>
+<div class="body"><a class="name" href="https://github.com/lmittmann/tint">tint</a><span class="repo">lmittmann/tint</span><p>Colorized slog handler for human-readable terminal output.</p></div>
+<span class="stars" title="GitHub stars">★ 1.4k</span>
+</li>
+</ol>
+</section>
+<section class="category" id="testing" data-id="testing">
+<h2><a href="#testing">Testing</a></h2>
+<p class="desc">Assertions, mocks, fixtures and integration test helpers.</p>
+<ol class="entries">
+<li class="entry podium" id="stretchr--testify" data-name="testify" data-stars="26203" data-added="2026-09-12" data-search="testify stretchr/testify assertions, mocks and suites that work with the standard testing package.">
+<span class="rank">🥇</span>
+<div class="body"><a class="name" href="https://github.com/stretchr/testify">testify</a><span class="repo">stretchr/testify</span><p>Assertions, mocks and suites that work with the standard testing package.</p></div>
+<span class="stars" title="GitHub stars">★ 26k</span>
+</li>
+<li class="entry podium" id="onsi--ginkgo" data-name="ginkgo" data-stars="9051" data-added="2026-09-12" data-search="ginkgo onsi/ginkgo bdd-style testing framework paired with the gomega matcher library.">
+<span class="rank">🥈</span>
+<div class="body"><a class="name" href="https://github.com/onsi/ginkgo">ginkgo</a><span class="repo">onsi/ginkgo</span><p>BDD-style testing framework paired with the Gomega matcher library.</p></div>
+<span class="stars" title="GitHub stars">★ 9.1k</span>
+</li>
+<li class="entry podium" id="data-dog--go-sqlmock" data-name="go-sqlmock" data-stars="6571" data-added="2026-09-12" data-search="go-sqlmock data-dog/go-sqlmock sql driver mock for testing database interactions without a real database.">
+<span class="rank">🥉</span>
+<div class="body"><a class="name" href="https://github.com/DATA-DOG/go-sqlmock">go-sqlmock</a><span class="repo">DATA-DOG/go-sqlmock</span><p>SQL driver mock for testing database interactions without a real database.</p></div>
+<span class="stars" title="GitHub stars">★ 6.6k</span>
+</li>
+<li class="entry" id="testcontainers--testcontainers-go" data-name="testcontainers-go" data-stars="4974" data-added="2026-09-12" data-search="testcontainers-go testcontainers/testcontainers-go throwaway docker containers for integration tests.">
+<span class="rank">4</span>
+<div class="body"><a class="name" href="https://github.com/testcontainers/testcontainers-go">testcontainers-go</a><span class="repo">testcontainers/testcontainers-go</span><p>Throwaway Docker containers for integration tests.</p></div>
+<span class="stars" title="GitHub stars">★ 5k</span>
+</li>
+<li class="entry" id="uber-go--mock" data-name="mock" data-stars="3405" data-added="2026-09-12" data-search="mock uber-go/mock mocking framework with code generation via mockgen.">
+<span class="rank">5</span>
+<div class="body"><a class="name" href="https://github.com/uber-go/mock">mock</a><span class="repo">uber-go/mock</span><p>Mocking framework with code generation via mockgen.</p></div>
+<span class="stars" title="GitHub stars">★ 3.4k</span>
+</li>
+</ol>
+</section>
+<section class="category" id="databases" data-id="databases">
+<h2><a href="#databases">Databases &amp; SQL</a></h2>
+<p class="desc">Drivers, query builders, ORMs, migrations and embedded stores.</p>
+<ol class="entries">
+<li class="entry podium" id="go-gorm--gorm" data-name="gorm" data-stars="39952" data-added="2026-09-12" data-search="gorm go-gorm/gorm developer-friendly orm with associations, hooks, transactions and migrations.">
+<span class="rank">🥇</span>
+<div class="body"><a class="name" href="https://github.com/go-gorm/gorm">gorm</a><span class="repo">go-gorm/gorm</span><p>Developer-friendly ORM with associations, hooks, transactions and migrations.</p></div>
+<span class="stars" title="GitHub stars">★ 40k</span>
+</li>
+<li class="entry podium" id="redis--go-redis" data-name="go-redis" data-stars="22230" data-added="2026-09-12" data-search="go-redis redis/go-redis redis client supporting clusters, sentinels, pipelines and pub/sub.">
+<span class="rank">🥈</span>
+<div class="body"><a class="name" href="https://github.com/redis/go-redis">go-redis</a><span class="repo">redis/go-redis</span><p>Redis client supporting clusters, sentinels, pipelines and pub/sub.</p></div>
+<span class="stars" title="GitHub stars">★ 22k</span>
+</li>
+<li class="entry podium" id="golang-migrate--migrate" data-name="migrate" data-stars="18915" data-added="2026-09-12" data-search="migrate golang-migrate/migrate database migrations as a cli and library with many drivers.">
+<span class="rank">🥉</span>
+<div class="body"><a class="name" href="https://github.com/golang-migrate/migrate">migrate</a><span class="repo">golang-migrate/migrate</span><p>Database migrations as a CLI and library with many drivers.</p></div>
+<span class="stars" title="GitHub stars">★ 19k</span>
+</li>
+<li class="entry" id="sqlc-dev--sqlc" data-name="sqlc" data-stars="18282" data-added="2026-09-12" data-search="sqlc sqlc-dev/sqlc compiler that generates type-safe code from sql queries.">
+<span class="rank">4</span>
+<div class="body"><a class="name" href="https://github.com/sqlc-dev/sqlc">sqlc</a><span class="repo">sqlc-dev/sqlc</span><p>Compiler that generates type-safe code from SQL queries.</p></div>
+<span class="stars" title="GitHub stars">★ 18k</span>
+</li>
+<li class="entry" id="jmoiron--sqlx" data-name="sqlx" data-stars="17734" data-added="2026-09-12" data-search="sqlx jmoiron/sqlx extensions to database/sql for scanning rows into structs and named queries.">
+<span class="rank">5</span>
+<div class="body"><a class="name" href="https://github.com/jmoiron/sqlx">sqlx</a><span class="repo">jmoiron/sqlx</span><p>Extensions to database/sql for scanning rows into structs and named queries.</p></div>
+<span class="stars" title="GitHub stars">★ 18k</span>
+</li>
+<li class="entry" id="ent--ent" data-name="ent" data-stars="17198" data-added="2026-09-12" data-search="ent ent/ent entity framework for modeling data as a graph schema with generated code.">
+<span class="rank">6</span>
+<div class="body"><a class="name" href="https://github.com/ent/ent">ent</a><span class="repo">ent/ent</span><p>Entity framework for modeling data as a graph schema with generated code.</p></div>
+<span class="stars" title="GitHub stars">★ 17k</span>
+</li>
+<li class="entry" id="dgraph-io--badger" data-name="badger" data-stars="15762" data-added="2026-09-12" data-search="badger dgraph-io/badger embeddable, persistent key-value store built on lsm trees.">
+<span class="rank">7</span>
+<div class="body"><a class="name" href="https://github.com/dgraph-io/badger">badger</a><span class="repo">dgraph-io/badger</span><p>Embeddable, persistent key-value store built on LSM trees.</p></div>
+<span class="stars" title="GitHub stars">★ 16k</span>
+</li>
+<li class="entry" id="go-sql-driver--mysql" data-name="mysql" data-stars="15282" data-added="2026-09-12" data-search="mysql go-sql-driver/mysql driver for mysql over database/sql.">
+<span class="rank">8</span>
+<div class="body"><a class="name" href="https://github.com/go-sql-driver/mysql">mysql</a><span class="repo">go-sql-driver/mysql</span><p>Driver for MySQL over database/sql.</p></div>
+<span class="stars" title="GitHub stars">★ 15k</span>
+</li>
+<li class="entry" id="jackc--pgx" data-name="pgx" data-stars="14240" data-added="2026-09-12" data-search="pgx jackc/pgx postgresql driver and toolkit with native protocol support.">
+<span class="rank">9</span>
+<div class="body"><a class="name" href="https://github.com/jackc/pgx">pgx</a><span class="repo">jackc/pgx</span><p>PostgreSQL driver and toolkit with native protocol support.</p></div>
+<span class="stars" title="GitHub stars">★ 14k</span>
+</li>
+<li class="entry" id="pressly--goose" data-name="goose" data-stars="11453" data-added="2026-09-12" data-search="goose pressly/goose database migration tool supporting sql and go migrations.">
+<span class="rank">10</span>
+<div class="body"><a class="name" href="https://github.com/pressly/goose">goose</a><span class="repo">pressly/goose</span><p>Database migration tool supporting SQL and Go migrations.</p></div>
+<span class="stars" title="GitHub stars">★ 11k</span>
+</li>
+<li class="entry" id="etcd-io--bbolt" data-name="bbolt" data-stars="9740" data-added="2026-09-12" data-search="bbolt etcd-io/bbolt embedded key-value database based on b&#43; trees.">
+<span class="rank">11</span>
+<div class="body"><a class="name" href="https://github.com/etcd-io/bbolt">bbolt</a><span class="repo">etcd-io/bbolt</span><p>Embedded key-value database based on B&#43; trees.</p></div>
+<span class="stars" title="GitHub stars">★ 9.7k</span>
+</li>
+<li class="entry" id="mattn--go-sqlite3" data-name="go-sqlite3" data-stars="9237" data-added="2026-09-12" data-search="go-sqlite3 mattn/go-sqlite3 sqlite3 driver for database/sql based on cgo.">
+<span class="rank">12</span>
+<div class="body"><a class="name" href="https://github.com/mattn/go-sqlite3">go-sqlite3</a><span class="repo">mattn/go-sqlite3</span><p>SQLite3 driver for database/sql based on cgo.</p></div>
+<span class="stars" title="GitHub stars">★ 9.2k</span>
+</li>
+<li class="entry" id="mongodb--mongo-go-driver" data-name="mongo-go-driver" data-stars="8538" data-added="2026-09-12" data-search="mongo-go-driver mongodb/mongo-go-driver official mongodb driver.">
+<span class="rank">13</span>
+<div class="body"><a class="name" href="https://github.com/mongodb/mongo-go-driver">mongo-go-driver</a><span class="repo">mongodb/mongo-go-driver</span><p>Official MongoDB driver.</p></div>
+<span class="stars" title="GitHub stars">★ 8.5k</span>
+</li>
+<li class="entry" id="uptrace--bun" data-name="bun" data-stars="4968" data-added="2026-09-12" data-search="bun uptrace/bun sql-first orm for postgresql, mysql, mssql and sqlite.">
+<span class="rank">14</span>
+<div class="body"><a class="name" href="https://github.com/uptrace/bun">bun</a><span class="repo">uptrace/bun</span><p>SQL-first ORM for PostgreSQL, MySQL, MSSQL and SQLite.</p></div>
+<span class="stars" title="GitHub stars">★ 5k</span>
+</li>
+</ol>
+</section>
+<section class="category" id="serialization" data-id="serialization">
+<h2><a href="#serialization">Serialization</a></h2>
+<p class="desc">JSON, YAML, TOML, MessagePack and friends.</p>
+<ol class="entries">
+<li class="entry podium" id="tidwall--gjson" data-name="gjson" data-stars="15559" data-added="2026-09-12" data-search="gjson tidwall/gjson json value lookup with a single-line path syntax.">
+<span class="rank">🥇</span>
+<div class="body"><a class="name" href="https://github.com/tidwall/gjson">gjson</a><span class="repo">tidwall/gjson</span><p>JSON value lookup with a single-line path syntax.</p></div>
+<span class="stars" title="GitHub stars">★ 16k</span>
+</li>
+<li class="entry podium" id="burntsushi--toml" data-name="toml" data-stars="5004" data-added="2026-09-12" data-search="toml burntsushi/toml parser and encoder for toml with reflection-based mapping to structs.">
+<span class="rank">🥈</span>
+<div class="body"><a class="name" href="https://github.com/BurntSushi/toml">toml</a><span class="repo">BurntSushi/toml</span><p>Parser and encoder for TOML with reflection-based mapping to structs.</p></div>
+<span class="stars" title="GitHub stars">★ 5k</span>
+</li>
+<li class="entry podium" id="goccy--go-yaml" data-name="go-yaml" data-stars="2228" data-added="2026-09-12" data-search="go-yaml goccy/go-yaml yaml parser and encoder with precise error reporting and struct tags.">
+<span class="rank">🥉</span>
+<div class="body"><a class="name" href="https://github.com/goccy/go-yaml">go-yaml</a><span class="repo">goccy/go-yaml</span><p>YAML parser and encoder with precise error reporting and struct tags.</p></div>
+<span class="stars" title="GitHub stars">★ 2.2k</span>
+</li>
+</ol>
+</section>
+<section class="category" id="validation" data-id="validation">
+<h2><a href="#validation">Validation</a></h2>
+<p class="desc">Validating structs and inputs.</p>
+<ol class="entries">
+<li class="entry podium" id="go-playground--validator" data-name="validator" data-stars="20155" data-added="2026-09-12" data-search="validator go-playground/validator struct and field validation using tags, with cross-field and cross-struct rules.">
+<span class="rank">🥇</span>
+<div class="body"><a class="name" href="https://github.com/go-playground/validator">validator</a><span class="repo">go-playground/validator</span><p>Struct and field validation using tags, with cross-field and cross-struct rules.</p></div>
+<span class="stars" title="GitHub stars">★ 20k</span>
+</li>
+</ol>
+</section>
+<section class="category" id="dependency-injection" data-id="dependency-injection">
+<h2><a href="#dependency-injection">Dependency Injection</a></h2>
+<p class="desc">Wiring applications together.</p>
+<ol class="entries">
+<li class="entry podium" id="uber-go--fx" data-name="fx" data-stars="7662" data-added="2026-09-12" data-search="fx uber-go/fx application framework built around dependency injection and lifecycle hooks.">
+<span class="rank">🥇</span>
+<div class="body"><a class="name" href="https://github.com/uber-go/fx">fx</a><span class="repo">uber-go/fx</span><p>Application framework built around dependency injection and lifecycle hooks.</p></div>
+<span class="stars" title="GitHub stars">★ 7.7k</span>
+</li>
+<li class="entry podium" id="uber-go--dig" data-name="dig" data-stars="4500" data-added="2026-09-12" data-search="dig uber-go/dig reflection-based dependency injection toolkit.">
+<span class="rank">🥈</span>
+<div class="body"><a class="name" href="https://github.com/uber-go/dig">dig</a><span class="repo">uber-go/dig</span><p>Reflection-based dependency injection toolkit.</p></div>
+<span class="stars" title="GitHub stars">★ 4.5k</span>
+</li>
+<li class="entry podium" id="samber--do" data-name="do" data-stars="2810" data-added="2026-09-12" data-search="do samber/do typesafe dependency injection based on generics.">
+<span class="rank">🥉</span>
+<div class="body"><a class="name" href="https://github.com/samber/do">do</a><span class="repo">samber/do</span><p>Typesafe dependency injection based on generics.</p></div>
+<span class="stars" title="GitHub stars">★ 2.8k</span>
+</li>
+</ol>
+</section>
+<section class="category" id="concurrency" data-id="concurrency">
+<h2><a href="#concurrency">Concurrency</a></h2>
+<p class="desc">Goroutine pools, structured concurrency and synchronization helpers.</p>
+<ol class="entries">
+<li class="entry podium" id="panjf2000--ants" data-name="ants" data-stars="14502" data-added="2026-09-12" data-search="ants panjf2000/ants high-performance goroutine pool for managing and recycling goroutines.">
+<span class="rank">🥇</span>
+<div class="body"><a class="name" href="https://github.com/panjf2000/ants">ants</a><span class="repo">panjf2000/ants</span><p>High-performance goroutine pool for managing and recycling goroutines.</p></div>
+<span class="stars" title="GitHub stars">★ 15k</span>
+</li>
+<li class="entry podium" id="sourcegraph--conc" data-name="conc" data-stars="10429" data-added="2026-09-12" data-search="conc sourcegraph/conc structured concurrency primitives: pools, wait groups and panic propagation.">
+<span class="rank">🥈</span>
+<div class="body"><a class="name" href="https://github.com/sourcegraph/conc">conc</a><span class="repo">sourcegraph/conc</span><p>Structured concurrency primitives: pools, wait groups and panic propagation.</p></div>
+<span class="stars" title="GitHub stars">★ 10k</span>
+</li>
+</ol>
+</section>
+<section class="category" id="caching" data-id="caching">
+<h2><a href="#caching">Caching</a></h2>
+<p class="desc">In-memory caches and eviction policies.</p>
+<ol class="entries">
+<li class="entry podium" id="allegro--bigcache" data-name="bigcache" data-stars="8161" data-added="2026-09-12" data-search="bigcache allegro/bigcache efficient in-memory cache for gigabytes of data without gc overhead.">
+<span class="rank">🥇</span>
+<div class="body"><a class="name" href="https://github.com/allegro/bigcache">bigcache</a><span class="repo">allegro/bigcache</span><p>Efficient in-memory cache for gigabytes of data without GC overhead.</p></div>
+<span class="stars" title="GitHub stars">★ 8.2k</span>
+</li>
+<li class="entry podium" id="dgraph-io--ristretto" data-name="ristretto" data-stars="6987" data-added="2026-09-12" data-search="ristretto dgraph-io/ristretto concurrent cache with admission and eviction policies tuned for hit ratio.">
+<span class="rank">🥈</span>
+<div class="body"><a class="name" href="https://github.com/dgraph-io/ristretto">ristretto</a><span class="repo">dgraph-io/ristretto</span><p>Concurrent cache with admission and eviction policies tuned for hit ratio.</p></div>
+<span class="stars" title="GitHub stars">★ 7k</span>
+</li>
+<li class="entry podium" id="hashicorp--golang-lru" data-name="golang-lru" data-stars="5121" data-added="2026-09-12" data-search="golang-lru hashicorp/golang-lru thread-safe fixed-size lru and 2q caches.">
+<span class="rank">🥉</span>
+<div class="body"><a class="name" href="https://github.com/hashicorp/golang-lru">golang-lru</a><span class="repo">hashicorp/golang-lru</span><p>Thread-safe fixed-size LRU and 2Q caches.</p></div>
+<span class="stars" title="GitHub stars">★ 5.1k</span>
+</li>
+<li class="entry" id="maypok86--otter" data-name="otter" data-stars="2675" data-added="2026-09-12" data-search="otter maypok86/otter lock-free cache with s3-fifo eviction and high hit ratio.">
+<span class="rank">4</span>
+<div class="body"><a class="name" href="https://github.com/maypok86/otter">otter</a><span class="repo">maypok86/otter</span><p>Lock-free cache with S3-FIFO eviction and high hit ratio.</p></div>
+<span class="stars" title="GitHub stars">★ 2.7k</span>
+</li>
+</ol>
+</section>
+<section class="category" id="http-clients" data-id="http-clients">
+<h2><a href="#http-clients">HTTP Clients</a></h2>
+<p class="desc">Making requests with retries, tracing and convenience.</p>
+<ol class="entries">
+<li class="entry podium" id="go-resty--resty" data-name="resty" data-stars="11797" data-added="2026-09-12" data-search="resty go-resty/resty feature-rich rest client with retries, middleware and request tracing.">
+<span class="rank">🥇</span>
+<div class="body"><a class="name" href="https://github.com/go-resty/resty">resty</a><span class="repo">go-resty/resty</span><p>Feature-rich REST client with retries, middleware and request tracing.</p></div>
+<span class="stars" title="GitHub stars">★ 12k</span>
+</li>
+<li class="entry podium" id="imroc--req" data-name="req" data-stars="4860" data-added="2026-09-12" data-search="req imroc/req http client with a fluent api, debugging tools and http/2 and http/3 support.">
+<span class="rank">🥈</span>
+<div class="body"><a class="name" href="https://github.com/imroc/req">req</a><span class="repo">imroc/req</span><p>HTTP client with a fluent API, debugging tools and HTTP/2 and HTTP/3 support.</p></div>
+<span class="stars" title="GitHub stars">★ 4.9k</span>
+</li>
+<li class="entry podium" id="hashicorp--go-retryablehttp" data-name="go-retryablehttp" data-stars="2347" data-added="2026-09-12" data-search="go-retryablehttp hashicorp/go-retryablehttp retrying http client with exponential backoff.">
+<span class="rank">🥉</span>
+<div class="body"><a class="name" href="https://github.com/hashicorp/go-retryablehttp">go-retryablehttp</a><span class="repo">hashicorp/go-retryablehttp</span><p>Retrying HTTP client with exponential backoff.</p></div>
+<span class="stars" title="GitHub stars">★ 2.3k</span>
+</li>
+</ol>
+</section>
+<section class="category" id="messaging" data-id="messaging">
+<h2><a href="#messaging">Messaging &amp; Queues</a></h2>
+<p class="desc">Message brokers, streaming platforms and task queues.</p>
+<ol class="entries">
+<li class="entry podium" id="hibiken--asynq" data-name="asynq" data-stars="13696" data-added="2026-09-12" data-search="asynq hibiken/asynq distributed task queue backed by redis.">
+<span class="rank">🥇</span>
+<div class="body"><a class="name" href="https://github.com/hibiken/asynq">asynq</a><span class="repo">hibiken/asynq</span><p>Distributed task queue backed by Redis.</p></div>
+<span class="stars" title="GitHub stars">★ 14k</span>
+</li>
+<li class="entry podium" id="threedotslabs--watermill" data-name="watermill" data-stars="9888" data-added="2026-09-12" data-search="watermill threedotslabs/watermill library for building event-driven applications over pub/sub backends.">
+<span class="rank">🥈</span>
+<div class="body"><a class="name" href="https://github.com/ThreeDotsLabs/watermill">watermill</a><span class="repo">ThreeDotsLabs/watermill</span><p>Library for building event-driven applications over pub/sub backends.</p></div>
+<span class="stars" title="GitHub stars">★ 9.9k</span>
+</li>
+<li class="entry podium" id="segmentio--kafka-go" data-name="kafka-go" data-stars="8626" data-added="2026-09-12" data-search="kafka-go segmentio/kafka-go kafka client with low-level and high-level apis.">
+<span class="rank">🥉</span>
+<div class="body"><a class="name" href="https://github.com/segmentio/kafka-go">kafka-go</a><span class="repo">segmentio/kafka-go</span><p>Kafka client with low-level and high-level APIs.</p></div>
+<span class="stars" title="GitHub stars">★ 8.6k</span>
+</li>
+<li class="entry" id="nats-io--nats.go" data-name="nats.go" data-stars="6745" data-added="2026-09-12" data-search="nats.go nats-io/nats.go client for the nats messaging system.">
+<span class="rank">4</span>
+<div class="body"><a class="name" href="https://github.com/nats-io/nats.go">nats.go</a><span class="repo">nats-io/nats.go</span><p>Client for the NATS messaging system.</p></div>
+<span class="stars" title="GitHub stars">★ 6.7k</span>
+</li>
+<li class="entry" id="twmb--franz-go" data-name="franz-go" data-stars="3057" data-added="2026-09-12" data-search="franz-go twmb/franz-go feature-complete kafka client with transactions and consumer groups.">
+<span class="rank">5</span>
+<div class="body"><a class="name" href="https://github.com/twmb/franz-go">franz-go</a><span class="repo">twmb/franz-go</span><p>Feature-complete Kafka client with transactions and consumer groups.</p></div>
+<span class="stars" title="GitHub stars">★ 3.1k</span>
+</li>
+<li class="entry" id="rabbitmq--amqp091-go" data-name="amqp091-go" data-stars="2035" data-added="2026-09-12" data-search="amqp091-go rabbitmq/amqp091-go official rabbitmq client for amqp 0.9.1.">
+<span class="rank">6</span>
+<div class="body"><a class="name" href="https://github.com/rabbitmq/amqp091-go">amqp091-go</a><span class="repo">rabbitmq/amqp091-go</span><p>Official RabbitMQ client for AMQP 0.9.1.</p></div>
+<span class="stars" title="GitHub stars">★ 2k</span>
+</li>
+</ol>
+</section>
+<section class="category" id="rpc-and-api" data-id="rpc-and-api">
+<h2><a href="#rpc-and-api">RPC &amp; API</a></h2>
+<p class="desc">gRPC, RPC frameworks, GraphQL and OpenAPI tooling.</p>
+<ol class="entries">
+<li class="entry podium" id="grpc--grpc-go" data-name="grpc-go" data-stars="23055" data-added="2026-09-12" data-search="grpc-go grpc/grpc-go official grpc implementation.">
+<span class="rank">🥇</span>
+<div class="body"><a class="name" href="https://github.com/grpc/grpc-go">grpc-go</a><span class="repo">grpc/grpc-go</span><p>Official gRPC implementation.</p></div>
+<span class="stars" title="GitHub stars">★ 23k</span>
+</li>
+<li class="entry podium" id="swaggo--swag" data-name="swag" data-stars="13016" data-added="2026-09-12" data-search="swag swaggo/swag generate openapi documentation from source annotations.">
+<span class="rank">🥈</span>
+<div class="body"><a class="name" href="https://github.com/swaggo/swag">swag</a><span class="repo">swaggo/swag</span><p>Generate OpenAPI documentation from source annotations.</p></div>
+<span class="stars" title="GitHub stars">★ 13k</span>
+</li>
+<li class="entry podium" id="99designs--gqlgen" data-name="gqlgen" data-stars="10762" data-added="2026-09-12" data-search="gqlgen 99designs/gqlgen schema-first graphql server generator.">
+<span class="rank">🥉</span>
+<div class="body"><a class="name" href="https://github.com/99designs/gqlgen">gqlgen</a><span class="repo">99designs/gqlgen</span><p>Schema-first GraphQL server generator.</p></div>
+<span class="stars" title="GitHub stars">★ 11k</span>
+</li>
+<li class="entry" id="danielgtaylor--huma" data-name="huma" data-stars="4390" data-added="2026-09-12" data-search="huma danielgtaylor/huma framework for http apis with openapi 3 generation and validation.">
+<span class="rank">4</span>
+<div class="body"><a class="name" href="https://github.com/danielgtaylor/huma">huma</a><span class="repo">danielgtaylor/huma</span><p>Framework for HTTP APIs with OpenAPI 3 generation and validation.</p></div>
+<span class="stars" title="GitHub stars">★ 4.4k</span>
+</li>
+<li class="entry" id="connectrpc--connect-go" data-name="connect-go" data-stars="4067" data-added="2026-09-12" data-search="connect-go connectrpc/connect-go simple rpc over http/1.1 and http/2 with grpc compatibility.">
+<span class="rank">5</span>
+<div class="body"><a class="name" href="https://github.com/connectrpc/connect-go">connect-go</a><span class="repo">connectrpc/connect-go</span><p>Simple RPC over HTTP/1.1 and HTTP/2 with gRPC compatibility.</p></div>
+<span class="stars" title="GitHub stars">★ 4.1k</span>
+</li>
+</ol>
+</section>
+<section class="category" id="auth" data-id="auth">
+<h2><a href="#auth">Authentication &amp; Authorization</a></h2>
+<p class="desc">Tokens, sessions, OAuth and access control.</p>
+<ol class="entries">
+<li class="entry podium" id="apache--casbin" data-name="casbin" data-stars="20385" data-added="2026-09-12" data-search="casbin apache/casbin authorization library supporting acl, rbac and abac models.">
+<span class="rank">🥇</span>
+<div class="body"><a class="name" href="https://github.com/apache/casbin">casbin</a><span class="repo">apache/casbin</span><p>Authorization library supporting ACL, RBAC and ABAC models.</p></div>
+<span class="stars" title="GitHub stars">★ 20k</span>
+</li>
+<li class="entry podium" id="golang-jwt--jwt" data-name="jwt" data-stars="9222" data-added="2026-09-12" data-search="jwt golang-jwt/jwt json web token implementation.">
+<span class="rank">🥈</span>
+<div class="body"><a class="name" href="https://github.com/golang-jwt/jwt">jwt</a><span class="repo">golang-jwt/jwt</span><p>JSON Web Token implementation.</p></div>
+<span class="stars" title="GitHub stars">★ 9.2k</span>
+</li>
+<li class="entry podium" id="markbates--goth" data-name="goth" data-stars="6599" data-added="2026-09-12" data-search="goth markbates/goth multi-provider oauth authentication for web applications.">
+<span class="rank">🥉</span>
+<div class="body"><a class="name" href="https://github.com/markbates/goth">goth</a><span class="repo">markbates/goth</span><p>Multi-provider OAuth authentication for web applications.</p></div>
+<span class="stars" title="GitHub stars">★ 6.6k</span>
+</li>
+<li class="entry" id="alexedwards--scs" data-name="scs" data-stars="2618" data-added="2026-09-12" data-search="scs alexedwards/scs http session management with pluggable stores.">
+<span class="rank">4</span>
+<div class="body"><a class="name" href="https://github.com/alexedwards/scs">scs</a><span class="repo">alexedwards/scs</span><p>HTTP session management with pluggable stores.</p></div>
+<span class="stars" title="GitHub stars">★ 2.6k</span>
+</li>
+<li class="entry" id="coreos--go-oidc" data-name="go-oidc" data-stars="2476" data-added="2026-09-12" data-search="go-oidc coreos/go-oidc openid connect client with verification of id tokens.">
+<span class="rank">5</span>
+<div class="body"><a class="name" href="https://github.com/coreos/go-oidc">go-oidc</a><span class="repo">coreos/go-oidc</span><p>OpenID Connect client with verification of ID tokens.</p></div>
+<span class="stars" title="GitHub stars">★ 2.5k</span>
+</li>
+<li class="entry" id="lestrrat-go--jwx" data-name="jwx" data-stars="2424" data-added="2026-09-12" data-search="jwx lestrrat-go/jwx complete implementation of jwa, jwe, jwk, jws and jwt.">
+<span class="rank">6</span>
+<div class="body"><a class="name" href="https://github.com/lestrrat-go/jwx">jwx</a><span class="repo">lestrrat-go/jwx</span><p>Complete implementation of JWA, JWE, JWK, JWS and JWT.</p></div>
+<span class="stars" title="GitHub stars">★ 2.4k</span>
+</li>
+</ol>
+</section>
+<section class="category" id="observability" data-id="observability">
+<h2><a href="#observability">Observability</a></h2>
+<p class="desc">Metrics, tracing and instrumentation.</p>
+<ol class="entries">
+<li class="entry podium" id="open-telemetry--opentelemetry-go" data-name="opentelemetry-go" data-stars="6549" data-added="2026-09-12" data-search="opentelemetry-go open-telemetry/opentelemetry-go opentelemetry api and sdk for traces, metrics and logs.">
+<span class="rank">🥇</span>
+<div class="body"><a class="name" href="https://github.com/open-telemetry/opentelemetry-go">opentelemetry-go</a><span class="repo">open-telemetry/opentelemetry-go</span><p>OpenTelemetry API and SDK for traces, metrics and logs.</p></div>
+<span class="stars" title="GitHub stars">★ 6.5k</span>
+</li>
+<li class="entry podium" id="prometheus--client_golang" data-name="client_golang" data-stars="6028" data-added="2026-09-12" data-search="client_golang prometheus/client_golang official prometheus instrumentation library.">
+<span class="rank">🥈</span>
+<div class="body"><a class="name" href="https://github.com/prometheus/client_golang">client_golang</a><span class="repo">prometheus/client_golang</span><p>Official Prometheus instrumentation library.</p></div>
+<span class="stars" title="GitHub stars">★ 6k</span>
+</li>
+</ol>
+</section>
+<section class="category" id="text-and-templates" data-id="text-and-templates">
+<h2><a href="#text-and-templates">Text, HTML &amp; Templates</a></h2>
+<p class="desc">Parsing and generating markup and text.</p>
+<ol class="entries">
+<li class="entry podium" id="puerkitobio--goquery" data-name="goquery" data-stars="14987" data-added="2026-09-12" data-search="goquery puerkitobio/goquery html document traversal and manipulation with a jquery-like api.">
+<span class="rank">🥇</span>
+<div class="body"><a class="name" href="https://github.com/PuerkitoBio/goquery">goquery</a><span class="repo">PuerkitoBio/goquery</span><p>HTML document traversal and manipulation with a jQuery-like API.</p></div>
+<span class="stars" title="GitHub stars">★ 15k</span>
+</li>
+<li class="entry podium" id="a-h--templ" data-name="templ" data-stars="10537" data-added="2026-09-12" data-search="templ a-h/templ language for type-safe html components that compile to go code.">
+<span class="rank">🥈</span>
+<div class="body"><a class="name" href="https://github.com/a-h/templ">templ</a><span class="repo">a-h/templ</span><p>Language for type-safe HTML components that compile to Go code.</p></div>
+<span class="stars" title="GitHub stars">★ 11k</span>
+</li>
+<li class="entry podium" id="yuin--goldmark" data-name="goldmark" data-stars="5013" data-added="2026-09-12" data-search="goldmark yuin/goldmark commonmark-compliant markdown parser that is easy to extend.">
+<span class="rank">🥉</span>
+<div class="body"><a class="name" href="https://github.com/yuin/goldmark">goldmark</a><span class="repo">yuin/goldmark</span><p>CommonMark-compliant Markdown parser that is easy to extend.</p></div>
+<span class="stars" title="GitHub stars">★ 5k</span>
+</li>
+</ol>
+</section>
+<section class="category" id="utilities" data-id="utilities">
+<h2><a href="#utilities">Utilities</a></h2>
+<p class="desc">General-purpose helpers that end up in every project.</p>
+<ol class="entries">
+<li class="entry podium" id="samber--lo" data-name="lo" data-stars="21433" data-added="2026-09-12" data-search="lo samber/lo lodash-style helper functions built on generics.">
+<span class="rank">🥇</span>
+<div class="body"><a class="name" href="https://github.com/samber/lo">lo</a><span class="repo">samber/lo</span><p>Lodash-style helper functions built on generics.</p></div>
+<span class="stars" title="GitHub stars">★ 21k</span>
+</li>
+<li class="entry podium" id="fsnotify--fsnotify" data-name="fsnotify" data-stars="10778" data-added="2026-09-12" data-search="fsnotify fsnotify/fsnotify cross-platform filesystem notifications.">
+<span class="rank">🥈</span>
+<div class="body"><a class="name" href="https://github.com/fsnotify/fsnotify">fsnotify</a><span class="repo">fsnotify/fsnotify</span><p>Cross-platform filesystem notifications.</p></div>
+<span class="stars" title="GitHub stars">★ 11k</span>
+</li>
+<li class="entry podium" id="pkg--errors" data-name="errors" data-stars="8256" data-added="2026-09-12" data-search="errors pkg/errors error handling primitives with stack traces.">
+<span class="rank">🥉</span>
+<div class="body"><a class="name" href="https://github.com/pkg/errors">errors</a><span class="repo">pkg/errors</span><p>Error handling primitives with stack traces.</p></div>
+<span class="stars" title="GitHub stars">★ 8.3k</span>
+</li>
+<li class="entry" id="spf13--afero" data-name="afero" data-stars="6697" data-added="2026-09-12" data-search="afero spf13/afero filesystem abstraction with in-memory, os and composable backends.">
+<span class="rank">4</span>
+<div class="body"><a class="name" href="https://github.com/spf13/afero">afero</a><span class="repo">spf13/afero</span><p>Filesystem abstraction with in-memory, OS and composable backends.</p></div>
+<span class="stars" title="GitHub stars">★ 6.7k</span>
+</li>
+<li class="entry" id="oklog--ulid" data-name="ulid" data-stars="5048" data-added="2026-09-12" data-search="ulid oklog/ulid universally unique lexicographically sortable identifiers.">
+<span class="rank">5</span>
+<div class="body"><a class="name" href="https://github.com/oklog/ulid">ulid</a><span class="repo">oklog/ulid</span><p>Universally Unique Lexicographically Sortable Identifiers.</p></div>
+<span class="stars" title="GitHub stars">★ 5k</span>
+</li>
+<li class="entry" id="dustin--go-humanize" data-name="go-humanize" data-stars="4816" data-added="2026-09-12" data-search="go-humanize dustin/go-humanize formatters for byte sizes, times, numbers and ordinals in human-readable form.">
+<span class="rank">6</span>
+<div class="body"><a class="name" href="https://github.com/dustin/go-humanize">go-humanize</a><span class="repo">dustin/go-humanize</span><p>Formatters for byte sizes, times, numbers and ordinals in human-readable form.</p></div>
+<span class="stars" title="GitHub stars">★ 4.8k</span>
+</li>
+<li class="entry" id="cenkalti--backoff" data-name="backoff" data-stars="4063" data-added="2026-09-12" data-search="backoff cenkalti/backoff exponential backoff algorithm with retries and contexts.">
+<span class="rank">7</span>
+<div class="body"><a class="name" href="https://github.com/cenkalti/backoff">backoff</a><span class="repo">cenkalti/backoff</span><p>Exponential backoff algorithm with retries and contexts.</p></div>
+<span class="stars" title="GitHub stars">★ 4.1k</span>
+</li>
+<li class="entry" id="spf13--cast" data-name="cast" data-stars="3980" data-added="2026-09-12" data-search="cast spf13/cast safe and easy casting between types.">
+<span class="rank">8</span>
+<div class="body"><a class="name" href="https://github.com/spf13/cast">cast</a><span class="repo">spf13/cast</span><p>Safe and easy casting between types.</p></div>
+<span class="stars" title="GitHub stars">★ 4k</span>
+</li>
+<li class="entry" id="avast--retry-go" data-name="retry-go" data-stars="2950" data-added="2026-09-12" data-search="retry-go avast/retry-go simple retry mechanism with configurable backoff.">
+<span class="rank">9</span>
+<div class="body"><a class="name" href="https://github.com/avast/retry-go">retry-go</a><span class="repo">avast/retry-go</span><p>Simple retry mechanism with configurable backoff.</p></div>
+<span class="stars" title="GitHub stars">★ 3k</span>
+</li>
+<li class="entry" id="go-viper--mapstructure" data-name="mapstructure" data-stars="484" data-added="2026-09-12" data-search="mapstructure go-viper/mapstructure decoding of generic map values into native structures.">
+<span class="rank">10</span>
+<div class="body"><a class="name" href="https://github.com/go-viper/mapstructure">mapstructure</a><span class="repo">go-viper/mapstructure</span><p>Decoding of generic map values into native structures.</p></div>
+<span class="stars" title="GitHub stars">★ 484</span>
+</li>
+</ol>
+</section>
+<section class="category" id="developer-tools" data-id="developer-tools">
+<h2><a href="#developer-tools">Developer Tools</a></h2>
+<p class="desc">Linters, build tools, debuggers and code generators.</p>
+<ol class="entries">
+<li class="entry podium" id="go-delve--delve" data-name="delve" data-stars="24915" data-added="2026-09-12" data-search="delve go-delve/delve debugger with support for goroutines, breakpoints and remote debugging.">
+<span class="rank">🥇</span>
+<div class="body"><a class="name" href="https://github.com/go-delve/delve">delve</a><span class="repo">go-delve/delve</span><p>Debugger with support for goroutines, breakpoints and remote debugging.</p></div>
+<span class="stars" title="GitHub stars">★ 25k</span>
+</li>
+<li class="entry podium" id="air-verse--air" data-name="air" data-stars="23978" data-added="2026-09-12" data-search="air air-verse/air live reload for development.">
+<span class="rank">🥈</span>
+<div class="body"><a class="name" href="https://github.com/air-verse/air">air</a><span class="repo">air-verse/air</span><p>Live reload for development.</p></div>
+<span class="stars" title="GitHub stars">★ 24k</span>
+</li>
+<li class="entry podium" id="golangci--golangci-lint" data-name="golangci-lint" data-stars="19369" data-added="2026-09-12" data-search="golangci-lint golangci/golangci-lint linters runner that aggregates dozens of linters with caching and parallelism.">
+<span class="rank">🥉</span>
+<div class="body"><a class="name" href="https://github.com/golangci/golangci-lint">golangci-lint</a><span class="repo">golangci/golangci-lint</span><p>Linters runner that aggregates dozens of linters with caching and parallelism.</p></div>
+<span class="stars" title="GitHub stars">★ 19k</span>
+</li>
+<li class="entry" id="go-task--task" data-name="task" data-stars="16130" data-added="2026-09-12" data-search="task go-task/task build tool and task runner with a simple yaml syntax.">
+<span class="rank">4</span>
+<div class="body"><a class="name" href="https://github.com/go-task/task">task</a><span class="repo">go-task/task</span><p>Build tool and task runner with a simple YAML syntax.</p></div>
+<span class="stars" title="GitHub stars">★ 16k</span>
+</li>
+<li class="entry" id="goreleaser--goreleaser" data-name="goreleaser" data-stars="16029" data-added="2026-09-12" data-search="goreleaser goreleaser/goreleaser release automation for building, packaging and publishing binaries.">
+<span class="rank">5</span>
+<div class="body"><a class="name" href="https://github.com/goreleaser/goreleaser">goreleaser</a><span class="repo">goreleaser/goreleaser</span><p>Release automation for building, packaging and publishing binaries.</p></div>
+<span class="stars" title="GitHub stars">★ 16k</span>
+</li>
+<li class="entry" id="bufbuild--buf" data-name="buf" data-stars="11431" data-added="2026-09-12" data-search="buf bufbuild/buf protobuf build tool with linting, breaking change detection and code generation.">
+<span class="rank">6</span>
+<div class="body"><a class="name" href="https://github.com/bufbuild/buf">buf</a><span class="repo">bufbuild/buf</span><p>Protobuf build tool with linting, breaking change detection and code generation.</p></div>
+<span class="stars" title="GitHub stars">★ 11k</span>
+</li>
+<li class="entry" id="vektra--mockery" data-name="mockery" data-stars="7160" data-added="2026-09-12" data-search="mockery vektra/mockery mock code generator for interfaces.">
+<span class="rank">7</span>
+<div class="body"><a class="name" href="https://github.com/vektra/mockery">mockery</a><span class="repo">vektra/mockery</span><p>Mock code generator for interfaces.</p></div>
+<span class="stars" title="GitHub stars">★ 7.2k</span>
+</li>
+<li class="entry" id="dominikh--go-tools" data-name="go-tools" data-stars="6891" data-added="2026-09-12" data-search="go-tools dominikh/go-tools staticcheck and other advanced static analysis tools.">
+<span class="rank">8</span>
+<div class="body"><a class="name" href="https://github.com/dominikh/go-tools">go-tools</a><span class="repo">dominikh/go-tools</span><p>Staticcheck and other advanced static analysis tools.</p></div>
+<span class="stars" title="GitHub stars">★ 6.9k</span>
+</li>
+<li class="entry" id="mvdan--gofumpt" data-name="gofumpt" data-stars="4078" data-added="2026-09-12" data-search="gofumpt mvdan/gofumpt stricter gofmt.">
+<span class="rank">9</span>
+<div class="body"><a class="name" href="https://github.com/mvdan/gofumpt">gofumpt</a><span class="repo">mvdan/gofumpt</span><p>Stricter gofmt.</p></div>
+<span class="stars" title="GitHub stars">★ 4.1k</span>
+</li>
+</ol>
+</section>
+<p class="empty" id="empty">Nothing matches.</p>
+</main>
+<footer>
+<p>Every entry is added by a human through a pull request and checked against the <a href="https://github.com/floatdrop/awesome-go/blob/main/CONTRIBUTING.md#entry-rules">entry rules</a> by CI. Archived repositories are removed automatically. Sorted by GitHub stars within each category; the top 5 are highlighted.</p>
+<p>Released under <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a>. Generated from <a href="https://github.com/floatdrop/awesome-go">floatdrop/awesome-go</a>.</p>
+</footer>
+</div>
+<script>
+(function(){
+  var q=document.getElementById('q'),cat=document.getElementById('cat'),sort=document.getElementById('sort'),count=document.getElementById('count'),empty=document.getElementById('empty');
+  var sections=Array.prototype.slice.call(document.querySelectorAll('section.category'));
+  var total=document.querySelectorAll('li.entry').length;
+  function cmp(s){
+    if(s==='name')return function(a,b){return a.dataset.name.localeCompare(b.dataset.name)};
+    if(s==='added')return function(a,b){return b.dataset.added.localeCompare(a.dataset.added)||(b.dataset.stars-a.dataset.stars)};
+    return function(a,b){return (b.dataset.stars-a.dataset.stars)||a.dataset.name.localeCompare(b.dataset.name)};
+  }
+  function apply(){
+    var term=q.value.trim().toLowerCase(),c=cat.value,order=cmp(sort.value),shown=0;
+    sections.forEach(function(sec){
+      var list=sec.querySelector('ol.entries'),items=Array.prototype.slice.call(list.children),visible=0;
+      items.forEach(function(li){var ok=(!c||sec.dataset.id===c)&&(!term||li.dataset.search.indexOf(term)>=0);li.hidden=!ok;if(ok)visible++});
+      items.sort(order).forEach(function(li){list.appendChild(li)});
+      sec.hidden=visible===0;shown+=visible;
+    });
+    empty.style.display=shown?'none':'block';
+    count.textContent=shown===total?total+' projects':shown+' of '+total;
+  }
+  q.addEventListener('input',apply);cat.addEventListener('change',apply);sort.addEventListener('change',apply);
+  apply();
+})();
+</script>
+</body>
+</html>

@@ -51,7 +51,7 @@ jobs:
       - name: Generated files were not edited by hand
         if: github.event_name == 'pull_request'
         run: |
-          changed=$(git diff --name-only "origin/${{ github.base_ref }}...HEAD" -- README.md metadata.json badges/)
+          changed=$(git diff --name-only "origin/${{ github.base_ref }}...HEAD" -- README.md metadata.json badges/ docs/)
           if [ -n "$changed" ]; then
             echo "::error::These files are generated from list.json and entries/; do not edit them in a pull request:"
             echo "$changed"

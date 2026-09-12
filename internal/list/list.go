@@ -38,10 +38,22 @@ type Meta struct {
 	Repo        string `json:"repo"`
 	Branch      string `json:"branch"`
 	Description string `json:"description"`
+	// Site overrides the GitHub Pages URL, for a custom domain. Defaults to
+	// https://<owner>.github.io/<name>/.
+	Site string `json:"site,omitempty"`
 	// Podium is how many entries per category are shown before the rest is
 	// collapsed into a "More" block. The first three get medals. Zero shows a
 	// flat list.
 	Podium int `json:"podium"`
+}
+
+// SiteURL is where the generated docs/ site is published.
+func (m Meta) SiteURL() string {
+	if m.Site != "" {
+		return m.Site
+	}
+	owner, name, _ := strings.Cut(m.Repo, "/")
+	return "https://" + strings.ToLower(owner) + ".github.io/" + name + "/"
 }
 
 // BranchOrMain returns the branch that serves generated badges.

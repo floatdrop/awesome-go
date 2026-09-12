@@ -163,6 +163,16 @@ func runGenerate(args []string) error {
 	if err := os.WriteFile(p.readme(), render.README(l, meta, now), 0o644); err != nil {
 		return err
 	}
+	site, err := render.Site(l, meta, now)
+	if err != nil {
+		return err
+	}
+	if err := os.MkdirAll(p.docs(), 0o755); err != nil {
+		return err
+	}
+	if err := os.WriteFile(filepath.Join(p.docs(), "index.html"), site, 0o644); err != nil {
+		return err
+	}
 
 	dir := p.badges()
 	if err := os.MkdirAll(dir, 0o755); err != nil {
@@ -192,7 +202,7 @@ func runGenerate(args []string) error {
 		generated++
 	}
 
-	fmt.Printf("✓ README.md and %d badges generated", generated)
+	fmt.Printf("✓ README.md, docs/index.html and %d badges generated", generated)
 	if skipped > 0 {
 		fmt.Printf(" (%d entries have no added date yet; run refresh)", skipped)
 	}

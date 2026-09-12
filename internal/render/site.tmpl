@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{.Title}}</title>
+<meta name="description" content="{{.Description}}">
+<link rel="canonical" href="{{.SiteURL}}">
+<style>
+:root{--bg:#ffffff;--fg:#1f2328;--muted:#656d76;--line:#d0d7de;--accent:#0969da;--card:#f6f8fa;--podium:#fff8e1}
+@media (prefers-color-scheme:dark){:root{--bg:#0d1117;--fg:#e6edf3;--muted:#8b949e;--line:#30363d;--accent:#58a6ff;--card:#161b22;--podium:#1c1a12}}
+*{box-sizing:border-box}
+html{scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:920px;margin:0 auto;padding:0 20px}
+header.hero{padding:48px 0 16px}
+h1{margin:0 0 8px;font-size:2.2rem;letter-spacing:-.02em}
+.lede{margin:0 0 8px;font-size:1.1rem;color:var(--muted);max-width:60ch}
+.meta{margin:0;color:var(--muted);font-size:.9rem}
+.meta a{color:inherit;text-decoration:underline}
+.controls{position:sticky;top:0;z-index:2;background:var(--bg);border-bottom:1px solid var(--line);padding:12px 0}
+.controls .wrap{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.controls input,.controls select{font:inherit;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;padding:8px 10px}
+.controls input{flex:1;min-width:200px}
+#count{color:var(--muted);font-size:.9rem;margin-left:auto}
+nav.toc{display:flex;flex-wrap:wrap;gap:6px;padding:20px 0 4px}
+nav.toc a{font-size:.85rem;padding:4px 10px;border:1px solid var(--line);border-radius:999px;color:var(--fg);background:var(--card)}
+nav.toc a small{color:var(--muted);margin-left:4px}
+section.category{padding:28px 0 4px}
+section.category h2{margin:0 0 4px;font-size:1.4rem}
+section.category h2 a{color:inherit}
+section.category .desc{margin:0 0 12px;color:var(--muted)}
+ol.entries{list-style:none;margin:0;padding:0;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+li.entry{display:flex;gap:12px;align-items:flex-start;padding:10px 14px;border-top:1px solid var(--line)}
+li.entry:first-child{border-top:0}
+li.entry.podium{background:var(--podium)}
+li.entry:target{outline:2px solid var(--accent);outline-offset:-2px}
+.rank{flex:0 0 2em;text-align:center;font-variant-numeric:tabular-nums;color:var(--muted);line-height:1.5}
+.body{flex:1;min-width:0}
+.name{font-weight:600}
+.repo{color:var(--muted);font-size:.85rem;margin-left:6px}
+.body p{margin:2px 0 0}
+.stars{flex:0 0 auto;font-variant-numeric:tabular-nums;color:var(--muted);white-space:nowrap}
+.empty{display:none;color:var(--muted);padding:40px 0;text-align:center}
+footer{margin:48px 0 40px;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line);padding-top:16px}
+@media (max-width:600px){.stars{display:none}h1{font-size:1.8rem}}
+</style>
+</head>
+<body>
+<header class="hero"><div class="wrap">
+<h1>{{.Title}}</h1>
+<p class="lede">{{.Description}}</p>
+<p class="meta">{{.Total}} projects in {{len .Categories}} categories{{if .Updated}} · stars refreshed {{.Updated}}{{end}} · <a href="{{.RepoURL}}">GitHub</a> · <a href="{{.RepoURL}}/blob/{{.Branch}}/CONTRIBUTING.md">Contribute</a></p>
+</div></header>
+<div class="controls"><div class="wrap">
+<input id="q" type="search" placeholder="Search projects…" aria-label="Search projects" autocomplete="off">
+<select id="cat" aria-label="Category"><option value="">All categories</option>{{range .Categories}}<option value="{{.ID}}">{{.Name}}</option>{{end}}</select>
+<select id="sort" aria-label="Sort"><option value="stars">Most stars</option><option value="added">Recently added</option><option value="name">Name</option></select>
+<span id="count"></span>
+</div></div>
+<div class="wrap">
+<nav class="toc">{{range .Categories}}<a href="#{{.ID}}">{{.Name}}<small>{{len .Entries}}</small></a>{{end}}</nav>
+<main>
+{{range .Categories}}<section class="category" id="{{.ID}}" data-id="{{.ID}}">
+<h2><a href="#{{.ID}}">{{.Name}}</a></h2>
+{{with .Description}}<p class="desc">{{.}}</p>{{end}}
+<ol class="entries">
+{{range .Entries}}<li class="entry{{if .Medal}} podium{{end}}" id="{{.Slug}}" data-name="{{.Name}}" data-stars="{{.Stars}}" data-added="{{.Added}}" data-search="{{.Search}}">
+<span class="rank">{{if .Medal}}{{.Medal}}{{else}}{{.Rank}}{{end}}</span>
+<div class="body"><a class="name" href="{{.URL}}">{{.Name}}</a><span class="repo">{{.Repo}}</span><p>{{.Description}}</p></div>
+<span class="stars" title="GitHub stars">★ {{.StarsText}}</span>
+</li>
+{{end}}</ol>
+</section>
+{{end}}<p class="empty" id="empty">Nothing matches.</p>
+</main>
+<footer>
+<p>Every entry is added by a human through a pull request and checked against the <a href="{{.RepoURL}}/blob/{{.Branch}}/CONTRIBUTING.md#entry-rules">entry rules</a> by CI. Archived repositories are removed automatically. Sorted by GitHub stars within each category; the top {{.Podium}} are highlighted.</p>
+<p>Released under <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a>. Generated from <a href="{{.RepoURL}}">{{.Repo}}</a>.</p>
+</footer>
+</div>
+<script>
+(function(){
+  var q=document.getElementById('q'),cat=document.getElementById('cat'),sort=document.getElementById('sort'),count=document.getElementById('count'),empty=document.getElementById('empty');
+  var sections=Array.prototype.slice.call(document.querySelectorAll('section.category'));
+  var total=document.querySelectorAll('li.entry').length;
+  function cmp(s){
+    if(s==='name')return function(a,b){return a.dataset.name.localeCompare(b.dataset.name)};
+    if(s==='added')return function(a,b){return b.dataset.added.localeCompare(a.dataset.added)||(b.dataset.stars-a.dataset.stars)};
+    return function(a,b){return (b.dataset.stars-a.dataset.stars)||a.dataset.name.localeCompare(b.dataset.name)};
+  }
+  function apply(){
+    var term=q.value.trim().toLowerCase(),c=cat.value,order=cmp(sort.value),shown=0;
+    sections.forEach(function(sec){
+      var list=sec.querySelector('ol.entries'),items=Array.prototype.slice.call(list.children),visible=0;
+      items.forEach(function(li){var ok=(!c||sec.dataset.id===c)&&(!term||li.dataset.search.indexOf(term)>=0);li.hidden=!ok;if(ok)visible++});
+      items.sort(order).forEach(function(li){list.appendChild(li)});
+      sec.hidden=visible===0;shown+=visible;
+    });
+    empty.style.display=shown?'none':'block';
+    count.textContent=shown===total?total+' projects':shown+' of '+total;
+  }
+  q.addEventListener('input',apply);cat.addEventListener('change',apply);sort.addEventListener('change',apply);
+  apply();
+})();
+</script>
+</body>
+</html>

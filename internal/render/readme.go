@@ -63,6 +63,7 @@ func README(l *list.List, m *list.Metadata, now time.Time) []byte {
 		w(" Stars were last refreshed on %s.", m.UpdatedAt.UTC().Format("2006-01-02"))
 	}
 	w("\n\n")
+	w("Search, filter and sort the full list at [%s](%s).\n\n", strings.TrimSuffix(strings.TrimPrefix(l.Meta.SiteURL(), "https://"), "/"), l.Meta.SiteURL())
 
 	w("## Contents\n\n")
 	for _, c := range categories {
