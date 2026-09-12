@@ -1,0 +1,9 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "repo": "jmoiron/sqlx",
+  "description": "Extensions to database/sql for scanning rows into structs and named queries.",
+  "category": "databases",
+  "exempt": [
+    "inactive"
+  ]
+}
