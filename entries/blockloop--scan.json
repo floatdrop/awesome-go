@@ -2,5 +2,6 @@
   "$schema": "../schema/entry.schema.json",
   "repo": "blockloop/scan",
   "description": "Map database/sql rows onto structs, slices and primitives using struct tags.",
-  "category": "databases"
+  "category": "databases",
+  "added": "2026-09-12"
 }

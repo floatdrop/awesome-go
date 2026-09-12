@@ -28,6 +28,15 @@
       "created_at": "2016-03-23T07:18:52Z",
       "pushed_at": "2026-08-31T13:55:41Z"
     },
+    "blockloop/scan": {
+      "stars": 615,
+      "archived": false,
+      "is_go": true,
+      "language": "Go",
+      "license": "MIT",
+      "created_at": "2017-11-27T23:22:18Z",
+      "pushed_at": "2026-08-20T11:02:42Z"
+    },
     "charmbracelet/bubbletea": {
       "stars": 44916,
       "archived": false,
@@ -162,6 +171,15 @@
       "license": "MIT",
       "created_at": "2019-06-21T21:11:35Z",
       "pushed_at": "2026-09-11T21:28:29Z"
+    },
+    "stretchr/testify": {
+      "stars": 26203,
+      "archived": false,
+      "is_go": true,
+      "language": "Go",
+      "license": "MIT",
+      "created_at": "2012-10-16T16:43:17Z",
+      "pushed_at": "2026-09-02T05:37:01Z"
     },
     "wailsapp/wails": {
       "stars": 36226,
