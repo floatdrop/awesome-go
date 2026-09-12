@@ -8,7 +8,7 @@ Thanks for helping keep this list short and honest. The whole point of the list 
 - `list.json` holds the categories, the policy thresholds and the list metadata. It changes rarely.
 - `README.md`, `metadata.json` and everything under `badges/` are generated. CI rejects pull requests that touch them.
 - A nightly job refreshes star counts, removes repositories that were archived or deleted, and regenerates the README and badges. Nobody has to remember to clean up.
-- Within each category the most-starred projects take the podium (🥇🥈🥉) and the rest are listed as contenders. Stars decide the order, humans decide who is on the list at all.
+- Within each category the five most-starred projects are shown first, the top three with medals (🥇🥈🥉), and the rest are folded under a collapsed "More" block. Stars decide the order, humans decide who is on the list at all.
 
 ## Adding an entry
 

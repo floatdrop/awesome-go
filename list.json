@@ -5,7 +5,7 @@
     "repo": "floatdrop/awesome-go",
     "branch": "main",
     "description": "A short, hand-curated list of Go libraries and tools that are actually worth using. Not a directory of everything that exists.",
-    "podium": 3
+    "podium": 5
   },
   "policy": {
     "min_age_days": 90,

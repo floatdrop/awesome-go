@@ -38,8 +38,9 @@ type Meta struct {
 	Repo        string `json:"repo"`
 	Branch      string `json:"branch"`
 	Description string `json:"description"`
-	// Podium is how many entries per category are shown with medals before the
-	// rest is collapsed into a "contenders" block. Zero shows a flat list.
+	// Podium is how many entries per category are shown before the rest is
+	// collapsed into a "More" block. The first three get medals. Zero shows a
+	// flat list.
 	Podium int `json:"podium"`
 }
 

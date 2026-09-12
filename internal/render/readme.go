@@ -49,7 +49,7 @@ func README(l *list.List, m *list.Metadata, now time.Time) []byte {
 	w("%d projects in %d categories. ", len(l.Entries), len(categories))
 	w("Every entry is added by a human through a pull request and checked against the [entry rules](CONTRIBUTING.md#entry-rules) by CI. ")
 	if l.Meta.Podium > 0 {
-		w("Within each category the %d most-starred projects take the podium and the rest are listed as contenders. ", l.Meta.Podium)
+		w("Within each category the %d most-starred projects are shown first and the rest are folded under More. ", l.Meta.Podium)
 	} else {
 		w("Entries are ordered by GitHub stars. ")
 	}
@@ -84,7 +84,7 @@ func README(l *list.List, m *list.Metadata, now time.Time) []byte {
 			w("- %s\n", item(r, medal(i, l.Meta.Podium)))
 		}
 		if rest := rs[podium:]; len(rest) > 0 {
-			w("\n<details>\n<summary>Contenders (%d)</summary>\n\n", len(rest))
+			w("\n<details>\n<summary>More (%d)</summary>\n\n", len(rest))
 			for _, r := range rest {
 				w("- %s\n", item(r, ""))
 			}

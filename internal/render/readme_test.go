@@ -40,7 +40,7 @@ func TestREADMEOrderAndPodium(t *testing.T) {
 		"## Web & HTTP\n\nServers.\n\n",
 		"- 🥇 [big](https://github.com/b/big) - Big. ★ 46k\n",
 		"- 🥈 [middle](https://github.com/c/mid) - Mid. ★ 2.1k\n",
-		"<summary>Contenders (2)</summary>\n\n- [small](https://github.com/a/small) - Small. ★ 120\n- [unknown](https://github.com/d/unknown) - Unknown.\n",
+		"<summary>More (2)</summary>\n\n- [small](https://github.com/a/small) - Small. ★ 120\n- [unknown](https://github.com/d/unknown) - Unknown.\n",
 		"last refreshed on 2026-09-12",
 	} {
 		if !strings.Contains(out, want) {

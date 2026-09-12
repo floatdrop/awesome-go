@@ -42,7 +42,7 @@
         "podium": {
           "type": "integer",
           "minimum": 0,
-          "description": "Entries per category shown with medals; 0 disables the podium."
+          "description": "Entries per category shown before the rest is collapsed under More; the first three get medals. 0 shows a flat list."
         }
       }
     },
