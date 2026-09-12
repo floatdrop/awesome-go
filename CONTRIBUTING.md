@@ -72,6 +72,7 @@ Contributors should not add exemptions themselves; propose the entry and make th
 
 Rules that need a human:
 
+- An entry earns its place in one of two ways. Either it covers a need that no listed project in its category covers, or it does the same job better than a listed project. In the second case say which one and why; replacing the weaker entry is a normal outcome, not a hostile one. "Also popular" is not a third way in.
 - The project must be something you would recommend to a colleague without caveats.
 - The category must fit. Suggest a new category in the PR if none does, with at least three candidate entries for it.
 - Deprecated, "maintenance mode" and thin wrappers around another listed project do not qualify even if they pass every automated check.

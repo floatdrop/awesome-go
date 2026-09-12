@@ -42,6 +42,7 @@ func TestREADMEOrderAndPodium(t *testing.T) {
 		"- 🥈 [middle](https://github.com/c/mid) - Mid. ★ 2.1k\n",
 		"<summary>More (2)</summary>\n\n- [small](https://github.com/a/small) - Small. ★ 120\n- [unknown](https://github.com/d/unknown) - Unknown.\n",
 		"last refreshed on 2026-09-12",
+		"An entry earns its place by covering something no listed project does, or by doing it better.",
 		"Search, filter and sort the full list at [x.github.io/y](https://x.github.io/y/).",
 	} {
 		if !strings.Contains(out, want) {
