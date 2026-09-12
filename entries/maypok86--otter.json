@@ -2,5 +2,6 @@
   "$schema": "../schema/entry.schema.json",
   "repo": "maypok86/otter",
   "description": "Concurrent in-memory cache tuned for high hit ratio and low contention.",
-  "category": "caching"
+  "category": "caching",
+  "added": "2026-09-12"
 }
