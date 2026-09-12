@@ -131,16 +131,6 @@
       "pushed_at": "2026-09-11T14:04:12Z",
       "fetched_at": "2026-09-12T15:49:51.600078561Z"
     },
-    "bytedance/sonic": {
-      "stars": 9595,
-      "archived": false,
-      "is_go": true,
-      "language": "Go",
-      "license": "Apache-2.0",
-      "created_at": "2021-05-25T03:52:51Z",
-      "pushed_at": "2026-09-11T02:46:20Z",
-      "fetched_at": "2026-09-12T15:49:51.600078561Z"
-    },
     "caarlos0/env": {
       "stars": 6308,
       "archived": false,
@@ -370,16 +360,6 @@
       "license": "MIT",
       "created_at": "2023-12-18T15:19:52Z",
       "pushed_at": "2026-05-04T05:01:02Z",
-      "fetched_at": "2026-09-12T15:49:51.600078561Z"
-    },
-    "goccy/go-json": {
-      "stars": 3707,
-      "archived": false,
-      "is_go": true,
-      "language": "Go",
-      "license": "MIT",
-      "created_at": "2020-04-19T09:32:36Z",
-      "pushed_at": "2026-07-23T23:52:43Z",
       "fetched_at": "2026-09-12T15:49:51.600078561Z"
     },
     "goccy/go-yaml": {
@@ -722,16 +702,6 @@
       "pushed_at": "2026-09-11T16:05:35Z",
       "fetched_at": "2026-09-12T15:49:51.600078561Z"
     },
-    "rs/zerolog": {
-      "stars": 12504,
-      "archived": false,
-      "is_go": true,
-      "language": "Go",
-      "license": "MIT",
-      "created_at": "2017-05-12T05:24:39Z",
-      "pushed_at": "2026-09-08T14:22:10Z",
-      "fetched_at": "2026-09-12T15:49:51.600078561Z"
-    },
     "samber/do": {
       "stars": 2810,
       "archived": false,
@@ -921,16 +891,6 @@
       "license": "Apache-2.0",
       "created_at": "2023-05-03T21:47:38Z",
       "pushed_at": "2026-08-25T23:59:55Z",
-      "fetched_at": "2026-09-12T15:49:51.600078561Z"
-    },
-    "uber-go/zap": {
-      "stars": 24656,
-      "archived": false,
-      "is_go": true,
-      "language": "Go",
-      "license": "MIT",
-      "created_at": "2016-02-18T19:52:56Z",
-      "pushed_at": "2026-08-31T18:59:30Z",
       "fetched_at": "2026-09-12T15:49:51.600078561Z"
     },
     "uptrace/bun": {

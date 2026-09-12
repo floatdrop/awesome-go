@@ -1,7 +1,0 @@
-{
-  "$schema": "../schema/entry.schema.json",
-  "repo": "bytedance/sonic",
-  "description": "JSON serialization and deserialization accelerated with JIT and SIMD.",
-  "category": "serialization",
-  "added": "2026-09-12"
-}

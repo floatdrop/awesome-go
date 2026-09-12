@@ -1,7 +1,0 @@
-{
-  "$schema": "../schema/entry.schema.json",
-  "repo": "goccy/go-json",
-  "description": "Drop-in replacement for encoding/json with much higher throughput.",
-  "category": "serialization",
-  "added": "2026-09-12"
-}

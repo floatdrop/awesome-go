@@ -3,7 +3,7 @@
 
 > A short, hand-curated list of Go libraries and tools that are actually worth using. Not a directory of everything that exists.
 
-98 projects in 19 categories. Every entry is added by a human through a pull request and checked against the [entry rules](CONTRIBUTING.md#entry-rules) by CI. Within each category the 5 most-starred projects are shown first and the rest are folded under More. Archived repositories are removed automatically. Stars were last refreshed on 2026-09-12.
+94 projects in 19 categories. Every entry is added by a human through a pull request and checked against the [entry rules](CONTRIBUTING.md#entry-rules) by CI. Within each category the 5 most-starred projects are shown first and the rest are folded under More. Archived repositories are removed automatically. Stars were last refreshed on 2026-09-12.
 
 ## Contents
 
@@ -75,9 +75,7 @@ Loading settings from files, environment variables and flags.
 
 Structured and leveled logging.
 
-- 🥇 [zap](https://github.com/uber-go/zap) - Structured, leveled logging with a focus on performance. ★ 25k
-- 🥈 [zerolog](https://github.com/rs/zerolog) - Zero-allocation JSON logger. ★ 13k
-- 🥉 [tint](https://github.com/lmittmann/tint) - Colorized slog handler for human-readable terminal output. ★ 1.4k
+- 🥇 [tint](https://github.com/lmittmann/tint) - Colorized slog handler for human-readable terminal output. ★ 1.4k
 
 ## Testing
 
@@ -119,10 +117,8 @@ Drivers, query builders, ORMs, migrations and embedded stores.
 JSON, YAML, TOML, MessagePack and friends.
 
 - 🥇 [gjson](https://github.com/tidwall/gjson) - JSON value lookup with a single-line path syntax. ★ 16k
-- 🥈 [sonic](https://github.com/bytedance/sonic) - JSON serialization and deserialization accelerated with JIT and SIMD. ★ 9.6k
-- 🥉 [toml](https://github.com/BurntSushi/toml) - Parser and encoder for TOML with reflection-based mapping to structs. ★ 5k
-- &emsp;&#8196; [go-json](https://github.com/goccy/go-json) - Drop-in replacement for encoding/json with much higher throughput. ★ 3.7k
-- &emsp;&#8196; [go-yaml](https://github.com/goccy/go-yaml) - YAML parser and encoder with precise error reporting and struct tags. ★ 2.2k
+- 🥈 [toml](https://github.com/BurntSushi/toml) - Parser and encoder for TOML with reflection-based mapping to structs. ★ 5k
+- 🥉 [go-yaml](https://github.com/goccy/go-yaml) - YAML parser and encoder with precise error reporting and struct tags. ★ 2.2k
 
 ## Validation
 

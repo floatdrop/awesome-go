@@ -1,7 +1,0 @@
-{
-  "$schema": "../schema/entry.schema.json",
-  "repo": "rs/zerolog",
-  "description": "Zero-allocation JSON logger.",
-  "category": "logging",
-  "added": "2026-09-12"
-}
