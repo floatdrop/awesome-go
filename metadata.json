@@ -1,6 +1,15 @@
 {
   "updated_at": "2026-09-12",
   "repos": {
+    "alecthomas/kong": {
+      "stars": 3173,
+      "archived": false,
+      "is_go": true,
+      "language": "Go",
+      "license": "MIT",
+      "created_at": "2018-04-10T06:50:32Z",
+      "pushed_at": "2026-09-08T20:10:44Z"
+    },
     "alitto/pond": {
       "stars": 2192,
       "archived": false,
@@ -83,7 +92,7 @@
       "pushed_at": "2026-06-18T07:33:22Z"
     },
     "jesseduffield/lazygit": {
-      "stars": 82272,
+      "stars": 82273,
       "archived": false,
       "is_go": true,
       "language": "Go",
