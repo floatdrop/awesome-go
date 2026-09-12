@@ -100,8 +100,8 @@ func (l *List) Validate(now time.Time) []Problem {
 		}
 		seenExempt := map[string]bool{}
 		for _, x := range e.Exempt {
-			if x != ExemptFork && x != ExemptInactive {
-				add("%s: unknown exemption %q (allowed: %s, %s)", where, x, ExemptFork, ExemptInactive)
+			if !KnownExemption(x) {
+				add("%s: unknown exemption %q (allowed: %s)", where, x, strings.Join(Exemptions, ", "))
 			}
 			if seenExempt[x] {
 				add("%s: duplicate exemption %q", where, x)

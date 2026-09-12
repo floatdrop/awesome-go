@@ -51,7 +51,7 @@ func TestValidateRejects(t *testing.T) {
 		{"future date", func(l *List) { l.Entries[0].Added = "2099-01-01" }, "future"},
 		{"bad category id", func(l *List) { l.Categories[0].ID = "Web Stuff"; l.Entries[0].Category = "Web Stuff" }, "kebab-case"},
 		{"bad list repo", func(l *List) { l.Meta.Repo = "awesome-go" }, "list.repo"},
-		{"unknown exemption", func(l *List) { l.Entries[0].Exempt = []string{"stars"} }, "unknown exemption"},
+		{"unknown exemption", func(l *List) { l.Entries[0].Exempt = []string{"license"} }, "unknown exemption"},
 	}
 	for _, tc := range cases {
 		t.Run(tc.name, func(t *testing.T) {
@@ -165,8 +165,12 @@ func TestPolicyCheck(t *testing.T) {
 	}
 	young := good
 	young.CreatedAt = now
-	if got := p.Check(young, now, Entry{Exempt: []string{ExemptFork, ExemptInactive}}); len(got) == 0 {
-		t.Fatal("age must not be waivable")
+	young.Stars = 2
+	if got := p.Check(young, now, Entry{Exempt: []string{ExemptFork, ExemptInactive}}); len(got) != 2 {
+		t.Fatalf("age and stars must fail without their own exemptions: %v", got)
+	}
+	if got := p.Check(young, now, Entry{Exempt: []string{ExemptAge, ExemptStars}}); len(got) != 0 {
+		t.Fatalf("age and stars exemptions not honoured: %v", got)
 	}
 	if _, dead := p.Dead(good); dead {
 		t.Fatal("good repo reported dead")

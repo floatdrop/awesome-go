@@ -61,12 +61,14 @@ Description rules, also enforced:
 - Does not mention Go or Golang. Everything here is Go.
 - Plain text: no Markdown, links or HTML.
 
-Two rules can be waived by a maintainer with an explicit `"exempt"` list on the entry, because automation gets them wrong for good projects:
+A maintainer can waive individual rules with an explicit `"exempt"` list on the entry. The waiver is part of the entry file, so it is visible in the diff, in the history and to anyone reading the data:
 
 - `"fork"`: the repository is a fork that became the maintained successor of its upstream (for example `go-viper/mapstructure`).
-- `"inactive"`: a finished library that has not needed a commit in a while but is still the right answer (for example `google/uuid`).
+- `"inactive"`: a finished library that has not needed a commit in a while but is still the right answer.
+- `"stars"`: below the star threshold but, in the maintainers' judgment, already the best option in its category.
+- `"age"`: younger than the age threshold; use together with `"stars"` for a new project the maintainers stand behind.
 
-Age and star thresholds cannot be waived. Every exemption must be justified in the pull request, and the nightly job keeps listing inactive projects in its summary so they get looked at again.
+Contributors should not add exemptions themselves; propose the entry and make the case in the pull request. Every exemption must be justified there, and the nightly job keeps listing inactive projects in its summary so they get looked at again.
 
 Rules that need a human:
 

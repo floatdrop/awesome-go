@@ -40,7 +40,9 @@
       "items": {
         "enum": [
           "fork",
-          "inactive"
+          "inactive",
+          "stars",
+          "age"
         ]
       },
       "description": "Policy rules a maintainer waived for this entry; must be justified in the PR."

@@ -81,7 +81,8 @@ type Entry struct {
 	Category    string `json:"category"`
 	Added       string `json:"added,omitempty"`
 	// Exempt lists policy rules a maintainer has consciously waived for this
-	// entry (see ExemptFork, ExemptInactive). Age and stars cannot be waived.
+	// entry (see the Exempt* constants). Every waiver is a visible, reviewable
+	// exception in the entry file, never a silent change to the policy.
 	Exempt []string `json:"exempt,omitempty"`
 
 	file string // basename the entry was loaded from; empty when created in memory
@@ -91,7 +92,22 @@ type Entry struct {
 const (
 	ExemptFork     = "fork"     // a fork that became the maintained successor
 	ExemptInactive = "inactive" // a finished library that does not need commits
+	ExemptStars    = "stars"    // below the star threshold but worth listing anyway
+	ExemptAge      = "age"      // younger than the age threshold
 )
+
+// Exemptions is every exemption a maintainer may grant.
+var Exemptions = []string{ExemptFork, ExemptInactive, ExemptStars, ExemptAge}
+
+// KnownExemption reports whether rule is one of Exemptions.
+func KnownExemption(rule string) bool {
+	for _, x := range Exemptions {
+		if x == rule {
+			return true
+		}
+	}
+	return false
+}
 
 // IsExempt reports whether the entry waives the given rule.
 func (e Entry) IsExempt(rule string) bool {
