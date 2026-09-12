@@ -1,0 +1,6 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "repo": "knadh/koanf",
+  "description": "Configuration management with pluggable providers and parsers merged in explicit layers.",
+  "category": "configuration"
+}
