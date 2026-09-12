@@ -29,7 +29,11 @@ jobs:
     name: Refresh, prune, generate
     runs-on: ubuntu-latest
     steps:
+      # main is protected; the bot pushes with a write deploy key that the
+      # ruleset exempts. GITHUB_TOKEN cannot bypass rules on a user-owned repo.
       - uses: actions/checkout@v4
+        with:
+          ssh-key: ${{ secrets.SYNC_DEPLOY_KEY }}
       - uses: actions/setup-go@v5
         with:
           go-version-file: go.mod
