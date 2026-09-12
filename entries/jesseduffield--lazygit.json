@@ -1,0 +1,6 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "repo": "jesseduffield/lazygit",
+  "description": "Terminal UI for git with staging, rebasing, stashing and worktrees a keystroke away.",
+  "category": "developer-tools"
+}
