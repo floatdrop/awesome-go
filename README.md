@@ -34,8 +34,8 @@ HTTP servers, routers and full-stack web frameworks.
 - 🥇 [gin](https://github.com/gin-gonic/gin) - HTTP web framework with a martini-like API and strong routing performance. ★ 89k
 - 🥈 [fiber](https://github.com/gofiber/fiber) - Express-inspired web framework built on top of Fasthttp. ★ 40k
 - 🥉 [echo](https://github.com/labstack/echo) - Minimalist web framework with a focus on performance and extensibility. ★ 33k
-- [fasthttp](https://github.com/valyala/fasthttp) - HTTP implementation tuned for high-throughput workloads. ★ 23k
-- [chi](https://github.com/go-chi/chi) - Lightweight, idiomatic and composable router built on net/http. ★ 23k
+- &emsp; [fasthttp](https://github.com/valyala/fasthttp) - HTTP implementation tuned for high-throughput workloads. ★ 23k
+- &emsp; [chi](https://github.com/go-chi/chi) - Lightweight, idiomatic and composable router built on net/http. ★ 23k
 
 <details>
 <summary>More (1)</summary>
@@ -51,8 +51,8 @@ Argument parsing, terminal UIs and everything else for building CLIs.
 - 🥇 [bubbletea](https://github.com/charmbracelet/bubbletea) - Framework for terminal user interfaces based on The Elm Architecture. ★ 45k
 - 🥈 [cobra](https://github.com/spf13/cobra) - Framework for CLI applications with subcommands, flags and shell completions. ★ 45k
 - 🥉 [cli](https://github.com/urfave/cli) - Declarative library for building command line applications. ★ 24k
-- [lipgloss](https://github.com/charmbracelet/lipgloss) - Style definitions for nice terminal layouts. ★ 12k
-- [progressbar](https://github.com/schollz/progressbar) - Thread-safe progress bar for terminal applications. ★ 4.7k
+- &emsp; [lipgloss](https://github.com/charmbracelet/lipgloss) - Style definitions for nice terminal layouts. ★ 12k
+- &emsp; [progressbar](https://github.com/schollz/progressbar) - Thread-safe progress bar for terminal applications. ★ 4.7k
 
 <details>
 <summary>More (2)</summary>
@@ -69,7 +69,7 @@ Loading settings from files, environment variables and flags.
 - 🥇 [viper](https://github.com/spf13/viper) - Complete configuration solution with files, environment variables, flags and remote stores. ★ 30k
 - 🥈 [godotenv](https://github.com/joho/godotenv) - Load environment variables from .env files. ★ 11k
 - 🥉 [env](https://github.com/caarlos0/env) - Parse environment variables into structs using tags. ★ 6.3k
-- [koanf](https://github.com/knadh/koanf) - Lightweight, extensible configuration management with pluggable providers and parsers. ★ 4.2k
+- &emsp; [koanf](https://github.com/knadh/koanf) - Lightweight, extensible configuration management with pluggable providers and parsers. ★ 4.2k
 
 ## Logging
 
@@ -86,8 +86,8 @@ Assertions, mocks, fixtures and integration test helpers.
 - 🥇 [testify](https://github.com/stretchr/testify) - Assertions, mocks and suites that work with the standard testing package. ★ 26k
 - 🥈 [ginkgo](https://github.com/onsi/ginkgo) - BDD-style testing framework paired with the Gomega matcher library. ★ 9.1k
 - 🥉 [go-sqlmock](https://github.com/DATA-DOG/go-sqlmock) - SQL driver mock for testing database interactions without a real database. ★ 6.6k
-- [testcontainers-go](https://github.com/testcontainers/testcontainers-go) - Throwaway Docker containers for integration tests. ★ 5k
-- [mock](https://github.com/uber-go/mock) - Mocking framework with code generation via mockgen. ★ 3.4k
+- &emsp; [testcontainers-go](https://github.com/testcontainers/testcontainers-go) - Throwaway Docker containers for integration tests. ★ 5k
+- &emsp; [mock](https://github.com/uber-go/mock) - Mocking framework with code generation via mockgen. ★ 3.4k
 
 ## Databases & SQL
 
@@ -96,8 +96,8 @@ Drivers, query builders, ORMs, migrations and embedded stores.
 - 🥇 [gorm](https://github.com/go-gorm/gorm) - Developer-friendly ORM with associations, hooks, transactions and migrations. ★ 40k
 - 🥈 [go-redis](https://github.com/redis/go-redis) - Redis client supporting clusters, sentinels, pipelines and pub/sub. ★ 22k
 - 🥉 [migrate](https://github.com/golang-migrate/migrate) - Database migrations as a CLI and library with many drivers. ★ 19k
-- [sqlc](https://github.com/sqlc-dev/sqlc) - Compiler that generates type-safe code from SQL queries. ★ 18k
-- [sqlx](https://github.com/jmoiron/sqlx) - Extensions to database/sql for scanning rows into structs and named queries. ★ 18k
+- &emsp; [sqlc](https://github.com/sqlc-dev/sqlc) - Compiler that generates type-safe code from SQL queries. ★ 18k
+- &emsp; [sqlx](https://github.com/jmoiron/sqlx) - Extensions to database/sql for scanning rows into structs and named queries. ★ 18k
 
 <details>
 <summary>More (9)</summary>
@@ -121,8 +121,8 @@ JSON, YAML, TOML, MessagePack and friends.
 - 🥇 [gjson](https://github.com/tidwall/gjson) - JSON value lookup with a single-line path syntax. ★ 16k
 - 🥈 [sonic](https://github.com/bytedance/sonic) - JSON serialization and deserialization accelerated with JIT and SIMD. ★ 9.6k
 - 🥉 [toml](https://github.com/BurntSushi/toml) - Parser and encoder for TOML with reflection-based mapping to structs. ★ 5k
-- [go-json](https://github.com/goccy/go-json) - Drop-in replacement for encoding/json with much higher throughput. ★ 3.7k
-- [go-yaml](https://github.com/goccy/go-yaml) - YAML parser and encoder with precise error reporting and struct tags. ★ 2.2k
+- &emsp; [go-json](https://github.com/goccy/go-json) - Drop-in replacement for encoding/json with much higher throughput. ★ 3.7k
+- &emsp; [go-yaml](https://github.com/goccy/go-yaml) - YAML parser and encoder with precise error reporting and struct tags. ★ 2.2k
 
 ## Validation
 
@@ -152,7 +152,7 @@ In-memory caches and eviction policies.
 - 🥇 [bigcache](https://github.com/allegro/bigcache) - Efficient in-memory cache for gigabytes of data without GC overhead. ★ 8.2k
 - 🥈 [ristretto](https://github.com/dgraph-io/ristretto) - Concurrent cache with admission and eviction policies tuned for hit ratio. ★ 7k
 - 🥉 [golang-lru](https://github.com/hashicorp/golang-lru) - Thread-safe fixed-size LRU and 2Q caches. ★ 5.1k
-- [otter](https://github.com/maypok86/otter) - Lock-free cache with S3-FIFO eviction and high hit ratio. ★ 2.7k
+- &emsp; [otter](https://github.com/maypok86/otter) - Lock-free cache with S3-FIFO eviction and high hit ratio. ★ 2.7k
 
 ## HTTP Clients
 
@@ -169,8 +169,8 @@ Message brokers, streaming platforms and task queues.
 - 🥇 [asynq](https://github.com/hibiken/asynq) - Distributed task queue backed by Redis. ★ 14k
 - 🥈 [watermill](https://github.com/ThreeDotsLabs/watermill) - Library for building event-driven applications over pub/sub backends. ★ 9.9k
 - 🥉 [kafka-go](https://github.com/segmentio/kafka-go) - Kafka client with low-level and high-level APIs. ★ 8.6k
-- [nats.go](https://github.com/nats-io/nats.go) - Client for the NATS messaging system. ★ 6.7k
-- [franz-go](https://github.com/twmb/franz-go) - Feature-complete Kafka client with transactions and consumer groups. ★ 3.1k
+- &emsp; [nats.go](https://github.com/nats-io/nats.go) - Client for the NATS messaging system. ★ 6.7k
+- &emsp; [franz-go](https://github.com/twmb/franz-go) - Feature-complete Kafka client with transactions and consumer groups. ★ 3.1k
 
 <details>
 <summary>More (1)</summary>
@@ -186,8 +186,8 @@ gRPC, RPC frameworks, GraphQL and OpenAPI tooling.
 - 🥇 [grpc-go](https://github.com/grpc/grpc-go) - Official gRPC implementation. ★ 23k
 - 🥈 [swag](https://github.com/swaggo/swag) - Generate OpenAPI documentation from source annotations. ★ 13k
 - 🥉 [gqlgen](https://github.com/99designs/gqlgen) - Schema-first GraphQL server generator. ★ 11k
-- [huma](https://github.com/danielgtaylor/huma) - Framework for HTTP APIs with OpenAPI 3 generation and validation. ★ 4.4k
-- [connect-go](https://github.com/connectrpc/connect-go) - Simple RPC over HTTP/1.1 and HTTP/2 with gRPC compatibility. ★ 4.1k
+- &emsp; [huma](https://github.com/danielgtaylor/huma) - Framework for HTTP APIs with OpenAPI 3 generation and validation. ★ 4.4k
+- &emsp; [connect-go](https://github.com/connectrpc/connect-go) - Simple RPC over HTTP/1.1 and HTTP/2 with gRPC compatibility. ★ 4.1k
 
 ## Authentication & Authorization
 
@@ -196,8 +196,8 @@ Tokens, sessions, OAuth and access control.
 - 🥇 [casbin](https://github.com/apache/casbin) - Authorization library supporting ACL, RBAC and ABAC models. ★ 20k
 - 🥈 [jwt](https://github.com/golang-jwt/jwt) - JSON Web Token implementation. ★ 9.2k
 - 🥉 [goth](https://github.com/markbates/goth) - Multi-provider OAuth authentication for web applications. ★ 6.6k
-- [scs](https://github.com/alexedwards/scs) - HTTP session management with pluggable stores. ★ 2.6k
-- [go-oidc](https://github.com/coreos/go-oidc) - OpenID Connect client with verification of ID tokens. ★ 2.5k
+- &emsp; [scs](https://github.com/alexedwards/scs) - HTTP session management with pluggable stores. ★ 2.6k
+- &emsp; [go-oidc](https://github.com/coreos/go-oidc) - OpenID Connect client with verification of ID tokens. ★ 2.5k
 
 <details>
 <summary>More (1)</summary>
@@ -228,8 +228,8 @@ General-purpose helpers that end up in every project.
 - 🥇 [lo](https://github.com/samber/lo) - Lodash-style helper functions built on generics. ★ 21k
 - 🥈 [fsnotify](https://github.com/fsnotify/fsnotify) - Cross-platform filesystem notifications. ★ 11k
 - 🥉 [errors](https://github.com/pkg/errors) - Error handling primitives with stack traces. ★ 8.3k
-- [afero](https://github.com/spf13/afero) - Filesystem abstraction with in-memory, OS and composable backends. ★ 6.7k
-- [uuid](https://github.com/google/uuid) - Generation and parsing of UUIDs per RFC 4122 and DCE 1.1. ★ 6.1k
+- &emsp; [afero](https://github.com/spf13/afero) - Filesystem abstraction with in-memory, OS and composable backends. ★ 6.7k
+- &emsp; [uuid](https://github.com/google/uuid) - Generation and parsing of UUIDs per RFC 4122 and DCE 1.1. ★ 6.1k
 
 <details>
 <summary>More (6)</summary>
@@ -250,8 +250,8 @@ Linters, build tools, debuggers and code generators.
 - 🥇 [delve](https://github.com/go-delve/delve) - Debugger with support for goroutines, breakpoints and remote debugging. ★ 25k
 - 🥈 [air](https://github.com/air-verse/air) - Live reload for development. ★ 24k
 - 🥉 [golangci-lint](https://github.com/golangci/golangci-lint) - Linters runner that aggregates dozens of linters with caching and parallelism. ★ 19k
-- [task](https://github.com/go-task/task) - Build tool and task runner with a simple YAML syntax. ★ 16k
-- [goreleaser](https://github.com/goreleaser/goreleaser) - Release automation for building, packaging and publishing binaries. ★ 16k
+- &emsp; [task](https://github.com/go-task/task) - Build tool and task runner with a simple YAML syntax. ★ 16k
+- &emsp; [goreleaser](https://github.com/goreleaser/goreleaser) - Release automation for building, packaging and publishing binaries. ★ 16k
 
 <details>
 <summary>More (4)</summary>

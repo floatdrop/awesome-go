@@ -13,6 +13,11 @@ import (
 
 var medals = []string{"🥇", "🥈", "🥉"}
 
+// blank pads podium entries without a medal so the names line up with the
+// medalled ones above them. An em space is the closest text-only match for
+// an emoji's width.
+const blank = "&emsp;"
+
 // Header is the first line of the generated README; CI uses it to recognise
 // the file as generated.
 const Header = "<!-- Generated from list.json and entries/ by `go run ./cmd/awesome generate`. Do not edit by hand. -->"
@@ -101,8 +106,11 @@ func README(l *list.List, m *list.Metadata, now time.Time) []byte {
 }
 
 func medal(i, podium int) string {
-	if podium <= 0 || i >= len(medals) {
+	if podium <= 0 {
 		return ""
+	}
+	if i >= len(medals) {
+		return blank
 	}
 	return medals[i]
 }
