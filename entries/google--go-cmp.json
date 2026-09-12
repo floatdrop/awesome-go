@@ -2,5 +2,6 @@
   "$schema": "../schema/entry.schema.json",
   "repo": "google/go-cmp",
   "description": "Equality comparison of arbitrary values for tests, with readable diffs and custom options.",
-  "category": "testing"
+  "category": "testing",
+  "added": "2026-09-12"
 }
