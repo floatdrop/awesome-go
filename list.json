@@ -28,6 +28,11 @@
       "description": "Argument parsing, terminal UIs and everything else for building CLIs."
     },
     {
+      "id": "gui",
+      "name": "GUI & Desktop",
+      "description": "Desktop application frameworks and GUI toolkits."
+    },
+    {
       "id": "configuration",
       "name": "Configuration",
       "description": "Loading settings from files, environment variables and flags."
