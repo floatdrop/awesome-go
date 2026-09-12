@@ -23,6 +23,9 @@ jobs:
   validate:
     name: Validate entries
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
     steps:
       - uses: actions/checkout@v4
         with:
@@ -58,11 +61,36 @@ jobs:
             exit 1
           fi
 
+      - name: Snapshot the base branch
+        if: github.event_name == 'pull_request'
+        run: |
+          mkdir -p "$RUNNER_TEMP/base"
+          git archive "origin/${{ github.base_ref }}" list.json entries | tar -x -C "$RUNNER_TEMP/base"
+
+      - name: Show the reviewer what the category already holds
+        if: github.event_name == 'pull_request'
+        continue-on-error: true # read-only token on fork PRs cannot comment; the job summary still has it
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ github.event.pull_request.number }}
+          REPO: ${{ github.repository }}
+        run: |
+          go run ./cmd/awesome compare -base "$RUNNER_TEMP/base" > "$RUNNER_TEMP/compare.md"
+          if [ ! -s "$RUNNER_TEMP/compare.md" ]; then
+            echo "No new entries in this pull request."
+            exit 0
+          fi
+          cat "$RUNNER_TEMP/compare.md" >> "$GITHUB_STEP_SUMMARY"
+          existing=$(gh api "repos/$REPO/issues/$PR/comments" --paginate \
+            --jq '.[] | select(.body | startswith("<!-- awesome-compare -->")) | .id' | head -n 1)
+          if [ -n "$existing" ]; then
+            gh api -X PATCH "repos/$REPO/issues/comments/$existing" -F body=@"$RUNNER_TEMP/compare.md" > /dev/null
+          else
+            gh pr comment "$PR" --body-file "$RUNNER_TEMP/compare.md"
+          fi
+
       - name: Repository checks on GitHub (new and changed entries only)
         if: github.event_name == 'pull_request'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          mkdir -p "$RUNNER_TEMP/base"
-          git archive "origin/${{ github.base_ref }}" list.json entries | tar -x -C "$RUNNER_TEMP/base"
-          go run ./cmd/awesome validate -remote -base "$RUNNER_TEMP/base"
+        run: go run ./cmd/awesome validate -remote -base "$RUNNER_TEMP/base"

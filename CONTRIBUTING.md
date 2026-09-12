@@ -101,6 +101,7 @@ Everything is stdlib Go, run through `go run ./cmd/awesome <command>`:
 | --- | --- |
 | `validate` | Offline rules; `-remote` adds the GitHub checks, `-base DIR` limits them to entries not present under that directory. |
 | `fmt` | Rewrites `list.json` and `entries/` in canonical form and fixes file names; `-check` only verifies. |
+| `compare` | Prints what the categories of new entries already hold, as Markdown; CI posts it on the pull request. `-base DIR` selects the new entries. |
 | `refresh` | Fetches stars, activity and status into `metadata.json`, follows renames, stamps `added` dates. |
 | `prune` | Removes archived, disabled and deleted repositories; reports stale ones. |
 | `generate` | Writes `README.md`, `docs/index.html` and `badges/*.svg`. |
