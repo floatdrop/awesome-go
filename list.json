@@ -50,7 +50,7 @@
     {
       "id": "databases",
       "name": "Databases & SQL",
-      "description": "Drivers, query builders, ORMs, migrations and embedded stores."
+      "description": "Drivers, query builders, ORMs, migrations, embedded and distributed stores."
     },
     {
       "id": "serialization",
