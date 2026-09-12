@@ -432,16 +432,6 @@
       "pushed_at": "2026-09-09T19:01:15Z",
       "fetched_at": "2026-09-12T15:47:14.530199535Z"
     },
-    "google/uuid": {
-      "stars": 6144,
-      "archived": false,
-      "is_go": true,
-      "language": "Go",
-      "license": "BSD-3-Clause",
-      "created_at": "2016-02-12T22:17:59Z",
-      "pushed_at": "2024-11-14T17:05:06Z",
-      "fetched_at": "2026-09-12T15:47:14.530199535Z"
-    },
     "goreleaser/goreleaser": {
       "stars": 16029,
       "archived": false,

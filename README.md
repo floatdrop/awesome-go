@@ -3,7 +3,7 @@
 
 > A short, hand-curated list of Go libraries and tools that are actually worth using. Not a directory of everything that exists.
 
-99 projects in 19 categories. Every entry is added by a human through a pull request and checked against the [entry rules](CONTRIBUTING.md#entry-rules) by CI. Within each category the 5 most-starred projects are shown first and the rest are folded under More. Archived repositories are removed automatically. Stars were last refreshed on 2026-09-12.
+98 projects in 19 categories. Every entry is added by a human through a pull request and checked against the [entry rules](CONTRIBUTING.md#entry-rules) by CI. Within each category the 5 most-starred projects are shown first and the rest are folded under More. Archived repositories are removed automatically. Stars were last refreshed on 2026-09-12.
 
 ## Contents
 
@@ -229,12 +229,11 @@ General-purpose helpers that end up in every project.
 - 🥈 [fsnotify](https://github.com/fsnotify/fsnotify) - Cross-platform filesystem notifications. ★ 11k
 - 🥉 [errors](https://github.com/pkg/errors) - Error handling primitives with stack traces. ★ 8.3k
 - &emsp;&#8196; [afero](https://github.com/spf13/afero) - Filesystem abstraction with in-memory, OS and composable backends. ★ 6.7k
-- &emsp;&#8196; [uuid](https://github.com/google/uuid) - Generation and parsing of UUIDs per RFC 4122 and DCE 1.1. ★ 6.1k
+- &emsp;&#8196; [ulid](https://github.com/oklog/ulid) - Universally Unique Lexicographically Sortable Identifiers. ★ 5k
 
 <details>
-<summary>More (6)</summary>
+<summary>More (5)</summary>
 
-- [ulid](https://github.com/oklog/ulid) - Universally Unique Lexicographically Sortable Identifiers. ★ 5k
 - [go-humanize](https://github.com/dustin/go-humanize) - Formatters for byte sizes, times, numbers and ordinals in human-readable form. ★ 4.8k
 - [backoff](https://github.com/cenkalti/backoff) - Exponential backoff algorithm with retries and contexts. ★ 4.1k
 - [cast](https://github.com/spf13/cast) - Safe and easy casting between types. ★ 4k
