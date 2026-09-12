@@ -21,6 +21,7 @@ const usage = `usage: awesome <command> [flags]
 commands:
   validate   check list.json and entries/ against the entry rules (-remote also asks GitHub)
   fmt        rewrite list.json and entries/ in canonical form (-check only verifies)
+  compare    print what the categories of new entries already hold (-base DIR selects the new ones)
   refresh    fetch stars and status of every repository into metadata.json
   prune      remove archived, disabled and deleted repositories
   generate   write README.md, docs/ and badges/ from list.json, entries/ and metadata.json
@@ -42,6 +43,8 @@ func main() {
 		err = runValidate(args)
 	case "fmt":
 		err = runFmt(args)
+	case "compare":
+		err = runCompare(args)
 	case "refresh":
 		err = runRefresh(args)
 	case "prune":
