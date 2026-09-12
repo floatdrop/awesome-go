@@ -82,8 +82,6 @@ Archived and deleted repositories are removed automatically every night. Anythin
 
 Every listed project gets its own badge: a small SVG with the project name in a colour of its own.
 
-![badge example](badges/gin-gonic--gin.svg)
-
 Embed it in your README:
 
 ```markdown

@@ -1,7 +1,0 @@
-{
-  "$schema": "../schema/entry.schema.json",
-  "repo": "yuin/goldmark",
-  "description": "CommonMark-compliant Markdown parser that is easy to extend.",
-  "category": "text-and-templates",
-  "added": "2026-09-12"
-}

@@ -1,7 +1,0 @@
-{
-  "$schema": "../schema/entry.schema.json",
-  "repo": "PuerkitoBio/goquery",
-  "description": "HTML document traversal and manipulation with a jQuery-like API.",
-  "category": "text-and-templates",
-  "added": "2026-09-12"
-}

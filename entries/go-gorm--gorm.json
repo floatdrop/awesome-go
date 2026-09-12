@@ -1,7 +1,0 @@
-{
-  "$schema": "../schema/entry.schema.json",
-  "repo": "go-gorm/gorm",
-  "description": "Developer-friendly ORM with associations, hooks, transactions and migrations.",
-  "category": "databases",
-  "added": "2026-09-12"
-}

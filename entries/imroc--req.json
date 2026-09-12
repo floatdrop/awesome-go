@@ -1,7 +1,0 @@
-{
-  "$schema": "../schema/entry.schema.json",
-  "repo": "imroc/req",
-  "description": "HTTP client with a fluent API, debugging tools and HTTP/2 and HTTP/3 support.",
-  "category": "http-clients",
-  "added": "2026-09-12"
-}

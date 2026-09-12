@@ -1,7 +1,0 @@
-{
-  "$schema": "../schema/entry.schema.json",
-  "repo": "valyala/fasthttp",
-  "description": "HTTP implementation tuned for high-throughput workloads.",
-  "category": "web-frameworks",
-  "added": "2026-09-12"
-}

@@ -1,7 +1,0 @@
-{
-  "$schema": "../schema/entry.schema.json",
-  "repo": "nats-io/nats.go",
-  "description": "Client for the NATS messaging system.",
-  "category": "messaging",
-  "added": "2026-09-12"
-}

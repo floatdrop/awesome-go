@@ -1,7 +1,0 @@
-{
-  "$schema": "../schema/entry.schema.json",
-  "repo": "segmentio/kafka-go",
-  "description": "Kafka client with low-level and high-level APIs.",
-  "category": "messaging",
-  "added": "2026-09-12"
-}

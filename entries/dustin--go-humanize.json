@@ -1,7 +1,0 @@
-{
-  "$schema": "../schema/entry.schema.json",
-  "repo": "dustin/go-humanize",
-  "description": "Formatters for byte sizes, times, numbers and ordinals in human-readable form.",
-  "category": "utilities",
-  "added": "2026-09-12"
-}

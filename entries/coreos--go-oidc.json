@@ -1,7 +1,0 @@
-{
-  "$schema": "../schema/entry.schema.json",
-  "repo": "coreos/go-oidc",
-  "description": "OpenID Connect client with verification of ID tokens.",
-  "category": "auth",
-  "added": "2026-09-12"
-}

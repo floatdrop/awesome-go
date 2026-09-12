@@ -1,7 +1,0 @@
-{
-  "$schema": "../schema/entry.schema.json",
-  "repo": "dgraph-io/badger",
-  "description": "Embeddable, persistent key-value store built on LSM trees.",
-  "category": "databases",
-  "added": "2026-09-12"
-}

@@ -1,7 +1,0 @@
-{
-  "$schema": "../schema/entry.schema.json",
-  "repo": "golang-migrate/migrate",
-  "description": "Database migrations as a CLI and library with many drivers.",
-  "category": "databases",
-  "added": "2026-09-12"
-}

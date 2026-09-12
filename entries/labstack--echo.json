@@ -1,7 +1,0 @@
-{
-  "$schema": "../schema/entry.schema.json",
-  "repo": "labstack/echo",
-  "description": "Minimalist web framework with a focus on performance and extensibility.",
-  "category": "web-frameworks",
-  "added": "2026-09-12"
-}

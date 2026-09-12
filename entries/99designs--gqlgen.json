@@ -1,7 +1,0 @@
-{
-  "$schema": "../schema/entry.schema.json",
-  "repo": "99designs/gqlgen",
-  "description": "Schema-first GraphQL server generator.",
-  "category": "rpc-and-api",
-  "added": "2026-09-12"
-}

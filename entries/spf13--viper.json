@@ -1,7 +1,0 @@
-{
-  "$schema": "../schema/entry.schema.json",
-  "repo": "spf13/viper",
-  "description": "Complete configuration solution with files, environment variables, flags and remote stores.",
-  "category": "configuration",
-  "added": "2026-09-12"
-}

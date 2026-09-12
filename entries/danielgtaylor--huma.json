@@ -1,7 +1,0 @@
-{
-  "$schema": "../schema/entry.schema.json",
-  "repo": "danielgtaylor/huma",
-  "description": "Framework for HTTP APIs with OpenAPI 3 generation and validation.",
-  "category": "rpc-and-api",
-  "added": "2026-09-12"
-}

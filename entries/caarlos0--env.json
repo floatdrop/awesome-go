@@ -1,7 +1,0 @@
-{
-  "$schema": "../schema/entry.schema.json",
-  "repo": "caarlos0/env",
-  "description": "Parse environment variables into structs using tags.",
-  "category": "configuration",
-  "added": "2026-09-12"
-}

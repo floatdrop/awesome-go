@@ -1,7 +1,0 @@
-{
-  "$schema": "../schema/entry.schema.json",
-  "repo": "mvdan/gofumpt",
-  "description": "Stricter gofmt.",
-  "category": "developer-tools",
-  "added": "2026-09-12"
-}

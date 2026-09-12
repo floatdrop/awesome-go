@@ -1,7 +1,0 @@
-{
-  "$schema": "../schema/entry.schema.json",
-  "repo": "maypok86/otter",
-  "description": "Lock-free cache with S3-FIFO eviction and high hit ratio.",
-  "category": "caching",
-  "added": "2026-09-12"
-}

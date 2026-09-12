@@ -1,7 +1,0 @@
-{
-  "$schema": "../schema/entry.schema.json",
-  "repo": "go-playground/validator",
-  "description": "Struct and field validation using tags, with cross-field and cross-struct rules.",
-  "category": "validation",
-  "added": "2026-09-12"
-}

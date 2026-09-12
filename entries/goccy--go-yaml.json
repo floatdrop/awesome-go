@@ -1,7 +1,0 @@
-{
-  "$schema": "../schema/entry.schema.json",
-  "repo": "goccy/go-yaml",
-  "description": "YAML parser and encoder with precise error reporting and struct tags.",
-  "category": "serialization",
-  "added": "2026-09-12"
-}

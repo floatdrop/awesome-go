@@ -1,7 +1,0 @@
-{
-  "$schema": "../schema/entry.schema.json",
-  "repo": "twmb/franz-go",
-  "description": "Feature-complete Kafka client with transactions and consumer groups.",
-  "category": "messaging",
-  "added": "2026-09-12"
-}

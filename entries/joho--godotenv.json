@@ -1,7 +1,0 @@
-{
-  "$schema": "../schema/entry.schema.json",
-  "repo": "joho/godotenv",
-  "description": "Load environment variables from .env files.",
-  "category": "configuration",
-  "added": "2026-09-12"
-}

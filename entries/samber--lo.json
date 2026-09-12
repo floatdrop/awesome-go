@@ -1,7 +1,0 @@
-{
-  "$schema": "../schema/entry.schema.json",
-  "repo": "samber/lo",
-  "description": "Lodash-style helper functions built on generics.",
-  "category": "utilities",
-  "added": "2026-09-12"
-}

@@ -1,7 +1,0 @@
-{
-  "$schema": "../schema/entry.schema.json",
-  "repo": "DATA-DOG/go-sqlmock",
-  "description": "SQL driver mock for testing database interactions without a real database.",
-  "category": "testing",
-  "added": "2026-09-12"
-}

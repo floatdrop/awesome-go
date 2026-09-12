@@ -1,7 +1,0 @@
-{
-  "$schema": "../schema/entry.schema.json",
-  "repo": "dgraph-io/ristretto",
-  "description": "Concurrent cache with admission and eviction policies tuned for hit ratio.",
-  "category": "caching",
-  "added": "2026-09-12"
-}

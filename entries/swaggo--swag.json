@@ -1,7 +1,0 @@
-{
-  "$schema": "../schema/entry.schema.json",
-  "repo": "swaggo/swag",
-  "description": "Generate OpenAPI documentation from source annotations.",
-  "category": "rpc-and-api",
-  "added": "2026-09-12"
-}

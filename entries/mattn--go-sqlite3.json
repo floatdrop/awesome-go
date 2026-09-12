@@ -1,7 +1,0 @@
-{
-  "$schema": "../schema/entry.schema.json",
-  "repo": "mattn/go-sqlite3",
-  "description": "SQLite3 driver for database/sql based on cgo.",
-  "category": "databases",
-  "added": "2026-09-12"
-}

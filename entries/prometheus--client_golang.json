@@ -1,7 +1,0 @@
-{
-  "$schema": "../schema/entry.schema.json",
-  "repo": "prometheus/client_golang",
-  "description": "Official Prometheus instrumentation library.",
-  "category": "observability",
-  "added": "2026-09-12"
-}

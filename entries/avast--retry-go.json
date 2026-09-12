@@ -1,7 +1,0 @@
-{
-  "$schema": "../schema/entry.schema.json",
-  "repo": "avast/retry-go",
-  "description": "Simple retry mechanism with configurable backoff.",
-  "category": "utilities",
-  "added": "2026-09-12"
-}

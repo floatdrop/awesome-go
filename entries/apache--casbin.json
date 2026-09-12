@@ -1,7 +1,0 @@
-{
-  "$schema": "../schema/entry.schema.json",
-  "repo": "apache/casbin",
-  "description": "Authorization library supporting ACL, RBAC and ABAC models.",
-  "category": "auth",
-  "added": "2026-09-12"
-}

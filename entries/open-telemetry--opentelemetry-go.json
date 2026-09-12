@@ -1,7 +1,0 @@
-{
-  "$schema": "../schema/entry.schema.json",
-  "repo": "open-telemetry/opentelemetry-go",
-  "description": "OpenTelemetry API and SDK for traces, metrics and logs.",
-  "category": "observability",
-  "added": "2026-09-12"
-}

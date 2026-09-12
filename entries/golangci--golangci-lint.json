@@ -1,7 +1,0 @@
-{
-  "$schema": "../schema/entry.schema.json",
-  "repo": "golangci/golangci-lint",
-  "description": "Linters runner that aggregates dozens of linters with caching and parallelism.",
-  "category": "developer-tools",
-  "added": "2026-09-12"
-}

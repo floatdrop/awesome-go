@@ -1,7 +1,0 @@
-{
-  "$schema": "../schema/entry.schema.json",
-  "repo": "ent/ent",
-  "description": "Entity framework for modeling data as a graph schema with generated code.",
-  "category": "databases",
-  "added": "2026-09-12"
-}

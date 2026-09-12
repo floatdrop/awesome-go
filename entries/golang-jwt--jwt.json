@@ -1,7 +1,0 @@
-{
-  "$schema": "../schema/entry.schema.json",
-  "repo": "golang-jwt/jwt",
-  "description": "JSON Web Token implementation.",
-  "category": "auth",
-  "added": "2026-09-12"
-}

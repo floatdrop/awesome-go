@@ -1,7 +1,0 @@
-{
-  "$schema": "../schema/entry.schema.json",
-  "repo": "allegro/bigcache",
-  "description": "Efficient in-memory cache for gigabytes of data without GC overhead.",
-  "category": "caching",
-  "added": "2026-09-12"
-}

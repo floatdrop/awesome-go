@@ -1,7 +1,0 @@
-{
-  "$schema": "../schema/entry.schema.json",
-  "repo": "tidwall/gjson",
-  "description": "JSON value lookup with a single-line path syntax.",
-  "category": "serialization",
-  "added": "2026-09-12"
-}

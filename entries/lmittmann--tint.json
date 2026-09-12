@@ -1,7 +1,0 @@
-{
-  "$schema": "../schema/entry.schema.json",
-  "repo": "lmittmann/tint",
-  "description": "Colorized slog handler for human-readable terminal output.",
-  "category": "logging",
-  "added": "2026-09-12"
-}

@@ -1,7 +1,0 @@
-{
-  "$schema": "../schema/entry.schema.json",
-  "repo": "rabbitmq/amqp091-go",
-  "description": "Official RabbitMQ client for AMQP 0.9.1.",
-  "category": "messaging",
-  "added": "2026-09-12"
-}
