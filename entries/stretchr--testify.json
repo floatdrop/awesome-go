@@ -1,0 +1,6 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "repo": "stretchr/testify",
+  "description": "Assertions, mocks and suites that work with the standard testing package.",
+  "category": "testing"
+}
