@@ -35,7 +35,7 @@ func TestREADMEOrderAndPodium(t *testing.T) {
 		t.Fatalf("missing generated header")
 	}
 	for _, want := range []string{
-		"# Awesome Go [![Awesome]",
+		"# Awesome Go\n\n> Curated.\n",
 		"## Contents\n\n- [Web & HTTP](#web--http)\n",
 		"## Web & HTTP\n\nServers.\n\n",
 		"- 🥇 [big](https://github.com/b/big) - Big. ★ 46k\n",

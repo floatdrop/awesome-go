@@ -44,7 +44,7 @@ func README(l *list.List, m *list.Metadata, now time.Time) []byte {
 	}
 
 	w("%s\n", Header)
-	w("# %s [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)\n\n", l.Meta.Title)
+	w("# %s\n\n", l.Meta.Title)
 	w("> %s\n\n", l.Meta.Description)
 	w("%d projects in %d categories. ", len(l.Entries), len(categories))
 	w("Every entry is added by a human through a pull request and checked against the [entry rules](CONTRIBUTING.md#entry-rules) by CI. ")
