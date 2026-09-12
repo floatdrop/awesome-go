@@ -3,6 +3,7 @@
   "repo": "floatdrop/di",
   "description": "Dependency injection container with typed constructors, lifecycle hooks and scopes.",
   "category": "dependency-injection",
+  "added": "2026-09-12",
   "exempt": [
     "age",
     "stars"
