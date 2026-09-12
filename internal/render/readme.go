@@ -14,9 +14,9 @@ import (
 var medals = []string{"🥇", "🥈", "🥉"}
 
 // blank pads podium entries without a medal so the names line up with the
-// medalled ones above them. Emoji render a little wider than one em, so an
-// em space plus a thin space is the closest text-only match.
-const blank = "&emsp;&thinsp;"
+// medalled ones above them. Emoji render about a third wider than one em, so
+// an em space plus a three-per-em space is the closest text-only match.
+const blank = "&emsp;&#8196;"
 
 // Header is the first line of the generated README; CI uses it to recognise
 // the file as generated.
