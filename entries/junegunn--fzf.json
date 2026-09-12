@@ -2,5 +2,6 @@
   "$schema": "../schema/entry.schema.json",
   "repo": "junegunn/fzf",
   "description": "Interactive fuzzy finder for the command line, with shell integration for files and history.",
-  "category": "developer-tools"
+  "category": "developer-tools",
+  "added": "2026-09-12"
 }
