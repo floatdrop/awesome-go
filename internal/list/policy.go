@@ -69,12 +69,12 @@ func (p Policy) Check(m RepoMeta, now time.Time, e Entry) []string {
 	if m.Fork && !p.AllowForks && !e.IsExempt(ExemptFork) {
 		problems = append(problems, "repository is a fork")
 	}
-	if p.MinAgeDays > 0 && !m.CreatedAt.IsZero() {
+	if p.MinAgeDays > 0 && !m.CreatedAt.IsZero() && !e.IsExempt(ExemptAge) {
 		if age := daysBetween(m.CreatedAt, now); age < p.MinAgeDays {
 			problems = append(problems, fmt.Sprintf("repository is %d days old, must be at least %d", age, p.MinAgeDays))
 		}
 	}
-	if p.MinStars > 0 && m.Stars < p.MinStars {
+	if p.MinStars > 0 && m.Stars < p.MinStars && !e.IsExempt(ExemptStars) {
 		problems = append(problems, fmt.Sprintf("repository has %d stars, needs at least %d", m.Stars, p.MinStars))
 	}
 	if days, stale := p.Stale(m, now); stale && !e.IsExempt(ExemptInactive) {

@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "repo": "floatdrop/di",
+  "description": "Dependency injection container with typed constructors, lifecycle hooks and scopes.",
+  "category": "dependency-injection",
+  "exempt": [
+    "age",
+    "stars"
+  ]
+}
