@@ -2,5 +2,6 @@
   "$schema": "../schema/entry.schema.json",
   "repo": "wailsapp/wails",
   "description": "Desktop applications with a Go backend and a web frontend, using the native webview.",
-  "category": "gui"
+  "category": "gui",
+  "added": "2026-09-12"
 }

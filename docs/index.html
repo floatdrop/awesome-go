@@ -51,25 +51,52 @@ footer{margin:48px 0 40px;color:var(--muted);font-size:.9rem;border-top:1px soli
 <header class="hero"><div class="wrap">
 <h1>Awesome Go</h1>
 <p class="lede">A short, hand-curated list of Go libraries and tools that are actually worth using. Not a directory of everything that exists.</p>
-<p class="meta">12 projects in 8 categories · stars refreshed 2026-09-12 · <a href="https://github.com/floatdrop/awesome-go">GitHub</a> · <a href="https://github.com/floatdrop/awesome-go/blob/main/CONTRIBUTING.md">Contribute</a></p>
+<p class="meta">16 projects in 10 categories · stars refreshed 2026-09-12 · <a href="https://github.com/floatdrop/awesome-go">GitHub</a> · <a href="https://github.com/floatdrop/awesome-go/blob/main/CONTRIBUTING.md">Contribute</a></p>
 </div></header>
 <div class="controls"><div class="wrap">
 <input id="q" type="search" placeholder="Search projects…" aria-label="Search projects" autocomplete="off">
-<select id="cat" aria-label="Category"><option value="">All categories</option><option value="web-frameworks">Web Frameworks &amp; Routers</option><option value="configuration">Configuration</option><option value="logging">Logging</option><option value="dependency-injection">Dependency Injection</option><option value="concurrency">Concurrency</option><option value="caching">Caching</option><option value="networking">Networking &amp; Protocols</option><option value="developer-tools">Developer Tools</option></select>
+<select id="cat" aria-label="Category"><option value="">All categories</option><option value="web-frameworks">Web Frameworks &amp; Routers</option><option value="cli">Command Line</option><option value="gui">GUI &amp; Desktop</option><option value="configuration">Configuration</option><option value="logging">Logging</option><option value="dependency-injection">Dependency Injection</option><option value="concurrency">Concurrency</option><option value="caching">Caching</option><option value="networking">Networking &amp; Protocols</option><option value="developer-tools">Developer Tools</option></select>
 <select id="sort" aria-label="Sort"><option value="stars">Most stars</option><option value="added">Recently added</option><option value="name">Name</option></select>
 <span id="count"></span>
 </div></div>
 <div class="wrap">
-<nav class="toc"><a href="#web-frameworks">Web Frameworks &amp; Routers<small>1</small></a><a href="#configuration">Configuration<small>2</small></a><a href="#logging">Logging<small>1</small></a><a href="#dependency-injection">Dependency Injection<small>1</small></a><a href="#concurrency">Concurrency<small>2</small></a><a href="#caching">Caching<small>3</small></a><a href="#networking">Networking &amp; Protocols<small>1</small></a><a href="#developer-tools">Developer Tools<small>1</small></a></nav>
+<nav class="toc"><a href="#web-frameworks">Web Frameworks &amp; Routers<small>2</small></a><a href="#cli">Command Line<small>1</small></a><a href="#gui">GUI &amp; Desktop<small>1</small></a><a href="#configuration">Configuration<small>2</small></a><a href="#logging">Logging<small>1</small></a><a href="#dependency-injection">Dependency Injection<small>1</small></a><a href="#concurrency">Concurrency<small>2</small></a><a href="#caching">Caching<small>3</small></a><a href="#networking">Networking &amp; Protocols<small>1</small></a><a href="#developer-tools">Developer Tools<small>2</small></a></nav>
 <main>
 <section class="category" id="web-frameworks" data-id="web-frameworks">
 <h2><a href="#web-frameworks">Web Frameworks &amp; Routers</a></h2>
 <p class="desc">HTTP servers, routers and full-stack web frameworks.</p>
 <ol class="entries">
-<li class="entry podium" id="go-chi--chi" data-name="chi" data-stars="22818" data-added="2026-09-12" data-search="chi go-chi/chi lightweight, idiomatic and composable router built on net/http.">
+<li class="entry podium" id="gin-gonic--gin" data-name="gin" data-stars="89207" data-added="2026-09-12" data-search="gin gin-gonic/gin http web framework with a martini-like api and strong routing performance.">
 <span class="rank">🥇</span>
+<div class="body"><a class="name" href="https://github.com/gin-gonic/gin">gin</a><span class="repo">gin-gonic/gin</span><p>HTTP web framework with a martini-like API and strong routing performance.</p></div>
+<span class="stars" title="GitHub stars">★ 89k</span>
+</li>
+<li class="entry podium" id="go-chi--chi" data-name="chi" data-stars="22818" data-added="2026-09-12" data-search="chi go-chi/chi lightweight, idiomatic and composable router built on net/http.">
+<span class="rank">🥈</span>
 <div class="body"><a class="name" href="https://github.com/go-chi/chi">chi</a><span class="repo">go-chi/chi</span><p>Lightweight, idiomatic and composable router built on net/http.</p></div>
 <span class="stars" title="GitHub stars">★ 23k</span>
+</li>
+</ol>
+</section>
+<section class="category" id="cli" data-id="cli">
+<h2><a href="#cli">Command Line</a></h2>
+<p class="desc">Argument parsing, terminal UIs and everything else for building CLIs.</p>
+<ol class="entries">
+<li class="entry podium" id="charmbracelet--bubbletea" data-name="bubbletea" data-stars="44916" data-added="2026-09-12" data-search="bubbletea charmbracelet/bubbletea framework for terminal user interfaces based on the elm architecture.">
+<span class="rank">🥇</span>
+<div class="body"><a class="name" href="https://github.com/charmbracelet/bubbletea">bubbletea</a><span class="repo">charmbracelet/bubbletea</span><p>Framework for terminal user interfaces based on The Elm Architecture.</p></div>
+<span class="stars" title="GitHub stars">★ 45k</span>
+</li>
+</ol>
+</section>
+<section class="category" id="gui" data-id="gui">
+<h2><a href="#gui">GUI &amp; Desktop</a></h2>
+<p class="desc">Desktop application frameworks and GUI toolkits.</p>
+<ol class="entries">
+<li class="entry podium" id="wailsapp--wails" data-name="wails" data-stars="36226" data-added="2026-09-12" data-search="wails wailsapp/wails desktop applications with a go backend and a web frontend, using the native webview.">
+<span class="rank">🥇</span>
+<div class="body"><a class="name" href="https://github.com/wailsapp/wails">wails</a><span class="repo">wailsapp/wails</span><p>Desktop applications with a Go backend and a web frontend, using the native webview.</p></div>
+<span class="stars" title="GitHub stars">★ 36k</span>
 </li>
 </ol>
 </section>
@@ -161,12 +188,17 @@ footer{margin:48px 0 40px;color:var(--muted);font-size:.9rem;border-top:1px soli
 </section>
 <section class="category" id="developer-tools" data-id="developer-tools">
 <h2><a href="#developer-tools">Developer Tools</a></h2>
-<p class="desc">Linters, build tools, debuggers and code generators.</p>
+<p class="desc">Linters, build tools, debuggers, code generators and terminal tools for daily development work.</p>
 <ol class="entries">
 <li class="entry podium" id="junegunn--fzf" data-name="fzf" data-stars="82940" data-added="2026-09-12" data-search="fzf junegunn/fzf interactive fuzzy finder for the command line, with shell integration for files and history.">
 <span class="rank">🥇</span>
 <div class="body"><a class="name" href="https://github.com/junegunn/fzf">fzf</a><span class="repo">junegunn/fzf</span><p>Interactive fuzzy finder for the command line, with shell integration for files and history.</p></div>
 <span class="stars" title="GitHub stars">★ 83k</span>
+</li>
+<li class="entry podium" id="jesseduffield--lazygit" data-name="lazygit" data-stars="82271" data-added="2026-09-12" data-search="lazygit jesseduffield/lazygit terminal ui for git with staging, rebasing, stashing and worktrees a keystroke away.">
+<span class="rank">🥈</span>
+<div class="body"><a class="name" href="https://github.com/jesseduffield/lazygit">lazygit</a><span class="repo">jesseduffield/lazygit</span><p>Terminal UI for git with staging, rebasing, stashing and worktrees a keystroke away.</p></div>
+<span class="stars" title="GitHub stars">★ 82k</span>
 </li>
 </ol>
 </section>

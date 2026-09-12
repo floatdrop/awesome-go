@@ -3,13 +3,15 @@
 
 > A short, hand-curated list of Go libraries and tools that are actually worth using. Not a directory of everything that exists.
 
-12 projects in 8 categories. Every entry is added by a human through a pull request and checked against the [entry rules](CONTRIBUTING.md#entry-rules) by CI. Within each category the 5 most-starred projects are shown first and the rest are folded under More. Archived repositories are removed automatically. Stars were last refreshed on 2026-09-12.
+16 projects in 10 categories. Every entry is added by a human through a pull request and checked against the [entry rules](CONTRIBUTING.md#entry-rules) by CI. Within each category the 5 most-starred projects are shown first and the rest are folded under More. Archived repositories are removed automatically. Stars were last refreshed on 2026-09-12.
 
 Search, filter and sort the full list at [floatdrop.github.io/awesome-go](https://floatdrop.github.io/awesome-go/).
 
 ## Contents
 
 - [Web Frameworks & Routers](#web-frameworks--routers)
+- [Command Line](#command-line)
+- [GUI & Desktop](#gui--desktop)
 - [Configuration](#configuration)
 - [Logging](#logging)
 - [Dependency Injection](#dependency-injection)
@@ -22,7 +24,20 @@ Search, filter and sort the full list at [floatdrop.github.io/awesome-go](https:
 
 HTTP servers, routers and full-stack web frameworks.
 
-- 🥇 [chi](https://github.com/go-chi/chi) - Lightweight, idiomatic and composable router built on net/http. ★ 23k
+- 🥇 [gin](https://github.com/gin-gonic/gin) - HTTP web framework with a martini-like API and strong routing performance. ★ 89k
+- 🥈 [chi](https://github.com/go-chi/chi) - Lightweight, idiomatic and composable router built on net/http. ★ 23k
+
+## Command Line
+
+Argument parsing, terminal UIs and everything else for building CLIs.
+
+- 🥇 [bubbletea](https://github.com/charmbracelet/bubbletea) - Framework for terminal user interfaces based on The Elm Architecture. ★ 45k
+
+## GUI & Desktop
+
+Desktop application frameworks and GUI toolkits.
+
+- 🥇 [wails](https://github.com/wailsapp/wails) - Desktop applications with a Go backend and a web frontend, using the native webview. ★ 36k
 
 ## Configuration
 
@@ -66,9 +81,10 @@ Protocol implementations, transports and low-level network plumbing.
 
 ## Developer Tools
 
-Linters, build tools, debuggers and code generators.
+Linters, build tools, debuggers, code generators and terminal tools for daily development work.
 
 - 🥇 [fzf](https://github.com/junegunn/fzf) - Interactive fuzzy finder for the command line, with shell integration for files and history. ★ 83k
+- 🥈 [lazygit](https://github.com/jesseduffield/lazygit) - Terminal UI for git with staging, rebasing, stashing and worktrees a keystroke away. ★ 82k
 
 ## Contributing
 
