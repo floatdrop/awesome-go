@@ -1,0 +1,6 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "repo": "sqlc-dev/sqlc",
+  "description": "Compiler that generates type-safe code from SQL queries.",
+  "category": "databases"
+}
