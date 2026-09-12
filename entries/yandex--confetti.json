@@ -1,0 +1,9 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "repo": "yandex/confetti",
+  "description": "Configuration loader that chains sources per value or struct, with backends as plain functions.",
+  "category": "configuration",
+  "exempt": [
+    "stars"
+  ]
+}
