@@ -4,6 +4,10 @@
 
 <!-- One or two sentences from your own experience. "Popular" and "many stars" are not reasons. -->
 
+## What does it add to the category?
+
+<!-- Name the listed entries it complements, or the one it beats and how. CI will post the current entries of the category on this PR for comparison. -->
+
 ## Checklist
 
 - [ ] I added exactly one file under `entries/` (or this is a removal or a fix).
