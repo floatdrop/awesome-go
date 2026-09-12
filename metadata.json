@@ -9,6 +9,15 @@
       "license": "MIT",
       "created_at": "2022-12-02T18:04:11Z",
       "pushed_at": "2026-09-03T10:40:42Z"
+    },
+    "go-chi/chi": {
+      "stars": 22818,
+      "archived": false,
+      "is_go": true,
+      "language": "Go",
+      "license": "MIT",
+      "created_at": "2015-10-15T20:46:29Z",
+      "pushed_at": "2026-09-08T16:04:08Z"
     }
   }
 }
