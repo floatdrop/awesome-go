@@ -1,0 +1,9 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "repo": "opencoff/go-sieve",
+  "description": "Generic in-memory cache with SIEVE eviction and a lock-free read path.",
+  "category": "caching",
+  "exempt": [
+    "stars"
+  ]
+}
