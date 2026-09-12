@@ -3,6 +3,7 @@
   "repo": "opencoff/go-sieve",
   "description": "Generic in-memory cache with SIEVE eviction and a lock-free read path.",
   "category": "caching",
+  "added": "2026-09-12",
   "exempt": [
     "stars"
   ]
