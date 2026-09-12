@@ -2,5 +2,6 @@
   "$schema": "../schema/entry.schema.json",
   "repo": "ergo-services/ergo",
   "description": "Actor framework with supervision trees and network transparency, modeled on Erlang/OTP.",
-  "category": "concurrency"
+  "category": "concurrency",
+  "added": "2026-09-12"
 }

@@ -2,5 +2,6 @@
   "$schema": "../schema/entry.schema.json",
   "repo": "nats-io/nats.go",
   "description": "Client for the NATS messaging system, including JetStream streams, key-value and object stores.",
-  "category": "messaging"
+  "category": "messaging",
+  "added": "2026-09-12"
 }

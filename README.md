@@ -3,7 +3,7 @@
 
 > A short, hand-curated list of Go libraries and tools that are actually worth using. Not a directory of everything that exists.
 
-22 projects in 12 categories. Every entry is added by a human through a pull request and checked against the [entry rules](CONTRIBUTING.md#entry-rules) by CI. Within each category the 5 most-starred projects are shown first and the rest are folded under More. Archived repositories are removed automatically. Stars were last refreshed on 2026-09-12.
+24 projects in 13 categories. Every entry is added by a human through a pull request and checked against the [entry rules](CONTRIBUTING.md#entry-rules) by CI. Within each category the 5 most-starred projects are shown first and the rest are folded under More. Archived repositories are removed automatically. Stars were last refreshed on 2026-09-12.
 
 Search, filter and sort the full list at [floatdrop.github.io/awesome-go](https://floatdrop.github.io/awesome-go/).
 
@@ -20,6 +20,7 @@ Search, filter and sort the full list at [floatdrop.github.io/awesome-go](https:
 - [Concurrency](#concurrency)
 - [Caching](#caching)
 - [Networking & Protocols](#networking--protocols)
+- [Messaging & Queues](#messaging--queues)
 - [Developer Tools](#developer-tools)
 
 ## Web Frameworks & Routers
@@ -78,10 +79,11 @@ Wiring applications together.
 
 ## Concurrency
 
-Goroutine pools, structured concurrency and synchronization helpers.
+Goroutine pools, structured concurrency, synchronization helpers and actor frameworks.
 
 - 🥇 [conc](https://github.com/sourcegraph/conc) - Structured concurrency: scoped groups with panic propagation, bounded pools and ordered streams. ★ 10k
-- 🥈 [pond](https://github.com/alitto/pond) - Bounded worker pool with generics, result groups, context cancellation and subpools. ★ 2.2k
+- 🥈 [ergo](https://github.com/ergo-services/ergo) - Actor framework with supervision trees and network transparency, modeled on Erlang/OTP. ★ 4.7k
+- 🥉 [pond](https://github.com/alitto/pond) - Bounded worker pool with generics, result groups, context cancellation and subpools. ★ 2.2k
 
 ## Caching
 
@@ -96,6 +98,12 @@ In-memory caches and eviction policies.
 Protocol implementations, transports and low-level network plumbing.
 
 - 🥇 [moq-go](https://github.com/floatdrop/moq-go) - Media over QUIC transport library and relay tracking the IETF MoQ drafts. ★ 3
+
+## Messaging & Queues
+
+Message brokers, streaming platforms and task queues.
+
+- 🥇 [nats.go](https://github.com/nats-io/nats.go) - Client for the NATS messaging system, including JetStream streams, key-value and object stores. ★ 6.7k
 
 ## Developer Tools
 
