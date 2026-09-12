@@ -1,0 +1,7 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "repo": "spf13/cast",
+  "description": "Safe and easy casting between types.",
+  "category": "utilities",
+  "added": "2026-09-12"
+}

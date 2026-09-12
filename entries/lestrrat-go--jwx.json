@@ -1,0 +1,7 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "repo": "lestrrat-go/jwx",
+  "description": "Complete implementation of JWA, JWE, JWK, JWS and JWT.",
+  "category": "auth",
+  "added": "2026-09-12"
+}

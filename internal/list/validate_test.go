@@ -1,6 +1,8 @@
 package list
 
 import (
+	"os"
+	"path/filepath"
 	"strings"
 	"testing"
 	"time"
@@ -35,7 +37,7 @@ func TestValidateRejects(t *testing.T) {
 		{"url as repo", func(l *List) { l.Entries[0].Repo = "https://github.com/gin-gonic/gin" }, "owner/name"},
 		{"duplicate repo", func(l *List) { l.Entries[1].Repo = "GIN-GONIC/gin" }, "duplicate"},
 		{"unknown category", func(l *List) { l.Entries[0].Category = "nope" }, "unknown category"},
-		{"unsorted", func(l *List) { l.Entries[0], l.Entries[1] = l.Entries[1], l.Entries[0] }, "not sorted"},
+		{"misnamed file", func(l *List) { l.Entries[0].file = "gin.json" }, "must be named gin-gonic--gin.json"},
 		{"lowercase start", func(l *List) { l.Entries[0].Description = "http framework." }, "uppercase"},
 		{"no period", func(l *List) { l.Entries[0].Description = "HTTP framework" }, "period"},
 		{"too long", func(l *List) { l.Entries[0].Description = "X" + strings.Repeat("y", 100) + "." }, "maximum"},
@@ -57,7 +59,7 @@ func TestValidateRejects(t *testing.T) {
 			tc.mutate(l)
 			problems := l.Validate(now)
 			for _, p := range problems {
-				if strings.Contains(p, tc.want) {
+				if strings.Contains(p.String(), tc.want) {
 					return
 				}
 			}
@@ -67,35 +69,61 @@ func TestValidateRejects(t *testing.T) {
 }
 
 func TestParseRejectsUnknownFields(t *testing.T) {
-	_, err := Parse([]byte(`{"list":{"title":"x"},"entries":[{"repo":"a/b","descripton":"typo."}]}`))
-	if err == nil || !strings.Contains(err.Error(), "descripton") {
+	if _, err := ParseEntry([]byte(`{"repo":"a/b","descripton":"typo."}`)); err == nil || !strings.Contains(err.Error(), "descripton") {
 		t.Fatalf("expected unknown field error, got %v", err)
+	}
+	if _, err := ParseList([]byte(`{"list":{"title":"x"},"entries":[]}`)); err == nil || !strings.Contains(err.Error(), "entries") {
+		t.Fatalf("list.json must not carry entries, got %v", err)
 	}
 }
 
-func TestFormatIsCanonicalAndIdempotent(t *testing.T) {
+func TestSaveLoadRoundTrip(t *testing.T) {
+	root := t.TempDir()
 	l := valid()
-	l.Entries[0], l.Entries[1] = l.Entries[1], l.Entries[0]
-	once, err := l.Format()
+	if err := l.Save(root); err != nil {
+		t.Fatal(err)
+	}
+	// A stray, misnamed file must be cleaned up by the next Save.
+	stray := filepath.Join(root, EntriesDir, "gin.json")
+	if err := os.WriteFile(stray, []byte(`{"repo":"gin-gonic/gin","description":"Dup.","category":"web"}`), 0o644); err != nil {
+		t.Fatal(err)
+	}
+	loaded, err := Load(root)
 	if err != nil {
 		t.Fatal(err)
 	}
-	if !strings.HasSuffix(string(once), "}\n") {
-		t.Fatalf("expected trailing newline")
+	if len(loaded.Entries) != 3 {
+		t.Fatalf("expected the stray file to load as an entry, got %d entries", len(loaded.Entries))
 	}
-	again, err := l.Format()
+	if problems := loaded.Validate(now); len(problems) < 2 {
+		t.Fatalf("expected misnamed-file and duplicate problems, got %v", problems)
+	}
+
+	if err := l.Save(root); err != nil {
+		t.Fatal(err)
+	}
+	if _, err := os.Stat(stray); !os.IsNotExist(err) {
+		t.Fatalf("Save must delete files that do not belong to an entry")
+	}
+	loaded, err = Load(root)
 	if err != nil {
 		t.Fatal(err)
 	}
-	if string(once) != string(again) {
-		t.Fatalf("format is not idempotent")
+	if len(loaded.Entries) != 2 || loaded.Entries[0].Repo != "gin-gonic/gin" || loaded.Entries[0].File() != "gin-gonic--gin.json" {
+		t.Fatalf("unexpected entries after reload: %+v", loaded.Entries)
 	}
-	parsed, err := Parse(once)
+	if loaded.Entries[0].Schema != entrySchema || loaded.Schema != listSchema {
+		t.Fatalf("canonical files must carry $schema")
+	}
+	if problems := loaded.Validate(now); len(problems) != 0 {
+		t.Fatalf("canonical files must validate: %v", problems)
+	}
+	data, err := loaded.Entries[0].Format()
 	if err != nil {
 		t.Fatal(err)
 	}
-	if parsed.Entries[0].Repo != "gin-gonic/gin" {
-		t.Fatalf("entries not sorted in output: %v", parsed.Entries)
+	if !strings.HasPrefix(string(data), "{\n  \"$schema\": \"../schema/entry.schema.json\",\n  \"repo\": \"gin-gonic/gin\",") || !strings.HasSuffix(string(data), "}\n") {
+		t.Fatalf("unexpected entry format:\n%s", data)
 	}
 }
 

@@ -1,0 +1,7 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "repo": "dominikh/go-tools",
+  "description": "Staticcheck and other advanced static analysis tools.",
+  "category": "developer-tools",
+  "added": "2026-09-12"
+}

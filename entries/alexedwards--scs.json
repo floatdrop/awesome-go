@@ -1,0 +1,7 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "repo": "alexedwards/scs",
+  "description": "HTTP session management with pluggable stores.",
+  "category": "auth",
+  "added": "2026-09-12"
+}

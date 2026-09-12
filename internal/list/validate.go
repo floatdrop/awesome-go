@@ -19,12 +19,26 @@ var (
 	markdownRe = regexp.MustCompile("[`*_\\[\\]<>]|https?://")
 )
 
+// Problem is a validation failure attached to the file it was found in.
+type Problem struct {
+	File string
+	Msg  string
+}
+
+func (p Problem) String() string {
+	if p.File == "" {
+		return p.Msg
+	}
+	return p.File + ": " + p.Msg
+}
+
 // Validate applies every rule that can be checked without network access and
-// returns human-readable problems. An empty result means the file is valid.
-func (l *List) Validate(now time.Time) []string {
-	var problems []string
+// returns human-readable problems. An empty result means the data is valid.
+func (l *List) Validate(now time.Time) []Problem {
+	var problems []Problem
+	file := ListFileName
 	add := func(format string, args ...any) {
-		problems = append(problems, fmt.Sprintf(format, args...))
+		problems = append(problems, Problem{File: file, Msg: fmt.Sprintf(format, args...)})
 	}
 
 	if l.Meta.Title == "" {
@@ -52,24 +66,28 @@ func (l *List) Validate(now time.Time) []string {
 		}
 	}
 
-	seenRepo := map[string]int{}
-	for i, e := range l.Entries {
-		where := fmt.Sprintf("entries[%d] (%s)", i, e.Repo)
+	seenRepo := map[string]string{}
+	for _, e := range l.Entries {
+		file = e.Path()
+		where := e.Repo
 		switch {
 		case e.Repo == "":
-			add("entries[%d]: repo is required", i)
+			add("repo is required")
 			continue
 		case !repoRe.MatchString(e.Repo):
-			add("%s: repo must be \"owner/name\" without a URL", where)
+			add("repo must be \"owner/name\" without a URL")
 			continue
 		case strings.HasSuffix(strings.ToLower(e.Repo), ".git"):
 			add("%s: repo must not end with .git", where)
 		}
-		key := strings.ToLower(e.Repo)
-		if j, dup := seenRepo[key]; dup {
-			add("%s: duplicate of entries[%d]", where, j)
+		if e.File() != "" && e.File() != e.FileName() {
+			add("file must be named %s to match repo %s (run `go run ./cmd/awesome fmt`)", e.FileName(), e.Repo)
 		}
-		seenRepo[key] = i
+		key := strings.ToLower(e.Repo)
+		if other, dup := seenRepo[key]; dup {
+			add("%s: duplicate of %s", where, other)
+		}
+		seenRepo[key] = e.Path()
 
 		if !seenCategory[e.Category] {
 			add("%s: unknown category %q", where, e.Category)
@@ -100,12 +118,6 @@ func (l *List) Validate(now time.Time) []string {
 		}
 	}
 
-	for i := 1; i < len(l.Entries); i++ {
-		if strings.ToLower(l.Entries[i-1].Repo) > strings.ToLower(l.Entries[i].Repo) {
-			add("entries are not sorted by repo (run `go run ./cmd/awesome fmt`)")
-			break
-		}
-	}
 	return problems
 }
 

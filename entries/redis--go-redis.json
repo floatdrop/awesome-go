@@ -1,0 +1,7 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "repo": "redis/go-redis",
+  "description": "Redis client supporting clusters, sentinels, pipelines and pub/sub.",
+  "category": "databases",
+  "added": "2026-09-12"
+}

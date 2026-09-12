@@ -1,0 +1,7 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "repo": "oklog/ulid",
+  "description": "Universally Unique Lexicographically Sortable Identifiers.",
+  "category": "utilities",
+  "added": "2026-09-12"
+}

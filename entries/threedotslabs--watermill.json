@@ -1,0 +1,7 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "repo": "ThreeDotsLabs/watermill",
+  "description": "Library for building event-driven applications over pub/sub backends.",
+  "category": "messaging",
+  "added": "2026-09-12"
+}

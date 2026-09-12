@@ -1,0 +1,7 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "repo": "knadh/koanf",
+  "description": "Lightweight, extensible configuration management with pluggable providers and parsers.",
+  "category": "configuration",
+  "added": "2026-09-12"
+}

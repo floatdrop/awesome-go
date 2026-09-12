@@ -1,0 +1,7 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "repo": "etcd-io/bbolt",
+  "description": "Embedded key-value database based on B+ trees.",
+  "category": "databases",
+  "added": "2026-09-12"
+}

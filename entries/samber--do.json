@@ -1,0 +1,7 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "repo": "samber/do",
+  "description": "Typesafe dependency injection based on generics.",
+  "category": "dependency-injection",
+  "added": "2026-09-12"
+}

@@ -1,4 +1,4 @@
-// Command awesome maintains the list: validates awesome.json, refreshes GitHub
+// Command awesome maintains the list: validates list.json and entries/, refreshes GitHub
 // metadata, prunes dead repositories and generates README.md and badges.
 package main
 
@@ -19,11 +19,11 @@ import (
 const usage = `usage: awesome <command> [flags]
 
 commands:
-  validate   check awesome.json against the entry rules (-remote also asks GitHub)
-  fmt        rewrite awesome.json in canonical form (-check only verifies)
+  validate   check list.json and entries/ against the entry rules (-remote also asks GitHub)
+  fmt        rewrite list.json and entries/ in canonical form (-check only verifies)
   refresh    fetch stars and status of every repository into metadata.json
   prune      remove archived, disabled and deleted repositories
-  generate   write README.md and badges/ from awesome.json and metadata.json
+  generate   write README.md and badges/ from list.json, entries/ and metadata.json
   sync       refresh, prune and generate in one go (what the nightly job runs)
 
 flags common to all commands:
@@ -65,7 +65,6 @@ func main() {
 // paths resolves the well-known files under the repository root.
 type paths struct{ root string }
 
-func (p paths) list() string     { return filepath.Join(p.root, list.FileName) }
 func (p paths) metadata() string { return filepath.Join(p.root, list.MetadataFileName) }
 func (p paths) readme() string   { return filepath.Join(p.root, "README.md") }
 func (p paths) badges() string   { return filepath.Join(p.root, "badges") }
@@ -80,12 +79,12 @@ func newFlags(name string) (*flag.FlagSet, *paths) {
 func runValidate(args []string) error {
 	fs, p := newFlags("validate")
 	remote := fs.Bool("remote", false, "also check repositories against GitHub")
-	base := fs.String("base", "", "with -remote: awesome.json of the base branch; only new or changed entries are checked")
+	base := fs.String("base", "", "with -remote: directory holding the base branch's list.json and entries/; only new or changed entries are checked")
 	if err := fs.Parse(args); err != nil {
 		return err
 	}
 	now := time.Now().UTC()
-	l, err := list.Load(p.list())
+	l, err := list.Load(p.root)
 	if err != nil {
 		return err
 	}
@@ -106,28 +105,29 @@ func runValidate(args []string) error {
 				return r.err
 			}
 			if r.canonical != "" && r.canonical != r.entry.Repo {
-				problems = append(problems, fmt.Sprintf("%s: repository has moved to %s, use the new name", r.entry.Repo, r.canonical))
+				problems = append(problems, list.Problem{File: r.entry.Path(), Msg: fmt.Sprintf("repository has moved to %s, use the new name", r.canonical)})
 			}
 			for _, msg := range l.Policy.Check(r.meta, now, r.entry) {
-				problems = append(problems, r.entry.Repo+": "+msg)
+				problems = append(problems, list.Problem{File: r.entry.Path(), Msg: msg})
 			}
 		}
 	}
 
 	if len(problems) > 0 {
-		for _, msg := range problems {
-			fmt.Printf("✗ %s\n", msg)
-			annotate("error", msg)
+		for _, p := range problems {
+			fmt.Printf("✗ %s\n", p)
+			annotate("error", p.File, p.Msg)
 		}
 		return fmt.Errorf("%d problem(s) found", len(problems))
 	}
-	fmt.Printf("✓ %s: %d entries in %d categories\n", list.FileName, len(l.Entries), len(l.Categories))
+	fmt.Printf("✓ %d entries in %d categories\n", len(l.Entries), len(l.Categories))
 	return nil
 }
 
-// changedEntries returns entries that do not exist verbatim in the base file.
-func changedEntries(l *list.List, basePath string) ([]list.Entry, error) {
-	base, err := list.Load(basePath)
+// changedEntries returns entries whose repository is new or renamed compared
+// to the list under baseRoot.
+func changedEntries(l *list.List, baseRoot string) ([]list.Entry, error) {
+	base, err := list.Load(baseRoot)
 	if err != nil {
 		return nil, fmt.Errorf("base list: %w", err)
 	}
@@ -146,35 +146,62 @@ func changedEntries(l *list.List, basePath string) ([]list.Entry, error) {
 
 func runFmt(args []string) error {
 	fs, p := newFlags("fmt")
-	check := fs.Bool("check", false, "exit non-zero if the file is not formatted instead of rewriting it")
+	check := fs.Bool("check", false, "exit non-zero if any file is not canonical instead of rewriting")
 	if err := fs.Parse(args); err != nil {
 		return err
 	}
-	original, err := os.ReadFile(p.list())
+	l, err := list.Load(p.root)
 	if err != nil {
 		return err
 	}
-	l, err := list.Parse(original)
-	if err != nil {
-		return fmt.Errorf("%s: %w", p.list(), err)
-	}
-	formatted, err := l.Format()
+
+	var stale []string // human-readable descriptions of what is not canonical
+	current, err := os.ReadFile(filepath.Join(p.root, list.ListFileName))
 	if err != nil {
 		return err
 	}
-	if string(original) == string(formatted) {
-		fmt.Printf("✓ %s is formatted\n", list.FileName)
+	want, err := l.FormatList()
+	if err != nil {
+		return err
+	}
+	if string(current) != string(want) {
+		stale = append(stale, list.ListFileName+" is not in canonical form")
+	}
+	for _, e := range l.Entries {
+		if e.File() != e.FileName() {
+			stale = append(stale, fmt.Sprintf("%s should be named %s", e.Path(), e.FileName()))
+			continue
+		}
+		current, err := os.ReadFile(filepath.Join(p.root, list.EntriesDir, e.File()))
+		if err != nil {
+			return err
+		}
+		want, err := e.Format()
+		if err != nil {
+			return err
+		}
+		if string(current) != string(want) {
+			stale = append(stale, e.Path()+" is not in canonical form")
+		}
+	}
+
+	if len(stale) == 0 {
+		fmt.Println("✓ all files are in canonical form")
 		return nil
 	}
 	if *check {
-		msg := list.FileName + " is not in canonical form; run `go run ./cmd/awesome fmt` and commit the result"
-		annotate("error", msg)
-		return errors.New(msg)
+		for _, msg := range stale {
+			fmt.Printf("✗ %s\n", msg)
+			annotate("error", "", msg)
+		}
+		return errors.New("run `go run ./cmd/awesome fmt` and commit the result")
 	}
-	if err := os.WriteFile(p.list(), formatted, 0o644); err != nil {
+	if err := l.Save(p.root); err != nil {
 		return err
 	}
-	fmt.Printf("formatted %s\n", list.FileName)
+	for _, msg := range stale {
+		fmt.Printf("fixed: %s\n", msg)
+	}
 	return nil
 }
 
@@ -189,11 +216,15 @@ func runSync(args []string) error {
 
 // annotate emits a GitHub Actions workflow command so problems show up inline
 // in the pull request. Outside Actions it is silent.
-func annotate(level, msg string) {
+func annotate(level, file, msg string) {
 	if os.Getenv("GITHUB_ACTIONS") != "true" {
 		return
 	}
-	fmt.Printf("::%s file=%s::%s\n", level, list.FileName, msg)
+	if file == "" {
+		fmt.Printf("::%s::%s\n", level, msg)
+		return
+	}
+	fmt.Printf("::%s file=%s::%s\n", level, file, msg)
 }
 
 // summary appends Markdown to the GitHub Actions job summary when available

@@ -1,0 +1,7 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "repo": "schollz/progressbar",
+  "description": "Thread-safe progress bar for terminal applications.",
+  "category": "cli",
+  "added": "2026-09-12"
+}

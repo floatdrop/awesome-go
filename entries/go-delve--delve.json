@@ -1,0 +1,7 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "repo": "go-delve/delve",
+  "description": "Debugger with support for goroutines, breakpoints and remote debugging.",
+  "category": "developer-tools",
+  "added": "2026-09-12"
+}

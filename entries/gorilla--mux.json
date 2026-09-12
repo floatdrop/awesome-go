@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "repo": "gorilla/mux",
+  "description": "Request router and dispatcher for matching incoming requests to their handlers.",
+  "category": "web-frameworks",
+  "added": "2026-09-12",
+  "exempt": [
+    "inactive"
+  ]
+}

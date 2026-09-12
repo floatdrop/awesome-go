@@ -1,0 +1,7 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "repo": "panjf2000/ants",
+  "description": "High-performance goroutine pool for managing and recycling goroutines.",
+  "category": "concurrency",
+  "added": "2026-09-12"
+}

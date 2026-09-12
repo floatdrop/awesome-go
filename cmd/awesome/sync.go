@@ -20,7 +20,7 @@ func runRefresh(args []string) error {
 		return err
 	}
 	now := time.Now().UTC()
-	l, err := list.Load(p.list())
+	l, err := list.Load(p.root)
 	if err != nil {
 		return err
 	}
@@ -73,7 +73,7 @@ func runRefresh(args []string) error {
 	}
 	meta.UpdatedAt = now
 
-	if err := l.Save(p.list()); err != nil {
+	if err := l.Save(p.root); err != nil {
 		return err
 	}
 	if err := meta.Save(p.metadata()); err != nil {
@@ -92,7 +92,7 @@ func runPrune(args []string) error {
 		return err
 	}
 	now := time.Now().UTC()
-	l, err := list.Load(p.list())
+	l, err := list.Load(p.root)
 	if err != nil {
 		return err
 	}
@@ -127,7 +127,7 @@ func runPrune(args []string) error {
 
 	if len(removed) > 0 {
 		summary(append([]string{"### Removed", ""}, removed...)...)
-		if err := l.Save(p.list()); err != nil {
+		if err := l.Save(p.root); err != nil {
 			return err
 		}
 		if err := meta.Save(p.metadata()); err != nil {
@@ -148,12 +148,12 @@ func runGenerate(args []string) error {
 		return err
 	}
 	now := time.Now().UTC()
-	l, err := list.Load(p.list())
+	l, err := list.Load(p.root)
 	if err != nil {
 		return err
 	}
 	if problems := l.Validate(now); len(problems) > 0 {
-		return fmt.Errorf("%s is invalid, refusing to generate: %s", list.FileName, problems[0])
+		return fmt.Errorf("data is invalid, refusing to generate: %s", problems[0])
 	}
 	meta, err := list.LoadMetadata(p.metadata())
 	if err != nil {

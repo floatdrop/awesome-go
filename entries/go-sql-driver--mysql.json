@@ -1,0 +1,7 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "repo": "go-sql-driver/mysql",
+  "description": "Driver for MySQL over database/sql.",
+  "category": "databases",
+  "added": "2026-09-12"
+}

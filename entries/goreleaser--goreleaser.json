@@ -1,0 +1,7 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "repo": "goreleaser/goreleaser",
+  "description": "Release automation for building, packaging and publishing binaries.",
+  "category": "developer-tools",
+  "added": "2026-09-12"
+}

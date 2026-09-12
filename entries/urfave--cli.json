@@ -1,0 +1,7 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "repo": "urfave/cli",
+  "description": "Declarative library for building command line applications.",
+  "category": "cli",
+  "added": "2026-09-12"
+}

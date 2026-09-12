@@ -1,0 +1,7 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "repo": "uptrace/bun",
+  "description": "SQL-first ORM for PostgreSQL, MySQL, MSSQL and SQLite.",
+  "category": "databases",
+  "added": "2026-09-12"
+}

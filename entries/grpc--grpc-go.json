@@ -1,0 +1,7 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "repo": "grpc/grpc-go",
+  "description": "Official gRPC implementation.",
+  "category": "rpc-and-api",
+  "added": "2026-09-12"
+}

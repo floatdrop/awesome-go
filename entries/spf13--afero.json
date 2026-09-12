@@ -1,0 +1,7 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "repo": "spf13/afero",
+  "description": "Filesystem abstraction with in-memory, OS and composable backends.",
+  "category": "utilities",
+  "added": "2026-09-12"
+}

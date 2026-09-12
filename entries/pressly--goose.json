@@ -1,0 +1,7 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "repo": "pressly/goose",
+  "description": "Database migration tool supporting SQL and Go migrations.",
+  "category": "databases",
+  "added": "2026-09-12"
+}

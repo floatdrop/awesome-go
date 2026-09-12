@@ -1,0 +1,7 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "repo": "a-h/templ",
+  "description": "Language for type-safe HTML components that compile to Go code.",
+  "category": "text-and-templates",
+  "added": "2026-09-12"
+}

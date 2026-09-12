@@ -1,0 +1,7 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "repo": "go-task/task",
+  "description": "Build tool and task runner with a simple YAML syntax.",
+  "category": "developer-tools",
+  "added": "2026-09-12"
+}

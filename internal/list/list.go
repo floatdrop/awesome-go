@@ -1,4 +1,5 @@
-// Package list holds the data model behind awesome.json and metadata.json.
+// Package list holds the data model behind list.json, entries/ and
+// metadata.json.
 package list
 
 import (
@@ -7,20 +8,28 @@ import (
 	"errors"
 	"fmt"
 	"os"
+	"path/filepath"
 	"sort"
 	"strings"
 )
 
-// FileName is the curated source of truth, edited by humans.
-const FileName = "awesome.json"
+const (
+	// ListFileName holds the list metadata, the policy and the categories.
+	ListFileName = "list.json"
+	// EntriesDir holds one JSON file per entry, named after the repository slug.
+	EntriesDir = "entries"
 
-// List is the top-level document stored in awesome.json.
+	listSchema  = "schema/list.schema.json"
+	entrySchema = "../schema/entry.schema.json"
+)
+
+// List is the in-memory view of the whole data set.
 type List struct {
 	Schema     string     `json:"$schema,omitempty"`
 	Meta       Meta       `json:"list"`
 	Policy     Policy     `json:"policy"`
 	Categories []Category `json:"categories"`
-	Entries    []Entry    `json:"entries"`
+	Entries    []Entry    `json:"-"`
 }
 
 // Meta describes the list itself.
@@ -50,8 +59,9 @@ type Category struct {
 	Description string `json:"description,omitempty"`
 }
 
-// Entry is a single listed repository.
+// Entry is a single listed repository, stored as entries/<owner>--<name>.json.
 type Entry struct {
+	Schema      string `json:"$schema,omitempty"`
 	Repo        string `json:"repo"`
 	Name        string `json:"name,omitempty"`
 	Description string `json:"description"`
@@ -60,6 +70,8 @@ type Entry struct {
 	// Exempt lists policy rules a maintainer has consciously waived for this
 	// entry (see ExemptFork, ExemptInactive). Age and stars cannot be waived.
 	Exempt []string `json:"exempt,omitempty"`
+
+	file string // basename the entry was loaded from; empty when created in memory
 }
 
 // Exemptions a maintainer may grant. Anything else is a validation error.
@@ -93,79 +105,162 @@ func (e Entry) DisplayName() string {
 // URL is the repository home page.
 func (e Entry) URL() string { return "https://github.com/" + e.Repo }
 
+// FileName is the canonical basename for the entry under EntriesDir.
+func (e Entry) FileName() string { return Slug(e.Repo) + ".json" }
+
+// File is the basename the entry was loaded from, or "" for in-memory entries.
+func (e Entry) File() string { return e.file }
+
+// Path is the repository-relative path the entry is (or should be) stored at.
+func (e Entry) Path() string {
+	if e.file != "" {
+		return EntriesDir + "/" + e.file
+	}
+	return EntriesDir + "/" + e.FileName()
+}
+
 // Slug turns "Owner/Repo" into a filesystem and URL safe "owner--repo".
 func Slug(repo string) string {
 	return strings.ToLower(strings.ReplaceAll(repo, "/", "--"))
 }
 
-// Load reads and parses a list file.
-func Load(path string) (*List, error) {
-	data, err := os.ReadFile(path)
+// Load reads list.json and every entries/*.json under root.
+func Load(root string) (*List, error) {
+	data, err := os.ReadFile(filepath.Join(root, ListFileName))
 	if err != nil {
 		return nil, err
 	}
-	l, err := Parse(data)
+	l, err := ParseList(data)
 	if err != nil {
-		return nil, fmt.Errorf("%s: %w", path, err)
+		return nil, fmt.Errorf("%s: %w", ListFileName, err)
 	}
+	paths, err := filepath.Glob(filepath.Join(root, EntriesDir, "*.json"))
+	if err != nil {
+		return nil, err
+	}
+	sort.Strings(paths)
+	for _, path := range paths {
+		data, err := os.ReadFile(path)
+		if err != nil {
+			return nil, err
+		}
+		e, err := ParseEntry(data)
+		if err != nil {
+			return nil, fmt.Errorf("%s/%s: %w", EntriesDir, filepath.Base(path), err)
+		}
+		e.file = filepath.Base(path)
+		l.Entries = append(l.Entries, e)
+	}
+	l.Sort()
 	return l, nil
 }
 
-// Parse decodes a list strictly: unknown fields are errors so typos in
-// contributions are caught instead of silently ignored.
-func Parse(data []byte) (*List, error) {
+func strictDecode(data []byte, out any) error {
 	dec := json.NewDecoder(bytes.NewReader(data))
 	dec.DisallowUnknownFields()
-	var l List
-	if err := dec.Decode(&l); err != nil {
-		return nil, err
+	if err := dec.Decode(out); err != nil {
+		return err
 	}
 	if dec.More() {
-		return nil, errors.New("trailing data after JSON document")
+		return errors.New("trailing data after JSON document")
+	}
+	return nil
+}
+
+// ParseList decodes list.json strictly: unknown fields are errors so typos are
+// caught instead of silently ignored.
+func ParseList(data []byte) (*List, error) {
+	var l List
+	if err := strictDecode(data, &l); err != nil {
+		return nil, err
 	}
 	if l.Categories == nil {
 		l.Categories = []Category{}
 	}
-	if l.Entries == nil {
-		l.Entries = []Entry{}
-	}
+	l.Entries = []Entry{}
 	return &l, nil
 }
 
-// Sort orders entries by repository name, case-insensitively. A stable, boring
-// order in the source file keeps diffs small and merge conflicts rare.
+// ParseEntry decodes one entry file strictly.
+func ParseEntry(data []byte) (Entry, error) {
+	var e Entry
+	err := strictDecode(data, &e)
+	return e, err
+}
+
+// Sort orders entries by repository name, case-insensitively.
 func (l *List) Sort() {
 	sort.SliceStable(l.Entries, func(i, j int) bool {
 		return strings.ToLower(l.Entries[i].Repo) < strings.ToLower(l.Entries[j].Repo)
 	})
 }
 
-// Format returns the canonical encoding of the list: sorted entries, two-space
-// indentation, trailing newline.
-func (l *List) Format() ([]byte, error) {
-	c := *l
-	c.Entries = append([]Entry{}, l.Entries...)
-	c.Sort()
-	if c.Categories == nil {
-		c.Categories = []Category{}
-	}
+func encode(v any) ([]byte, error) {
 	var buf bytes.Buffer
 	enc := json.NewEncoder(&buf)
 	enc.SetIndent("", "  ")
 	enc.SetEscapeHTML(false)
-	if err := enc.Encode(&c); err != nil {
+	if err := enc.Encode(v); err != nil {
 		return nil, err
 	}
 	return buf.Bytes(), nil
 }
 
-// Save writes the list in canonical form.
-func (l *List) Save(path string) error {
-	data, err := l.Format()
+// FormatList returns the canonical encoding of list.json.
+func (l *List) FormatList() ([]byte, error) {
+	c := *l
+	c.Schema = listSchema
+	if c.Categories == nil {
+		c.Categories = []Category{}
+	}
+	return encode(&c)
+}
+
+// Format returns the canonical encoding of an entry file.
+func (e Entry) Format() ([]byte, error) {
+	e.Schema = entrySchema
+	return encode(&e)
+}
+
+// Save writes list.json and one file per entry in canonical form, and deletes
+// entry files that no longer correspond to an entry (removed or renamed).
+func (l *List) Save(root string) error {
+	data, err := l.FormatList()
 	if err != nil {
 		return err
 	}
-	return os.WriteFile(path, data, 0o644)
+	if err := os.WriteFile(filepath.Join(root, ListFileName), data, 0o644); err != nil {
+		return err
+	}
+	dir := filepath.Join(root, EntriesDir)
+	if err := os.MkdirAll(dir, 0o755); err != nil {
+		return err
+	}
+	wanted := map[string]bool{}
+	for i := range l.Entries {
+		e := &l.Entries[i]
+		data, err := e.Format()
+		if err != nil {
+			return err
+		}
+		if err := os.WriteFile(filepath.Join(dir, e.FileName()), data, 0o644); err != nil {
+			return err
+		}
+		wanted[e.FileName()] = true
+		e.file = e.FileName()
+	}
+	existing, err := filepath.Glob(filepath.Join(dir, "*.json"))
+	if err != nil {
+		return err
+	}
+	for _, path := range existing {
+		if !wanted[filepath.Base(path)] {
+			if err := os.Remove(path); err != nil {
+				return err
+			}
+		}
+	}
+	return nil
 }
 
 // Category looks a category up by id.
@@ -176,20 +271,4 @@ func (l *List) Category(id string) (Category, bool) {
 		}
 	}
 	return Category{}, false
-}
-
-// Remove drops every entry with the given repository name (case-insensitive)
-// and reports whether anything was removed.
-func (l *List) Remove(repo string) bool {
-	kept := l.Entries[:0]
-	removed := false
-	for _, e := range l.Entries {
-		if strings.EqualFold(e.Repo, repo) {
-			removed = true
-			continue
-		}
-		kept = append(kept, e)
-	}
-	l.Entries = kept
-	return removed
 }

@@ -1,0 +1,7 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "repo": "hashicorp/go-retryablehttp",
+  "description": "Retrying HTTP client with exponential backoff.",
+  "category": "http-clients",
+  "added": "2026-09-12"
+}

@@ -1,0 +1,7 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "repo": "alecthomas/kong",
+  "description": "Command-line parser driven by struct tags.",
+  "category": "cli",
+  "added": "2026-09-12"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "repo": "spf13/pflag",
+  "description": "Drop-in replacement for the flag package implementing POSIX and GNU style flags.",
+  "category": "cli",
+  "added": "2026-09-12",
+  "exempt": [
+    "fork"
+  ]
+}

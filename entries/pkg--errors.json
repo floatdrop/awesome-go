@@ -1,0 +1,7 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "repo": "pkg/errors",
+  "description": "Error handling primitives with stack traces.",
+  "category": "utilities",
+  "added": "2026-09-12"
+}

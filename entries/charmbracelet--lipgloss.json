@@ -1,0 +1,7 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "repo": "charmbracelet/lipgloss",
+  "description": "Style definitions for nice terminal layouts.",
+  "category": "cli",
+  "added": "2026-09-12"
+}

@@ -1,0 +1,116 @@
+{
+  "$schema": "schema/list.schema.json",
+  "list": {
+    "title": "Awesome Go",
+    "repo": "floatdrop/awesome-go",
+    "branch": "main",
+    "description": "A short, hand-curated list of Go libraries and tools that are actually worth using. Not a directory of everything that exists.",
+    "podium": 3
+  },
+  "policy": {
+    "min_age_days": 90,
+    "min_stars": 200,
+    "max_inactive_days": 365,
+    "max_description_length": 100,
+    "require_license": true,
+    "require_go": true,
+    "allow_forks": false
+  },
+  "categories": [
+    {
+      "id": "web-frameworks",
+      "name": "Web Frameworks & Routers",
+      "description": "HTTP servers, routers and full-stack web frameworks."
+    },
+    {
+      "id": "cli",
+      "name": "Command Line",
+      "description": "Argument parsing, terminal UIs and everything else for building CLIs."
+    },
+    {
+      "id": "configuration",
+      "name": "Configuration",
+      "description": "Loading settings from files, environment variables and flags."
+    },
+    {
+      "id": "logging",
+      "name": "Logging",
+      "description": "Structured and leveled logging."
+    },
+    {
+      "id": "testing",
+      "name": "Testing",
+      "description": "Assertions, mocks, fixtures and integration test helpers."
+    },
+    {
+      "id": "databases",
+      "name": "Databases & SQL",
+      "description": "Drivers, query builders, ORMs, migrations and embedded stores."
+    },
+    {
+      "id": "serialization",
+      "name": "Serialization",
+      "description": "JSON, YAML, TOML, MessagePack and friends."
+    },
+    {
+      "id": "validation",
+      "name": "Validation",
+      "description": "Validating structs and inputs."
+    },
+    {
+      "id": "dependency-injection",
+      "name": "Dependency Injection",
+      "description": "Wiring applications together."
+    },
+    {
+      "id": "concurrency",
+      "name": "Concurrency",
+      "description": "Goroutine pools, structured concurrency and synchronization helpers."
+    },
+    {
+      "id": "caching",
+      "name": "Caching",
+      "description": "In-memory caches and eviction policies."
+    },
+    {
+      "id": "http-clients",
+      "name": "HTTP Clients",
+      "description": "Making requests with retries, tracing and convenience."
+    },
+    {
+      "id": "messaging",
+      "name": "Messaging & Queues",
+      "description": "Message brokers, streaming platforms and task queues."
+    },
+    {
+      "id": "rpc-and-api",
+      "name": "RPC & API",
+      "description": "gRPC, RPC frameworks, GraphQL and OpenAPI tooling."
+    },
+    {
+      "id": "auth",
+      "name": "Authentication & Authorization",
+      "description": "Tokens, sessions, OAuth and access control."
+    },
+    {
+      "id": "observability",
+      "name": "Observability",
+      "description": "Metrics, tracing and instrumentation."
+    },
+    {
+      "id": "text-and-templates",
+      "name": "Text, HTML & Templates",
+      "description": "Parsing and generating markup and text."
+    },
+    {
+      "id": "utilities",
+      "name": "Utilities",
+      "description": "General-purpose helpers that end up in every project."
+    },
+    {
+      "id": "developer-tools",
+      "name": "Developer Tools",
+      "description": "Linters, build tools, debuggers and code generators."
+    }
+  ]
+}

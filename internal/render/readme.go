@@ -15,7 +15,7 @@ var medals = []string{"🥇", "🥈", "🥉"}
 
 // Header is the first line of the generated README; CI uses it to recognise
 // the file as generated.
-const Header = "<!-- Generated from awesome.json by `go run ./cmd/awesome generate`. Do not edit by hand. -->"
+const Header = "<!-- Generated from list.json and entries/ by `go run ./cmd/awesome generate`. Do not edit by hand. -->"
 
 type ranked struct {
 	entry list.Entry

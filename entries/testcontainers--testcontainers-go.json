@@ -1,0 +1,7 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "repo": "testcontainers/testcontainers-go",
+  "description": "Throwaway Docker containers for integration tests.",
+  "category": "testing",
+  "added": "2026-09-12"
+}

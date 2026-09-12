@@ -1,0 +1,7 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "repo": "gin-gonic/gin",
+  "description": "HTTP web framework with a martini-like API and strong routing performance.",
+  "category": "web-frameworks",
+  "added": "2026-09-12"
+}

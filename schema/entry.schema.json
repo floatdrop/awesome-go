@@ -1,0 +1,52 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "repo",
+    "description",
+    "category"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "repo": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9-]+/[A-Za-z0-9_.-]+$",
+      "description": "GitHub owner/name, no URL."
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Display name; defaults to the repository name."
+    },
+    "description": {
+      "type": "string",
+      "minLength": 10,
+      "maxLength": 100,
+      "pattern": "^[A-Z0-9].*\\.$"
+    },
+    "category": {
+      "type": "string"
+    },
+    "added": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+      "description": "Set automatically on acceptance; leave empty."
+    },
+    "exempt": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "fork",
+          "inactive"
+        ]
+      },
+      "description": "Policy rules a maintainer waived for this entry; must be justified in the PR."
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/floatdrop/awesome-go/main/schema/entry.schema.json",
+  "title": "Awesome Go entry"
+}

@@ -1,4 +1,4 @@
-<!-- Generated from awesome.json by `go run ./cmd/awesome generate`. Do not edit by hand. -->
+<!-- Generated from list.json and entries/ by `go run ./cmd/awesome generate`. Do not edit by hand. -->
 # Awesome Go
 
 > A short, hand-curated list of Go libraries and tools that are actually worth using. Not a directory of everything that exists.

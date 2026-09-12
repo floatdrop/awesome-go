@@ -4,7 +4,8 @@ Thanks for helping keep this list short and honest. The whole point of the list 
 
 ## How the list works
 
-- `awesome.json` is the only file you edit. It holds the categories, the entries and the policy thresholds.
+- `entries/<owner>--<name>.json` is one file per listed project. That is the file you add, edit or delete.
+- `list.json` holds the categories, the policy thresholds and the list metadata. It changes rarely.
 - `README.md`, `metadata.json` and everything under `badges/` are generated. CI rejects pull requests that touch them.
 - A nightly job refreshes star counts, removes repositories that were archived or deleted, and regenerates the README and badges. Nobody has to remember to clean up.
 - Within each category the most-starred projects take the podium (🥇🥈🥉) and the rest are listed as contenders. Stars decide the order, humans decide who is on the list at all.
@@ -12,33 +13,34 @@ Thanks for helping keep this list short and honest. The whole point of the list 
 ## Adding an entry
 
 1. Make sure the project is not already listed and passes the [entry rules](#entry-rules).
-2. Add one object to the `entries` array in `awesome.json`:
+2. Create `entries/<owner>--<name>.json`, lowercase, with the two slashes of the repository path replaced by `--`:
 
    ```json
    {
+     "$schema": "../schema/entry.schema.json",
      "repo": "owner/name",
      "description": "What it does, in one plain sentence.",
      "category": "existing-category-id"
    }
    ```
 
-   `name` is optional and defaults to the repository name. Do not set `added`; the bot fills it in on acceptance.
+   Category ids are in `list.json`. `name` is optional and defaults to the repository name. Do not set `added`; the bot fills it in on acceptance.
 
 3. Run the tooling and fix what it reports:
 
    ```sh
-   go run ./cmd/awesome fmt        # canonical formatting and sort order
+   go run ./cmd/awesome fmt        # canonical formatting and file naming
    go run ./cmd/awesome validate   # offline rules
    GITHUB_TOKEN=$(gh auth token) go run ./cmd/awesome validate -remote   # optional: the GitHub checks CI will run
    ```
 
-4. Open a pull request with **exactly one entry** and a sentence or two on why the project is awesome from your own experience. A PR that adds many entries will be closed; splitting them makes each one reviewable.
+4. Open a pull request with **exactly one new entry** and a sentence or two on why the project is awesome from your own experience. CI rejects pull requests that add more than one file under `entries/`; splitting them makes each one reviewable.
 
 Fully AI-generated pull requests are not accepted.
 
 ## Entry rules
 
-Enforced by CI on every pull request. The numbers live in the `policy` section of `awesome.json`, so if they change the README and this document follow.
+Enforced by CI on every pull request. The numbers live in the `policy` section of `list.json`, so if they change the README and this document follow.
 
 | Rule | Why |
 | --- | --- |
@@ -95,8 +97,8 @@ Everything is stdlib Go, run through `go run ./cmd/awesome <command>`:
 
 | Command | What it does |
 | --- | --- |
-| `validate` | Offline rules; `-remote` adds the GitHub checks, `-base FILE` limits them to entries not in the base file. |
-| `fmt` | Rewrites `awesome.json` in canonical form; `-check` only verifies. |
+| `validate` | Offline rules; `-remote` adds the GitHub checks, `-base DIR` limits them to entries not present under that directory. |
+| `fmt` | Rewrites `list.json` and `entries/` in canonical form and fixes file names; `-check` only verifies. |
 | `refresh` | Fetches stars, activity and status into `metadata.json`, follows renames, stamps `added` dates. |
 | `prune` | Removes archived, disabled and deleted repositories; reports stale ones. |
 | `generate` | Writes `README.md` and `badges/*.svg`. |

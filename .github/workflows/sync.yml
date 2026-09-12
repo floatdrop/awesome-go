@@ -10,7 +10,8 @@ on:
   push:
     branches: [main]
     paths:
-      - awesome.json
+      - list.json
+      - "entries/**"
       - go.mod
       - "cmd/**"
       - "internal/**"

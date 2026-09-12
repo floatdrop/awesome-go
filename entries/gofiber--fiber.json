@@ -1,0 +1,7 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "repo": "gofiber/fiber",
+  "description": "Express-inspired web framework built on top of Fasthttp.",
+  "category": "web-frameworks",
+  "added": "2026-09-12"
+}

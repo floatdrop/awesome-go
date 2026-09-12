@@ -1,0 +1,7 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "repo": "hibiken/asynq",
+  "description": "Distributed task queue backed by Redis.",
+  "category": "messaging",
+  "added": "2026-09-12"
+}

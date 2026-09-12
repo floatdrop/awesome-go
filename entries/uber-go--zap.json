@@ -1,0 +1,7 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "repo": "uber-go/zap",
+  "description": "Structured, leveled logging with a focus on performance.",
+  "category": "logging",
+  "added": "2026-09-12"
+}

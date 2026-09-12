@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "repo": "google/uuid",
+  "description": "Generation and parsing of UUIDs per RFC 4122 and DCE 1.1.",
+  "category": "utilities",
+  "added": "2026-09-12",
+  "exempt": [
+    "inactive"
+  ]
+}

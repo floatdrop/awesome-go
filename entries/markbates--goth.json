@@ -1,0 +1,7 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "repo": "markbates/goth",
+  "description": "Multi-provider OAuth authentication for web applications.",
+  "category": "auth",
+  "added": "2026-09-12"
+}

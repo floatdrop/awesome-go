@@ -1,0 +1,7 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "repo": "fsnotify/fsnotify",
+  "description": "Cross-platform filesystem notifications.",
+  "category": "utilities",
+  "added": "2026-09-12"
+}

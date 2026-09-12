@@ -31,18 +31,29 @@ jobs:
         with:
           go-version-file: go.mod
 
-      - name: awesome.json is in canonical form
+      - name: Files are in canonical form
         run: go run ./cmd/awesome fmt -check
 
       - name: Entry rules (offline)
         run: go run ./cmd/awesome validate
+
+      - name: One new entry per pull request
+        if: github.event_name == 'pull_request'
+        run: |
+          added=$(git diff --name-only --diff-filter=A "origin/${{ github.base_ref }}...HEAD" -- entries/ | sed '/^$/d')
+          count=$(printf '%s' "$added" | grep -c . || true)
+          if [ "$count" -gt 1 ]; then
+            echo "::error::A pull request may add only one entry so each can be reviewed on its own. This one adds $count:"
+            echo "$added"
+            exit 1
+          fi
 
       - name: Generated files were not edited by hand
         if: github.event_name == 'pull_request'
         run: |
           changed=$(git diff --name-only "origin/${{ github.base_ref }}...HEAD" -- README.md metadata.json badges/)
           if [ -n "$changed" ]; then
-            echo "::error::These files are generated from awesome.json; do not edit them in a pull request:"
+            echo "::error::These files are generated from list.json and entries/; do not edit them in a pull request:"
             echo "$changed"
             exit 1
           fi
@@ -52,5 +63,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git show "origin/${{ github.base_ref }}:awesome.json" > "$RUNNER_TEMP/base.json"
-          go run ./cmd/awesome validate -remote -base "$RUNNER_TEMP/base.json"
+          mkdir -p "$RUNNER_TEMP/base"
+          git archive "origin/${{ github.base_ref }}" list.json entries | tar -x -C "$RUNNER_TEMP/base"
+          go run ./cmd/awesome validate -remote -base "$RUNNER_TEMP/base"

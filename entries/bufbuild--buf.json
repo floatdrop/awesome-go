@@ -1,0 +1,7 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "repo": "bufbuild/buf",
+  "description": "Protobuf build tool with linting, breaking change detection and code generation.",
+  "category": "developer-tools",
+  "added": "2026-09-12"
+}

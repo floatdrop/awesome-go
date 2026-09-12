@@ -1,0 +1,7 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "repo": "uber-go/mock",
+  "description": "Mocking framework with code generation via mockgen.",
+  "category": "testing",
+  "added": "2026-09-12"
+}

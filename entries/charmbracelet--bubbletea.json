@@ -1,0 +1,7 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "repo": "charmbracelet/bubbletea",
+  "description": "Framework for terminal user interfaces based on The Elm Architecture.",
+  "category": "cli",
+  "added": "2026-09-12"
+}

@@ -6,7 +6,7 @@ import (
 )
 
 // Policy is the machine-enforced part of the entry rules. It lives in
-// awesome.json so contributors can read the thresholds next to the data.
+// list.json so contributors can read the thresholds next to the data.
 type Policy struct {
 	MinAgeDays           int  `json:"min_age_days"`
 	MinStars             int  `json:"min_stars"`

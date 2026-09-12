@@ -1,0 +1,7 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "repo": "hashicorp/golang-lru",
+  "description": "Thread-safe fixed-size LRU and 2Q caches.",
+  "category": "caching",
+  "added": "2026-09-12"
+}

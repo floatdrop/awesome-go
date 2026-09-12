@@ -1,0 +1,7 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "repo": "BurntSushi/toml",
+  "description": "Parser and encoder for TOML with reflection-based mapping to structs.",
+  "category": "serialization",
+  "added": "2026-09-12"
+}

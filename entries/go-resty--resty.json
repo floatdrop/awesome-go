@@ -1,0 +1,7 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "repo": "go-resty/resty",
+  "description": "Feature-rich REST client with retries, middleware and request tracing.",
+  "category": "http-clients",
+  "added": "2026-09-12"
+}
