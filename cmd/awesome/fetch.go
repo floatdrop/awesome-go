@@ -5,7 +5,6 @@ import (
 	"errors"
 	"strings"
 	"sync"
-	"time"
 
 	"github.com/floatdrop/awesome-go/internal/gh"
 	"github.com/floatdrop/awesome-go/internal/list"
@@ -22,7 +21,7 @@ type fetchResult struct {
 
 // fetchAll queries GitHub for every entry with bounded concurrency and returns
 // results in input order.
-func fetchAll(ctx context.Context, c *gh.Client, entries []list.Entry, now time.Time) []fetchResult {
+func fetchAll(ctx context.Context, c *gh.Client, entries []list.Entry) []fetchResult {
 	results := make([]fetchResult, len(entries))
 	sem := make(chan struct{}, fetchWorkers)
 	var wg sync.WaitGroup
@@ -32,7 +31,7 @@ func fetchAll(ctx context.Context, c *gh.Client, entries []list.Entry, now time.
 			defer wg.Done()
 			sem <- struct{}{}
 			defer func() { <-sem }()
-			m, canonical, err := fetchOne(ctx, c, e, now)
+			m, canonical, err := fetchOne(ctx, c, e)
 			results[i] = fetchResult{entry: e, meta: m, canonical: canonical, err: err}
 		}(i, e)
 	}
@@ -40,10 +39,10 @@ func fetchAll(ctx context.Context, c *gh.Client, entries []list.Entry, now time.
 	return results
 }
 
-func fetchOne(ctx context.Context, c *gh.Client, e list.Entry, now time.Time) (list.RepoMeta, string, error) {
+func fetchOne(ctx context.Context, c *gh.Client, e list.Entry) (list.RepoMeta, string, error) {
 	r, err := c.Repo(ctx, e.Repo)
 	if errors.Is(err, gh.ErrNotFound) {
-		return list.RepoMeta{NotFound: true, FetchedAt: now}, "", nil
+		return list.RepoMeta{NotFound: true}, "", nil
 	}
 	if err != nil {
 		return list.RepoMeta{}, "", err
@@ -56,7 +55,6 @@ func fetchOne(ctx context.Context, c *gh.Client, e list.Entry, now time.Time) (l
 		Language:  r.Language,
 		CreatedAt: r.CreatedAt,
 		PushedAt:  r.PushedAt,
-		FetchedAt: now,
 	}
 	if r.License != nil {
 		m.License = r.License.SPDXID

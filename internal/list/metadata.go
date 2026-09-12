@@ -12,9 +12,11 @@ import (
 // GitHub API. It is generated, never edited by hand.
 const MetadataFileName = "metadata.json"
 
-// Metadata maps "owner/repo" to the facts fetched about it.
+// Metadata maps "owner/repo" to the facts fetched about it. It deliberately
+// holds no timestamps finer than a day: the file must only change when a real
+// value changes, so a sync run that learns nothing new commits nothing.
 type Metadata struct {
-	UpdatedAt time.Time           `json:"updated_at"`
+	UpdatedAt string              `json:"updated_at"` // YYYY-MM-DD of the last refresh
 	Repos     map[string]RepoMeta `json:"repos"`
 }
 
@@ -31,7 +33,6 @@ type RepoMeta struct {
 	License   string    `json:"license,omitempty"`
 	CreatedAt time.Time `json:"created_at"`
 	PushedAt  time.Time `json:"pushed_at"`
-	FetchedAt time.Time `json:"fetched_at"`
 }
 
 // LoadMetadata reads the cache; a missing file is an empty cache.

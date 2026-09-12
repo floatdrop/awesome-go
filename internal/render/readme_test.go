@@ -19,7 +19,7 @@ func fixture(podium int) (*list.List, *list.Metadata) {
 			{Repo: "d/unknown", Description: "Unknown.", Category: "web"},
 		},
 	}
-	m := &list.Metadata{UpdatedAt: time.Date(2026, 9, 12, 3, 0, 0, 0, time.UTC), Repos: map[string]list.RepoMeta{
+	m := &list.Metadata{UpdatedAt: "2026-09-12", Repos: map[string]list.RepoMeta{
 		"a/small": {Stars: 120},
 		"b/big":   {Stars: 45678},
 		"c/mid":   {Stars: 2050},

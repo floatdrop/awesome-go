@@ -101,7 +101,7 @@ func runValidate(args []string) error {
 		}
 		fmt.Printf("checking %d repositories against GitHub\n", len(targets))
 		client := gh.New(os.Getenv("GITHUB_TOKEN"))
-		for _, r := range fetchAll(context.Background(), client, targets, now) {
+		for _, r := range fetchAll(context.Background(), client, targets) {
 			if r.err != nil {
 				return r.err
 			}
