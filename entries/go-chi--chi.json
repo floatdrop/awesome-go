@@ -1,0 +1,6 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "repo": "go-chi/chi",
+  "description": "Lightweight, idiomatic and composable router built on net/http.",
+  "category": "web-frameworks"
+}
