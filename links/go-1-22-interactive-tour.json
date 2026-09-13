@@ -1,0 +1,7 @@
+{
+  "$schema": "../schema/link.schema.json",
+  "title": "Go 1.22 Interactive Tour",
+  "url": "https://antonz.org/go-1-22/",
+  "description": "Runnable examples of per-iteration loop variables, range over integers, math/rand/v2 and routing.",
+  "section": "documentation"
+}
