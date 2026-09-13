@@ -33,6 +33,7 @@ Search, filter and sort the full list at [floatdrop.github.io/awesome-go](https:
 - [Messaging & Queues](#messaging--queues)
 - [Developer Tools](#developer-tools)
 - [Documentation](#documentation)
+- [Books](#books)
 
 ## Web Frameworks & Routers
 
@@ -144,6 +145,12 @@ Linters, build tools, debuggers, code generators and terminal tools for daily de
 Official guides and references for learning and using the language.
 
 - [A Tour of Go](https://go.dev/tour/) - Interactive introduction that runs in the browser, from basic syntax to generics and concurrency.
+
+## Books
+
+Books worth reading cover to cover.
+
+- [Learning Go, 2nd Edition](https://www.oreilly.com/library/view/learning-go-2nd/9781098139285/) - Jon Bodner's guide to idiomatic modern practice, from generics to concurrency and testing.
 
 ## Contributing
 
