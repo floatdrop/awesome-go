@@ -47,6 +47,7 @@ func TestValidateRejectsLinks(t *testing.T) {
 		}, "duplicate of"},
 		{"section clashes with category", func(l *List) { l.LinkSections[0].ID = "web"; l.Links[0].Section = "web" }, "already used by a category"},
 		{"duplicate section", func(l *List) { l.LinkSections = append(l.LinkSections, l.LinkSections[0]) }, "duplicate link section"},
+		{"unknown link exemption", func(l *List) { l.Links[0].Exempt = []string{"stars"} }, "unknown link exemption"},
 	}
 	for _, tc := range cases {
 		t.Run(tc.name, func(t *testing.T) {

@@ -172,6 +172,11 @@ func (l *List) Validate(now time.Time) []Problem {
 		if !seenSection[k.Section] {
 			add("unknown link section %q", k.Section)
 		}
+		for _, x := range k.Exempt {
+			if x != LinkExemptCheck {
+				add("unknown link exemption %q (allowed: %s)", x, LinkExemptCheck)
+			}
+		}
 		for _, p := range describeText(k.Title, k.Description, l.Policy.maxDescription()) {
 			add("%s", p)
 		}

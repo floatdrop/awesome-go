@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema/link.schema.json",
+  "title": "Learning Go, 2nd Edition",
+  "url": "https://www.oreilly.com/library/view/learning-go-2nd/9781098139285/",
+  "description": "Jon Bodner's guide to idiomatic modern practice, from generics to concurrency and testing.",
+  "section": "books",
+  "exempt": [
+    "link-check"
+  ]
+}

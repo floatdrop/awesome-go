@@ -33,6 +33,16 @@
     "section": {
       "type": "string",
       "description": "A link section id from list.json."
+    },
+    "exempt": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "link-check"
+        ]
+      },
+      "description": "Checks a maintainer waived for this link; link-check skips the live HTTP request."
     }
   }
 }

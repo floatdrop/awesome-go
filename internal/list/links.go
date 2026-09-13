@@ -34,8 +34,25 @@ type Link struct {
 	URL         string `json:"url"`
 	Description string `json:"description"`
 	Section     string `json:"section"`
+	// Exempt waives checks a maintainer has decided do not apply to this link,
+	// such as the live link check for sites behind bot protection.
+	Exempt []string `json:"exempt,omitempty"`
 
 	file string
+}
+
+// LinkExemptCheck skips the live HTTP check, for pages that refuse automated
+// requests (for example publisher sites behind Akamai) but work in a browser.
+const LinkExemptCheck = "link-check"
+
+// IsExempt reports whether the link waives the given check.
+func (k Link) IsExempt(rule string) bool {
+	for _, x := range k.Exempt {
+		if x == rule {
+			return true
+		}
+	}
+	return false
 }
 
 var slugNonAlnum = regexp.MustCompile(`[^a-z0-9]+`)

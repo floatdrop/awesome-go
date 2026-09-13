@@ -137,6 +137,11 @@
       "id": "documentation",
       "name": "Documentation",
       "description": "Official guides and references for learning and using the language."
+    },
+    {
+      "id": "books",
+      "name": "Books",
+      "description": "Books worth reading cover to cover."
     }
   ]
 }
