@@ -41,10 +41,30 @@ type Meta struct {
 	// Site overrides the GitHub Pages URL, for a custom domain. Defaults to
 	// https://<owner>.github.io/<name>/.
 	Site string `json:"site,omitempty"`
+	// Logo is a repository-relative image shown centered above the README title.
+	Logo string `json:"logo,omitempty"`
+	// Discord links the community server from a badge under the README title.
+	Discord *Discord `json:"discord,omitempty"`
 	// Podium is how many entries per category are shown before the rest is
 	// collapsed into a "More" block. The first three get medals. Zero shows a
 	// flat list.
 	Podium int `json:"podium"`
+}
+
+// Discord identifies the community server. The badge needs the server widget
+// enabled; Invite is where the badge links, falling back to the server URL,
+// which only works for people who are already members.
+type Discord struct {
+	Server string `json:"server"`
+	Invite string `json:"invite,omitempty"`
+}
+
+// Link is where the Discord badge points.
+func (d Discord) Link() string {
+	if d.Invite != "" {
+		return d.Invite
+	}
+	return "https://discord.com/channels/" + d.Server
 }
 
 // SiteURL is where the generated docs/ site is published.

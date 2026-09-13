@@ -51,6 +51,9 @@ func TestValidateRejects(t *testing.T) {
 		{"future date", func(l *List) { l.Entries[0].Added = "2099-01-01" }, "future"},
 		{"bad category id", func(l *List) { l.Categories[0].ID = "Web Stuff"; l.Entries[0].Category = "Web Stuff" }, "kebab-case"},
 		{"bad list repo", func(l *List) { l.Meta.Repo = "awesome-go" }, "list.repo"},
+		{"bad discord id", func(l *List) { l.Meta.Discord = &Discord{Server: "awesome"} }, "list.discord.server"},
+		{"bad discord invite", func(l *List) { l.Meta.Discord = &Discord{Server: "1548529967288029294", Invite: "https://example.com"} }, "list.discord.invite"},
+		{"logo in docs", func(l *List) { l.Meta.Logo = "docs/logo.svg" }, "list.logo"},
 		{"unknown exemption", func(l *List) { l.Entries[0].Exempt = []string{"license"} }, "unknown exemption"},
 	}
 	for _, tc := range cases {

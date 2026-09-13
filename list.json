@@ -5,6 +5,10 @@
     "repo": "floatdrop/awesome-go",
     "branch": "main",
     "description": "A short, hand-curated list of Go libraries and tools that are actually worth using. Not a directory of everything that exists.",
+    "logo": "assets/logotype.svg",
+    "discord": {
+      "server": "1548529967288029294"
+    },
     "podium": 5
   },
   "policy": {

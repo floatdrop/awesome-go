@@ -49,7 +49,15 @@ func README(l *list.List, m *list.Metadata, now time.Time) []byte {
 	}
 
 	w("%s\n", Header)
-	w("# %s\n\n", l.Meta.Title)
+	if l.Meta.Logo != "" {
+		w("<p align=\"center\">\n  <img src=\"%s\" alt=\"The Go gopher wearing pixel sunglasses\" width=\"180\">\n</p>\n\n", l.Meta.Logo)
+		w("<h1 align=\"center\">%s</h1>\n\n", l.Meta.Title)
+	} else {
+		w("# %s\n\n", l.Meta.Title)
+	}
+	if d := l.Meta.Discord; d != nil {
+		w("<p align=\"center\">\n  <a href=\"%s\"><img src=\"https://img.shields.io/discord/%s?logo=discord&logoColor=white&label=discord&color=5865F2\" alt=\"Discord\"></a>\n</p>\n\n", d.Link(), d.Server)
+	}
 	w("> %s\n\n", l.Meta.Description)
 	w("%d projects in %d categories. ", len(l.Entries), len(categories))
 	w("Every entry is added by a human through a pull request and checked against the [entry rules](CONTRIBUTING.md#entry-rules) by CI. ")
@@ -103,7 +111,11 @@ func README(l *list.List, m *list.Metadata, now time.Time) []byte {
 	w("Read the [contribution guidelines](CONTRIBUTING.md) first. Every listed project gets its own [badge](CONTRIBUTING.md#badge) to show off.\n")
 	w("\n## License\n\n")
 	w("[![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)\n\n")
-	w("To the extent possible under law, the maintainers have waived all copyright and related or neighboring rights to this work.\n")
+	w("To the extent possible under law, the maintainers have waived all copyright and related or neighboring rights to this work.")
+	if l.Meta.Logo != "" {
+		w(" The logo is excluded: it is based on the Go gopher by Renée French, licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).")
+	}
+	w("\n")
 	return []byte(b.String())
 }
 
