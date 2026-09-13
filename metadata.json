@@ -307,6 +307,15 @@
       "created_at": "2012-10-16T16:43:17Z",
       "pushed_at": "2026-09-02T05:37:01Z"
     },
+    "testcontainers/testcontainers-go": {
+      "stars": 4974,
+      "archived": false,
+      "is_go": true,
+      "language": "Go",
+      "license": "MIT",
+      "created_at": "2018-07-18T15:04:31Z",
+      "pushed_at": "2026-09-10T07:56:21Z"
+    },
     "wailsapp/wails": {
       "stars": 36227,
       "archived": false,

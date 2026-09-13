@@ -2,5 +2,6 @@
   "$schema": "../schema/entry.schema.json",
   "repo": "testcontainers/testcontainers-go",
   "description": "Throwaway Docker containers for integration tests, with ready modules for databases and brokers.",
-  "category": "testing"
+  "category": "testing",
+  "added": "2026-09-13"
 }
