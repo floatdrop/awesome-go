@@ -107,6 +107,15 @@ func TestREADMELinkSections(t *testing.T) {
 	if strings.Contains(out, "Books") {
 		t.Errorf("empty link sections must be skipped")
 	}
+
+	l.Links = append(l.Links, list.Link{
+		Title: "Release Tours", URL: "https://example.com/2", Description: "Tours.", Section: "documentation",
+		Versions: []list.LinkVersion{{Label: "2", URL: "https://example.com/2"}, {Label: "1", URL: "https://example.com/1"}},
+	})
+	out = string(README(l, m, time.Now()))
+	if want := "- [Release Tours](https://example.com/2) - Tours. Versions: [2](https://example.com/2) · [1](https://example.com/1)\n"; !strings.Contains(out, want) {
+		t.Errorf("README missing %q\n---\n%s", want, out)
+	}
 	if strings.Index(out, "## Documentation") > strings.Index(out, "## Contributing") || strings.Index(out, "## Documentation") < strings.Index(out, "## Web & HTTP") {
 		t.Errorf("link sections must come after the categories and before Contributing")
 	}

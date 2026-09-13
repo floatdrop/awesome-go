@@ -44,10 +44,30 @@ func TestValidateRejectsLinks(t *testing.T) {
 			d.Title = "Tour Again"
 			d.URL = "https://go.dev/tour"
 			l.Links = append(l.Links, d)
-		}, "duplicate of"},
+		}, "is already listed in"},
 		{"section clashes with category", func(l *List) { l.LinkSections[0].ID = "web"; l.Links[0].Section = "web" }, "already used by a category"},
 		{"duplicate section", func(l *List) { l.LinkSections = append(l.LinkSections, l.LinkSections[0]) }, "duplicate link section"},
 		{"unknown link exemption", func(l *List) { l.Links[0].Exempt = []string{"stars"} }, "unknown link exemption"},
+		{"single version", func(l *List) {
+			l.Links[0].Versions = []LinkVersion{{Label: "1", URL: l.Links[0].URL}}
+		}, "single version"},
+		{"url not newest version", func(l *List) {
+			l.Links[0].Versions = []LinkVersion{{Label: "2", URL: "https://example.com/2"}, {Label: "1", URL: l.Links[0].URL}}
+		}, "must equal the first version"},
+		{"bad version url", func(l *List) {
+			l.Links[0].Versions = []LinkVersion{{Label: "2", URL: l.Links[0].URL}, {Label: "1", URL: "http://example.com/1"}}
+		}, "versions[1]: url must be an absolute https URL"},
+		{"duplicate version label", func(l *List) {
+			l.Links[0].Versions = []LinkVersion{{Label: "1", URL: l.Links[0].URL}, {Label: "1", URL: "https://example.com/1"}}
+		}, "duplicate label"},
+		{"repeated version url", func(l *List) {
+			l.Links[0].Versions = []LinkVersion{{Label: "2", URL: l.Links[0].URL}, {Label: "1", URL: l.Links[0].URL}}
+		}, "is repeated"},
+		{"version url listed elsewhere", func(l *List) {
+			other := Link{Title: "Other", URL: "https://example.com/other", Description: "Other resource.", Section: "documentation"}
+			l.Links = append(l.Links, other)
+			l.Links[0].Versions = []LinkVersion{{Label: "2", URL: l.Links[0].URL}, {Label: "1", URL: "https://example.com/other"}}
+		}, "is already listed in"},
 	}
 	for _, tc := range cases {
 		t.Run(tc.name, func(t *testing.T) {
@@ -97,6 +117,31 @@ func TestLinksSaveLoadRoundTrip(t *testing.T) {
 	}
 	if _, err := ParseLink([]byte(`{"title":"x","ur":"typo"}`)); err == nil {
 		t.Fatalf("unknown fields must be rejected")
+	}
+}
+
+func TestLinkVersions(t *testing.T) {
+	l := withLinks()
+	l.Links[0].Versions = []LinkVersion{
+		{Label: "2", URL: "https://go.dev/tour/"},
+		{Label: "1", URL: "https://example.com/tour-1"},
+	}
+	if p := l.Validate(now); len(p) != 0 {
+		t.Fatalf("valid series rejected: %v", p)
+	}
+	if got := l.Links[0].URLs(); len(got) != 2 || got[0] != "https://go.dev/tour/" || got[1] != "https://example.com/tour-1" {
+		t.Fatalf("URLs must list the main url once, then the other versions: %v", got)
+	}
+	root := t.TempDir()
+	if err := l.Save(root); err != nil {
+		t.Fatal(err)
+	}
+	loaded, err := Load(root)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if len(loaded.Links[0].Versions) != 2 || loaded.Links[0].Versions[1].Label != "1" {
+		t.Fatalf("versions not persisted in order: %+v", loaded.Links[0].Versions)
 	}
 }
 

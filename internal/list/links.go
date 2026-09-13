@@ -34,6 +34,10 @@ type Link struct {
 	URL         string `json:"url"`
 	Description string `json:"description"`
 	Section     string `json:"section"`
+	// Versions turns the link into a series, such as one tour per release.
+	// The first version is the newest and its URL must equal URL, so the
+	// title always points at the latest installment.
+	Versions []LinkVersion `json:"versions,omitempty"`
 	// Exempt waives checks a maintainer has decided do not apply to this link,
 	// such as the live link check for sites behind bot protection.
 	Exempt []string `json:"exempt,omitempty"`
@@ -44,6 +48,34 @@ type Link struct {
 // LinkExemptCheck skips the live HTTP check, for pages that refuse automated
 // requests (for example publisher sites behind Akamai) but work in a browser.
 const LinkExemptCheck = "link-check"
+
+// LinkVersion is one installment of a series link.
+type LinkVersion struct {
+	Label string `json:"label"`
+	URL   string `json:"url"`
+}
+
+// URLs returns the link's URL followed by every version URL, without
+// duplicates, in order.
+func (k Link) URLs() []string {
+	seen := map[string]bool{}
+	var out []string
+	for _, u := range append([]string{k.URL}, versionURLs(k.Versions)...) {
+		if u != "" && !seen[u] {
+			seen[u] = true
+			out = append(out, u)
+		}
+	}
+	return out
+}
+
+func versionURLs(vs []LinkVersion) []string {
+	out := make([]string, len(vs))
+	for i, v := range vs {
+		out[i] = v.URL
+	}
+	return out
+}
 
 // IsExempt reports whether the link waives the given check.
 func (k Link) IsExempt(rule string) bool {

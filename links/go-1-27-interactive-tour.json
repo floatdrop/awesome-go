@@ -1,7 +1,0 @@
-{
-  "$schema": "../schema/link.schema.json",
-  "title": "Go 1.27 Interactive Tour",
-  "url": "https://victoriametrics.com/blog/go-1-27/",
-  "description": "Runnable examples of every notable language, runtime and standard library change in the release.",
-  "section": "documentation"
-}

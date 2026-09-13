@@ -44,6 +44,7 @@ type siteLink struct {
 	Host        string
 	Description string
 	Search      string
+	Versions    []list.LinkVersion
 }
 
 type siteCategory struct {
@@ -136,7 +137,8 @@ func Site(l *list.List, m *list.Metadata, now time.Time) ([]byte, error) {
 				URL:         k.URL,
 				Host:        k.Host(),
 				Description: k.Description,
-				Search:      strings.ToLower(k.Title + " " + k.Host() + " " + k.Description),
+				Search:      strings.ToLower(k.Title + " " + k.Host() + " " + k.Description + versionLabels(k.Versions)),
+				Versions:    k.Versions,
 			})
 		}
 		page.LinkSections = append(page.LinkSections, ss)
@@ -147,4 +149,13 @@ func Site(l *list.List, m *list.Metadata, now time.Time) ([]byte, error) {
 		return nil, err
 	}
 	return buf.Bytes(), nil
+}
+
+// versionLabels joins version labels for site search, with a leading space.
+func versionLabels(vs []list.LinkVersion) string {
+	var b strings.Builder
+	for _, v := range vs {
+		b.WriteString(" " + v.Label)
+	}
+	return b.String()
 }
