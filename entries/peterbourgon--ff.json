@@ -1,0 +1,6 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "repo": "peterbourgon/ff",
+  "description": "Extends the standard flag package with env vars, config files and subcommands, without replacing it.",
+  "category": "cli"
+}
