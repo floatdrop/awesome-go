@@ -2,5 +2,6 @@
   "$schema": "../schema/entry.schema.json",
   "repo": "RoaringBitmap/roaring",
   "description": "Compressed bitmaps for sparse or huge integer sets, with fast set operations and serialization.",
-  "category": "data-structures"
+  "category": "data-structures",
+  "added": "2026-09-13"
 }

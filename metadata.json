@@ -19,6 +19,15 @@
       "created_at": "2024-06-23T12:52:57Z",
       "pushed_at": "2026-08-30T14:00:30Z"
     },
+    "RoaringBitmap/roaring": {
+      "stars": 2934,
+      "archived": false,
+      "is_go": true,
+      "language": "Go",
+      "license": "Apache-2.0",
+      "created_at": "2014-07-10T20:14:34Z",
+      "pushed_at": "2026-09-02T17:12:59Z"
+    },
     "alecthomas/kong": {
       "stars": 3173,
       "archived": false,
@@ -45,6 +54,15 @@
       "license": "Apache-2.0",
       "created_at": "2016-03-23T07:18:52Z",
       "pushed_at": "2026-08-31T13:55:41Z"
+    },
+    "bits-and-blooms/bitset": {
+      "stars": 1512,
+      "archived": false,
+      "is_go": true,
+      "language": "Go",
+      "license": "BSD-3-Clause",
+      "created_at": "2011-05-11T03:33:44Z",
+      "pushed_at": "2026-09-03T19:01:50Z"
     },
     "blockloop/scan": {
       "stars": 615,
@@ -188,7 +206,7 @@
       "language": "Go",
       "license": "MIT",
       "created_at": "2018-05-19T00:53:06Z",
-      "pushed_at": "2026-09-11T17:14:40Z"
+      "pushed_at": "2026-09-13T05:39:10Z"
     },
     "junegunn/fzf": {
       "stars": 82950,
@@ -359,7 +377,7 @@
       "language": "Go",
       "license": "MIT",
       "created_at": "2018-12-15T23:14:06Z",
-      "pushed_at": "2026-09-13T05:27:22Z"
+      "pushed_at": "2026-09-13T05:35:55Z"
     },
     "yandex/confetti": {
       "stars": 7,
