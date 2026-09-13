@@ -1,0 +1,6 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "repo": "jackc/pgx",
+  "description": "PostgreSQL driver and toolkit with a native API, connection pool, binary protocol and COPY support.",
+  "category": "databases"
+}
