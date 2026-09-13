@@ -27,13 +27,13 @@ h1{margin:0 0 8px;font-size:2.2rem;letter-spacing:-.02em}
 nav.toc{display:flex;flex-wrap:wrap;gap:6px;padding:20px 0 4px}
 nav.toc a{font-size:.85rem;padding:4px 10px;border:1px solid var(--line);border-radius:999px;color:var(--fg);background:var(--card)}
 nav.toc a small{color:var(--muted);margin-left:4px}
-section.category{padding:28px 0 4px}
-section.category h2{margin:0 0 4px;font-size:1.4rem}
-section.category h2 a{color:inherit}
-section.category .desc{margin:0 0 12px;color:var(--muted)}
+section.category,section.links{padding:28px 0 4px}
+section.category h2,section.links h2{margin:0 0 4px;font-size:1.4rem}
+section.category h2 a,section.links h2 a{color:inherit}
+section.category .desc,section.links .desc{margin:0 0 12px;color:var(--muted)}
 ol.entries{list-style:none;margin:0;padding:0;border:1px solid var(--line);border-radius:8px;overflow:hidden}
-li.entry{display:flex;gap:12px;align-items:flex-start;padding:10px 14px;border-top:1px solid var(--line)}
-li.entry:first-child{border-top:0}
+li.entry,li.link{display:flex;gap:12px;align-items:flex-start;padding:10px 14px;border-top:1px solid var(--line)}
+li.entry:first-child,li.link:first-child{border-top:0}
 li.entry.podium{background:var(--podium)}
 li.entry:target{outline:2px solid var(--accent);outline-offset:-2px}
 .rank{flex:0 0 2em;text-align:center;font-variant-numeric:tabular-nums;color:var(--muted);line-height:1.5}
@@ -60,7 +60,7 @@ footer{margin:48px 0 40px;color:var(--muted);font-size:.9rem;border-top:1px soli
 <span id="count"></span>
 </div></div>
 <div class="wrap">
-<nav class="toc"><a href="#web-frameworks">Web Frameworks &amp; Routers<small>2</small></a><a href="#cli">Command Line<small>3</small></a><a href="#gui">GUI &amp; Desktop<small>1</small></a><a href="#configuration">Configuration<small>2</small></a><a href="#logging">Logging<small>1</small></a><a href="#testing">Testing<small>2</small></a><a href="#databases">Databases &amp; SQL<small>3</small></a><a href="#validation">Validation<small>1</small></a><a href="#dependency-injection">Dependency Injection<small>1</small></a><a href="#concurrency">Concurrency<small>3</small></a><a href="#caching">Caching<small>3</small></a><a href="#networking">Networking &amp; Protocols<small>2</small></a><a href="#audio-video">Audio &amp; Video<small>2</small></a><a href="#messaging">Messaging &amp; Queues<small>1</small></a><a href="#developer-tools">Developer Tools<small>3</small></a></nav>
+<nav class="toc"><a href="#web-frameworks">Web Frameworks &amp; Routers<small>2</small></a><a href="#cli">Command Line<small>3</small></a><a href="#gui">GUI &amp; Desktop<small>1</small></a><a href="#configuration">Configuration<small>2</small></a><a href="#logging">Logging<small>1</small></a><a href="#testing">Testing<small>2</small></a><a href="#databases">Databases &amp; SQL<small>3</small></a><a href="#validation">Validation<small>1</small></a><a href="#dependency-injection">Dependency Injection<small>1</small></a><a href="#concurrency">Concurrency<small>3</small></a><a href="#caching">Caching<small>3</small></a><a href="#networking">Networking &amp; Protocols<small>2</small></a><a href="#audio-video">Audio &amp; Video<small>2</small></a><a href="#messaging">Messaging &amp; Queues<small>1</small></a><a href="#developer-tools">Developer Tools<small>3</small></a><a href="#documentation">Documentation<small>1</small></a></nav>
 <main>
 <section class="category" id="web-frameworks" data-id="web-frameworks">
 <h2><a href="#web-frameworks">Web Frameworks &amp; Routers</a></h2>
@@ -130,7 +130,7 @@ footer{margin:48px 0 40px;color:var(--muted);font-size:.9rem;border-top:1px soli
 <h2><a href="#logging">Logging</a></h2>
 <p class="desc">Structured and leveled logging.</p>
 <ol class="entries">
-<li class="entry podium" id="charmbracelet--log" data-name="log" data-stars="3390" data-added="2026-09-12" data-search="log charmbracelet/log minimal, colorful logger with a slog handler and structured key-value output.">
+<li class="entry podium" id="charmbracelet--log" data-name="log" data-stars="3391" data-added="2026-09-12" data-search="log charmbracelet/log minimal, colorful logger with a slog handler and structured key-value output.">
 <span class="rank">🥇</span>
 <div class="body"><a class="name" href="https://github.com/charmbracelet/log">log</a><span class="repo">charmbracelet/log</span><p>Minimal, colorful logger with a slog handler and structured key-value output.</p></div>
 <span class="stars" title="GitHub stars">★ 3.4k</span>
@@ -157,7 +157,7 @@ footer{margin:48px 0 40px;color:var(--muted);font-size:.9rem;border-top:1px soli
 <h2><a href="#databases">Databases &amp; SQL</a></h2>
 <p class="desc">Drivers, query builders, ORMs, migrations, embedded and distributed stores.</p>
 <ol class="entries">
-<li class="entry podium" id="etcd-io--etcd" data-name="etcd" data-stars="52257" data-added="2026-09-12" data-search="etcd etcd-io/etcd distributed key-value store with raft consensus, watches and leases, plus its client.">
+<li class="entry podium" id="etcd-io--etcd" data-name="etcd" data-stars="52258" data-added="2026-09-12" data-search="etcd etcd-io/etcd distributed key-value store with raft consensus, watches and leases, plus its client.">
 <span class="rank">🥇</span>
 <div class="body"><a class="name" href="https://github.com/etcd-io/etcd">etcd</a><span class="repo">etcd-io/etcd</span><p>Distributed key-value store with Raft consensus, watches and leases, plus its client.</p></div>
 <span class="stars" title="GitHub stars">★ 52k</span>
@@ -290,7 +290,7 @@ footer{margin:48px 0 40px;color:var(--muted);font-size:.9rem;border-top:1px soli
 <div class="body"><a class="name" href="https://github.com/junegunn/fzf">fzf</a><span class="repo">junegunn/fzf</span><p>Interactive fuzzy finder for the command line, with shell integration for files and history.</p></div>
 <span class="stars" title="GitHub stars">★ 83k</span>
 </li>
-<li class="entry podium" id="jesseduffield--lazygit" data-name="lazygit" data-stars="82285" data-added="2026-09-12" data-search="lazygit jesseduffield/lazygit terminal ui for git with staging, rebasing, stashing and worktrees a keystroke away.">
+<li class="entry podium" id="jesseduffield--lazygit" data-name="lazygit" data-stars="82286" data-added="2026-09-12" data-search="lazygit jesseduffield/lazygit terminal ui for git with staging, rebasing, stashing and worktrees a keystroke away.">
 <span class="rank">🥈</span>
 <div class="body"><a class="name" href="https://github.com/jesseduffield/lazygit">lazygit</a><span class="repo">jesseduffield/lazygit</span><p>Terminal UI for git with staging, rebasing, stashing and worktrees a keystroke away.</p></div>
 <span class="stars" title="GitHub stars">★ 82k</span>
@@ -299,6 +299,15 @@ footer{margin:48px 0 40px;color:var(--muted);font-size:.9rem;border-top:1px soli
 <span class="rank">🥉</span>
 <div class="body"><a class="name" href="https://github.com/golangci/golangci-lint">golangci-lint</a><span class="repo">golangci/golangci-lint</span><p>Linters runner that aggregates dozens of linters with caching, parallelism and a single config.</p></div>
 <span class="stars" title="GitHub stars">★ 19k</span>
+</li>
+</ol>
+</section>
+<section class="links" id="documentation">
+<h2><a href="#documentation">Documentation</a></h2>
+<p class="desc">Official guides and references for learning and using the language.</p>
+<ol class="entries">
+<li class="link" id="a-tour-of-go" data-search="a tour of go go.dev interactive introduction that runs in the browser, from basic syntax to generics and concurrency.">
+<div class="body"><a class="name" href="https://go.dev/tour/">A Tour of Go</a><span class="repo">go.dev</span><p>Interactive introduction that runs in the browser, from basic syntax to generics and concurrency.</p></div>
 </li>
 </ol>
 </section>
@@ -314,6 +323,7 @@ footer{margin:48px 0 40px;color:var(--muted);font-size:.9rem;border-top:1px soli
   var q=document.getElementById('q'),cat=document.getElementById('cat'),sort=document.getElementById('sort'),count=document.getElementById('count'),empty=document.getElementById('empty');
   var sections=Array.prototype.slice.call(document.querySelectorAll('section.category'));
   var total=document.querySelectorAll('li.entry').length;
+  var linkSecs=Array.prototype.slice.call(document.querySelectorAll('section.links'));
   function cmp(s){
     if(s==='name')return function(a,b){return a.dataset.name.localeCompare(b.dataset.name)};
     if(s==='added')return function(a,b){return b.dataset.added.localeCompare(a.dataset.added)||(b.dataset.stars-a.dataset.stars)};
@@ -327,7 +337,9 @@ footer{margin:48px 0 40px;color:var(--muted);font-size:.9rem;border-top:1px soli
       items.sort(order).forEach(function(li){list.appendChild(li)});
       sec.hidden=visible===0;shown+=visible;
     });
-    empty.style.display=shown?'none':'block';
+    var linkShown=0;
+    linkSecs.forEach(function(sec){var v=0;Array.prototype.forEach.call(sec.querySelectorAll('li.link'),function(li){var ok=!c&&(!term||li.dataset.search.indexOf(term)>=0);li.hidden=!ok;if(ok)v++});sec.hidden=v===0;linkShown+=v});
+    empty.style.display=(shown||linkShown)?'none':'block';
     count.textContent=shown===total?total+' projects':shown+' of '+total;
   }
   q.addEventListener('input',apply);cat.addEventListener('change',apply);sort.addEventListener('change',apply);

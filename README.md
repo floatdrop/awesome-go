@@ -32,6 +32,7 @@ Search, filter and sort the full list at [floatdrop.github.io/awesome-go](https:
 - [Audio & Video](#audio--video)
 - [Messaging & Queues](#messaging--queues)
 - [Developer Tools](#developer-tools)
+- [Documentation](#documentation)
 
 ## Web Frameworks & Routers
 
@@ -137,6 +138,12 @@ Linters, build tools, debuggers, code generators and terminal tools for daily de
 - 🥇 [fzf](https://github.com/junegunn/fzf) - Interactive fuzzy finder for the command line, with shell integration for files and history. ★ 83k
 - 🥈 [lazygit](https://github.com/jesseduffield/lazygit) - Terminal UI for git with staging, rebasing, stashing and worktrees a keystroke away. ★ 82k
 - 🥉 [golangci-lint](https://github.com/golangci/golangci-lint) - Linters runner that aggregates dozens of linters with caching, parallelism and a single config. ★ 19k
+
+## Documentation
+
+Official guides and references for learning and using the language.
+
+- [A Tour of Go](https://go.dev/tour/) - Interactive introduction that runs in the browser, from basic syntax to generics and concurrency.
 
 ## Contributing
 
