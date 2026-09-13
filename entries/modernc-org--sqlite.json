@@ -4,6 +4,7 @@
   "name": "modernc.org/sqlite",
   "description": "SQLite translated from C, so database/sql gets an embedded database without cgo or a C toolchain.",
   "category": "databases",
+  "added": "2026-09-13",
   "exempt": [
     "stars"
   ]
