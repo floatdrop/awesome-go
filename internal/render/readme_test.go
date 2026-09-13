@@ -91,6 +91,27 @@ func TestREADMEHeaderWithLogoAndDiscord(t *testing.T) {
 	}
 }
 
+func TestREADMELinkSections(t *testing.T) {
+	l, m := fixture(3)
+	l.LinkSections = []list.LinkSection{{ID: "documentation", Name: "Documentation", Description: "Guides."}, {ID: "books", Name: "Books"}}
+	l.Links = []list.Link{{Title: "A Tour of Go", URL: "https://go.dev/tour/", Description: "Interactive introduction.", Section: "documentation"}}
+	out := string(README(l, m, time.Now()))
+	for _, want := range []string{
+		"- [Web & HTTP](#web--http)\n- [Documentation](#documentation)\n",
+		"\n## Documentation\n\nGuides.\n\n- [A Tour of Go](https://go.dev/tour/) - Interactive introduction.\n",
+	} {
+		if !strings.Contains(out, want) {
+			t.Errorf("README missing %q\n---\n%s", want, out)
+		}
+	}
+	if strings.Contains(out, "Books") {
+		t.Errorf("empty link sections must be skipped")
+	}
+	if strings.Index(out, "## Documentation") > strings.Index(out, "## Contributing") || strings.Index(out, "## Documentation") < strings.Index(out, "## Web & HTTP") {
+		t.Errorf("link sections must come after the categories and before Contributing")
+	}
+}
+
 func TestREADMEFlatWithoutPodium(t *testing.T) {
 	l, m := fixture(0)
 	out := string(README(l, m, time.Now()))

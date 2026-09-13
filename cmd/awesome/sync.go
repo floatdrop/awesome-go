@@ -79,6 +79,13 @@ func runRefresh(args []string) error {
 	if err := meta.Save(p.metadata()); err != nil {
 		return err
 	}
+	if broken := checkLinks(context.Background(), l.Links); len(broken) > 0 {
+		lines := []string{"", "### Broken links (review manually)", ""}
+		for _, b := range broken {
+			lines = append(lines, "- "+b.String())
+		}
+		summary(lines...)
+	}
 	if len(failures) > 0 {
 		return fmt.Errorf("%d repositories could not be refreshed:\n  %s", len(failures), strings.Join(failures, "\n  "))
 	}

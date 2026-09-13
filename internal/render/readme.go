@@ -74,9 +74,19 @@ func README(l *list.List, m *list.Metadata, now time.Time) []byte {
 	w("\n\n")
 	w("Search, filter and sort the full list at [%s](%s).\n\n", strings.TrimSuffix(strings.TrimPrefix(l.Meta.SiteURL(), "https://"), "/"), l.Meta.SiteURL())
 
+	var linkSections []list.LinkSection
+	for _, s := range l.LinkSections {
+		if len(l.LinksIn(s.ID)) > 0 {
+			linkSections = append(linkSections, s)
+		}
+	}
+
 	w("## Contents\n\n")
 	for _, c := range categories {
 		w("- [%s](#%s)\n", c.Name, Slugify(c.Name))
+	}
+	for _, s := range linkSections {
+		w("- [%s](#%s)\n", s.Name, Slugify(s.Name))
 	}
 
 	for _, c := range categories {
@@ -104,6 +114,16 @@ func README(l *list.List, m *list.Metadata, now time.Time) []byte {
 				w("- %s\n", item(r, ""))
 			}
 			w("\n</details>\n")
+		}
+	}
+
+	for _, s := range linkSections {
+		w("\n## %s\n\n", s.Name)
+		if s.Description != "" {
+			w("%s\n\n", s.Description)
+		}
+		for _, k := range l.LinksIn(s.ID) {
+			w("- [%s](%s) - %s\n", k.Title, k.URL, k.Description)
 		}
 	}
 

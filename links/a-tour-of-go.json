@@ -1,0 +1,7 @@
+{
+  "$schema": "../schema/link.schema.json",
+  "title": "A Tour of Go",
+  "url": "https://go.dev/tour/",
+  "description": "Interactive introduction that runs in the browser, from basic syntax to generics and concurrency.",
+  "section": "documentation"
+}

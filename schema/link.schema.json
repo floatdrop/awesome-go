@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/floatdrop/awesome-go/main/schema/link.schema.json",
+  "title": "Awesome Go link",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "title",
+    "url",
+    "description",
+    "section"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Display title; the file name is derived from it."
+    },
+    "url": {
+      "type": "string",
+      "pattern": "^https://",
+      "description": "Absolute https URL. GitHub repositories belong in entries/."
+    },
+    "description": {
+      "type": "string",
+      "minLength": 10,
+      "maxLength": 100,
+      "pattern": "^[A-Z0-9].*\\.$"
+    },
+    "section": {
+      "type": "string",
+      "description": "A link section id from list.json."
+    }
+  }
+}

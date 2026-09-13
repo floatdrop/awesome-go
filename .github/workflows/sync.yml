@@ -12,6 +12,7 @@ on:
     paths:
       - list.json
       - "entries/**"
+      - "links/**"
       - go.mod
       - "cmd/**"
       - "internal/**"

@@ -4,7 +4,30 @@ import (
 	"strings"
 	"testing"
 	"time"
+
+	"github.com/floatdrop/awesome-go/internal/list"
 )
+
+func TestSiteLinkSections(t *testing.T) {
+	l, m := fixture(3)
+	l.LinkSections = []list.LinkSection{{ID: "documentation", Name: "Documentation"}}
+	l.Links = []list.Link{{Title: "A Tour of Go", URL: "https://www.go.dev/tour/", Description: "Interactive introduction.", Section: "documentation"}}
+	out, err := Site(l, m, time.Now())
+	if err != nil {
+		t.Fatal(err)
+	}
+	s := string(out)
+	for _, want := range []string{
+		`<a href="#documentation">Documentation<small>1</small></a>`,
+		`<section class="links" id="documentation">`,
+		`<li class="link" id="a-tour-of-go" data-search="a tour of go go.dev interactive introduction.">`,
+		`<a class="name" href="https://www.go.dev/tour/">A Tour of Go</a><span class="repo">go.dev</span>`,
+	} {
+		if !strings.Contains(s, want) {
+			t.Errorf("site missing %q", want)
+		}
+	}
+}
 
 func TestSite(t *testing.T) {
 	l, m := fixture(3)

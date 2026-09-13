@@ -27,13 +27,13 @@ h1{margin:0 0 8px;font-size:2.2rem;letter-spacing:-.02em}
 nav.toc{display:flex;flex-wrap:wrap;gap:6px;padding:20px 0 4px}
 nav.toc a{font-size:.85rem;padding:4px 10px;border:1px solid var(--line);border-radius:999px;color:var(--fg);background:var(--card)}
 nav.toc a small{color:var(--muted);margin-left:4px}
-section.category{padding:28px 0 4px}
-section.category h2{margin:0 0 4px;font-size:1.4rem}
-section.category h2 a{color:inherit}
-section.category .desc{margin:0 0 12px;color:var(--muted)}
+section.category,section.links{padding:28px 0 4px}
+section.category h2,section.links h2{margin:0 0 4px;font-size:1.4rem}
+section.category h2 a,section.links h2 a{color:inherit}
+section.category .desc,section.links .desc{margin:0 0 12px;color:var(--muted)}
 ol.entries{list-style:none;margin:0;padding:0;border:1px solid var(--line);border-radius:8px;overflow:hidden}
-li.entry{display:flex;gap:12px;align-items:flex-start;padding:10px 14px;border-top:1px solid var(--line)}
-li.entry:first-child{border-top:0}
+li.entry,li.link{display:flex;gap:12px;align-items:flex-start;padding:10px 14px;border-top:1px solid var(--line)}
+li.entry:first-child,li.link:first-child{border-top:0}
 li.entry.podium{background:var(--podium)}
 li.entry:target{outline:2px solid var(--accent);outline-offset:-2px}
 .rank{flex:0 0 2em;text-align:center;font-variant-numeric:tabular-nums;color:var(--muted);line-height:1.5}
@@ -60,7 +60,7 @@ footer{margin:48px 0 40px;color:var(--muted);font-size:.9rem;border-top:1px soli
 <span id="count"></span>
 </div></div>
 <div class="wrap">
-<nav class="toc">{{range .Categories}}<a href="#{{.ID}}">{{.Name}}<small>{{len .Entries}}</small></a>{{end}}</nav>
+<nav class="toc">{{range .Categories}}<a href="#{{.ID}}">{{.Name}}<small>{{len .Entries}}</small></a>{{end}}{{range .LinkSections}}<a href="#{{.ID}}">{{.Name}}<small>{{len .Links}}</small></a>{{end}}</nav>
 <main>
 {{range .Categories}}<section class="category" id="{{.ID}}" data-id="{{.ID}}">
 <h2><a href="#{{.ID}}">{{.Name}}</a></h2>
@@ -70,6 +70,15 @@ footer{margin:48px 0 40px;color:var(--muted);font-size:.9rem;border-top:1px soli
 <span class="rank">{{if .Medal}}{{.Medal}}{{else}}{{.Rank}}{{end}}</span>
 <div class="body"><a class="name" href="{{.URL}}">{{.Name}}</a><span class="repo">{{.Repo}}</span><p>{{.Description}}</p></div>
 <span class="stars" title="GitHub stars">★ {{.StarsText}}</span>
+</li>
+{{end}}</ol>
+</section>
+{{end}}{{range .LinkSections}}<section class="links" id="{{.ID}}">
+<h2><a href="#{{.ID}}">{{.Name}}</a></h2>
+{{with .Description}}<p class="desc">{{.}}</p>{{end}}
+<ol class="entries">
+{{range .Links}}<li class="link" id="{{.Slug}}" data-search="{{.Search}}">
+<div class="body"><a class="name" href="{{.URL}}">{{.Title}}</a><span class="repo">{{.Host}}</span><p>{{.Description}}</p></div>
 </li>
 {{end}}</ol>
 </section>
@@ -85,6 +94,7 @@ footer{margin:48px 0 40px;color:var(--muted);font-size:.9rem;border-top:1px soli
   var q=document.getElementById('q'),cat=document.getElementById('cat'),sort=document.getElementById('sort'),count=document.getElementById('count'),empty=document.getElementById('empty');
   var sections=Array.prototype.slice.call(document.querySelectorAll('section.category'));
   var total=document.querySelectorAll('li.entry').length;
+  var linkSecs=Array.prototype.slice.call(document.querySelectorAll('section.links'));
   function cmp(s){
     if(s==='name')return function(a,b){return a.dataset.name.localeCompare(b.dataset.name)};
     if(s==='added')return function(a,b){return b.dataset.added.localeCompare(a.dataset.added)||(b.dataset.stars-a.dataset.stars)};
@@ -98,7 +108,9 @@ footer{margin:48px 0 40px;color:var(--muted);font-size:.9rem;border-top:1px soli
       items.sort(order).forEach(function(li){list.appendChild(li)});
       sec.hidden=visible===0;shown+=visible;
     });
-    empty.style.display=shown?'none':'block';
+    var linkShown=0;
+    linkSecs.forEach(function(sec){var v=0;Array.prototype.forEach.call(sec.querySelectorAll('li.link'),function(li){var ok=!c&&(!term||li.dataset.search.indexOf(term)>=0);li.hidden=!ok;if(ok)v++});sec.hidden=v===0;linkShown+=v});
+    empty.style.display=(shown||linkShown)?'none':'block';
     count.textContent=shown===total?total+' projects':shown+' of '+total;
   }
   q.addEventListener('input',apply);cat.addEventListener('change',apply);sort.addEventListener('change',apply);

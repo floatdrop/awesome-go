@@ -17,16 +17,33 @@ var siteTemplate string
 var siteTpl = template.Must(template.New("site").Parse(siteTemplate))
 
 type sitePage struct {
-	Title       string
+	Title        string
+	Description  string
+	Repo         string
+	RepoURL      string
+	Branch       string
+	SiteURL      string
+	Updated      string
+	Total        int
+	Podium       int
+	Categories   []siteCategory
+	LinkSections []siteLinkSection
+}
+
+type siteLinkSection struct {
+	ID          string
+	Name        string
 	Description string
-	Repo        string
-	RepoURL     string
-	Branch      string
-	SiteURL     string
-	Updated     string
-	Total       int
-	Podium      int
-	Categories  []siteCategory
+	Links       []siteLink
+}
+
+type siteLink struct {
+	Slug        string
+	Title       string
+	URL         string
+	Host        string
+	Description string
+	Search      string
 }
 
 type siteCategory struct {
@@ -104,6 +121,25 @@ func Site(l *list.List, m *list.Metadata, now time.Time) ([]byte, error) {
 			}
 		}
 		page.Categories = append(page.Categories, sc)
+	}
+
+	for _, s := range l.LinkSections {
+		links := l.LinksIn(s.ID)
+		if len(links) == 0 {
+			continue
+		}
+		ss := siteLinkSection{ID: s.ID, Name: s.Name, Description: s.Description}
+		for _, k := range links {
+			ss.Links = append(ss.Links, siteLink{
+				Slug:        k.Slug(),
+				Title:       k.Title,
+				URL:         k.URL,
+				Host:        k.Host(),
+				Description: k.Description,
+				Search:      strings.ToLower(k.Title + " " + k.Host() + " " + k.Description),
+			})
+		}
+		page.LinkSections = append(page.LinkSections, ss)
 	}
 
 	var buf bytes.Buffer

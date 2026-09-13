@@ -131,5 +131,12 @@
       "name": "Developer Tools",
       "description": "Linters, build tools, debuggers, code generators and terminal tools for daily development work."
     }
+  ],
+  "link_sections": [
+    {
+      "id": "documentation",
+      "name": "Documentation",
+      "description": "Official guides and references for learning and using the language."
+    }
   ]
 }
