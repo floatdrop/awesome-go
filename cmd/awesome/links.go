@@ -4,6 +4,7 @@ import (
 	"context"
 	"fmt"
 	"net/http"
+	"strings"
 	"sync"
 	"time"
 
@@ -31,7 +32,13 @@ func checkLinks(ctx context.Context, links []list.Link) []list.Problem {
 			defer wg.Done()
 			sem <- struct{}{}
 			defer func() { <-sem }()
-			results[i] = checkLink(ctx, linkClient, k.URL)
+			var failed []string
+			for _, u := range k.URLs() {
+				if msg := checkLink(ctx, linkClient, u); msg != "" {
+					failed = append(failed, u+": "+msg)
+				}
+			}
+			results[i] = strings.Join(failed, "; ")
 		}(i, k)
 	}
 	wg.Wait()
@@ -63,7 +70,8 @@ func checkLink(ctx context.Context, c *http.Client, url string) string {
 	return ""
 }
 
-// changedLinks returns links whose URL is not present under baseRoot.
+// changedLinks returns links with at least one URL, including version URLs,
+// that is not present under baseRoot.
 func changedLinks(l *list.List, baseRoot string) ([]list.Link, error) {
 	base, err := list.Load(baseRoot)
 	if err != nil {
@@ -71,12 +79,17 @@ func changedLinks(l *list.List, baseRoot string) ([]list.Link, error) {
 	}
 	seen := map[string]bool{}
 	for _, k := range base.Links {
-		seen[k.URL] = true
+		for _, u := range k.URLs() {
+			seen[u] = true
+		}
 	}
 	var changed []list.Link
 	for _, k := range l.Links {
-		if !seen[k.URL] {
-			changed = append(changed, k)
+		for _, u := range k.URLs() {
+			if !seen[u] {
+				changed = append(changed, k)
+				break
+			}
 		}
 	}
 	return changed, nil

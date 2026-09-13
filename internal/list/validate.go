@@ -164,11 +164,38 @@ func (l *List) Validate(now time.Time) []Problem {
 		case strings.EqualFold(u.Host, "github.com") && len(strings.Split(strings.Trim(u.Path, "/"), "/")) == 2:
 			add("%s is a repository; it belongs in entries/, not links/", k.URL)
 		}
-		key := strings.TrimSuffix(strings.ToLower(k.URL), "/")
-		if other, dup := seenURL[key]; dup {
-			add("duplicate of %s", other)
+		seenLabel := map[string]bool{}
+		ownURL := map[string]bool{}
+		for i, v := range k.Versions {
+			where := fmt.Sprintf("versions[%d]", i)
+			if strings.TrimSpace(v.Label) == "" || strings.TrimSpace(v.Label) != v.Label || markdownRe.MatchString(v.Label) {
+				add("%s: label must be plain text without surrounding whitespace", where)
+			}
+			if seenLabel[v.Label] {
+				add("%s: duplicate label %q", where, v.Label)
+			}
+			seenLabel[v.Label] = true
+			if vu, err := url.Parse(v.URL); err != nil || vu.Scheme != "https" || vu.Host == "" {
+				add("%s: url must be an absolute https URL, got %q", where, v.URL)
+			}
+			if ownURL[v.URL] {
+				add("%s: url %s is repeated", where, v.URL)
+			}
+			ownURL[v.URL] = true
 		}
-		seenURL[key] = k.Path()
+		switch {
+		case len(k.Versions) == 1:
+			add("a link with a single version should not list versions")
+		case len(k.Versions) > 1 && k.URL != k.Versions[0].URL:
+			add("url must equal the first version's url (%s), so the title points at the newest installment", k.Versions[0].URL)
+		}
+		for _, u := range k.URLs() {
+			key := strings.TrimSuffix(strings.ToLower(u), "/")
+			if other, dup := seenURL[key]; dup && other != k.Path() {
+				add("%s is already listed in %s", u, other)
+			}
+			seenURL[key] = k.Path()
+		}
 		if !seenSection[k.Section] {
 			add("unknown link section %q", k.Section)
 		}

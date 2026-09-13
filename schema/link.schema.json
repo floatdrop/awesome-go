@@ -34,6 +34,29 @@
       "type": "string",
       "description": "A link section id from list.json."
     },
+    "versions": {
+      "type": "array",
+      "minItems": 2,
+      "description": "Installments of a series, newest first; the first url must equal url.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "label",
+          "url"
+        ],
+        "properties": {
+          "label": {
+            "type": "string",
+            "minLength": 1
+          },
+          "url": {
+            "type": "string",
+            "pattern": "^https://"
+          }
+        }
+      }
+    },
     "exempt": {
       "type": "array",
       "uniqueItems": true,

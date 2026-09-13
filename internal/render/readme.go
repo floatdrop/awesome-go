@@ -123,7 +123,15 @@ func README(l *list.List, m *list.Metadata, now time.Time) []byte {
 			w("%s\n\n", s.Description)
 		}
 		for _, k := range l.LinksIn(s.ID) {
-			w("- [%s](%s) - %s\n", k.Title, k.URL, k.Description)
+			w("- [%s](%s) - %s", k.Title, k.URL, k.Description)
+			if len(k.Versions) > 0 {
+				parts := make([]string, len(k.Versions))
+				for i, v := range k.Versions {
+					parts[i] = fmt.Sprintf("[%s](%s)", v.Label, v.URL)
+				}
+				w(" Versions: %s", strings.Join(parts, " · "))
+			}
+			w("\n")
 		}
 	}
 

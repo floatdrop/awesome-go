@@ -93,6 +93,8 @@ Documentation and other resources that are not a GitHub repository go under `lin
 
 Section ids are the `link_sections` in `list.json`. Links follow the same description rules as entries and count toward the one-addition-per-pull-request limit. Instead of star and age checks, CI requests the URL and requires an https link that answers without an error. A GitHub repository is always an entry, never a link. The nightly job reports links that stop answering but does not remove them. Some publishers block automated requests while the page works fine in a browser; a maintainer can then add `"exempt": ["link-check"]` to the link, which skips the live check and keeps every other rule.
 
+A series, such as one interactive tour per Go release, is one link with a `versions` list, newest first, each with a `label` and a `url`. The link's own `url` must equal the newest version's, so the title always points at the latest installment. A new installment is a new first item in `versions` plus the updated `url`, not a new link.
+
 ## Removing an entry
 
 Archived and deleted repositories are removed automatically every night. Anything else (unmaintained, superseded, no longer recommendable) is removed through a pull request that deletes the entry and explains why. The nightly job also lists projects with no pushes in the policy window in its job summary so they can be reviewed.

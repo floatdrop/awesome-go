@@ -1,0 +1,33 @@
+{
+  "$schema": "../schema/link.schema.json",
+  "title": "Go Release Interactive Tours",
+  "url": "https://victoriametrics.com/blog/go-1-27/",
+  "description": "Runnable examples of what changed in each release, from language features to the standard library.",
+  "section": "documentation",
+  "versions": [
+    {
+      "label": "1.27",
+      "url": "https://victoriametrics.com/blog/go-1-27/"
+    },
+    {
+      "label": "1.26",
+      "url": "https://antonz.org/go-1-26/"
+    },
+    {
+      "label": "1.25",
+      "url": "https://antonz.org/go-1-25/"
+    },
+    {
+      "label": "1.24",
+      "url": "https://antonz.org/go-1-24/"
+    },
+    {
+      "label": "1.23",
+      "url": "https://antonz.org/go-1-23/"
+    },
+    {
+      "label": "1.22",
+      "url": "https://antonz.org/go-1-22/"
+    }
+  ]
+}

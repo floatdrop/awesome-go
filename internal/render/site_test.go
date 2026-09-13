@@ -11,7 +11,8 @@ import (
 func TestSiteLinkSections(t *testing.T) {
 	l, m := fixture(3)
 	l.LinkSections = []list.LinkSection{{ID: "documentation", Name: "Documentation"}}
-	l.Links = []list.Link{{Title: "A Tour of Go", URL: "https://www.go.dev/tour/", Description: "Interactive introduction.", Section: "documentation"}}
+	l.Links = []list.Link{{Title: "A Tour of Go", URL: "https://www.go.dev/tour/", Description: "Interactive introduction.", Section: "documentation",
+		Versions: []list.LinkVersion{{Label: "2", URL: "https://www.go.dev/tour/"}, {Label: "1", URL: "https://example.com/1"}}}}
 	out, err := Site(l, m, time.Now())
 	if err != nil {
 		t.Fatal(err)
@@ -20,8 +21,9 @@ func TestSiteLinkSections(t *testing.T) {
 	for _, want := range []string{
 		`<a href="#documentation">Documentation<small>1</small></a>`,
 		`<section class="links" id="documentation">`,
-		`<li class="link" id="a-tour-of-go" data-search="a tour of go go.dev interactive introduction.">`,
 		`<a class="name" href="https://www.go.dev/tour/">A Tour of Go</a><span class="repo">go.dev</span>`,
+		`<p class="versions">Versions: <a href="https://www.go.dev/tour/">2</a> · <a href="https://example.com/1">1</a></p>`,
+		`data-search="a tour of go go.dev interactive introduction. 2 1"`,
 	} {
 		if !strings.Contains(s, want) {
 			t.Errorf("site missing %q", want)
