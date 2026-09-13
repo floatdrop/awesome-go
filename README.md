@@ -145,12 +145,7 @@ Linters, build tools, debuggers, code generators and terminal tools for daily de
 Official guides and references for learning and using the language.
 
 - [A Tour of Go](https://go.dev/tour/) - Interactive introduction that runs in the browser, from basic syntax to generics and concurrency.
-- [Go 1.22 Interactive Tour](https://antonz.org/go-1-22/) - Runnable examples of per-iteration loop variables, range over integers, math/rand/v2 and routing.
-- [Go 1.23 Interactive Tour](https://antonz.org/go-1-23/) - Runnable examples of range-over-func iterators, the new timer behavior and the unique package.
-- [Go 1.24 Interactive Tour](https://antonz.org/go-1-24/) - Runnable examples of weak pointers, Swiss Table maps, directory-scoped file access and more.
-- [Go 1.25 Interactive Tour](https://antonz.org/go-1-25/) - Runnable examples of synctest fake clocks, the new garbage collector and the flight recorder.
-- [Go 1.26 Interactive Tour](https://antonz.org/go-1-26/) - Runnable examples of new with expressions, type-safe error checking and performance improvements.
-- [Go 1.27 Interactive Tour](https://victoriametrics.com/blog/go-1-27/) - Runnable examples of every notable language, runtime and standard library change in the release.
+- [Go Release Interactive Tours](https://victoriametrics.com/blog/go-1-27/) - Runnable examples of what changed in each release, from language features to the standard library. Versions: [1.27](https://victoriametrics.com/blog/go-1-27/) · [1.26](https://antonz.org/go-1-26/) · [1.25](https://antonz.org/go-1-25/) · [1.24](https://antonz.org/go-1-24/) · [1.23](https://antonz.org/go-1-23/) · [1.22](https://antonz.org/go-1-22/)
 
 ## Books
 
