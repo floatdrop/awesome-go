@@ -77,6 +77,22 @@ Rules that need a human:
 - The category must fit. Suggest a new category in the PR if none does, with at least three candidate entries for it.
 - Deprecated, "maintenance mode" and thin wrappers around another listed project do not qualify even if they pass every automated check.
 
+## Adding a link
+
+Documentation and other resources that are not a GitHub repository go under `links/`, one file per link, named after the title in lowercase with hyphens (`A Tour of Go` becomes `links/a-tour-of-go.json`):
+
+```json
+{
+  "$schema": "../schema/link.schema.json",
+  "title": "A Tour of Go",
+  "url": "https://go.dev/tour/",
+  "description": "What the reader gets from it, in one plain sentence.",
+  "section": "documentation"
+}
+```
+
+Section ids are the `link_sections` in `list.json`. Links follow the same description rules as entries and count toward the one-addition-per-pull-request limit. Instead of star and age checks, CI requests the URL and requires an https link that answers without an error. A GitHub repository is always an entry, never a link. The nightly job reports links that stop answering but does not remove them.
+
 ## Removing an entry
 
 Archived and deleted repositories are removed automatically every night. Anything else (unmaintained, superseded, no longer recommendable) is removed through a pull request that deletes the entry and explains why. The nightly job also lists projects with no pushes in the policy window in its job summary so they can be reviewed.

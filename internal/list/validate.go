@@ -2,6 +2,7 @@ package list
 
 import (
 	"fmt"
+	"net/url"
 	"regexp"
 	"strings"
 	"time"
@@ -130,12 +131,62 @@ func (l *List) Validate(now time.Time) []Problem {
 		}
 	}
 
+	file = ListFileName
+	seenSection := map[string]bool{}
+	for i, s := range l.LinkSections {
+		where := fmt.Sprintf("link_sections[%d]", i)
+		if !idRe.MatchString(s.ID) {
+			add("%s: id %q must be kebab-case", where, s.ID)
+		}
+		if seenSection[s.ID] {
+			add("%s: duplicate link section id %q", where, s.ID)
+		}
+		if seenCategory[s.ID] {
+			add("%s: id %q is already used by a category", where, s.ID)
+		}
+		seenSection[s.ID] = true
+		if strings.TrimSpace(s.Name) == "" {
+			add("%s: name is required", where)
+		}
+	}
+	seenURL := map[string]string{}
+	for _, k := range l.Links {
+		file = k.Path()
+		if strings.TrimSpace(k.Title) == "" || strings.TrimSpace(k.Title) != k.Title || markdownRe.MatchString(k.Title) {
+			add("title must be plain text without surrounding whitespace")
+		} else if k.File() != "" && k.File() != k.FileName() {
+			add("file must be named %s to match its title (run `go run ./cmd/awesome fmt`)", k.FileName())
+		}
+		u, err := url.Parse(k.URL)
+		switch {
+		case err != nil || u.Scheme != "https" || u.Host == "":
+			add("url must be an absolute https URL, got %q", k.URL)
+		case strings.EqualFold(u.Host, "github.com") && len(strings.Split(strings.Trim(u.Path, "/"), "/")) == 2:
+			add("%s is a repository; it belongs in entries/, not links/", k.URL)
+		}
+		key := strings.TrimSuffix(strings.ToLower(k.URL), "/")
+		if other, dup := seenURL[key]; dup {
+			add("duplicate of %s", other)
+		}
+		seenURL[key] = k.Path()
+		if !seenSection[k.Section] {
+			add("unknown link section %q", k.Section)
+		}
+		for _, p := range describeText(k.Title, k.Description, l.Policy.maxDescription()) {
+			add("%s", p)
+		}
+	}
+
 	return problems
 }
 
 func describeProblems(e Entry, maxLen int) []string {
+	return describeText(e.DisplayName(), e.Description, maxLen)
+}
+
+// describeText applies the description rules to anything listed under name.
+func describeText(displayName, d string, maxLen int) []string {
 	var problems []string
-	d := e.Description
 	if d == "" {
 		return []string{"description is required"}
 	}
@@ -159,7 +210,7 @@ func describeProblems(e Entry, maxLen int) []string {
 		problems = append(problems, "description must be plain text: no markdown, links or HTML")
 	}
 	lower := strings.ToLower(d)
-	name := strings.ToLower(e.DisplayName())
+	name := strings.ToLower(displayName)
 	if strings.HasPrefix(lower, name+" ") || strings.HasPrefix(lower, name+",") {
 		problems = append(problems, "description must not start with the project name")
 	}

@@ -29,7 +29,10 @@ type List struct {
 	Meta       Meta       `json:"list"`
 	Policy     Policy     `json:"policy"`
 	Categories []Category `json:"categories"`
-	Entries    []Entry    `json:"-"`
+	// LinkSections group non-repository links, rendered after the categories.
+	LinkSections []LinkSection `json:"link_sections,omitempty"`
+	Entries      []Entry       `json:"-"`
+	Links        []Link        `json:"-"`
 }
 
 // Meta describes the list itself.
@@ -201,6 +204,9 @@ func Load(root string) (*List, error) {
 		l.Entries = append(l.Entries, e)
 	}
 	l.Sort()
+	if err := l.loadLinks(root); err != nil {
+		return nil, err
+	}
 	return l, nil
 }
 
@@ -309,7 +315,7 @@ func (l *List) Save(root string) error {
 			}
 		}
 	}
-	return nil
+	return l.saveLinks(root)
 }
 
 // Category looks a category up by id.

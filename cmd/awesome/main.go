@@ -115,6 +115,14 @@ func runValidate(args []string) error {
 				problems = append(problems, list.Problem{File: r.entry.Path(), Msg: msg})
 			}
 		}
+		links := l.Links
+		if *base != "" {
+			if links, err = changedLinks(l, *base); err != nil {
+				return err
+			}
+		}
+		fmt.Printf("checking %d links\n", len(links))
+		problems = append(problems, checkLinks(context.Background(), links)...)
 	}
 
 	if len(problems) > 0 {
@@ -124,7 +132,7 @@ func runValidate(args []string) error {
 		}
 		return fmt.Errorf("%d problem(s) found", len(problems))
 	}
-	fmt.Printf("✓ %d entries in %d categories\n", len(l.Entries), len(l.Categories))
+	fmt.Printf("✓ %d entries in %d categories, %d links\n", len(l.Entries), len(l.Categories), len(l.Links))
 	return nil
 }
 
@@ -186,6 +194,24 @@ func runFmt(args []string) error {
 		}
 		if string(current) != string(want) {
 			stale = append(stale, e.Path()+" is not in canonical form")
+		}
+	}
+
+	for _, k := range l.Links {
+		if k.File() != k.FileName() {
+			stale = append(stale, fmt.Sprintf("%s should be named %s", k.Path(), k.FileName()))
+			continue
+		}
+		current, err := os.ReadFile(filepath.Join(p.root, list.LinksDir, k.File()))
+		if err != nil {
+			return err
+		}
+		want, err := k.Format()
+		if err != nil {
+			return err
+		}
+		if string(current) != string(want) {
+			stale = append(stale, k.Path()+" is not in canonical form")
 		}
 	}
 
