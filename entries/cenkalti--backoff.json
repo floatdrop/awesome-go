@@ -2,5 +2,6 @@
   "$schema": "../schema/entry.schema.json",
   "repo": "cenkalti/backoff",
   "description": "Exponential backoff with jitter for retries, honoring context cancellation and permanent errors.",
-  "category": "resilience"
+  "category": "resilience",
+  "added": "2026-09-13"
 }

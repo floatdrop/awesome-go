@@ -2,5 +2,6 @@
   "$schema": "../schema/entry.schema.json",
   "repo": "sony/gobreaker",
   "description": "Circuit breaker with configurable trip conditions, state change hooks and a generic two-step API.",
-  "category": "resilience"
+  "category": "resilience",
+  "added": "2026-09-13"
 }

@@ -11,7 +11,7 @@
 
 > A short, hand-curated list of Go libraries and tools that are actually worth using. Not a directory of everything that exists.
 
-37 projects in 15 categories. Every entry is added by a human through a pull request and checked against the [entry rules](CONTRIBUTING.md#entry-rules) by CI. An entry earns its place by covering something no listed project does, or by doing it better. Within each category the 5 most-starred projects are shown first and the rest are folded under More. Archived repositories are removed automatically. Stars were last refreshed on 2026-09-13.
+39 projects in 16 categories. Every entry is added by a human through a pull request and checked against the [entry rules](CONTRIBUTING.md#entry-rules) by CI. An entry earns its place by covering something no listed project does, or by doing it better. Within each category the 5 most-starred projects are shown first and the rest are folded under More. Archived repositories are removed automatically. Stars were last refreshed on 2026-09-13.
 
 Search, filter and sort the full list at [floatdrop.github.io/awesome-go](https://floatdrop.github.io/awesome-go/).
 
@@ -27,6 +27,7 @@ Search, filter and sort the full list at [floatdrop.github.io/awesome-go](https:
 - [Validation](#validation)
 - [Dependency Injection](#dependency-injection)
 - [Concurrency](#concurrency)
+- [Resilience](#resilience)
 - [Caching](#caching)
 - [Networking & Protocols](#networking--protocols)
 - [Audio & Video](#audio--video)
@@ -110,6 +111,13 @@ Goroutine pools, structured concurrency, synchronization helpers and actor frame
 - 🥇 [conc](https://github.com/sourcegraph/conc) - Structured concurrency: scoped groups with panic propagation, bounded pools and ordered streams. ★&nbsp;10k
 - 🥈 [ergo](https://github.com/ergo-services/ergo) - Actor framework with supervision trees and network transparency, modeled on Erlang/OTP. ★&nbsp;4.7k
 - 🥉 [pond](https://github.com/alitto/pond) - Bounded worker pool with generics, result groups, context cancellation and subpools. ★&nbsp;2.2k
+
+## Resilience
+
+Retries, backoff, circuit breakers and other patterns for surviving failing dependencies.
+
+- 🥇 [backoff](https://github.com/cenkalti/backoff) - Exponential backoff with jitter for retries, honoring context cancellation and permanent errors. ★&nbsp;4.1k
+- 🥈 [gobreaker](https://github.com/sony/gobreaker) - Circuit breaker with configurable trip conditions, state change hooks and a generic two-step API. ★&nbsp;3.7k
 
 ## Caching
 

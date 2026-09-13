@@ -55,6 +55,15 @@
       "created_at": "2017-11-27T23:22:18Z",
       "pushed_at": "2026-08-20T11:02:42Z"
     },
+    "cenkalti/backoff": {
+      "stars": 4063,
+      "archived": false,
+      "is_go": true,
+      "language": "Go",
+      "license": "MIT",
+      "created_at": "2014-02-26T00:00:16Z",
+      "pushed_at": "2026-06-30T15:26:08Z"
+    },
     "charmbracelet/bubbletea": {
       "stars": 44925,
       "archived": false,
@@ -74,7 +83,7 @@
       "pushed_at": "2026-09-03T10:40:42Z"
     },
     "ergo-services/ergo": {
-      "stars": 4656,
+      "stars": 4657,
       "archived": false,
       "is_go": true,
       "language": "Go",
@@ -271,6 +280,15 @@
       "created_at": "2017-05-09T22:41:26Z",
       "pushed_at": "2026-08-06T09:23:44Z"
     },
+    "sony/gobreaker": {
+      "stars": 3693,
+      "archived": false,
+      "is_go": true,
+      "language": "Go",
+      "license": "MIT",
+      "created_at": "2015-05-29T04:46:15Z",
+      "pushed_at": "2026-02-07T09:21:38Z"
+    },
     "sourcegraph/conc": {
       "stars": 10429,
       "archived": false,
@@ -323,7 +341,7 @@
       "language": "Go",
       "license": "MIT",
       "created_at": "2018-12-15T23:14:06Z",
-      "pushed_at": "2026-09-13T02:22:22Z"
+      "pushed_at": "2026-09-13T05:13:15Z"
     },
     "yandex/confetti": {
       "stars": 7,
