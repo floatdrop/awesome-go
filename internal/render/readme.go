@@ -157,6 +157,8 @@ func medal(i, podium int) string {
 	return medals[i]
 }
 
+// item renders one entry line. The star and the count are joined by a
+// non-breaking space so a narrow page never wraps between them.
 func item(r ranked, prefix string) string {
 	var b strings.Builder
 	if prefix != "" {
@@ -164,7 +166,7 @@ func item(r ranked, prefix string) string {
 	}
 	fmt.Fprintf(&b, "[%s](%s) - %s", r.entry.DisplayName(), r.entry.URL(), r.entry.Description)
 	if r.known {
-		fmt.Fprintf(&b, " ★ %s", FormatStars(r.stars))
+		fmt.Fprintf(&b, " ★&nbsp;%s", FormatStars(r.stars))
 	}
 	return b.String()
 }

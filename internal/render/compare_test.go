@@ -18,7 +18,7 @@ func TestCompare(t *testing.T) {
 	}
 	for _, want := range []string{
 		"**z/new** joins _Web & HTTP_:",
-		"- [b/big](https://github.com/b/big) ★ 46k — Big.\n- [c/mid](https://github.com/c/mid) ★ 2.1k — Mid.\n- [a/small](https://github.com/a/small) ★ 120 — Small.\n- [d/unknown](https://github.com/d/unknown) — Unknown.\n",
+		"- [b/big](https://github.com/b/big) ★&nbsp;46k — Big.\n- [c/mid](https://github.com/c/mid) ★&nbsp;2.1k — Mid.\n- [a/small](https://github.com/a/small) ★&nbsp;120 — Small.\n- [d/unknown](https://github.com/d/unknown) — Unknown.\n",
 		"**q/lonely** joins _Empty_, which has no other entries yet.",
 	} {
 		if !strings.Contains(out, want) {
