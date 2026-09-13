@@ -109,6 +109,15 @@
       "created_at": "2015-10-15T20:46:29Z",
       "pushed_at": "2026-09-08T16:04:08Z"
     },
+    "go-playground/validator": {
+      "stars": 20157,
+      "archived": false,
+      "is_go": true,
+      "language": "Go",
+      "license": "MIT",
+      "created_at": "2015-02-12T16:32:22Z",
+      "pushed_at": "2026-09-10T01:30:32Z"
+    },
     "google/go-cmp": {
       "stars": 4676,
       "archived": false,

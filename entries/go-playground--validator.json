@@ -2,5 +2,6 @@
   "$schema": "../schema/entry.schema.json",
   "repo": "go-playground/validator",
   "description": "Struct and field validation using tags, with cross-field rules, custom validators and translations.",
-  "category": "validation"
+  "category": "validation",
+  "added": "2026-09-13"
 }

@@ -3,7 +3,7 @@
 
 > A short, hand-curated list of Go libraries and tools that are actually worth using. Not a directory of everything that exists.
 
-26 projects in 13 categories. Every entry is added by a human through a pull request and checked against the [entry rules](CONTRIBUTING.md#entry-rules) by CI. An entry earns its place by covering something no listed project does, or by doing it better. Within each category the 5 most-starred projects are shown first and the rest are folded under More. Archived repositories are removed automatically. Stars were last refreshed on 2026-09-13.
+27 projects in 14 categories. Every entry is added by a human through a pull request and checked against the [entry rules](CONTRIBUTING.md#entry-rules) by CI. An entry earns its place by covering something no listed project does, or by doing it better. Within each category the 5 most-starred projects are shown first and the rest are folded under More. Archived repositories are removed automatically. Stars were last refreshed on 2026-09-13.
 
 Search, filter and sort the full list at [floatdrop.github.io/awesome-go](https://floatdrop.github.io/awesome-go/).
 
@@ -16,6 +16,7 @@ Search, filter and sort the full list at [floatdrop.github.io/awesome-go](https:
 - [Logging](#logging)
 - [Testing](#testing)
 - [Databases & SQL](#databases--sql)
+- [Validation](#validation)
 - [Dependency Injection](#dependency-injection)
 - [Concurrency](#concurrency)
 - [Caching](#caching)
@@ -71,6 +72,12 @@ Drivers, query builders, ORMs, migrations, embedded and distributed stores.
 - 🥇 [etcd](https://github.com/etcd-io/etcd) - Distributed key-value store with Raft consensus, watches and leases, plus its client. ★ 52k
 - 🥈 [sqlc](https://github.com/sqlc-dev/sqlc) - Compiler that generates type-safe code from SQL queries. ★ 18k
 - 🥉 [scan](https://github.com/blockloop/scan) - Map database/sql rows onto structs, slices and primitives using struct tags. ★ 615
+
+## Validation
+
+Validating structs and inputs.
+
+- 🥇 [validator](https://github.com/go-playground/validator) - Struct and field validation using tags, with cross-field rules, custom validators and translations. ★ 20k
 
 ## Dependency Injection
 
