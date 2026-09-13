@@ -1,0 +1,6 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "repo": "redis/go-redis",
+  "description": "Redis client with cluster, sentinel and ring support, pipelines, pub/sub and OpenTelemetry hooks.",
+  "category": "databases"
+}
