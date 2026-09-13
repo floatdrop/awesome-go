@@ -101,7 +101,7 @@ Archived and deleted repositories are removed automatically every night. Anythin
 
 ## Badge
 
-Every listed project gets its own badge: a small SVG with the project name in a colour of its own.
+Every listed project gets its own badge: a small SVG with an 8-bit gopher in sunglasses, so it stands out among generic shields, and the project name in a colour of its own.
 
 Embed it in your README:
 
