@@ -2,5 +2,6 @@
   "$schema": "../schema/entry.schema.json",
   "repo": "pion/webrtc",
   "description": "Pure implementation of the WebRTC stack: ICE, DTLS, SRTP, data channels and media tracks.",
-  "category": "networking"
+  "category": "networking",
+  "added": "2026-09-13"
 }
