@@ -3,7 +3,7 @@
 
 > A short, hand-curated list of Go libraries and tools that are actually worth using. Not a directory of everything that exists.
 
-27 projects in 14 categories. Every entry is added by a human through a pull request and checked against the [entry rules](CONTRIBUTING.md#entry-rules) by CI. An entry earns its place by covering something no listed project does, or by doing it better. Within each category the 5 most-starred projects are shown first and the rest are folded under More. Archived repositories are removed automatically. Stars were last refreshed on 2026-09-13.
+29 projects in 15 categories. Every entry is added by a human through a pull request and checked against the [entry rules](CONTRIBUTING.md#entry-rules) by CI. An entry earns its place by covering something no listed project does, or by doing it better. Within each category the 5 most-starred projects are shown first and the rest are folded under More. Archived repositories are removed automatically. Stars were last refreshed on 2026-09-13.
 
 Search, filter and sort the full list at [floatdrop.github.io/awesome-go](https://floatdrop.github.io/awesome-go/).
 
@@ -21,6 +21,7 @@ Search, filter and sort the full list at [floatdrop.github.io/awesome-go](https:
 - [Concurrency](#concurrency)
 - [Caching](#caching)
 - [Networking & Protocols](#networking--protocols)
+- [Audio & Video](#audio--video)
 - [Messaging & Queues](#messaging--queues)
 - [Developer Tools](#developer-tools)
 
@@ -107,6 +108,13 @@ Protocol implementations, transports and low-level network plumbing.
 
 - 🥇 [webrtc](https://github.com/pion/webrtc) - Pure implementation of the WebRTC stack: ICE, DTLS, SRTP, data channels and media tracks. ★ 17k
 - 🥈 [moq-go](https://github.com/floatdrop/moq-go) - Media over QUIC transport library and relay tracking the IETF MoQ drafts. ★ 3
+
+## Audio & Video
+
+Codecs, containers and media processing.
+
+- 🥇 [opus](https://github.com/pion/opus) - Implementation of the Opus audio codec per RFC 6716, with bitstream internals exported for analysis. ★ 559
+- 🥈 [hi264](https://github.com/Eyevinn/hi264) - Decoder for H.264 IDR frames and generator of test bitstreams, with fMP4 fragment extension. ★ 22
 
 ## Messaging & Queues
 

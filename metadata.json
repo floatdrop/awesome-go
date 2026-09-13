@@ -1,6 +1,15 @@
 {
   "updated_at": "2026-09-13",
   "repos": {
+    "Eyevinn/hi264": {
+      "stars": 22,
+      "archived": false,
+      "is_go": true,
+      "language": "Go",
+      "license": "MIT",
+      "created_at": "2026-02-14T21:00:57Z",
+      "pushed_at": "2026-08-29T12:30:18Z"
+    },
     "alecthomas/kong": {
       "stars": 3173,
       "archived": false,
@@ -180,6 +189,15 @@
       "license": "BSD-2-Clause",
       "created_at": "2024-01-04T18:21:37Z",
       "pushed_at": "2026-09-08T01:16:27Z"
+    },
+    "pion/opus": {
+      "stars": 559,
+      "archived": false,
+      "is_go": true,
+      "language": "Go",
+      "license": "MIT",
+      "created_at": "2022-06-12T20:04:03Z",
+      "pushed_at": "2026-09-12T05:32:40Z"
     },
     "pion/webrtc": {
       "stars": 16775,

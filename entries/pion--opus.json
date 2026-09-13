@@ -2,5 +2,6 @@
   "$schema": "../schema/entry.schema.json",
   "repo": "pion/opus",
   "description": "Implementation of the Opus audio codec per RFC 6716, with bitstream internals exported for analysis.",
-  "category": "audio-video"
+  "category": "audio-video",
+  "added": "2026-09-13"
 }
