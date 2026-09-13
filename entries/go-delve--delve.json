@@ -2,5 +2,6 @@
   "$schema": "../schema/entry.schema.json",
   "repo": "go-delve/delve",
   "description": "Debugger with goroutine-aware breakpoints, core dump analysis and remote debugging over DAP.",
-  "category": "developer-tools"
+  "category": "developer-tools",
+  "added": "2026-09-13"
 }
