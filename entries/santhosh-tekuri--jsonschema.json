@@ -1,0 +1,6 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "repo": "santhosh-tekuri/jsonschema",
+  "description": "Validation against JSON Schema drafts 4 through 2020-12, with detailed errors and custom formats.",
+  "category": "validation"
+}
