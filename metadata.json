@@ -155,7 +155,7 @@
       "pushed_at": "2026-08-15T05:44:19Z"
     },
     "go-chi/chi": {
-      "stars": 22816,
+      "stars": 22817,
       "archived": false,
       "is_go": true,
       "language": "Go",
@@ -227,7 +227,7 @@
       "pushed_at": "2026-09-13T05:45:28Z"
     },
     "junegunn/fzf": {
-      "stars": 82951,
+      "stars": 82952,
       "archived": false,
       "is_go": true,
       "language": "Go",
@@ -353,7 +353,7 @@
       "pushed_at": "2026-07-11T00:43:07Z"
     },
     "sqlc-dev/sqlc": {
-      "stars": 18283,
+      "stars": 18284,
       "archived": false,
       "is_go": true,
       "language": "Go",
