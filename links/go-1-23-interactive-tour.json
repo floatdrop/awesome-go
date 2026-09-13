@@ -1,0 +1,7 @@
+{
+  "$schema": "../schema/link.schema.json",
+  "title": "Go 1.23 Interactive Tour",
+  "url": "https://antonz.org/go-1-23/",
+  "description": "Runnable examples of range-over-func iterators, the new timer behavior and the unique package.",
+  "section": "documentation"
+}
