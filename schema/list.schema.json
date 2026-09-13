@@ -44,6 +44,29 @@
           "format": "uri",
           "description": "Published site URL; defaults to https://<owner>.github.io/<name>/."
         },
+        "logo": {
+          "type": "string",
+          "description": "Repository-relative image shown above the README title; keep it outside docs/, which is generated."
+        },
+        "discord": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "server"
+          ],
+          "properties": {
+            "server": {
+              "type": "string",
+              "pattern": "^[0-9]{17,20}$",
+              "description": "Numeric server id; the server widget must be enabled for the badge."
+            },
+            "invite": {
+              "type": "string",
+              "pattern": "^https://(discord\\.gg/|discord\\.com/invite/)",
+              "description": "Permanent invite the badge links to; without it the badge links to the server, which only works for members."
+            }
+          }
+        },
         "podium": {
           "type": "integer",
           "minimum": 0,

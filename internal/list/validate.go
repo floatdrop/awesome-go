@@ -10,13 +10,14 @@ import (
 )
 
 var (
-	repoRe     = regexp.MustCompile(`^[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?/[A-Za-z0-9_.-]+$`)
-	idRe       = regexp.MustCompile(`^[a-z0-9]+(?:-[a-z0-9]+)*$`)
-	dateRe     = regexp.MustCompile(`^\d{4}-\d{2}-\d{2}$`)
-	buzzRe     = regexp.MustCompile(`(?i)\b(blazing(?:ly)?|fastest|best|awesome|amazing|revolutionary|ultimate|world-class|state-of-the-art|next-gen(?:eration)?|cutting-edge|powerful)\b`)
-	redundRe   = regexp.MustCompile(`(?i)\b(golang|(?:written|implemented) in go|for go)\b`)
-	articleRe  = regexp.MustCompile(`^(?i:a|an|the)\s`)
-	markdownRe = regexp.MustCompile("[`*_\\[\\]<>]|https?://")
+	repoRe      = regexp.MustCompile(`^[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?/[A-Za-z0-9_.-]+$`)
+	idRe        = regexp.MustCompile(`^[a-z0-9]+(?:-[a-z0-9]+)*$`)
+	discordIDRe = regexp.MustCompile(`^[0-9]{17,20}$`)
+	dateRe      = regexp.MustCompile(`^\d{4}-\d{2}-\d{2}$`)
+	buzzRe      = regexp.MustCompile(`(?i)\b(blazing(?:ly)?|fastest|best|awesome|amazing|revolutionary|ultimate|world-class|state-of-the-art|next-gen(?:eration)?|cutting-edge|powerful)\b`)
+	redundRe    = regexp.MustCompile(`(?i)\b(golang|(?:written|implemented) in go|for go)\b`)
+	articleRe   = regexp.MustCompile(`^(?i:a|an|the)\s`)
+	markdownRe  = regexp.MustCompile("[`*_\\[\\]<>]|https?://")
 )
 
 // Problem is a validation failure attached to the file it was found in.
@@ -49,6 +50,17 @@ func (l *List) Validate(now time.Time) []Problem {
 	}
 	if l.Meta.Podium < 0 {
 		add("list.podium must not be negative")
+	}
+	if d := l.Meta.Discord; d != nil {
+		if !discordIDRe.MatchString(d.Server) {
+			add("list.discord.server must be the numeric server id, got %q", d.Server)
+		}
+		if d.Invite != "" && !strings.HasPrefix(d.Invite, "https://discord.gg/") && !strings.HasPrefix(d.Invite, "https://discord.com/invite/") {
+			add("list.discord.invite must be a discord.gg or discord.com/invite URL")
+		}
+	}
+	if strings.HasPrefix(l.Meta.Logo, "/") || strings.Contains(l.Meta.Logo, "://") || strings.HasPrefix(l.Meta.Logo, "docs/") {
+		add("list.logo must be a repository-relative path outside docs/, got %q", l.Meta.Logo)
 	}
 
 	seenCategory := map[string]bool{}

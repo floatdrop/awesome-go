@@ -68,6 +68,29 @@ func TestREADMEPadsPodiumEntriesWithoutMedal(t *testing.T) {
 	}
 }
 
+func TestREADMEHeaderWithLogoAndDiscord(t *testing.T) {
+	l, m := fixture(3)
+	l.Meta.Logo = "assets/logotype.svg"
+	l.Meta.Discord = &list.Discord{Server: "1548529967288029294"}
+	out := string(README(l, m, time.Now()))
+	for _, want := range []string{
+		"<p align=\"center\">\n  <img src=\"assets/logotype.svg\" alt=\"The Go gopher wearing pixel sunglasses\" width=\"180\">\n</p>\n\n<h1 align=\"center\">Awesome Go</h1>\n\n",
+		"<a href=\"https://discord.com/channels/1548529967288029294\"><img src=\"https://img.shields.io/discord/1548529967288029294?logo=discord&logoColor=white&label=discord&color=5865F2\" alt=\"Discord\"></a>",
+		"The logo is excluded: it is based on the Go gopher by Renée French",
+	} {
+		if !strings.Contains(out, want) {
+			t.Errorf("README missing %q\n---\n%s", want, out)
+		}
+	}
+	if strings.Contains(out, "# Awesome Go\n") {
+		t.Errorf("markdown title must be replaced by the centered heading when a logo is set")
+	}
+	l.Meta.Discord.Invite = "https://discord.gg/abc"
+	if out := string(README(l, m, time.Now())); !strings.Contains(out, `<a href="https://discord.gg/abc">`) {
+		t.Errorf("invite must take precedence over the server URL")
+	}
+}
+
 func TestREADMEFlatWithoutPodium(t *testing.T) {
 	l, m := fixture(0)
 	out := string(README(l, m, time.Now()))
