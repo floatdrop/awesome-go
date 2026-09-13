@@ -21,7 +21,7 @@ func TestSVGIsWellFormed(t *testing.T) {
 		}
 	}
 	s := string(svg)
-	for _, want := range []string{"awesome go", "gin &lt;&amp;&gt; co", Color("gin-gonic/gin"), "<title>gin-gonic/gin is listed</title>"} {
+	for _, want := range []string{">awesome</text>", `aria-label="awesome go: gin &lt;&amp;&gt; co"`, "gin &lt;&amp;&gt; co", Color("gin-gonic/gin"), "<title>gin-gonic/gin is listed</title>"} {
 		if !strings.Contains(s, want) {
 			t.Errorf("badge missing %q", want)
 		}
@@ -79,7 +79,7 @@ func TestGopherIcon(t *testing.T) {
 		}
 	}
 
-	label := strings.Index(s, `>awesome go</text>`)
+	label := strings.Index(s, `>awesome</text>`)
 	xStart := strings.LastIndex(s[:label], `<text x="`) + len(`<text x="`)
 	var cx int
 	if _, err := fmt.Sscanf(s[xStart:], "%d", &cx); err != nil {

@@ -1,5 +1,5 @@
 // Package badge generates the per-project badge: a flat SVG in the style of
-// shields.io with an 8-bit gopher in sunglasses and "awesome go" on the left and
+// shields.io with an 8-bit gopher in sunglasses and "awesome" on the left and
 // the project name on the right, coloured per project so no two badges look alike.
 package badge
 
@@ -11,8 +11,13 @@ import (
 	"unicode"
 )
 
-// Label is the left-hand text of every badge.
-const Label = "awesome go"
+// Label is the left-hand text of every badge. "Go" is carried by the gopher
+// icon, so the visible text stays short.
+const Label = "awesome"
+
+// accessibleLabel names the badge for screen readers, which cannot see the
+// gopher, so it keeps the full name of the list.
+const accessibleLabel = "awesome go"
 
 var palette = []string{
 	"#007ec6", // blue
@@ -119,7 +124,7 @@ func SVG(o Options) []byte {
 
 	var b strings.Builder
 	w := func(format string, args ...any) { fmt.Fprintf(&b, format, args...) }
-	aria := html.EscapeString(fmt.Sprintf("%s: %s", Label, o.Name))
+	aria := html.EscapeString(fmt.Sprintf("%s: %s", accessibleLabel, o.Name))
 	w(`<svg xmlns="http://www.w3.org/2000/svg" width="%d" height="20" role="img" aria-label="%s">`, total, aria)
 	w(`<title>%s</title>`, html.EscapeString(o.Title))
 	w(`<linearGradient id="s" x2="0" y2="100%%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient>`)
