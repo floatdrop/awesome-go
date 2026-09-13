@@ -121,7 +121,13 @@ func runValidate(args []string) error {
 				return err
 			}
 		}
-		fmt.Printf("checking %d links\n", len(links))
+		exempt := 0
+		for _, k := range links {
+			if k.IsExempt(list.LinkExemptCheck) {
+				exempt++
+			}
+		}
+		fmt.Printf("checking %d links (%d exempt from the live check)\n", len(links)-exempt, exempt)
 		problems = append(problems, checkLinks(context.Background(), links)...)
 	}
 

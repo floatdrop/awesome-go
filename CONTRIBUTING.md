@@ -91,7 +91,7 @@ Documentation and other resources that are not a GitHub repository go under `lin
 }
 ```
 
-Section ids are the `link_sections` in `list.json`. Links follow the same description rules as entries and count toward the one-addition-per-pull-request limit. Instead of star and age checks, CI requests the URL and requires an https link that answers without an error. A GitHub repository is always an entry, never a link. The nightly job reports links that stop answering but does not remove them.
+Section ids are the `link_sections` in `list.json`. Links follow the same description rules as entries and count toward the one-addition-per-pull-request limit. Instead of star and age checks, CI requests the URL and requires an https link that answers without an error. A GitHub repository is always an entry, never a link. The nightly job reports links that stop answering but does not remove them. Some publishers block automated requests while the page works fine in a browser; a maintainer can then add `"exempt": ["link-check"]` to the link, which skips the live check and keeps every other rule.
 
 ## Removing an entry
 

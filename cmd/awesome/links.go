@@ -12,9 +12,16 @@ import (
 
 var linkClient = &http.Client{Timeout: 20 * time.Second}
 
-// checkLinks requests every link and returns a problem for each one that is
-// unreachable or answers with an HTTP error, in input order.
+// checkLinks requests every link not exempt from the live check and returns a
+// problem for each one that is unreachable or answers with an HTTP error.
 func checkLinks(ctx context.Context, links []list.Link) []list.Problem {
+	var checked []list.Link
+	for _, k := range links {
+		if !k.IsExempt(list.LinkExemptCheck) {
+			checked = append(checked, k)
+		}
+	}
+	links = checked
 	results := make([]string, len(links))
 	sem := make(chan struct{}, fetchWorkers)
 	var wg sync.WaitGroup
