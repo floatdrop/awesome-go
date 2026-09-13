@@ -3,6 +3,7 @@
   "repo": "tphakala/go-flac",
   "description": "FLAC encoder and decoder with SIMD acceleration, no cgo, and output bit-exact with libFLAC.",
   "category": "audio-video",
+  "added": "2026-09-13",
   "exempt": [
     "age",
     "stars"
