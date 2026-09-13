@@ -1,0 +1,6 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "repo": "go-ozzo/ozzo-validation",
+  "description": "Validation rules written as code rather than tags, with conditional rules and field-keyed errors.",
+  "category": "validation"
+}
