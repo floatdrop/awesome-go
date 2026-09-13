@@ -334,6 +334,15 @@
       "created_at": "2018-07-18T15:04:31Z",
       "pushed_at": "2026-09-10T07:56:21Z"
     },
+    "thejerf/suture": {
+      "stars": 1411,
+      "archived": false,
+      "is_go": true,
+      "language": "Go",
+      "license": "MIT",
+      "created_at": "2014-04-17T17:37:16Z",
+      "pushed_at": "2026-07-22T01:18:27Z"
+    },
     "wailsapp/wails": {
       "stars": 36227,
       "archived": false,
@@ -341,7 +350,7 @@
       "language": "Go",
       "license": "MIT",
       "created_at": "2018-12-15T23:14:06Z",
-      "pushed_at": "2026-09-13T05:13:15Z"
+      "pushed_at": "2026-09-13T05:26:34Z"
     },
     "yandex/confetti": {
       "stars": 7,
