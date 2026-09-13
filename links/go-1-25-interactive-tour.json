@@ -1,0 +1,7 @@
+{
+  "$schema": "../schema/link.schema.json",
+  "title": "Go 1.25 Interactive Tour",
+  "url": "https://antonz.org/go-1-25/",
+  "description": "Runnable examples of synctest fake clocks, the new garbage collector and the flight recorder.",
+  "section": "documentation"
+}
