@@ -1,0 +1,9 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "repo": "Eyevinn/hi264",
+  "description": "Decoder for H.264 IDR frames and generator of test bitstreams, with fMP4 fragment extension.",
+  "category": "audio-video",
+  "exempt": [
+    "stars"
+  ]
+}
