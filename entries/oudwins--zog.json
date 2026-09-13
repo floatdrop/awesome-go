@@ -2,5 +2,6 @@
   "$schema": "../schema/entry.schema.json",
   "repo": "Oudwins/zog",
   "description": "Schema builder that parses untyped input into structs and validates it in one step, like Zod.",
-  "category": "validation"
+  "category": "validation",
+  "added": "2026-09-13"
 }

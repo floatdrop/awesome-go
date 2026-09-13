@@ -11,7 +11,7 @@
 
 > A short, hand-curated list of Go libraries and tools that are actually worth using. Not a directory of everything that exists.
 
-30 projects in 15 categories. Every entry is added by a human through a pull request and checked against the [entry rules](CONTRIBUTING.md#entry-rules) by CI. An entry earns its place by covering something no listed project does, or by doing it better. Within each category the 5 most-starred projects are shown first and the rest are folded under More. Archived repositories are removed automatically. Stars were last refreshed on 2026-09-13.
+34 projects in 15 categories. Every entry is added by a human through a pull request and checked against the [entry rules](CONTRIBUTING.md#entry-rules) by CI. An entry earns its place by covering something no listed project does, or by doing it better. Within each category the 5 most-starred projects are shown first and the rest are folded under More. Archived repositories are removed automatically. Stars were last refreshed on 2026-09-13.
 
 Search, filter and sort the full list at [floatdrop.github.io/awesome-go](https://floatdrop.github.io/awesome-go/).
 
@@ -49,6 +49,7 @@ Argument parsing, terminal UIs and everything else for building CLIs.
 - 🥇 [bubbletea](https://github.com/charmbracelet/bubbletea) - Framework for terminal user interfaces based on The Elm Architecture. ★&nbsp;45k
 - 🥈 [cobra](https://github.com/spf13/cobra) - Framework for CLI applications with subcommands, flags, shell completions and generated docs. ★&nbsp;45k
 - 🥉 [kong](https://github.com/alecthomas/kong) - Command-line parser where the whole grammar is a struct and commands are typed Run methods. ★&nbsp;3.2k
+- &emsp;&#8196; [ff](https://github.com/peterbourgon/ff) - Extends the standard flag package with env vars, config files and subcommands, without replacing it. ★&nbsp;1.4k
 
 ## GUI & Desktop
 
@@ -89,6 +90,9 @@ Drivers, query builders, ORMs, migrations, embedded and distributed stores.
 Validating structs and inputs.
 
 - 🥇 [validator](https://github.com/go-playground/validator) - Struct and field validation using tags, with cross-field rules, custom validators and translations. ★&nbsp;20k
+- 🥈 [ozzo-validation](https://github.com/go-ozzo/ozzo-validation) - Validation rules written as code rather than tags, with conditional rules and field-keyed errors. ★&nbsp;4.1k
+- 🥉 [jsonschema](https://github.com/santhosh-tekuri/jsonschema) - Validation against JSON Schema drafts 4 through 2020-12, with detailed errors and custom formats. ★&nbsp;1.3k
+- &emsp;&#8196; [zog](https://github.com/Oudwins/zog) - Schema builder that parses untyped input into structs and validates it in one step, like Zod. ★&nbsp;1.2k
 
 ## Dependency Injection
 
