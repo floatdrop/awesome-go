@@ -2,5 +2,6 @@
   "$schema": "../schema/entry.schema.json",
   "repo": "bits-and-blooms/bloom",
   "description": "Probabilistic set membership with Bloom filters sized from a target false positive rate.",
-  "category": "data-structures"
+  "category": "data-structures",
+  "added": "2026-09-13"
 }

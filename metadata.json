@@ -64,6 +64,15 @@
       "created_at": "2011-05-11T03:33:44Z",
       "pushed_at": "2026-09-03T19:01:50Z"
     },
+    "bits-and-blooms/bloom": {
+      "stars": 2813,
+      "archived": false,
+      "is_go": true,
+      "language": "Go",
+      "license": "BSD-2-Clause",
+      "created_at": "2011-05-21T14:18:41Z",
+      "pushed_at": "2026-07-10T13:18:56Z"
+    },
     "blockloop/scan": {
       "stars": 615,
       "archived": false,
@@ -206,7 +215,7 @@
       "language": "Go",
       "license": "MIT",
       "created_at": "2018-05-19T00:53:06Z",
-      "pushed_at": "2026-09-13T05:39:37Z"
+      "pushed_at": "2026-09-13T05:42:26Z"
     },
     "junegunn/fzf": {
       "stars": 82950,
