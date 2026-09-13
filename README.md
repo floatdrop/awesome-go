@@ -1,5 +1,13 @@
 <!-- Generated from list.json and entries/ by `go run ./cmd/awesome generate`. Do not edit by hand. -->
-# Awesome Go
+<p align="center">
+  <img src="assets/logotype.svg" alt="The Go gopher wearing pixel sunglasses" width="180">
+</p>
+
+<h1 align="center">Awesome Go</h1>
+
+<p align="center">
+  <a href="https://discord.com/channels/1548529967288029294"><img src="https://img.shields.io/discord/1548529967288029294?logo=discord&logoColor=white&label=discord&color=5865F2" alt="Discord"></a>
+</p>
 
 > A short, hand-curated list of Go libraries and tools that are actually worth using. Not a directory of everything that exists.
 
@@ -138,4 +146,4 @@ Read the [contribution guidelines](CONTRIBUTING.md) first. Every listed project 
 
 [![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
 
-To the extent possible under law, the maintainers have waived all copyright and related or neighboring rights to this work.
+To the extent possible under law, the maintainers have waived all copyright and related or neighboring rights to this work. The logo is excluded: it is based on the Go gopher by Renée French, licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
