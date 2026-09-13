@@ -92,7 +92,7 @@
       "pushed_at": "2026-06-30T15:26:08Z"
     },
     "charmbracelet/bubbletea": {
-      "stars": 44923,
+      "stars": 44921,
       "archived": false,
       "is_go": true,
       "language": "Go",
@@ -128,7 +128,7 @@
       "pushed_at": "2026-09-11T20:50:01Z"
     },
     "floatdrop/di": {
-      "stars": 2,
+      "stars": 3,
       "archived": false,
       "is_go": true,
       "language": "Go",
@@ -155,7 +155,7 @@
       "pushed_at": "2026-08-15T05:44:19Z"
     },
     "go-chi/chi": {
-      "stars": 22817,
+      "stars": 22816,
       "archived": false,
       "is_go": true,
       "language": "Go",
@@ -182,7 +182,7 @@
       "pushed_at": "2026-09-03T15:31:40Z"
     },
     "go-playground/validator": {
-      "stars": 20157,
+      "stars": 20158,
       "archived": false,
       "is_go": true,
       "language": "Go",
@@ -227,7 +227,7 @@
       "pushed_at": "2026-09-13T05:45:28Z"
     },
     "junegunn/fzf": {
-      "stars": 82950,
+      "stars": 82951,
       "archived": false,
       "is_go": true,
       "language": "Go",
@@ -236,7 +236,7 @@
       "pushed_at": "2026-09-12T00:35:44Z"
     },
     "knadh/koanf": {
-      "stars": 4194,
+      "stars": 4193,
       "archived": false,
       "is_go": true,
       "language": "Go",
@@ -306,6 +306,15 @@
       "license": "MIT",
       "created_at": "2018-05-18T23:10:05Z",
       "pushed_at": "2026-09-09T00:39:56Z"
+    },
+    "redis/go-redis": {
+      "stars": 22232,
+      "archived": false,
+      "is_go": true,
+      "language": "Go",
+      "license": "BSD-2-Clause",
+      "created_at": "2012-07-25T13:01:39Z",
+      "pushed_at": "2026-09-12T18:48:54Z"
     },
     "santhosh-tekuri/jsonschema": {
       "stars": 1268,
@@ -389,13 +398,13 @@
       "pushed_at": "2026-09-08T18:12:48Z"
     },
     "wailsapp/wails": {
-      "stars": 36226,
+      "stars": 36227,
       "archived": false,
       "is_go": true,
       "language": "Go",
       "license": "MIT",
       "created_at": "2018-12-15T23:14:06Z",
-      "pushed_at": "2026-09-13T06:31:34Z"
+      "pushed_at": "2026-09-13T06:32:17Z"
     },
     "yandex/confetti": {
       "stars": 7,

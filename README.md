@@ -11,7 +11,7 @@
 
 > A short, hand-curated list of Go libraries and tools that are actually worth using. Not a directory of everything that exists.
 
-45 projects in 17 categories. Every entry is added by a human through a pull request and checked against the [entry rules](CONTRIBUTING.md#entry-rules) by CI. An entry earns its place by covering something no listed project does, or by doing it better. Within each category the 5 most-starred projects are shown first and the rest are folded under More. Archived repositories are removed automatically. Stars were last refreshed on 2026-09-13.
+46 projects in 17 categories. Every entry is added by a human through a pull request and checked against the [entry rules](CONTRIBUTING.md#entry-rules) by CI. An entry earns its place by covering something no listed project does, or by doing it better. Within each category the 5 most-starred projects are shown first and the rest are folded under More. Archived repositories are removed automatically. Stars were last refreshed on 2026-09-13.
 
 Search, filter and sort the full list at [floatdrop.github.io/awesome-go](https://floatdrop.github.io/awesome-go/).
 
@@ -85,10 +85,17 @@ Assertions, mocks, fixtures and integration test helpers.
 Drivers, query builders, ORMs, migrations, embedded and distributed stores.
 
 - 🥇 [etcd](https://github.com/etcd-io/etcd) - Distributed key-value store with Raft consensus, watches and leases, plus its client. ★&nbsp;52k
-- 🥈 [sqlc](https://github.com/sqlc-dev/sqlc) - Compiler that generates type-safe code from SQL queries. ★&nbsp;18k
-- 🥉 [pgx](https://github.com/jackc/pgx) - PostgreSQL driver and toolkit with a native API, connection pool, binary protocol and COPY support. ★&nbsp;14k
+- 🥈 [go-redis](https://github.com/redis/go-redis) - Redis client with cluster, sentinel and ring support, pipelines, pub/sub and OpenTelemetry hooks. ★&nbsp;22k
+- 🥉 [sqlc](https://github.com/sqlc-dev/sqlc) - Compiler that generates type-safe code from SQL queries. ★&nbsp;18k
+- &emsp;&#8196; [pgx](https://github.com/jackc/pgx) - PostgreSQL driver and toolkit with a native API, connection pool, binary protocol and COPY support. ★&nbsp;14k
 - &emsp;&#8196; [scan](https://github.com/blockloop/scan) - Map database/sql rows onto structs, slices and primitives using struct tags. ★&nbsp;615
-- &emsp;&#8196; [modernc.org/sqlite](https://github.com/modernc-org/sqlite) - SQLite translated from C, so database/sql gets an embedded database without cgo or a C toolchain. ★&nbsp;96
+
+<details>
+<summary>More (1)</summary>
+
+- [modernc.org/sqlite](https://github.com/modernc-org/sqlite) - SQLite translated from C, so database/sql gets an embedded database without cgo or a C toolchain. ★&nbsp;96
+
+</details>
 
 ## Validation
 
@@ -103,7 +110,7 @@ Validating structs and inputs.
 
 Wiring applications together.
 
-- 🥇 [di](https://github.com/floatdrop/di) - Dependency injection container with typed constructors, lifecycle hooks and scopes. ★&nbsp;2
+- 🥇 [di](https://github.com/floatdrop/di) - Dependency injection container with typed constructors, lifecycle hooks and scopes. ★&nbsp;3
 
 ## Concurrency
 
