@@ -127,6 +127,11 @@
       "description": "Parsing and generating markup and text."
     },
     {
+      "id": "data-structures",
+      "name": "Data Structures",
+      "description": "Bitsets, compressed bitmaps and other containers beyond slices and maps."
+    },
+    {
       "id": "utilities",
       "name": "Utilities",
       "description": "General-purpose helpers that end up in every project."
