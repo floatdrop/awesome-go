@@ -77,6 +77,11 @@
       "description": "Goroutine pools, structured concurrency, synchronization helpers and actor frameworks."
     },
     {
+      "id": "resilience",
+      "name": "Resilience",
+      "description": "Retries, backoff, circuit breakers and other patterns for surviving failing dependencies."
+    },
+    {
       "id": "caching",
       "name": "Caching",
       "description": "In-memory caches and eviction policies."
