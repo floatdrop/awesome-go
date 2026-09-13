@@ -48,7 +48,7 @@ func Compare(l *list.List, m *list.Metadata, targets []list.Entry) string {
 		for _, e := range others {
 			fmt.Fprintf(&b, "- [%s](%s)", e.Repo, e.URL())
 			if rm, ok := m.Repos[e.Repo]; ok {
-				fmt.Fprintf(&b, " ★ %s", FormatStars(rm.Stars))
+				fmt.Fprintf(&b, " ★&nbsp;%s", FormatStars(rm.Stars))
 			}
 			fmt.Fprintf(&b, " — %s\n", e.Description)
 		}
