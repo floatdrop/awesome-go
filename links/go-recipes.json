@@ -1,0 +1,7 @@
+{
+  "$schema": "../schema/link.schema.json",
+  "title": "Go Recipes",
+  "url": "https://github.com/nikolaydubina/go-recipes/blob/main/README.md",
+  "description": "Cookbook of tool recipes for testing, dependencies, code generation, profiling and static analysis.",
+  "section": "documentation"
+}
