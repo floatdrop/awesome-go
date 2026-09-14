@@ -93,7 +93,7 @@ Drivers, query builders, ORMs, migrations, embedded and distributed stores.
 <details>
 <summary>More (1)</summary>
 
-- [modernc.org/sqlite](https://github.com/modernc-org/sqlite) - SQLite translated from C, so database/sql gets an embedded database without cgo or a C toolchain. ★&nbsp;96
+- [modernc.org/sqlite](https://github.com/modernc-org/sqlite) - SQLite translated from C, so database/sql gets an embedded database without cgo or a C toolchain. ★&nbsp;97
 
 </details>
 
