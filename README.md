@@ -11,7 +11,7 @@
 
 > A short, hand-curated list of Go libraries and tools that are actually worth using. Not a directory of everything that exists.
 
-46 projects in 17 categories. Every entry is added by a human through a pull request and checked against the [entry rules](CONTRIBUTING.md#entry-rules) by CI. An entry earns its place by covering something no listed project does, or by doing it better. Within each category the 5 most-starred projects are shown first and the rest are folded under More. Archived repositories are removed automatically. Stars were last refreshed on 2026-09-13.
+46 projects in 17 categories. Every entry is added by a human through a pull request and checked against the [entry rules](CONTRIBUTING.md#entry-rules) by CI. An entry earns its place by covering something no listed project does, or by doing it better. Within each category the 5 most-starred projects are shown first and the rest are folded under More. Archived repositories are removed automatically. Stars were last refreshed on 2026-09-14.
 
 Search, filter and sort the full list at [floatdrop.github.io/awesome-go](https://floatdrop.github.io/awesome-go/).
 
@@ -179,6 +179,7 @@ Linters, build tools, debuggers, code generators and terminal tools for daily de
 Official guides and references for learning and using the language.
 
 - [A Tour of Go](https://go.dev/tour/) - Interactive introduction that runs in the browser, from basic syntax to generics and concurrency.
+- [Go Recipes](https://github.com/nikolaydubina/go-recipes/blob/main/README.md) - Cookbook of tool recipes for testing, dependencies, code generation, profiling and static analysis.
 - [Go Release Interactive Tours](https://victoriametrics.com/blog/go-1-27/) - Runnable examples of what changed in each release, from language features to the standard library. Versions: [1.27](https://victoriametrics.com/blog/go-1-27/) · [1.26](https://antonz.org/go-1-26/) · [1.25](https://antonz.org/go-1-25/) · [1.24](https://antonz.org/go-1-24/) · [1.23](https://antonz.org/go-1-23/) · [1.22](https://antonz.org/go-1-22/)
 
 ## Books
