@@ -38,6 +38,7 @@ Search, filter and sort the full list at [floatdrop.github.io/awesome-go](https:
 - [Books](#books)
 - [Videos](#videos)
 - [Blog Posts](#blog-posts)
+- [Podcasts](#podcasts)
 
 ## Web Frameworks & Routers
 
@@ -203,6 +204,12 @@ Talks and courses worth watching from start to finish.
 Articles that changed how people write Go at work.
 
 - [Go for Industrial Programming](https://peter.bourgon.org/go-for-industrial-programming/) - Peter Bourgon on structuring team codebases: configuration, dependencies, logging and testing.
+
+## Podcasts
+
+Shows worth a spot in your queue.
+
+- [Cup o' Go](https://cupogo.dev/) - Weekly fifteen-minute rundown of news, releases and proposals with Jonathan Hall and Shay Nehmad.
 
 ## Contributing
 
