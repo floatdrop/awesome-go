@@ -44,59 +44,59 @@ Search, filter and sort the full list at [floatdrop.github.io/awesome-go](https:
 
 HTTP servers, routers and full-stack web frameworks.
 
-- ![89k stars](badges/stars/gin-gonic--gin.svg) [gin](https://github.com/gin-gonic/gin) - HTTP web framework with a martini-like API and strong routing performance.
-- ![23k stars](badges/stars/go-chi--chi.svg) [chi](https://github.com/go-chi/chi) - Lightweight, idiomatic and composable router built on net/http.
+- <img src="badges/stars/gin-gonic--gin.svg" alt="89k stars" align="middle"> [gin](https://github.com/gin-gonic/gin) - HTTP web framework with a martini-like API and strong routing performance.
+- <img src="badges/stars/go-chi--chi.svg" alt="23k stars" align="middle"> [chi](https://github.com/go-chi/chi) - Lightweight, idiomatic and composable router built on net/http.
 
 ## Command Line
 
 Argument parsing, terminal UIs and everything else for building CLIs.
 
-- ![45k stars](badges/stars/charmbracelet--bubbletea.svg) [bubbletea](https://github.com/charmbracelet/bubbletea) - Framework for terminal user interfaces based on The Elm Architecture.
-- ![45k stars](badges/stars/spf13--cobra.svg) [cobra](https://github.com/spf13/cobra) - Framework for CLI applications with subcommands, flags, shell completions and generated docs.
-- ![3.2k stars](badges/stars/alecthomas--kong.svg) [kong](https://github.com/alecthomas/kong) - Command-line parser where the whole grammar is a struct and commands are typed Run methods.
-- ![1.4k stars](badges/stars/peterbourgon--ff.svg) [ff](https://github.com/peterbourgon/ff) - Extends the standard flag package with env vars, config files and subcommands, without replacing it.
+- <img src="badges/stars/charmbracelet--bubbletea.svg" alt="45k stars" align="middle"> [bubbletea](https://github.com/charmbracelet/bubbletea) - Framework for terminal user interfaces based on The Elm Architecture.
+- <img src="badges/stars/spf13--cobra.svg" alt="45k stars" align="middle"> [cobra](https://github.com/spf13/cobra) - Framework for CLI applications with subcommands, flags, shell completions and generated docs.
+- <img src="badges/stars/alecthomas--kong.svg" alt="3.2k stars" align="middle"> [kong](https://github.com/alecthomas/kong) - Command-line parser where the whole grammar is a struct and commands are typed Run methods.
+- <img src="badges/stars/peterbourgon--ff.svg" alt="1.4k stars" align="middle"> [ff](https://github.com/peterbourgon/ff) - Extends the standard flag package with env vars, config files and subcommands, without replacing it.
 
 ## GUI & Desktop
 
 Desktop application frameworks and GUI toolkits.
 
-- ![36k stars](badges/stars/wailsapp--wails.svg) [wails](https://github.com/wailsapp/wails) - Desktop applications with a Go backend and a web frontend, using the native webview.
+- <img src="badges/stars/wailsapp--wails.svg" alt="36k stars" align="middle"> [wails](https://github.com/wailsapp/wails) - Desktop applications with a Go backend and a web frontend, using the native webview.
 
 ## Configuration
 
 Loading settings from files, environment variables and flags.
 
-- ![4.2k stars](badges/stars/knadh--koanf.svg) [koanf](https://github.com/knadh/koanf) - Configuration management with pluggable providers and parsers merged in explicit layers.
-- ![7 stars](badges/stars/yandex--confetti.svg) [confetti](https://github.com/yandex/confetti) - Configuration loader that chains sources per value or struct, with backends as plain functions.
+- <img src="badges/stars/knadh--koanf.svg" alt="4.2k stars" align="middle"> [koanf](https://github.com/knadh/koanf) - Configuration management with pluggable providers and parsers merged in explicit layers.
+- <img src="badges/stars/yandex--confetti.svg" alt="7 stars" align="middle"> [confetti](https://github.com/yandex/confetti) - Configuration loader that chains sources per value or struct, with backends as plain functions.
 
 ## Logging
 
 Structured and leveled logging.
 
-- ![3.4k stars](badges/stars/charmbracelet--log.svg) [log](https://github.com/charmbracelet/log) - Minimal, colorful logger with a slog handler and structured key-value output.
+- <img src="badges/stars/charmbracelet--log.svg" alt="3.4k stars" align="middle"> [log](https://github.com/charmbracelet/log) - Minimal, colorful logger with a slog handler and structured key-value output.
 
 ## Testing
 
 Assertions, mocks, fixtures and integration test helpers.
 
-- ![26k stars](badges/stars/stretchr--testify.svg) [testify](https://github.com/stretchr/testify) - Assertions, mocks and suites that work with the standard testing package.
-- ![5k stars](badges/stars/testcontainers--testcontainers-go.svg) [testcontainers-go](https://github.com/testcontainers/testcontainers-go) - Throwaway Docker containers for integration tests, with ready modules for databases and brokers.
-- ![4.7k stars](badges/stars/google--go-cmp.svg) [go-cmp](https://github.com/google/go-cmp) - Equality comparison of arbitrary values for tests, with readable diffs and custom options.
+- <img src="badges/stars/stretchr--testify.svg" alt="26k stars" align="middle"> [testify](https://github.com/stretchr/testify) - Assertions, mocks and suites that work with the standard testing package.
+- <img src="badges/stars/testcontainers--testcontainers-go.svg" alt="5k stars" align="middle"> [testcontainers-go](https://github.com/testcontainers/testcontainers-go) - Throwaway Docker containers for integration tests, with ready modules for databases and brokers.
+- <img src="badges/stars/google--go-cmp.svg" alt="4.7k stars" align="middle"> [go-cmp](https://github.com/google/go-cmp) - Equality comparison of arbitrary values for tests, with readable diffs and custom options.
 
 ## Databases & SQL
 
 Drivers, query builders, ORMs, migrations, embedded and distributed stores.
 
-- ![52k stars](badges/stars/etcd-io--etcd.svg) [etcd](https://github.com/etcd-io/etcd) - Distributed key-value store with Raft consensus, watches and leases, plus its client.
-- ![22k stars](badges/stars/redis--go-redis.svg) [go-redis](https://github.com/redis/go-redis) - Redis client with cluster, sentinel and ring support, pipelines, pub/sub and OpenTelemetry hooks.
-- ![18k stars](badges/stars/sqlc-dev--sqlc.svg) [sqlc](https://github.com/sqlc-dev/sqlc) - Compiler that generates type-safe code from SQL queries.
-- ![14k stars](badges/stars/jackc--pgx.svg) [pgx](https://github.com/jackc/pgx) - PostgreSQL driver and toolkit with a native API, connection pool, binary protocol and COPY support.
-- ![615 stars](badges/stars/blockloop--scan.svg) [scan](https://github.com/blockloop/scan) - Map database/sql rows onto structs, slices and primitives using struct tags.
+- <img src="badges/stars/etcd-io--etcd.svg" alt="52k stars" align="middle"> [etcd](https://github.com/etcd-io/etcd) - Distributed key-value store with Raft consensus, watches and leases, plus its client.
+- <img src="badges/stars/redis--go-redis.svg" alt="22k stars" align="middle"> [go-redis](https://github.com/redis/go-redis) - Redis client with cluster, sentinel and ring support, pipelines, pub/sub and OpenTelemetry hooks.
+- <img src="badges/stars/sqlc-dev--sqlc.svg" alt="18k stars" align="middle"> [sqlc](https://github.com/sqlc-dev/sqlc) - Compiler that generates type-safe code from SQL queries.
+- <img src="badges/stars/jackc--pgx.svg" alt="14k stars" align="middle"> [pgx](https://github.com/jackc/pgx) - PostgreSQL driver and toolkit with a native API, connection pool, binary protocol and COPY support.
+- <img src="badges/stars/blockloop--scan.svg" alt="615 stars" align="middle"> [scan](https://github.com/blockloop/scan) - Map database/sql rows onto structs, slices and primitives using struct tags.
 
 <details>
 <summary>More (1)</summary>
 
-- ![99 stars](badges/stars/modernc-org--sqlite.svg) [modernc.org/sqlite](https://github.com/modernc-org/sqlite) - SQLite translated from C, so database/sql gets an embedded database without cgo or a C toolchain.
+- <img src="badges/stars/modernc-org--sqlite.svg" alt="99 stars" align="middle"> [modernc.org/sqlite](https://github.com/modernc-org/sqlite) - SQLite translated from C, so database/sql gets an embedded database without cgo or a C toolchain.
 
 </details>
 
@@ -104,78 +104,78 @@ Drivers, query builders, ORMs, migrations, embedded and distributed stores.
 
 Validating structs and inputs.
 
-- ![20k stars](badges/stars/go-playground--validator.svg) [validator](https://github.com/go-playground/validator) - Struct and field validation using tags, with cross-field rules, custom validators and translations.
-- ![4.1k stars](badges/stars/go-ozzo--ozzo-validation.svg) [ozzo-validation](https://github.com/go-ozzo/ozzo-validation) - Validation rules written as code rather than tags, with conditional rules and field-keyed errors.
-- ![1.3k stars](badges/stars/santhosh-tekuri--jsonschema.svg) [jsonschema](https://github.com/santhosh-tekuri/jsonschema) - Validation against JSON Schema drafts 4 through 2020-12, with detailed errors and custom formats.
-- ![1.2k stars](badges/stars/oudwins--zog.svg) [zog](https://github.com/Oudwins/zog) - Schema builder that parses untyped input into structs and validates it in one step, like Zod.
+- <img src="badges/stars/go-playground--validator.svg" alt="20k stars" align="middle"> [validator](https://github.com/go-playground/validator) - Struct and field validation using tags, with cross-field rules, custom validators and translations.
+- <img src="badges/stars/go-ozzo--ozzo-validation.svg" alt="4.1k stars" align="middle"> [ozzo-validation](https://github.com/go-ozzo/ozzo-validation) - Validation rules written as code rather than tags, with conditional rules and field-keyed errors.
+- <img src="badges/stars/santhosh-tekuri--jsonschema.svg" alt="1.3k stars" align="middle"> [jsonschema](https://github.com/santhosh-tekuri/jsonschema) - Validation against JSON Schema drafts 4 through 2020-12, with detailed errors and custom formats.
+- <img src="badges/stars/oudwins--zog.svg" alt="1.2k stars" align="middle"> [zog](https://github.com/Oudwins/zog) - Schema builder that parses untyped input into structs and validates it in one step, like Zod.
 
 ## Dependency Injection
 
 Wiring applications together.
 
-- ![3 stars](badges/stars/floatdrop--di.svg) [di](https://github.com/floatdrop/di) - Dependency injection container with typed constructors, lifecycle hooks and scopes.
+- <img src="badges/stars/floatdrop--di.svg" alt="3 stars" align="middle"> [di](https://github.com/floatdrop/di) - Dependency injection container with typed constructors, lifecycle hooks and scopes.
 
 ## Concurrency
 
 Goroutine pools, structured concurrency, synchronization helpers and actor frameworks.
 
-- ![10k stars](badges/stars/sourcegraph--conc.svg) [conc](https://github.com/sourcegraph/conc) - Structured concurrency: scoped groups with panic propagation, bounded pools and ordered streams.
-- ![4.7k stars](badges/stars/ergo-services--ergo.svg) [ergo](https://github.com/ergo-services/ergo) - Actor framework with supervision trees and network transparency, modeled on Erlang/OTP.
-- ![2.2k stars](badges/stars/alitto--pond.svg) [pond](https://github.com/alitto/pond) - Bounded worker pool with generics, result groups, context cancellation and subpools.
-- ![1.4k stars](badges/stars/thejerf--suture.svg) [suture](https://github.com/thejerf/suture) - Supervisor trees that restart failed long-running services with backoff, modeled on Erlang/OTP.
+- <img src="badges/stars/sourcegraph--conc.svg" alt="10k stars" align="middle"> [conc](https://github.com/sourcegraph/conc) - Structured concurrency: scoped groups with panic propagation, bounded pools and ordered streams.
+- <img src="badges/stars/ergo-services--ergo.svg" alt="4.7k stars" align="middle"> [ergo](https://github.com/ergo-services/ergo) - Actor framework with supervision trees and network transparency, modeled on Erlang/OTP.
+- <img src="badges/stars/alitto--pond.svg" alt="2.2k stars" align="middle"> [pond](https://github.com/alitto/pond) - Bounded worker pool with generics, result groups, context cancellation and subpools.
+- <img src="badges/stars/thejerf--suture.svg" alt="1.4k stars" align="middle"> [suture](https://github.com/thejerf/suture) - Supervisor trees that restart failed long-running services with backoff, modeled on Erlang/OTP.
 
 ## Resilience
 
 Retries, backoff, circuit breakers and other patterns for surviving failing dependencies.
 
-- ![4.1k stars](badges/stars/cenkalti--backoff.svg) [backoff](https://github.com/cenkalti/backoff) - Exponential backoff with jitter for retries, honoring context cancellation and permanent errors.
-- ![3.7k stars](badges/stars/sony--gobreaker.svg) [gobreaker](https://github.com/sony/gobreaker) - Circuit breaker with configurable trip conditions, state change hooks and a generic two-step API.
+- <img src="badges/stars/cenkalti--backoff.svg" alt="4.1k stars" align="middle"> [backoff](https://github.com/cenkalti/backoff) - Exponential backoff with jitter for retries, honoring context cancellation and permanent errors.
+- <img src="badges/stars/sony--gobreaker.svg" alt="3.7k stars" align="middle"> [gobreaker](https://github.com/sony/gobreaker) - Circuit breaker with configurable trip conditions, state change hooks and a generic two-step API.
 
 ## Caching
 
 In-memory caches and eviction policies.
 
-- ![8.2k stars](badges/stars/allegro--bigcache.svg) [bigcache](https://github.com/allegro/bigcache) - Efficient in-memory cache for gigabytes of data without GC overhead.
-- ![2.7k stars](badges/stars/maypok86--otter.svg) [otter](https://github.com/maypok86/otter) - Concurrent in-memory cache tuned for high hit ratio and low contention.
-- ![41 stars](badges/stars/opencoff--go-sieve.svg) [go-sieve](https://github.com/opencoff/go-sieve) - Generic in-memory cache with SIEVE eviction and a lock-free read path.
+- <img src="badges/stars/allegro--bigcache.svg" alt="8.2k stars" align="middle"> [bigcache](https://github.com/allegro/bigcache) - Efficient in-memory cache for gigabytes of data without GC overhead.
+- <img src="badges/stars/maypok86--otter.svg" alt="2.7k stars" align="middle"> [otter](https://github.com/maypok86/otter) - Concurrent in-memory cache tuned for high hit ratio and low contention.
+- <img src="badges/stars/opencoff--go-sieve.svg" alt="41 stars" align="middle"> [go-sieve](https://github.com/opencoff/go-sieve) - Generic in-memory cache with SIEVE eviction and a lock-free read path.
 
 ## Networking & Protocols
 
 Protocol implementations, transports and low-level network plumbing.
 
-- ![17k stars](badges/stars/pion--webrtc.svg) [webrtc](https://github.com/pion/webrtc) - Pure implementation of the WebRTC stack: ICE, DTLS, SRTP, data channels and media tracks.
-- ![3 stars](badges/stars/floatdrop--moq-go.svg) [moq-go](https://github.com/floatdrop/moq-go) - Media over QUIC transport library and relay tracking the IETF MoQ drafts.
+- <img src="badges/stars/pion--webrtc.svg" alt="17k stars" align="middle"> [webrtc](https://github.com/pion/webrtc) - Pure implementation of the WebRTC stack: ICE, DTLS, SRTP, data channels and media tracks.
+- <img src="badges/stars/floatdrop--moq-go.svg" alt="3 stars" align="middle"> [moq-go](https://github.com/floatdrop/moq-go) - Media over QUIC transport library and relay tracking the IETF MoQ drafts.
 
 ## Audio & Video
 
 Codecs, containers and media processing.
 
-- ![560 stars](badges/stars/pion--opus.svg) [opus](https://github.com/pion/opus) - Implementation of the Opus audio codec per RFC 6716, with bitstream internals exported for analysis.
-- ![22 stars](badges/stars/eyevinn--hi264.svg) [hi264](https://github.com/Eyevinn/hi264) - Decoder for H.264 IDR frames and generator of test bitstreams, with fMP4 fragment extension.
-- ![1 stars](badges/stars/tphakala--go-flac.svg) [go-flac](https://github.com/tphakala/go-flac) - FLAC encoder and decoder with SIMD acceleration, no cgo, and output bit-exact with libFLAC.
+- <img src="badges/stars/pion--opus.svg" alt="560 stars" align="middle"> [opus](https://github.com/pion/opus) - Implementation of the Opus audio codec per RFC 6716, with bitstream internals exported for analysis.
+- <img src="badges/stars/eyevinn--hi264.svg" alt="22 stars" align="middle"> [hi264](https://github.com/Eyevinn/hi264) - Decoder for H.264 IDR frames and generator of test bitstreams, with fMP4 fragment extension.
+- <img src="badges/stars/tphakala--go-flac.svg" alt="1 stars" align="middle"> [go-flac](https://github.com/tphakala/go-flac) - FLAC encoder and decoder with SIMD acceleration, no cgo, and output bit-exact with libFLAC.
 
 ## Messaging & Queues
 
 Message brokers, streaming platforms and task queues.
 
-- ![6.8k stars](badges/stars/nats-io--nats.go.svg) [nats.go](https://github.com/nats-io/nats.go) - Client for the NATS messaging system, including JetStream streams, key-value and object stores.
+- <img src="badges/stars/nats-io--nats.go.svg" alt="6.8k stars" align="middle"> [nats.go](https://github.com/nats-io/nats.go) - Client for the NATS messaging system, including JetStream streams, key-value and object stores.
 
 ## Data Structures
 
 Bitsets, compressed bitmaps and other containers beyond slices and maps.
 
-- ![2.9k stars](badges/stars/roaringbitmap--roaring.svg) [roaring](https://github.com/RoaringBitmap/roaring) - Compressed bitmaps for sparse or huge integer sets, with fast set operations and serialization.
-- ![2.8k stars](badges/stars/bits-and-blooms--bloom.svg) [bloom](https://github.com/bits-and-blooms/bloom) - Probabilistic set membership with Bloom filters sized from a target false positive rate.
-- ![1.5k stars](badges/stars/bits-and-blooms--bitset.svg) [bitset](https://github.com/bits-and-blooms/bitset) - Bitsets with set algebra, population counts, fast iteration over set bits and serialization.
+- <img src="badges/stars/roaringbitmap--roaring.svg" alt="2.9k stars" align="middle"> [roaring](https://github.com/RoaringBitmap/roaring) - Compressed bitmaps for sparse or huge integer sets, with fast set operations and serialization.
+- <img src="badges/stars/bits-and-blooms--bloom.svg" alt="2.8k stars" align="middle"> [bloom](https://github.com/bits-and-blooms/bloom) - Probabilistic set membership with Bloom filters sized from a target false positive rate.
+- <img src="badges/stars/bits-and-blooms--bitset.svg" alt="1.5k stars" align="middle"> [bitset](https://github.com/bits-and-blooms/bitset) - Bitsets with set algebra, population counts, fast iteration over set bits and serialization.
 
 ## Developer Tools
 
 Linters, build tools, debuggers, code generators and terminal tools for daily development work.
 
-- ![83k stars](badges/stars/junegunn--fzf.svg) [fzf](https://github.com/junegunn/fzf) - Interactive fuzzy finder for the command line, with shell integration for files and history.
-- ![82k stars](badges/stars/jesseduffield--lazygit.svg) [lazygit](https://github.com/jesseduffield/lazygit) - Terminal UI for git with staging, rebasing, stashing and worktrees a keystroke away.
-- ![25k stars](badges/stars/go-delve--delve.svg) [delve](https://github.com/go-delve/delve) - Debugger with goroutine-aware breakpoints, core dump analysis and remote debugging over DAP.
-- ![19k stars](badges/stars/golangci--golangci-lint.svg) [golangci-lint](https://github.com/golangci/golangci-lint) - Linters runner that aggregates dozens of linters with caching, parallelism and a single config.
+- <img src="badges/stars/junegunn--fzf.svg" alt="83k stars" align="middle"> [fzf](https://github.com/junegunn/fzf) - Interactive fuzzy finder for the command line, with shell integration for files and history.
+- <img src="badges/stars/jesseduffield--lazygit.svg" alt="82k stars" align="middle"> [lazygit](https://github.com/jesseduffield/lazygit) - Terminal UI for git with staging, rebasing, stashing and worktrees a keystroke away.
+- <img src="badges/stars/go-delve--delve.svg" alt="25k stars" align="middle"> [delve](https://github.com/go-delve/delve) - Debugger with goroutine-aware breakpoints, core dump analysis and remote debugging over DAP.
+- <img src="badges/stars/golangci--golangci-lint.svg" alt="19k stars" align="middle"> [golangci-lint](https://github.com/golangci/golangci-lint) - Linters runner that aggregates dozens of linters with caching, parallelism and a single config.
 
 ## Documentation
 
