@@ -11,12 +11,22 @@ import (
 	"github.com/floatdrop/awesome-go/internal/list"
 )
 
-var medals = []string{"🥇", "🥈", "🥉"}
+// StarsDir is the directory under badges/ that holds one star pill per entry.
+const StarsDir = "stars"
 
-// blank pads podium entries without a medal so the names line up with the
-// medalled ones above them. Emoji render about a third wider than one em, so
-// an em space plus a three-per-em space is the closest text-only match.
-const blank = "&emsp;&#8196;"
+// StarsPath is the README-relative path of an entry's star pill.
+func StarsPath(repo string) string {
+	return "badges/" + StarsDir + "/" + list.Slug(repo) + ".svg"
+}
+
+// StarsText is what the star pill shows: the rounded count, or "new" for an
+// entry whose stars have not been fetched yet.
+func StarsText(stars int, known bool) string {
+	if !known {
+		return "new"
+	}
+	return FormatStars(stars)
+}
 
 // Header is the first line of the generated README; CI uses it to recognise
 // the file as generated.
@@ -105,13 +115,13 @@ func README(l *list.List, m *list.Metadata, now time.Time) []byte {
 		if podium <= 0 || podium >= len(rs) {
 			podium = len(rs)
 		}
-		for i, r := range rs[:podium] {
-			w("- %s\n", item(r, medal(i, l.Meta.Podium)))
+		for _, r := range rs[:podium] {
+			w("- %s\n", item(r))
 		}
 		if rest := rs[podium:]; len(rest) > 0 {
 			w("\n<details>\n<summary>More (%d)</summary>\n\n", len(rest))
 			for _, r := range rest {
-				w("- %s\n", item(r, ""))
+				w("- %s\n", item(r))
 			}
 			w("\n</details>\n")
 		}
@@ -147,28 +157,14 @@ func README(l *list.List, m *list.Metadata, now time.Time) []byte {
 	return []byte(b.String())
 }
 
-func medal(i, podium int) string {
-	if podium <= 0 {
-		return ""
-	}
-	if i >= len(medals) {
-		return blank
-	}
-	return medals[i]
-}
-
-// item renders one entry line. The star and the count are joined by a
-// non-breaking space so a narrow page never wraps between them.
-func item(r ranked, prefix string) string {
-	var b strings.Builder
-	if prefix != "" {
-		b.WriteString(prefix + " ")
-	}
-	fmt.Fprintf(&b, "[%s](%s) - %s", r.entry.DisplayName(), r.entry.URL(), r.entry.Description)
+// item renders one entry line. Every line starts with the entry's star pill,
+// a fixed-width image, so the names line up in one column.
+func item(r ranked) string {
+	alt := "new"
 	if r.known {
-		fmt.Fprintf(&b, " ★&nbsp;%s", FormatStars(r.stars))
+		alt = FormatStars(r.stars) + " stars"
 	}
-	return b.String()
+	return fmt.Sprintf("![%s](%s) [%s](%s) - %s", alt, StarsPath(r.entry.Repo), r.entry.DisplayName(), r.entry.URL(), r.entry.Description)
 }
 
 // FormatStars renders 1234 as "1.2k" and 80123 as "80k".

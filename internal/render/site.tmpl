@@ -67,8 +67,8 @@ footer{margin:48px 0 40px;color:var(--muted);font-size:.9rem;border-top:1px soli
 <h2><a href="#{{.ID}}">{{.Name}}</a></h2>
 {{with .Description}}<p class="desc">{{.}}</p>{{end}}
 <ol class="entries">
-{{range .Entries}}<li class="entry{{if .Medal}} podium{{end}}" id="{{.Slug}}" data-name="{{.Name}}" data-stars="{{.Stars}}" data-added="{{.Added}}" data-search="{{.Search}}">
-<span class="rank">{{if .Medal}}{{.Medal}}{{else}}{{.Rank}}{{end}}</span>
+{{range .Entries}}<li class="entry{{if .Podium}} podium{{end}}" id="{{.Slug}}" data-name="{{.Name}}" data-stars="{{.Stars}}" data-added="{{.Added}}" data-search="{{.Search}}">
+<span class="rank">{{.Rank}}</span>
 <div class="body"><a class="name" href="{{.URL}}">{{.Name}}</a><span class="repo">{{.Repo}}</span><p>{{.Description}}</p></div>
 <span class="stars" title="GitHub stars">★ {{.StarsText}}</span>
 </li>

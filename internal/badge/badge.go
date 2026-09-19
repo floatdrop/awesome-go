@@ -176,3 +176,28 @@ func textWidth(s string) int {
 	}
 	return int(total + 0.5)
 }
+
+// StarsWidth is the width of every star pill, so the names after them line
+// up regardless of how many digits the count has.
+const StarsWidth = 46
+
+// Stars renders the star pill that precedes each entry in the README: the
+// count in a fixed-width rounded box, in the same style as the badge, so the
+// list reads as a single column of numbers.
+func Stars(text, title string) []byte {
+	var b strings.Builder
+	w := func(format string, args ...any) { fmt.Fprintf(&b, format, args...) }
+	w(`<svg xmlns="http://www.w3.org/2000/svg" width="%d" height="20" role="img" aria-label="%s">`, StarsWidth, html.EscapeString(title))
+	w(`<title>%s</title>`, html.EscapeString(title))
+	w(`<linearGradient id="s" x2="0" y2="100%%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient>`)
+	w(`<clipPath id="r"><rect width="%d" height="20" rx="3" fill="#fff"/></clipPath>`, StarsWidth)
+	w(`<g clip-path="url(#r)"><rect width="%d" height="20" fill="#555"/><rect width="%d" height="20" fill="url(#s)"/></g>`, StarsWidth, StarsWidth)
+	w(`<g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="11">`)
+	cx := StarsWidth / 2
+	t := html.EscapeString(text)
+	w(`<text x="%d" y="15" fill="#010101" fill-opacity=".3">★ %s</text>`, cx, t)
+	w(`<text x="%d" y="14"><tspan fill="#dfb317">★</tspan> %s</text>`, cx, t)
+	w(`</g></svg>`)
+	b.WriteString("\n")
+	return []byte(b.String())
+}

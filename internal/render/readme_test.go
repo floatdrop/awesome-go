@@ -38,9 +38,9 @@ func TestREADMEOrderAndPodium(t *testing.T) {
 		"# Awesome Go\n\n> Curated.\n",
 		"## Contents\n\n- [Web & HTTP](#web--http)\n",
 		"## Web & HTTP\n\nServers.\n\n",
-		"- 🥇 [big](https://github.com/b/big) - Big. ★&nbsp;46k\n",
-		"- 🥈 [middle](https://github.com/c/mid) - Mid. ★&nbsp;2.1k\n",
-		"<summary>More (2)</summary>\n\n- [small](https://github.com/a/small) - Small. ★&nbsp;120\n- [unknown](https://github.com/d/unknown) - Unknown.\n",
+		"- ![46k stars](badges/stars/b--big.svg) [big](https://github.com/b/big) - Big.\n",
+		"- ![2.1k stars](badges/stars/c--mid.svg) [middle](https://github.com/c/mid) - Mid.\n",
+		"<summary>More (2)</summary>\n\n- ![120 stars](badges/stars/a--small.svg) [small](https://github.com/a/small) - Small.\n- ![new](badges/stars/d--unknown.svg) [unknown](https://github.com/d/unknown) - Unknown.\n",
 		"last refreshed on 2026-09-12",
 		"An entry earns its place by covering something no listed project does, or by doing it better.",
 		"Search, filter and sort the full list at [x.github.io/y](https://x.github.io/y/).",
@@ -52,16 +52,16 @@ func TestREADMEOrderAndPodium(t *testing.T) {
 	if strings.Contains(out, "## Empty") || strings.Contains(out, "#empty") {
 		t.Errorf("empty category should be skipped")
 	}
-	if strings.Contains(out, "🥉") {
-		t.Errorf("podium of 2 must not award bronze")
+	if strings.Contains(out, "🥇") || strings.Contains(out, "★") {
+		t.Errorf("medals and inline star counts were replaced by star pills")
 	}
 }
 
-func TestREADMEPadsPodiumEntriesWithoutMedal(t *testing.T) {
+func TestREADMEPodiumWithoutMore(t *testing.T) {
 	l, m := fixture(4)
 	out := string(README(l, m, time.Now()))
-	if !strings.Contains(out, "- 🥉 [small](") || !strings.Contains(out, "- &emsp;&#8196; [unknown](") {
-		t.Fatalf("fourth podium entry must be padded:\n%s", out)
+	if !strings.Contains(out, "- ![120 stars](badges/stars/a--small.svg) [small](") || !strings.Contains(out, "- ![new](badges/stars/d--unknown.svg) [unknown](") {
+		t.Fatalf("every podium entry must carry a star pill:\n%s", out)
 	}
 	if strings.Contains(out, "<details>") {
 		t.Fatalf("no More block expected when every entry is on the podium")
@@ -124,7 +124,7 @@ func TestREADMELinkSections(t *testing.T) {
 func TestREADMEFlatWithoutPodium(t *testing.T) {
 	l, m := fixture(0)
 	out := string(README(l, m, time.Now()))
-	if strings.Contains(out, "<details>") || strings.Contains(out, "🥇") {
+	if strings.Contains(out, "<details>") {
 		t.Fatalf("podium disabled but rendered:\n%s", out)
 	}
 	big := strings.Index(out, "[big]")
