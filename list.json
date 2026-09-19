@@ -157,6 +157,11 @@
       "id": "videos",
       "name": "Videos",
       "description": "Talks and courses worth watching from start to finish."
+    },
+    {
+      "id": "blog-posts",
+      "name": "Blog Posts",
+      "description": "Articles that changed how people write Go at work."
     }
   ]
 }
