@@ -160,14 +160,16 @@ func README(l *list.List, m *list.Metadata, now time.Time) []byte {
 // item renders one entry line. Every line starts with the entry's star pill,
 // a fixed-width image, so the names line up in one column. It is an HTML img
 // rather than Markdown because GitHub puts Markdown images on the text
-// baseline, which leaves a 20px pill floating above the line; align="middle"
-// is the one alignment attribute GitHub's sanitizer keeps.
+// baseline, which leaves a 20px pill floating above the line. GitHub's
+// sanitizer keeps the align attribute; "absmiddle" is the value every engine
+// maps to vertical-align: middle, whereas WebKit treats "middle" as
+// baseline-middle and drops the pill below the text.
 func item(r ranked) string {
 	alt := "new"
 	if r.known {
 		alt = FormatStars(r.stars) + " stars"
 	}
-	return fmt.Sprintf(`<img src="%s" alt="%s" align="middle"> [%s](%s) - %s`, StarsPath(r.entry.Repo), alt, r.entry.DisplayName(), r.entry.URL(), r.entry.Description)
+	return fmt.Sprintf(`<img src="%s" alt="%s" align="absmiddle"> [%s](%s) - %s`, StarsPath(r.entry.Repo), alt, r.entry.DisplayName(), r.entry.URL(), r.entry.Description)
 }
 
 // FormatStars renders 1234 as "1.2k" and 80123 as "80k".

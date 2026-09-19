@@ -38,9 +38,9 @@ func TestREADMEOrderAndPodium(t *testing.T) {
 		"# Awesome Go\n\n> Curated.\n",
 		"## Contents\n\n- [Web & HTTP](#web--http)\n",
 		"## Web & HTTP\n\nServers.\n\n",
-		"- <img src=\"badges/stars/b--big.svg\" alt=\"46k stars\" align=\"middle\"> [big](https://github.com/b/big) - Big.\n",
-		"- <img src=\"badges/stars/c--mid.svg\" alt=\"2.1k stars\" align=\"middle\"> [middle](https://github.com/c/mid) - Mid.\n",
-		"<summary>More (2)</summary>\n\n- <img src=\"badges/stars/a--small.svg\" alt=\"120 stars\" align=\"middle\"> [small](https://github.com/a/small) - Small.\n- <img src=\"badges/stars/d--unknown.svg\" alt=\"new\" align=\"middle\"> [unknown](https://github.com/d/unknown) - Unknown.\n",
+		"- <img src=\"badges/stars/b--big.svg\" alt=\"46k stars\" align=\"absmiddle\"> [big](https://github.com/b/big) - Big.\n",
+		"- <img src=\"badges/stars/c--mid.svg\" alt=\"2.1k stars\" align=\"absmiddle\"> [middle](https://github.com/c/mid) - Mid.\n",
+		"<summary>More (2)</summary>\n\n- <img src=\"badges/stars/a--small.svg\" alt=\"120 stars\" align=\"absmiddle\"> [small](https://github.com/a/small) - Small.\n- <img src=\"badges/stars/d--unknown.svg\" alt=\"new\" align=\"absmiddle\"> [unknown](https://github.com/d/unknown) - Unknown.\n",
 		"last refreshed on 2026-09-12",
 		"An entry earns its place by covering something no listed project does, or by doing it better.",
 		"Search, filter and sort the full list at [x.github.io/y](https://x.github.io/y/).",
@@ -60,7 +60,7 @@ func TestREADMEOrderAndPodium(t *testing.T) {
 func TestREADMEPodiumWithoutMore(t *testing.T) {
 	l, m := fixture(4)
 	out := string(README(l, m, time.Now()))
-	if !strings.Contains(out, "- <img src=\"badges/stars/a--small.svg\" alt=\"120 stars\" align=\"middle\"> [small](") || !strings.Contains(out, "- <img src=\"badges/stars/d--unknown.svg\" alt=\"new\" align=\"middle\"> [unknown](") {
+	if !strings.Contains(out, "- <img src=\"badges/stars/a--small.svg\" alt=\"120 stars\" align=\"absmiddle\"> [small](") || !strings.Contains(out, "- <img src=\"badges/stars/d--unknown.svg\" alt=\"new\" align=\"absmiddle\"> [unknown](") {
 		t.Fatalf("every podium entry must carry a star pill:\n%s", out)
 	}
 	if strings.Contains(out, "<details>") {
