@@ -92,7 +92,7 @@
       "pushed_at": "2026-06-30T15:26:08Z"
     },
     "charmbracelet/bubbletea": {
-      "stars": 45027,
+      "stars": 45028,
       "archived": false,
       "is_go": true,
       "language": "Go",
@@ -146,7 +146,7 @@
       "pushed_at": "2026-09-17T16:26:08Z"
     },
     "gin-gonic/gin": {
-      "stars": 89237,
+      "stars": 89236,
       "archived": false,
       "is_go": true,
       "language": "Go",
@@ -155,7 +155,7 @@
       "pushed_at": "2026-09-19T13:11:32Z"
     },
     "go-chi/chi": {
-      "stars": 22855,
+      "stars": 22856,
       "archived": false,
       "is_go": true,
       "language": "Go",
@@ -191,7 +191,7 @@
       "pushed_at": "2026-09-17T23:02:41Z"
     },
     "golangci/golangci-lint": {
-      "stars": 19387,
+      "stars": 19386,
       "archived": false,
       "is_go": true,
       "language": "Go",
@@ -218,7 +218,7 @@
       "pushed_at": "2026-09-17T12:22:07Z"
     },
     "jesseduffield/lazygit": {
-      "stars": 82477,
+      "stars": 82478,
       "archived": false,
       "is_go": true,
       "language": "Go",
@@ -388,6 +388,15 @@
       "created_at": "2014-04-17T17:37:16Z",
       "pushed_at": "2026-07-22T01:18:27Z"
     },
+    "tinygo-org/tinygo": {
+      "stars": 17736,
+      "archived": false,
+      "is_go": true,
+      "language": "Go",
+      "license": "Other",
+      "created_at": "2018-06-07T16:39:19Z",
+      "pushed_at": "2026-09-19T15:18:37Z"
+    },
     "tphakala/go-flac": {
       "stars": 1,
       "archived": false,
@@ -398,7 +407,7 @@
       "pushed_at": "2026-09-17T09:24:13Z"
     },
     "wailsapp/wails": {
-      "stars": 36274,
+      "stars": 36273,
       "archived": false,
       "is_go": true,
       "language": "Go",
