@@ -56,7 +56,7 @@ type siteCategory struct {
 
 type siteEntry struct {
 	Rank        int
-	Medal       string
+	Podium      bool
 	Slug        string
 	Name        string
 	Repo        string
@@ -117,9 +117,7 @@ func Site(l *list.List, m *list.Metadata, now time.Time) ([]byte, error) {
 		})
 		for i := range sc.Entries {
 			sc.Entries[i].Rank = i + 1
-			if l.Meta.Podium > 0 && i < len(medals) && i < l.Meta.Podium {
-				sc.Entries[i].Medal = medals[i]
-			}
+			sc.Entries[i].Podium = l.Meta.Podium > 0 && i < l.Meta.Podium
 		}
 		page.Categories = append(page.Categories, sc)
 	}

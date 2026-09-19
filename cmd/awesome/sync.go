@@ -185,15 +185,30 @@ func runGenerate(args []string) error {
 	if err := os.MkdirAll(dir, 0o755); err != nil {
 		return err
 	}
-	old, _ := filepath.Glob(filepath.Join(dir, "*.svg"))
-	for _, f := range old {
-		if err := os.Remove(f); err != nil {
-			return err
+	stars := filepath.Join(dir, render.StarsDir)
+	if err := os.MkdirAll(stars, 0o755); err != nil {
+		return err
+	}
+	for _, pattern := range []string{filepath.Join(dir, "*.svg"), filepath.Join(stars, "*.svg")} {
+		old, _ := filepath.Glob(pattern)
+		for _, f := range old {
+			if err := os.Remove(f); err != nil {
+				return err
+			}
 		}
 	}
 	generated := 0
 	skipped := 0
 	for _, e := range l.Entries {
+		rm, known := meta.Repos[e.Repo]
+		title := "Stars not fetched yet"
+		if known {
+			title = fmt.Sprintf("%s has %d stars on GitHub", e.Repo, rm.Stars)
+		}
+		pill := badge.Stars(render.StarsText(rm.Stars, known), title)
+		if err := os.WriteFile(filepath.Join(p.root, render.StarsPath(e.Repo)), pill, 0o644); err != nil {
+			return err
+		}
 		if e.Added == "" {
 			skipped++ // refresh assigns the acceptance date; the badge title mentions it.
 			continue

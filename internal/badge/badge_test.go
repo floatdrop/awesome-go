@@ -102,3 +102,15 @@ func TestColorIsStableAndVaried(t *testing.T) {
 		t.Fatalf("expected several colours across seeds, got %d", len(seen))
 	}
 }
+
+func TestStarsPillHasFixedWidth(t *testing.T) {
+	for _, text := range []string{"120", "2.1k", "89k", "new"} {
+		svg := string(Stars(text, "x has stars"))
+		if !strings.Contains(svg, `width="46"`) {
+			t.Errorf("Stars(%q) must be %d wide:\n%s", text, StarsWidth, svg)
+		}
+		if !strings.Contains(svg, "★</tspan> "+text+"</text>") {
+			t.Errorf("Stars(%q) must show the count:\n%s", text, svg)
+		}
+	}
+}
