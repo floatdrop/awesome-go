@@ -106,8 +106,8 @@ func TestColorIsStableAndVaried(t *testing.T) {
 func TestStarsPillHasFixedWidth(t *testing.T) {
 	for _, text := range []string{"120", "2.1k", "89k", "new"} {
 		svg := string(Stars(text, "x has stars"))
-		if !strings.Contains(svg, `width="46" height="24"`) {
-			t.Errorf("Stars(%q) must be %dx%d:\n%s", text, StarsWidth, StarsHeight, svg)
+		if !strings.Contains(svg, `width="46" height="20"`) {
+			t.Errorf("Stars(%q) must be %d wide and 20 tall:\n%s", text, StarsWidth, svg)
 		}
 		if !strings.Contains(svg, "★</tspan> "+text+"</text>") {
 			t.Errorf("Stars(%q) must show the count:\n%s", text, svg)
