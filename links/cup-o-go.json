@@ -1,0 +1,7 @@
+{
+  "$schema": "../schema/link.schema.json",
+  "title": "Cup o' Go",
+  "url": "https://cupogo.dev/",
+  "description": "Weekly fifteen-minute rundown of news, releases and proposals with Jonathan Hall and Shay Nehmad.",
+  "section": "podcasts"
+}

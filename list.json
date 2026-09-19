@@ -162,6 +162,11 @@
       "id": "blog-posts",
       "name": "Blog Posts",
       "description": "Articles that changed how people write Go at work."
+    },
+    {
+      "id": "podcasts",
+      "name": "Podcasts",
+      "description": "Shows worth a spot in your queue."
     }
   ]
 }
