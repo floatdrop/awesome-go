@@ -1,0 +1,7 @@
+{
+  "$schema": "../schema/link.schema.json",
+  "title": "Go Class by Matt KØDVB",
+  "url": "https://www.youtube.com/playlist?list=PLoILbKo9rG3skRCj37Kn5Zj803hhiuRK6",
+  "description": "Matt Holiday's university-style lecture course, from basic types to concurrency and testing.",
+  "section": "videos"
+}
