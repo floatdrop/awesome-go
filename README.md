@@ -36,6 +36,7 @@ Search, filter and sort the full list at [floatdrop.github.io/awesome-go](https:
 - [Developer Tools](#developer-tools)
 - [Documentation](#documentation)
 - [Books](#books)
+- [Videos](#videos)
 
 ## Web Frameworks & Routers
 
@@ -188,6 +189,12 @@ Official guides and references for learning and using the language.
 Books worth reading cover to cover.
 
 - [Learning Go, 2nd Edition](https://www.oreilly.com/library/view/learning-go-2nd/9781098139285/) - Jon Bodner's guide to idiomatic modern practice, from generics to concurrency and testing.
+
+## Videos
+
+Talks and courses worth watching from start to finish.
+
+- [Go Class by Matt KØDVB](https://www.youtube.com/playlist?list=PLoILbKo9rG3skRCj37Kn5Zj803hhiuRK6) - Matt Holiday's university-style lecture course, from basic types to concurrency and testing.
 
 ## Contributing
 
