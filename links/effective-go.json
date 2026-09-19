@@ -1,0 +1,7 @@
+{
+  "$schema": "../schema/link.schema.json",
+  "title": "Effective Go",
+  "url": "https://go.dev/doc/effective_go",
+  "description": "Official guide to clear, idiomatic code: naming, formatting, interfaces, errors and concurrency.",
+  "section": "documentation"
+}
