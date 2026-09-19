@@ -152,6 +152,11 @@
       "id": "books",
       "name": "Books",
       "description": "Books worth reading cover to cover."
+    },
+    {
+      "id": "videos",
+      "name": "Videos",
+      "description": "Talks and courses worth watching from start to finish."
     }
   ]
 }
