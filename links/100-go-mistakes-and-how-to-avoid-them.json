@@ -1,0 +1,7 @@
+{
+  "$schema": "../schema/link.schema.json",
+  "title": "100 Go Mistakes and How to Avoid Them",
+  "url": "https://100go.co/book/",
+  "description": "Teiva Harsanyi's catalogue of common pitfalls, from slices and maps to concurrency and testing.",
+  "section": "books"
+}
