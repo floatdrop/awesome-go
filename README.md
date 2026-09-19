@@ -37,6 +37,7 @@ Search, filter and sort the full list at [floatdrop.github.io/awesome-go](https:
 - [Documentation](#documentation)
 - [Books](#books)
 - [Videos](#videos)
+- [Blog Posts](#blog-posts)
 
 ## Web Frameworks & Routers
 
@@ -196,6 +197,12 @@ Books worth reading cover to cover.
 Talks and courses worth watching from start to finish.
 
 - [Go Class by Matt KØDVB](https://www.youtube.com/playlist?list=PLoILbKo9rG3skRCj37Kn5Zj803hhiuRK6) - Matt Holiday's university-style lecture course, from basic types to concurrency and testing.
+
+## Blog Posts
+
+Articles that changed how people write Go at work.
+
+- [Go for Industrial Programming](https://peter.bourgon.org/go-for-industrial-programming/) - Peter Bourgon on structuring team codebases: configuration, dependencies, logging and testing.
 
 ## Contributing
 
