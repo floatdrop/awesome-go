@@ -1,0 +1,7 @@
+{
+  "$schema": "../schema/link.schema.json",
+  "title": "Go for Industrial Programming",
+  "url": "https://peter.bourgon.org/go-for-industrial-programming/",
+  "description": "Peter Bourgon on structuring team codebases: configuration, dependencies, logging and testing.",
+  "section": "blog-posts"
+}
