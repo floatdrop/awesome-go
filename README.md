@@ -179,6 +179,7 @@ Linters, build tools, debuggers, code generators and terminal tools for daily de
 Official guides and references for learning and using the language.
 
 - [A Tour of Go](https://go.dev/tour/) - Interactive introduction that runs in the browser, from basic syntax to generics and concurrency.
+- [Effective Go](https://go.dev/doc/effective_go) - Official guide to clear, idiomatic code: naming, formatting, interfaces, errors and concurrency.
 - [Go Recipes](https://github.com/nikolaydubina/go-recipes/blob/main/README.md) - Cookbook of tool recipes for testing, dependencies, code generation, profiling and static analysis.
 - [Go Release Interactive Tours](https://victoriametrics.com/blog/go-1-27/) - Runnable examples of what changed in each release, from language features to the standard library. Versions: [1.27](https://victoriametrics.com/blog/go-1-27/) · [1.26](https://antonz.org/go-1-26/) · [1.25](https://antonz.org/go-1-25/) · [1.24](https://antonz.org/go-1-24/) · [1.23](https://antonz.org/go-1-23/) · [1.22](https://antonz.org/go-1-22/)
 
