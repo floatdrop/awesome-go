@@ -188,6 +188,7 @@ Official guides and references for learning and using the language.
 
 Books worth reading cover to cover.
 
+- [100 Go Mistakes and How to Avoid Them](https://100go.co/book/) - Teiva Harsanyi's catalogue of common pitfalls, from slices and maps to concurrency and testing.
 - [Learning Go, 2nd Edition](https://www.oreilly.com/library/view/learning-go-2nd/9781098139285/) - Jon Bodner's guide to idiomatic modern practice, from generics to concurrency and testing.
 
 ## Videos
