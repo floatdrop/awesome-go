@@ -2,5 +2,5 @@
   "$schema": "../schema/entry.schema.json",
   "repo": "tinygo-org/tinygo",
   "description": "Compiler for microcontrollers, WebAssembly and small binaries, built on LLVM.",
-  "category": "developer-tools"
+  "category": "embedded"
 }

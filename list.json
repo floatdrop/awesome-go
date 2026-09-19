@@ -140,6 +140,11 @@
       "id": "developer-tools",
       "name": "Developer Tools",
       "description": "Linters, build tools, debuggers, code generators and terminal tools for daily development work."
+    },
+    {
+      "id": "embedded",
+      "name": "Embedded & Hardware",
+      "description": "Compilers, frameworks and drivers for microcontrollers, boards and the devices attached to them."
     }
   ],
   "link_sections": [
