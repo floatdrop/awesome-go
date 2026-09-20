@@ -47,7 +47,7 @@ Codecs, containers and media processing.
 
 - <img src="badges/stars/pion--opus.svg" alt="560 stars" align="absmiddle"> [opus](https://github.com/pion/opus) - Implementation of the Opus audio codec per RFC 6716, with bitstream internals exported for analysis.
 - <img src="badges/stars/eyevinn--hi264.svg" alt="22 stars" align="absmiddle"> [hi264](https://github.com/Eyevinn/hi264) - Decoder for H.264 IDR frames and generator of test bitstreams, with fMP4 fragment extension.
-- <img src="badges/stars/tphakala--go-flac.svg" alt="1 stars" align="absmiddle"> [go-flac](https://github.com/tphakala/go-flac) - FLAC encoder and decoder with SIMD acceleration, no cgo, and output bit-exact with libFLAC.
+- <img src="badges/stars/tphakala--go-flac.svg" alt="2 stars" align="absmiddle"> [go-flac](https://github.com/tphakala/go-flac) - FLAC encoder and decoder with SIMD acceleration, no cgo, and output bit-exact with libFLAC.
 
 ## Caching
 
