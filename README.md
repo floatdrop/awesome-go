@@ -11,7 +11,7 @@
 
 > A short, hand-curated list of Go libraries and tools that are actually worth using. Not a directory of everything that exists.
 
-47 projects in 18 categories. Every entry is added by a human through a pull request and checked against the [entry rules](CONTRIBUTING.md#entry-rules) by CI. An entry earns its place by covering something no listed project does, or by doing it better. Within each category the 5 most-starred projects are shown first and the rest are folded under More. Archived repositories are removed automatically. Stars were last refreshed on 2026-09-19.
+48 projects in 18 categories. Every entry is added by a human through a pull request and checked against the [entry rules](CONTRIBUTING.md#entry-rules) by CI. An entry earns its place by covering something no listed project does, or by doing it better. Within each category the 5 most-starred projects are shown first and the rest are folded under More. Archived repositories are removed automatically. Stars were last refreshed on 2026-09-20.
 
 Search, filter and sort the full list at [floatdrop.github.io/awesome-go](https://floatdrop.github.io/awesome-go/).
 
@@ -74,6 +74,7 @@ Loading settings from files, environment variables and flags.
 
 Structured and leveled logging.
 
+- <img src="badges/stars/open-telemetry--opentelemetry-go.svg" alt="6.6k stars" align="absmiddle"> [opentelemetry-go](https://github.com/open-telemetry/opentelemetry-go) - Vendor-neutral SDK for traces, metrics and logs with OTLP and Prometheus exporters.
 - <img src="badges/stars/charmbracelet--log.svg" alt="3.4k stars" align="absmiddle"> [log](https://github.com/charmbracelet/log) - Minimal, colorful logger with a slog handler and structured key-value output.
 
 ## Testing
@@ -174,7 +175,7 @@ Bitsets, compressed bitmaps and other containers beyond slices and maps.
 Linters, build tools, debuggers, code generators and terminal tools for daily development work.
 
 - <img src="badges/stars/junegunn--fzf.svg" alt="83k stars" align="absmiddle"> [fzf](https://github.com/junegunn/fzf) - Interactive fuzzy finder for the command line, with shell integration for files and history.
-- <img src="badges/stars/jesseduffield--lazygit.svg" alt="82k stars" align="absmiddle"> [lazygit](https://github.com/jesseduffield/lazygit) - Terminal UI for git with staging, rebasing, stashing and worktrees a keystroke away.
+- <img src="badges/stars/jesseduffield--lazygit.svg" alt="83k stars" align="absmiddle"> [lazygit](https://github.com/jesseduffield/lazygit) - Terminal UI for git with staging, rebasing, stashing and worktrees a keystroke away.
 - <img src="badges/stars/go-delve--delve.svg" alt="25k stars" align="absmiddle"> [delve](https://github.com/go-delve/delve) - Debugger with goroutine-aware breakpoints, core dump analysis and remote debugging over DAP.
 - <img src="badges/stars/golangci--golangci-lint.svg" alt="19k stars" align="absmiddle"> [golangci-lint](https://github.com/golangci/golangci-lint) - Linters runner that aggregates dozens of linters with caching, parallelism and a single config.
 
