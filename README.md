@@ -11,7 +11,7 @@
 
 > A short, hand-curated list of Go libraries and tools that are actually worth using. Not a directory of everything that exists.
 
-49 projects in 19 categories. Every entry is added by a human through a pull request and checked against the [entry rules](CONTRIBUTING.md#entry-rules) by CI. An entry earns its place by covering something no listed project does, or by doing it better. Within each category the 10 most-starred projects are shown first and the rest are folded under More. Archived repositories are removed automatically. Stars were last refreshed on 2026-09-20.
+49 projects in 18 categories. Every entry is added by a human through a pull request and checked against the [entry rules](CONTRIBUTING.md#entry-rules) by CI. An entry earns its place by covering something no listed project does, or by doing it better. Within each category the 10 most-starred projects are shown first and the rest are folded under More. Archived repositories are removed automatically. Stars were last refreshed on 2026-09-20.
 
 Search, filter and sort the full list at [floatdrop.github.io/awesome-go](https://floatdrop.github.io/awesome-go/).
 
@@ -28,7 +28,6 @@ Search, filter and sort the full list at [floatdrop.github.io/awesome-go](https:
 - [Developer Tools](#developer-tools)
 - [Embedded & Hardware](#embedded--hardware)
 - [GUI & Desktop](#gui--desktop)
-- [Logging](#logging)
 - [Messaging & Queues](#messaging--queues)
 - [Networking & Protocols](#networking--protocols)
 - [Observability](#observability)
@@ -64,6 +63,7 @@ Argument parsing, terminal UIs and everything else for building CLIs.
 
 - <img src="badges/stars/charmbracelet--bubbletea.svg" alt="45k stars" align="absmiddle"> [bubbletea](https://github.com/charmbracelet/bubbletea) - Framework for terminal user interfaces based on The Elm Architecture.
 - <img src="badges/stars/spf13--cobra.svg" alt="45k stars" align="absmiddle"> [cobra](https://github.com/spf13/cobra) - Framework for CLI applications with subcommands, flags, shell completions and generated docs.
+- <img src="badges/stars/charmbracelet--log.svg" alt="3.4k stars" align="absmiddle"> [log](https://github.com/charmbracelet/log) - Minimal, colorful logger with a slog handler and structured key-value output.
 - <img src="badges/stars/alecthomas--kong.svg" alt="3.2k stars" align="absmiddle"> [kong](https://github.com/alecthomas/kong) - Command-line parser where the whole grammar is a struct and commands are typed Run methods.
 - <img src="badges/stars/peterbourgon--ff.svg" alt="1.4k stars" align="absmiddle"> [ff](https://github.com/peterbourgon/ff) - Extends the standard flag package with env vars, config files and subcommands, without replacing it.
 
@@ -129,12 +129,6 @@ Compilers, frameworks and drivers for microcontrollers, boards and the devices a
 Desktop application frameworks and GUI toolkits.
 
 - <img src="badges/stars/wailsapp--wails.svg" alt="36k stars" align="absmiddle"> [wails](https://github.com/wailsapp/wails) - Desktop applications with a Go backend and a web frontend, using the native webview.
-
-## Logging
-
-Structured and leveled logging.
-
-- <img src="badges/stars/charmbracelet--log.svg" alt="3.4k stars" align="absmiddle"> [log](https://github.com/charmbracelet/log) - Minimal, colorful logger with a slog handler and structured key-value output.
 
 ## Messaging & Queues
 
