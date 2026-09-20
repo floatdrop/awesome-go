@@ -22,94 +22,9 @@
   },
   "categories": [
     {
-      "id": "web-frameworks",
-      "name": "Web Frameworks & Routers",
-      "description": "HTTP servers, routers and full-stack web frameworks."
-    },
-    {
-      "id": "cli",
-      "name": "Command Line",
-      "description": "Argument parsing, terminal UIs and everything else for building CLIs."
-    },
-    {
-      "id": "gui",
-      "name": "GUI & Desktop",
-      "description": "Desktop application frameworks and GUI toolkits."
-    },
-    {
-      "id": "configuration",
-      "name": "Configuration",
-      "description": "Loading settings from files, environment variables and flags."
-    },
-    {
-      "id": "logging",
-      "name": "Logging",
-      "description": "Structured and leveled logging."
-    },
-    {
-      "id": "testing",
-      "name": "Testing",
-      "description": "Assertions, mocks, fixtures and integration test helpers."
-    },
-    {
-      "id": "databases",
-      "name": "Databases & SQL",
-      "description": "Drivers, query builders, ORMs, migrations, embedded and distributed stores."
-    },
-    {
-      "id": "serialization",
-      "name": "Serialization",
-      "description": "JSON, YAML, TOML, MessagePack and friends."
-    },
-    {
-      "id": "validation",
-      "name": "Validation",
-      "description": "Validating structs and inputs."
-    },
-    {
-      "id": "dependency-injection",
-      "name": "Dependency Injection",
-      "description": "Wiring applications together."
-    },
-    {
-      "id": "concurrency",
-      "name": "Concurrency",
-      "description": "Goroutine pools, structured concurrency, synchronization helpers and actor frameworks."
-    },
-    {
-      "id": "resilience",
-      "name": "Resilience",
-      "description": "Retries, backoff, circuit breakers and other patterns for surviving failing dependencies."
-    },
-    {
-      "id": "caching",
-      "name": "Caching",
-      "description": "In-memory caches and eviction policies."
-    },
-    {
-      "id": "http-clients",
-      "name": "HTTP Clients",
-      "description": "Making requests with retries, tracing and convenience."
-    },
-    {
-      "id": "networking",
-      "name": "Networking & Protocols",
-      "description": "Protocol implementations, transports and low-level network plumbing."
-    },
-    {
       "id": "audio-video",
       "name": "Audio & Video",
       "description": "Codecs, containers and media processing."
-    },
-    {
-      "id": "messaging",
-      "name": "Messaging & Queues",
-      "description": "Message brokers, streaming platforms and task queues."
-    },
-    {
-      "id": "rpc-and-api",
-      "name": "RPC & API",
-      "description": "gRPC, RPC frameworks, GraphQL and OpenAPI tooling."
     },
     {
       "id": "auth",
@@ -117,14 +32,24 @@
       "description": "Tokens, sessions, OAuth and access control."
     },
     {
-      "id": "observability",
-      "name": "Observability",
-      "description": "Metrics, tracing and instrumentation."
+      "id": "caching",
+      "name": "Caching",
+      "description": "In-memory caches and eviction policies."
     },
     {
-      "id": "text-and-templates",
-      "name": "Text, HTML & Templates",
-      "description": "Parsing and generating markup and text."
+      "id": "cli",
+      "name": "Command Line",
+      "description": "Argument parsing, terminal UIs and everything else for building CLIs."
+    },
+    {
+      "id": "concurrency",
+      "name": "Concurrency",
+      "description": "Goroutine pools, structured concurrency, synchronization helpers and actor frameworks."
+    },
+    {
+      "id": "configuration",
+      "name": "Configuration",
+      "description": "Loading settings from files, environment variables and flags."
     },
     {
       "id": "data-structures",
@@ -132,9 +57,14 @@
       "description": "Bitsets, compressed bitmaps and other containers beyond slices and maps."
     },
     {
-      "id": "utilities",
-      "name": "Utilities",
-      "description": "General-purpose helpers that end up in every project."
+      "id": "databases",
+      "name": "Databases & SQL",
+      "description": "Drivers, query builders, ORMs, migrations, embedded and distributed stores."
+    },
+    {
+      "id": "dependency-injection",
+      "name": "Dependency Injection",
+      "description": "Wiring applications together."
     },
     {
       "id": "developer-tools",
@@ -145,13 +75,83 @@
       "id": "embedded",
       "name": "Embedded & Hardware",
       "description": "Compilers, frameworks and drivers for microcontrollers, boards and the devices attached to them."
+    },
+    {
+      "id": "gui",
+      "name": "GUI & Desktop",
+      "description": "Desktop application frameworks and GUI toolkits."
+    },
+    {
+      "id": "http-clients",
+      "name": "HTTP Clients",
+      "description": "Making requests with retries, tracing and convenience."
+    },
+    {
+      "id": "logging",
+      "name": "Logging",
+      "description": "Structured and leveled logging."
+    },
+    {
+      "id": "messaging",
+      "name": "Messaging & Queues",
+      "description": "Message brokers, streaming platforms and task queues."
+    },
+    {
+      "id": "networking",
+      "name": "Networking & Protocols",
+      "description": "Protocol implementations, transports and low-level network plumbing."
+    },
+    {
+      "id": "observability",
+      "name": "Observability",
+      "description": "Metrics, tracing and instrumentation."
+    },
+    {
+      "id": "resilience",
+      "name": "Resilience",
+      "description": "Retries, backoff, circuit breakers and other patterns for surviving failing dependencies."
+    },
+    {
+      "id": "rpc-and-api",
+      "name": "RPC & API",
+      "description": "gRPC, RPC frameworks, GraphQL and OpenAPI tooling."
+    },
+    {
+      "id": "serialization",
+      "name": "Serialization",
+      "description": "JSON, YAML, TOML, MessagePack and friends."
+    },
+    {
+      "id": "testing",
+      "name": "Testing",
+      "description": "Assertions, mocks, fixtures and integration test helpers."
+    },
+    {
+      "id": "text-and-templates",
+      "name": "Text, HTML & Templates",
+      "description": "Parsing and generating markup and text."
+    },
+    {
+      "id": "utilities",
+      "name": "Utilities",
+      "description": "General-purpose helpers that end up in every project."
+    },
+    {
+      "id": "validation",
+      "name": "Validation",
+      "description": "Validating structs and inputs."
+    },
+    {
+      "id": "web-frameworks",
+      "name": "Web Frameworks & Routers",
+      "description": "HTTP servers, routers and full-stack web frameworks."
     }
   ],
   "link_sections": [
     {
-      "id": "documentation",
-      "name": "Documentation",
-      "description": "Official guides and references for learning and using the language."
+      "id": "blog-posts",
+      "name": "Blog Posts",
+      "description": "Articles that changed how people write Go at work."
     },
     {
       "id": "books",
@@ -159,19 +159,19 @@
       "description": "Books worth reading cover to cover."
     },
     {
-      "id": "videos",
-      "name": "Videos",
-      "description": "Talks and courses worth watching from start to finish."
-    },
-    {
-      "id": "blog-posts",
-      "name": "Blog Posts",
-      "description": "Articles that changed how people write Go at work."
+      "id": "documentation",
+      "name": "Documentation",
+      "description": "Official guides and references for learning and using the language."
     },
     {
       "id": "podcasts",
       "name": "Podcasts",
       "description": "Shows worth a spot in your queue."
+    },
+    {
+      "id": "videos",
+      "name": "Videos",
+      "description": "Talks and courses worth watching from start to finish."
     }
   ]
 }

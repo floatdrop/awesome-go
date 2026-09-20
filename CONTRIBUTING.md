@@ -5,7 +5,7 @@ Thanks for helping keep this list short and honest. The whole point of the list 
 ## How the list works
 
 - `entries/<owner>--<name>.json` is one file per listed project. That is the file you add, edit or delete.
-- `list.json` holds the categories, the policy thresholds and the list metadata. It changes rarely.
+- `list.json` holds the categories, the policy thresholds and the list metadata. It changes rarely; `fmt` keeps categories and link sections in alphabetical order.
 - `README.md`, `docs/index.html`, `metadata.json` and everything under `badges/` are generated. CI rejects pull requests that touch them.
 - The generated `docs/` folder is published with GitHub Pages at [floatdrop.github.io/awesome-go](https://floatdrop.github.io/awesome-go/), with search, filtering and sorting over the same data.
 - A nightly job refreshes star counts, removes repositories that were archived or deleted, and regenerates the README and badges. Nobody has to remember to clean up.

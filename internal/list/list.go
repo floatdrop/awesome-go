@@ -261,13 +261,21 @@ func encode(v any) ([]byte, error) {
 	return buf.Bytes(), nil
 }
 
-// FormatList returns the canonical encoding of list.json.
+// FormatList returns the canonical encoding of list.json. Categories and
+// link sections are sorted by name, case-insensitively, so the README and the
+// site list them alphabetically; the two groups never mix, since categories
+// hold repositories and link sections hold everything else.
 func (l *List) FormatList() ([]byte, error) {
 	c := *l
 	c.Schema = listSchema
-	if c.Categories == nil {
-		c.Categories = []Category{}
-	}
+	c.Categories = append([]Category{}, l.Categories...)
+	sort.SliceStable(c.Categories, func(i, j int) bool {
+		return strings.ToLower(c.Categories[i].Name) < strings.ToLower(c.Categories[j].Name)
+	})
+	c.LinkSections = append([]LinkSection{}, l.LinkSections...)
+	sort.SliceStable(c.LinkSections, func(i, j int) bool {
+		return strings.ToLower(c.LinkSections[i].Name) < strings.ToLower(c.LinkSections[j].Name)
+	})
 	return encode(&c)
 }
 
