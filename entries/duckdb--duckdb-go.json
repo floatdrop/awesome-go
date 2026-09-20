@@ -1,0 +1,9 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "repo": "duckdb/duckdb-go",
+  "description": "Official database/sql driver for DuckDB, the embedded analytical engine, with Appender and Arrow.",
+  "category": "databases",
+  "exempt": [
+    "fork"
+  ]
+}
