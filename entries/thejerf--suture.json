@@ -1,7 +1,0 @@
-{
-  "$schema": "../schema/entry.schema.json",
-  "repo": "thejerf/suture",
-  "description": "Supervisor trees that restart failed long-running services with backoff, modeled on Erlang/OTP.",
-  "category": "concurrency",
-  "added": "2026-09-13"
-}
