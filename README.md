@@ -117,7 +117,7 @@ Linters, build tools, debuggers, code generators and terminal tools for daily de
 - <img src="badges/stars/go-delve--delve.svg" alt="25k stars" align="absmiddle"> [delve](https://github.com/go-delve/delve) - Debugger with goroutine-aware breakpoints, core dump analysis and remote debugging over DAP.
 - <img src="badges/stars/air-verse--air.svg" alt="24k stars" align="absmiddle"> [air](https://github.com/air-verse/air) - Live reload that watches the tree, rebuilds and restarts the binary with a single config file.
 - <img src="badges/stars/golangci--golangci-lint.svg" alt="19k stars" align="absmiddle"> [golangci-lint](https://github.com/golangci/golangci-lint) - Linters runner that aggregates dozens of linters with caching, parallelism and a single config.
-- <img src="badges/stars/bjarneo--ku.svg" alt="556 stars" align="absmiddle"> [ku](https://github.com/bjarneo/ku) - Keyboard-driven Kubernetes TUI to browse and edit resources, follow logs and shell into pods.
+- <img src="badges/stars/janosmiko--lfk.svg" alt="898 stars" align="absmiddle"> [lfk](https://github.com/janosmiko/lfk) - Kubernetes TUI with yazi-style Miller columns over the owner hierarchy, plus Helm and trivy.
 
 ## Embedded & Hardware
 
