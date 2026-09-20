@@ -1,0 +1,7 @@
+{
+  "$schema": "../schema/link.schema.json",
+  "title": "Go Optimization Guide",
+  "url": "https://goperf.dev/",
+  "description": "Patterns for high-performance services: memory, GC tuning, concurrency, profiling and benchmarks.",
+  "section": "documentation"
+}
