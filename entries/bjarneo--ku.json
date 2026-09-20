@@ -1,0 +1,6 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "repo": "bjarneo/ku",
+  "description": "Keyboard-driven Kubernetes TUI to browse and edit resources, follow logs and shell into pods.",
+  "category": "developer-tools"
+}
