@@ -2,5 +2,6 @@
   "$schema": "../schema/entry.schema.json",
   "repo": "air-verse/air",
   "description": "Live reload that watches the tree, rebuilds and restarts the binary with a single config file.",
-  "category": "developer-tools"
+  "category": "developer-tools",
+  "added": "2026-09-20"
 }

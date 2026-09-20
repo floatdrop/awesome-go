@@ -28,6 +28,15 @@
       "created_at": "2014-07-10T20:14:34Z",
       "pushed_at": "2026-09-15T15:10:06Z"
     },
+    "air-verse/air": {
+      "stars": 23997,
+      "archived": false,
+      "is_go": true,
+      "language": "Go",
+      "license": "GPL-3.0",
+      "created_at": "2017-10-12T14:31:40Z",
+      "pushed_at": "2026-08-27T02:41:09Z"
+    },
     "alecthomas/kong": {
       "stars": 3179,
       "archived": false,
