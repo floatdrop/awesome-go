@@ -1,0 +1,6 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "repo": "uptrace/bun",
+  "description": "SQL-first ORM over database/sql with a query builder, relations, hooks and migrations.",
+  "category": "databases"
+}
