@@ -3,6 +3,7 @@
   "repo": "duckdb/duckdb-go",
   "description": "Official database/sql driver for DuckDB, the embedded analytical engine, with Appender and Arrow.",
   "category": "databases",
+  "added": "2026-09-20",
   "exempt": [
     "fork"
   ]

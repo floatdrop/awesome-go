@@ -11,7 +11,7 @@
 
 > A short, hand-curated list of Go libraries and tools that are actually worth using. Not a directory of everything that exists.
 
-46 projects in 18 categories. Every entry is added by a human through a pull request and checked against the [entry rules](CONTRIBUTING.md#entry-rules) by CI. An entry earns its place by covering something no listed project does, or by doing it better. Within each category the 5 most-starred projects are shown first and the rest are folded under More. Archived repositories are removed automatically. Stars were last refreshed on 2026-09-20.
+47 projects in 18 categories. Every entry is added by a human through a pull request and checked against the [entry rules](CONTRIBUTING.md#entry-rules) by CI. An entry earns its place by covering something no listed project does, or by doing it better. Within each category the 5 most-starred projects are shown first and the rest are folded under More. Archived repositories are removed automatically. Stars were last refreshed on 2026-09-20.
 
 Search, filter and sort the full list at [floatdrop.github.io/awesome-go](https://floatdrop.github.io/awesome-go/).
 
@@ -96,8 +96,9 @@ Drivers, query builders, ORMs, migrations, embedded and distributed stores.
 - <img src="badges/stars/blockloop--scan.svg" alt="615 stars" align="absmiddle"> [scan](https://github.com/blockloop/scan) - Map database/sql rows onto structs, slices and primitives using struct tags.
 
 <details>
-<summary>More (1)</summary>
+<summary>More (2)</summary>
 
+- <img src="badges/stars/duckdb--duckdb-go.svg" alt="297 stars" align="absmiddle"> [duckdb-go](https://github.com/duckdb/duckdb-go) - Official database/sql driver for DuckDB, the embedded analytical engine, with Appender and Arrow.
 - <img src="badges/stars/modernc-org--sqlite.svg" alt="99 stars" align="absmiddle"> [modernc.org/sqlite](https://github.com/modernc-org/sqlite) - SQLite translated from C, so database/sql gets an embedded database without cgo or a C toolchain.
 
 </details>

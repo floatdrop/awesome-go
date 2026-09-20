@@ -109,6 +109,16 @@
       "created_at": "2022-12-02T18:04:11Z",
       "pushed_at": "2026-09-03T10:40:42Z"
     },
+    "duckdb/duckdb-go": {
+      "stars": 297,
+      "archived": false,
+      "fork": true,
+      "is_go": true,
+      "language": "Go",
+      "license": "MIT",
+      "created_at": "2025-10-13T15:07:42Z",
+      "pushed_at": "2026-09-11T14:00:32Z"
+    },
     "ergo-services/ergo": {
       "stars": 4661,
       "archived": false,
@@ -119,7 +129,7 @@
       "pushed_at": "2026-09-07T11:25:11Z"
     },
     "etcd-io/etcd": {
-      "stars": 52276,
+      "stars": 52277,
       "archived": false,
       "is_go": true,
       "language": "Go",
