@@ -11,7 +11,7 @@
 
 > A short, hand-curated list of Go libraries and tools that are actually worth using. Not a directory of everything that exists.
 
-48 projects in 18 categories. Every entry is added by a human through a pull request and checked against the [entry rules](CONTRIBUTING.md#entry-rules) by CI. An entry earns its place by covering something no listed project does, or by doing it better. Within each category the 5 most-starred projects are shown first and the rest are folded under More. Archived repositories are removed automatically. Stars were last refreshed on 2026-09-20.
+47 projects in 18 categories. Every entry is added by a human through a pull request and checked against the [entry rules](CONTRIBUTING.md#entry-rules) by CI. An entry earns its place by covering something no listed project does, or by doing it better. Within each category the 5 most-starred projects are shown first and the rest are folded under More. Archived repositories are removed automatically. Stars were last refreshed on 2026-09-20.
 
 Search, filter and sort the full list at [floatdrop.github.io/awesome-go](https://floatdrop.github.io/awesome-go/).
 
@@ -121,7 +121,6 @@ Wiring applications together.
 
 Goroutine pools, structured concurrency, synchronization helpers and actor frameworks.
 
-- <img src="badges/stars/sourcegraph--conc.svg" alt="10k stars" align="absmiddle"> [conc](https://github.com/sourcegraph/conc) - Structured concurrency: scoped groups with panic propagation, bounded pools and ordered streams.
 - <img src="badges/stars/ergo-services--ergo.svg" alt="4.7k stars" align="absmiddle"> [ergo](https://github.com/ergo-services/ergo) - Actor framework with supervision trees and network transparency, modeled on Erlang/OTP.
 - <img src="badges/stars/alitto--pond.svg" alt="2.2k stars" align="absmiddle"> [pond](https://github.com/alitto/pond) - Bounded worker pool with generics, result groups, context cancellation and subpools.
 - <img src="badges/stars/thejerf--suture.svg" alt="1.4k stars" align="absmiddle"> [suture](https://github.com/thejerf/suture) - Supervisor trees that restart failed long-running services with backoff, modeled on Erlang/OTP.
