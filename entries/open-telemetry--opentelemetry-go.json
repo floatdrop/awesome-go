@@ -2,6 +2,6 @@
   "$schema": "../schema/entry.schema.json",
   "repo": "open-telemetry/opentelemetry-go",
   "description": "Vendor-neutral SDK for traces, metrics and logs with OTLP and Prometheus exporters.",
-  "category": "logging",
+  "category": "observability",
   "added": "2026-09-20"
 }
