@@ -1,0 +1,6 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "repo": "janosmiko/lfk",
+  "description": "Kubernetes TUI with yazi-style Miller columns over the owner hierarchy, plus Helm and trivy.",
+  "category": "developer-tools"
+}
