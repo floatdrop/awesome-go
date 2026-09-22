@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "repo": "floatdrop/fsm",
+  "description": "Finite state machine where the caller owns the state and events carry typed payloads.",
+  "category": "utilities",
+  "exempt": [
+    "age",
+    "stars"
+  ]
+}
