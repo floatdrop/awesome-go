@@ -11,7 +11,7 @@
 
 > A short, hand-curated list of Go libraries and tools that are actually worth using. Not a directory of everything that exists.
 
-50 projects in 18 categories. Every entry is added by a human through a pull request and checked against the [entry rules](CONTRIBUTING.md#entry-rules) by CI. An entry earns its place by covering something no listed project does, or by doing it better. Within each category the 10 most-starred projects are shown first and the rest are folded under More. Archived repositories are removed automatically. Stars were last refreshed on 2026-09-21.
+51 projects in 19 categories. Every entry is added by a human through a pull request and checked against the [entry rules](CONTRIBUTING.md#entry-rules) by CI. An entry earns its place by covering something no listed project does, or by doing it better. Within each category the 10 most-starred projects are shown first and the rest are folded under More. Archived repositories are removed automatically. Stars were last refreshed on 2026-09-22.
 
 Search, filter and sort the full list at [floatdrop.github.io/awesome-go](https://floatdrop.github.io/awesome-go/).
 
@@ -33,6 +33,7 @@ Search, filter and sort the full list at [floatdrop.github.io/awesome-go](https:
 - [Observability](#observability)
 - [Resilience](#resilience)
 - [Testing](#testing)
+- [Utilities](#utilities)
 - [Validation](#validation)
 - [Web Frameworks & Routers](#web-frameworks--routers)
 - [Blog Posts](#blog-posts)
@@ -164,6 +165,12 @@ Assertions, mocks, fixtures and integration test helpers.
 - <img src="badges/stars/stretchr--testify.svg" alt="26k stars" align="absmiddle"> [testify](https://github.com/stretchr/testify) - Assertions, mocks and suites that work with the standard testing package.
 - <img src="badges/stars/testcontainers--testcontainers-go.svg" alt="5k stars" align="absmiddle"> [testcontainers-go](https://github.com/testcontainers/testcontainers-go) - Throwaway Docker containers for integration tests, with ready modules for databases and brokers.
 - <img src="badges/stars/google--go-cmp.svg" alt="4.7k stars" align="absmiddle"> [go-cmp](https://github.com/google/go-cmp) - Equality comparison of arbitrary values for tests, with readable diffs and custom options.
+
+## Utilities
+
+General-purpose helpers that end up in every project.
+
+- <img src="badges/stars/floatdrop--fsm.svg" alt="1 stars" align="absmiddle"> [fsm](https://github.com/floatdrop/fsm) - Finite state machine where the caller owns the state and events carry typed payloads.
 
 ## Validation
 
