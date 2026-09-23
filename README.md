@@ -100,14 +100,14 @@ Drivers, query builders, ORMs, migrations, embedded and distributed stores.
 - <img src="badges/stars/jackc--pgx.svg" alt="14k stars" align="absmiddle"> [pgx](https://github.com/jackc/pgx) - PostgreSQL driver and toolkit with a native API, connection pool, binary protocol and COPY support.
 - <img src="badges/stars/uptrace--bun.svg" alt="5k stars" align="absmiddle"> [bun](https://github.com/uptrace/bun) - SQL-first ORM over database/sql with a query builder, relations, hooks and migrations.
 - <img src="badges/stars/blockloop--scan.svg" alt="615 stars" align="absmiddle"> [scan](https://github.com/blockloop/scan) - Map database/sql rows onto structs, slices and primitives using struct tags.
-- <img src="badges/stars/duckdb--duckdb-go.svg" alt="297 stars" align="absmiddle"> [duckdb-go](https://github.com/duckdb/duckdb-go) - Official database/sql driver for DuckDB, the embedded analytical engine, with Appender and Arrow.
+- <img src="badges/stars/duckdb--duckdb-go.svg" alt="298 stars" align="absmiddle"> [duckdb-go](https://github.com/duckdb/duckdb-go) - Official database/sql driver for DuckDB, the embedded analytical engine, with Appender and Arrow.
 - <img src="badges/stars/modernc-org--sqlite.svg" alt="99 stars" align="absmiddle"> [modernc.org/sqlite](https://github.com/modernc-org/sqlite) - SQLite translated from C, so database/sql gets an embedded database without cgo or a C toolchain.
 
 ## Dependency Injection
 
 Wiring applications together.
 
-- <img src="badges/stars/floatdrop--di.svg" alt="3 stars" align="absmiddle"> [di](https://github.com/floatdrop/di) - Dependency injection container with typed constructors, lifecycle hooks and scopes.
+- <img src="badges/stars/yandex--di.svg" alt="3 stars" align="absmiddle"> [di](https://github.com/yandex/di) - Dependency injection container with typed constructors, lifecycle hooks and scopes.
 
 ## Developer Tools
 
@@ -118,7 +118,7 @@ Linters, build tools, debuggers, code generators and terminal tools for daily de
 - <img src="badges/stars/go-delve--delve.svg" alt="25k stars" align="absmiddle"> [delve](https://github.com/go-delve/delve) - Debugger with goroutine-aware breakpoints, core dump analysis and remote debugging over DAP.
 - <img src="badges/stars/air-verse--air.svg" alt="24k stars" align="absmiddle"> [air](https://github.com/air-verse/air) - Live reload that watches the tree, rebuilds and restarts the binary with a single config file.
 - <img src="badges/stars/golangci--golangci-lint.svg" alt="19k stars" align="absmiddle"> [golangci-lint](https://github.com/golangci/golangci-lint) - Linters runner that aggregates dozens of linters with caching, parallelism and a single config.
-- <img src="badges/stars/janosmiko--lfk.svg" alt="901 stars" align="absmiddle"> [lfk](https://github.com/janosmiko/lfk) - Kubernetes TUI with yazi-style Miller columns over the owner hierarchy, plus Helm and trivy.
+- <img src="badges/stars/janosmiko--lfk.svg" alt="902 stars" align="absmiddle"> [lfk](https://github.com/janosmiko/lfk) - Kubernetes TUI with yazi-style Miller columns over the owner hierarchy, plus Helm and trivy.
 
 ## Embedded & Hardware
 
