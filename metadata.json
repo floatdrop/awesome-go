@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-22",
+  "updated_at": "2026-09-23",
   "repos": {
     "Eyevinn/hi264": {
       "stars": 22,
@@ -8,10 +8,10 @@
       "language": "Go",
       "license": "MIT",
       "created_at": "2026-02-14T21:00:57Z",
-      "pushed_at": "2026-08-29T12:30:18Z"
+      "pushed_at": "2026-09-22T14:01:48Z"
     },
     "Oudwins/zog": {
-      "stars": 1217,
+      "stars": 1218,
       "archived": false,
       "is_go": true,
       "language": "Go",
@@ -20,7 +20,7 @@
       "pushed_at": "2026-08-30T14:00:30Z"
     },
     "RoaringBitmap/roaring": {
-      "stars": 2942,
+      "stars": 2943,
       "archived": false,
       "is_go": true,
       "language": "Go",
@@ -29,7 +29,7 @@
       "pushed_at": "2026-09-21T21:46:49Z"
     },
     "air-verse/air": {
-      "stars": 24007,
+      "stars": 24011,
       "archived": false,
       "is_go": true,
       "language": "Go",
@@ -56,7 +56,7 @@
       "pushed_at": "2026-06-22T23:33:00Z"
     },
     "allegro/bigcache": {
-      "stars": 8162,
+      "stars": 8163,
       "archived": false,
       "is_go": true,
       "language": "Go",
@@ -92,7 +92,7 @@
       "pushed_at": "2026-09-14T11:03:40Z"
     },
     "cenkalti/backoff": {
-      "stars": 4081,
+      "stars": 4083,
       "archived": false,
       "is_go": true,
       "language": "Go",
@@ -101,13 +101,13 @@
       "pushed_at": "2026-06-30T15:26:08Z"
     },
     "charmbracelet/bubbletea": {
-      "stars": 45075,
+      "stars": 45093,
       "archived": false,
       "is_go": true,
       "language": "Go",
       "license": "MIT",
       "created_at": "2020-01-10T21:04:03Z",
-      "pushed_at": "2026-09-17T08:08:32Z"
+      "pushed_at": "2026-09-22T11:00:49Z"
     },
     "charmbracelet/log": {
       "stars": 3396,
@@ -126,10 +126,10 @@
       "language": "Go",
       "license": "MIT",
       "created_at": "2025-10-13T15:07:42Z",
-      "pushed_at": "2026-09-11T14:00:32Z"
+      "pushed_at": "2026-09-22T11:31:35Z"
     },
     "ergo-services/ergo": {
-      "stars": 4663,
+      "stars": 4664,
       "archived": false,
       "is_go": true,
       "language": "Go",
@@ -138,13 +138,13 @@
       "pushed_at": "2026-09-07T11:25:11Z"
     },
     "etcd-io/etcd": {
-      "stars": 52292,
+      "stars": 52307,
       "archived": false,
       "is_go": true,
       "language": "Go",
       "license": "Apache-2.0",
       "created_at": "2013-07-06T21:57:21Z",
-      "pushed_at": "2026-09-22T08:27:53Z"
+      "pushed_at": "2026-09-22T21:09:26Z"
     },
     "floatdrop/di": {
       "stars": 3,
@@ -162,7 +162,7 @@
       "language": "Go",
       "license": "MIT",
       "created_at": "2026-09-22T05:16:25Z",
-      "pushed_at": "2026-09-22T08:23:12Z"
+      "pushed_at": "2026-09-22T14:04:39Z"
     },
     "floatdrop/moq-go": {
       "stars": 3,
@@ -174,7 +174,7 @@
       "pushed_at": "2026-09-17T16:26:08Z"
     },
     "gin-gonic/gin": {
-      "stars": 89245,
+      "stars": 89248,
       "archived": false,
       "is_go": true,
       "language": "Go",
@@ -183,7 +183,7 @@
       "pushed_at": "2026-09-19T13:11:32Z"
     },
     "go-chi/chi": {
-      "stars": 22871,
+      "stars": 22876,
       "archived": false,
       "is_go": true,
       "language": "Go",
@@ -192,7 +192,7 @@
       "pushed_at": "2026-09-18T11:51:54Z"
     },
     "go-delve/delve": {
-      "stars": 24922,
+      "stars": 24923,
       "archived": false,
       "is_go": true,
       "language": "Go",
@@ -210,7 +210,7 @@
       "pushed_at": "2026-09-03T15:31:40Z"
     },
     "go-playground/validator": {
-      "stars": 20171,
+      "stars": 20176,
       "archived": false,
       "is_go": true,
       "language": "Go",
@@ -225,7 +225,7 @@
       "language": "Go",
       "license": "GPL-3.0",
       "created_at": "2018-05-04T13:41:15Z",
-      "pushed_at": "2026-09-20T12:13:58Z"
+      "pushed_at": "2026-09-22T22:59:27Z"
     },
     "google/go-cmp": {
       "stars": 4677,
@@ -237,7 +237,7 @@
       "pushed_at": "2026-06-18T07:33:22Z"
     },
     "jackc/pgx": {
-      "stars": 14260,
+      "stars": 14265,
       "archived": false,
       "is_go": true,
       "language": "Go",
@@ -246,25 +246,25 @@
       "pushed_at": "2026-09-17T12:22:07Z"
     },
     "janosmiko/lfk": {
-      "stars": 900,
+      "stars": 901,
       "archived": false,
       "is_go": true,
       "language": "Go",
       "license": "Apache-2.0",
       "created_at": "2026-03-15T11:49:45Z",
-      "pushed_at": "2026-09-21T14:36:44Z"
+      "pushed_at": "2026-09-23T06:42:08Z"
     },
     "jesseduffield/lazygit": {
-      "stars": 82565,
+      "stars": 82588,
       "archived": false,
       "is_go": true,
       "language": "Go",
       "license": "MIT",
       "created_at": "2018-05-19T00:53:06Z",
-      "pushed_at": "2026-09-22T08:04:41Z"
+      "pushed_at": "2026-09-23T00:03:28Z"
     },
     "junegunn/fzf": {
-      "stars": 83187,
+      "stars": 83210,
       "archived": false,
       "is_go": true,
       "language": "Go",
@@ -273,7 +273,7 @@
       "pushed_at": "2026-09-21T14:49:46Z"
     },
     "knadh/koanf": {
-      "stars": 4206,
+      "stars": 4207,
       "archived": false,
       "is_go": true,
       "language": "Go",
@@ -297,10 +297,10 @@
       "language": "Go",
       "license": "BSD-3-Clause",
       "created_at": "2025-12-01T10:40:15Z",
-      "pushed_at": "2026-09-21T14:02:08Z"
+      "pushed_at": "2026-09-22T14:07:30Z"
     },
     "nats-io/nats.go": {
-      "stars": 6756,
+      "stars": 6759,
       "archived": false,
       "is_go": true,
       "language": "Go",
@@ -309,13 +309,13 @@
       "pushed_at": "2026-09-18T20:27:29Z"
     },
     "open-telemetry/opentelemetry-go": {
-      "stars": 6557,
+      "stars": 6559,
       "archived": false,
       "is_go": true,
       "language": "Go",
       "license": "Apache-2.0",
       "created_at": "2019-05-16T19:05:26Z",
-      "pushed_at": "2026-09-22T07:25:17Z"
+      "pushed_at": "2026-09-22T23:00:51Z"
     },
     "opencoff/go-sieve": {
       "stars": 41,
@@ -336,25 +336,25 @@
       "pushed_at": "2026-04-23T22:36:51Z"
     },
     "pion/opus": {
-      "stars": 560,
+      "stars": 561,
       "archived": false,
       "is_go": true,
       "language": "Go",
       "license": "MIT",
       "created_at": "2022-06-12T20:04:03Z",
-      "pushed_at": "2026-09-21T19:02:36Z"
+      "pushed_at": "2026-09-23T00:06:04Z"
     },
     "pion/webrtc": {
-      "stars": 16787,
+      "stars": 16791,
       "archived": false,
       "is_go": true,
       "language": "Go",
       "license": "MIT",
       "created_at": "2018-05-18T23:10:05Z",
-      "pushed_at": "2026-09-21T17:36:36Z"
+      "pushed_at": "2026-09-23T03:25:34Z"
     },
     "redis/go-redis": {
-      "stars": 22243,
+      "stars": 22246,
       "archived": false,
       "is_go": true,
       "language": "Go",
@@ -372,7 +372,7 @@
       "pushed_at": "2026-09-21T14:33:11Z"
     },
     "sony/gobreaker": {
-      "stars": 3696,
+      "stars": 3697,
       "archived": false,
       "is_go": true,
       "language": "Go",
@@ -381,7 +381,7 @@
       "pushed_at": "2026-02-07T09:21:38Z"
     },
     "spf13/cobra": {
-      "stars": 44626,
+      "stars": 44636,
       "archived": false,
       "is_go": true,
       "language": "Go",
@@ -390,7 +390,7 @@
       "pushed_at": "2026-07-11T00:43:07Z"
     },
     "sqlc-dev/sqlc": {
-      "stars": 18312,
+      "stars": 18315,
       "archived": false,
       "is_go": true,
       "language": "Go",
@@ -399,7 +399,7 @@
       "pushed_at": "2026-09-21T10:02:56Z"
     },
     "stretchr/testify": {
-      "stars": 26207,
+      "stars": 26212,
       "archived": false,
       "is_go": true,
       "language": "Go",
@@ -408,7 +408,7 @@
       "pushed_at": "2026-09-02T05:37:01Z"
     },
     "testcontainers/testcontainers-go": {
-      "stars": 4987,
+      "stars": 4989,
       "archived": false,
       "is_go": true,
       "language": "Go",
@@ -417,13 +417,13 @@
       "pushed_at": "2026-09-21T14:07:25Z"
     },
     "tinygo-org/tinygo": {
-      "stars": 17766,
+      "stars": 17768,
       "archived": false,
       "is_go": true,
       "language": "Go",
       "license": "Other",
       "created_at": "2018-06-07T16:39:19Z",
-      "pushed_at": "2026-09-22T08:21:18Z"
+      "pushed_at": "2026-09-23T07:51:01Z"
     },
     "tphakala/go-flac": {
       "stars": 2,
@@ -441,16 +441,16 @@
       "language": "Go",
       "license": "BSD-2-Clause",
       "created_at": "2021-05-03T11:40:52Z",
-      "pushed_at": "2026-08-21T14:17:15Z"
+      "pushed_at": "2026-09-23T08:19:35Z"
     },
     "wailsapp/wails": {
-      "stars": 36307,
+      "stars": 36314,
       "archived": false,
       "is_go": true,
       "language": "Go",
       "license": "MIT",
       "created_at": "2018-12-15T23:14:06Z",
-      "pushed_at": "2026-09-22T00:28:29Z"
+      "pushed_at": "2026-09-23T07:51:10Z"
     },
     "yandex/confetti": {
       "stars": 7,
