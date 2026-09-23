@@ -1,6 +1,6 @@
 {
   "$schema": "../schema/entry.schema.json",
-  "repo": "floatdrop/di",
+  "repo": "yandex/di",
   "description": "Dependency injection container with typed constructors, lifecycle hooks and scopes.",
   "category": "dependency-injection",
   "added": "2026-09-12",
