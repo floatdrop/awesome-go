@@ -11,7 +11,7 @@
 
 > A short, hand-curated list of Go libraries and tools that are actually worth using. Not a directory of everything that exists.
 
-51 projects in 19 categories. Every entry is added by a human through a pull request and checked against the [entry rules](CONTRIBUTING.md#entry-rules) by CI. An entry earns its place by covering something no listed project does, or by doing it better. Within each category the 10 most-starred projects are shown first and the rest are folded under More. Archived repositories are removed automatically. Stars were last refreshed on 2026-09-23.
+51 projects in 19 categories. Every entry is added by a human through a pull request and checked against the [entry rules](CONTRIBUTING.md#entry-rules) by CI. An entry earns its place by covering something no listed project does, or by doing it better. Within each category the 10 most-starred projects are shown first and the rest are folded under More. Archived repositories are removed automatically. Stars were last refreshed on 2026-09-24.
 
 Search, filter and sort the full list at [floatdrop.github.io/awesome-go](https://floatdrop.github.io/awesome-go/).
 
@@ -118,7 +118,7 @@ Linters, build tools, debuggers, code generators and terminal tools for daily de
 - <img src="badges/stars/go-delve--delve.svg" alt="25k stars" align="absmiddle"> [delve](https://github.com/go-delve/delve) - Debugger with goroutine-aware breakpoints, core dump analysis and remote debugging over DAP.
 - <img src="badges/stars/air-verse--air.svg" alt="24k stars" align="absmiddle"> [air](https://github.com/air-verse/air) - Live reload that watches the tree, rebuilds and restarts the binary with a single config file.
 - <img src="badges/stars/golangci--golangci-lint.svg" alt="19k stars" align="absmiddle"> [golangci-lint](https://github.com/golangci/golangci-lint) - Linters runner that aggregates dozens of linters with caching, parallelism and a single config.
-- <img src="badges/stars/janosmiko--lfk.svg" alt="902 stars" align="absmiddle"> [lfk](https://github.com/janosmiko/lfk) - Kubernetes TUI with yazi-style Miller columns over the owner hierarchy, plus Helm and trivy.
+- <img src="badges/stars/janosmiko--lfk.svg" alt="903 stars" align="absmiddle"> [lfk](https://github.com/janosmiko/lfk) - Kubernetes TUI with yazi-style Miller columns over the owner hierarchy, plus Helm and trivy.
 
 ## Embedded & Hardware
 
