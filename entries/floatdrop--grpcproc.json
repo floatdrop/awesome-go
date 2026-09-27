@@ -3,6 +3,7 @@
   "repo": "floatdrop/grpcproc",
   "description": "Erlang-style processes with typed protobuf mailboxes and monitors across nodes, on a gRPC server.",
   "category": "concurrency",
+  "added": "2026-09-27",
   "exempt": [
     "age",
     "stars"

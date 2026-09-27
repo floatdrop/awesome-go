@@ -72,8 +72,8 @@ Argument parsing, terminal UIs and everything else for building CLIs.
 
 Goroutine pools, structured concurrency, synchronization helpers and actor frameworks.
 
-- <img src="badges/stars/ergo-services--ergo.svg" alt="4.7k stars" align="absmiddle"> [ergo](https://github.com/ergo-services/ergo) - Actor framework with supervision trees and network transparency, modeled on Erlang/OTP.
 - <img src="badges/stars/alitto--pond.svg" alt="2.2k stars" align="absmiddle"> [pond](https://github.com/alitto/pond) - Bounded worker pool with generics, result groups, context cancellation and subpools.
+- <img src="badges/stars/floatdrop--grpcproc.svg" alt="0 stars" align="absmiddle"> [grpcproc](https://github.com/floatdrop/grpcproc) - Erlang-style processes with typed protobuf mailboxes and monitors across nodes, on a gRPC server.
 
 ## Configuration
 
