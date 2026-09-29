@@ -101,7 +101,7 @@
       "pushed_at": "2026-06-30T15:26:08Z"
     },
     "charmbracelet/bubbletea": {
-      "stars": 45167,
+      "stars": 45168,
       "archived": false,
       "is_go": true,
       "language": "Go",
@@ -129,7 +129,7 @@
       "pushed_at": "2026-09-22T11:31:35Z"
     },
     "etcd-io/etcd": {
-      "stars": 52322,
+      "stars": 52323,
       "archived": false,
       "is_go": true,
       "language": "Go",
@@ -165,7 +165,7 @@
       "pushed_at": "2026-09-28T06:26:35Z"
     },
     "gin-gonic/gin": {
-      "stars": 89272,
+      "stars": 89274,
       "archived": false,
       "is_go": true,
       "language": "Go",
@@ -174,7 +174,7 @@
       "pushed_at": "2026-09-25T06:01:37Z"
     },
     "go-chi/chi": {
-      "stars": 22900,
+      "stars": 22901,
       "archived": false,
       "is_go": true,
       "language": "Go",
@@ -246,7 +246,7 @@
       "pushed_at": "2026-09-28T14:03:32Z"
     },
     "jesseduffield/lazygit": {
-      "stars": 82753,
+      "stars": 82754,
       "archived": false,
       "is_go": true,
       "language": "Go",
@@ -255,7 +255,7 @@
       "pushed_at": "2026-09-28T20:52:28Z"
     },
     "junegunn/fzf": {
-      "stars": 83310,
+      "stars": 83309,
       "archived": false,
       "is_go": true,
       "language": "Go",
@@ -264,7 +264,7 @@
       "pushed_at": "2026-09-28T13:21:31Z"
     },
     "knadh/koanf": {
-      "stars": 4211,
+      "stars": 4212,
       "archived": false,
       "is_go": true,
       "language": "Go",
@@ -372,7 +372,7 @@
       "pushed_at": "2026-02-07T09:21:38Z"
     },
     "spf13/cobra": {
-      "stars": 44669,
+      "stars": 44670,
       "archived": false,
       "is_go": true,
       "language": "Go",
