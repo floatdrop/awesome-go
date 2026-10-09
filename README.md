@@ -11,7 +11,7 @@
 
 > A short, hand-curated list of Go libraries and tools that are actually worth using. Not a directory of everything that exists.
 
-50 projects in 19 categories. Every entry is added by a human through a pull request and checked against the [entry rules](CONTRIBUTING.md#entry-rules) by CI. An entry earns its place by covering something no listed project does, or by doing it better. Within each category the 10 most-starred projects are shown first and the rest are folded under More. Archived repositories are removed automatically. Stars were last refreshed on 2026-10-08.
+50 projects in 19 categories. Every entry is added by a human through a pull request and checked against the [entry rules](CONTRIBUTING.md#entry-rules) by CI. An entry earns its place by covering something no listed project does, or by doing it better. Within each category the 10 most-starred projects are shown first and the rest are folded under More. Archived repositories are removed automatically. Stars were last refreshed on 2026-10-09.
 
 Search, filter and sort the full list at [floatdrop.github.io/awesome-go](https://floatdrop.github.io/awesome-go/).
 
@@ -48,7 +48,7 @@ Codecs, containers and media processing.
 
 - <img src="badges/stars/pion--opus.svg" alt="563 stars" align="absmiddle"> [opus](https://github.com/pion/opus) - Implementation of the Opus audio codec per RFC 6716, with bitstream internals exported for analysis.
 - <img src="badges/stars/eyevinn--hi264.svg" alt="24 stars" align="absmiddle"> [hi264](https://github.com/Eyevinn/hi264) - Decoder for H.264 IDR frames and generator of test bitstreams, with fMP4 fragment extension.
-- <img src="badges/stars/tphakala--go-flac.svg" alt="2 stars" align="absmiddle"> [go-flac](https://github.com/tphakala/go-flac) - FLAC encoder and decoder with SIMD acceleration, no cgo, and output bit-exact with libFLAC.
+- <img src="badges/stars/tphakala--go-flac.svg" alt="3 stars" align="absmiddle"> [go-flac](https://github.com/tphakala/go-flac) - FLAC encoder and decoder with SIMD acceleration, no cgo, and output bit-exact with libFLAC.
 
 ## Caching
 
@@ -99,14 +99,14 @@ Drivers, query builders, ORMs, migrations, embedded and distributed stores.
 - <img src="badges/stars/jackc--pgx.svg" alt="14k stars" align="absmiddle"> [pgx](https://github.com/jackc/pgx) - PostgreSQL driver and toolkit with a native API, connection pool, binary protocol and COPY support.
 - <img src="badges/stars/uptrace--bun.svg" alt="5k stars" align="absmiddle"> [bun](https://github.com/uptrace/bun) - SQL-first ORM over database/sql with a query builder, relations, hooks and migrations.
 - <img src="badges/stars/blockloop--scan.svg" alt="613 stars" align="absmiddle"> [scan](https://github.com/blockloop/scan) - Map database/sql rows onto structs, slices and primitives using struct tags.
-- <img src="badges/stars/duckdb--duckdb-go.svg" alt="300 stars" align="absmiddle"> [duckdb-go](https://github.com/duckdb/duckdb-go) - Official database/sql driver for DuckDB, the embedded analytical engine, with Appender and Arrow.
+- <img src="badges/stars/duckdb--duckdb-go.svg" alt="301 stars" align="absmiddle"> [duckdb-go](https://github.com/duckdb/duckdb-go) - Official database/sql driver for DuckDB, the embedded analytical engine, with Appender and Arrow.
 - <img src="badges/stars/modernc-org--sqlite.svg" alt="111 stars" align="absmiddle"> [modernc.org/sqlite](https://github.com/modernc-org/sqlite) - SQLite translated from C, so database/sql gets an embedded database without cgo or a C toolchain.
 
 ## Dependency Injection
 
 Wiring applications together.
 
-- <img src="badges/stars/yandex--di.svg" alt="8 stars" align="absmiddle"> [di](https://github.com/yandex/di) - Dependency injection container with typed constructors, lifecycle hooks and scopes.
+- <img src="badges/stars/yandex--di.svg" alt="10 stars" align="absmiddle"> [di](https://github.com/yandex/di) - Dependency injection container with typed constructors, lifecycle hooks and scopes.
 
 ## Developer Tools
 
