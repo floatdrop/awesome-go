@@ -11,7 +11,7 @@
 
 > A short, hand-curated list of Go libraries and tools that are actually worth using. Not a directory of everything that exists.
 
-50 projects in 19 categories. Every entry is added by a human through a pull request and checked against the [entry rules](CONTRIBUTING.md#entry-rules) by CI. An entry earns its place by covering something no listed project does, or by doing it better. Within each category the 10 most-starred projects are shown first and the rest are folded under More. Archived repositories are removed automatically. Stars were last refreshed on 2026-10-10.
+50 projects in 19 categories. Every entry is added by a human through a pull request and checked against the [entry rules](CONTRIBUTING.md#entry-rules) by CI. An entry earns its place by covering something no listed project does, or by doing it better. Within each category the 10 most-starred projects are shown first and the rest are folded under More. Archived repositories are removed automatically. Stars were last refreshed on 2026-10-11.
 
 Search, filter and sort the full list at [floatdrop.github.io/awesome-go](https://floatdrop.github.io/awesome-go/).
 
@@ -99,7 +99,7 @@ Drivers, query builders, ORMs, migrations, embedded and distributed stores.
 - <img src="badges/stars/jackc--pgx.svg" alt="14k stars" align="absmiddle"> [pgx](https://github.com/jackc/pgx) - PostgreSQL driver and toolkit with a native API, connection pool, binary protocol and COPY support.
 - <img src="badges/stars/uptrace--bun.svg" alt="5k stars" align="absmiddle"> [bun](https://github.com/uptrace/bun) - SQL-first ORM over database/sql with a query builder, relations, hooks and migrations.
 - <img src="badges/stars/blockloop--scan.svg" alt="614 stars" align="absmiddle"> [scan](https://github.com/blockloop/scan) - Map database/sql rows onto structs, slices and primitives using struct tags.
-- <img src="badges/stars/duckdb--duckdb-go.svg" alt="301 stars" align="absmiddle"> [duckdb-go](https://github.com/duckdb/duckdb-go) - Official database/sql driver for DuckDB, the embedded analytical engine, with Appender and Arrow.
+- <img src="badges/stars/duckdb--duckdb-go.svg" alt="302 stars" align="absmiddle"> [duckdb-go](https://github.com/duckdb/duckdb-go) - Official database/sql driver for DuckDB, the embedded analytical engine, with Appender and Arrow.
 - <img src="badges/stars/modernc-org--sqlite.svg" alt="111 stars" align="absmiddle"> [modernc.org/sqlite](https://github.com/modernc-org/sqlite) - SQLite translated from C, so database/sql gets an embedded database without cgo or a C toolchain.
 
 ## Dependency Injection
@@ -129,7 +129,7 @@ Compilers, frameworks and drivers for microcontrollers, boards and the devices a
 
 Desktop application frameworks and GUI toolkits.
 
-- <img src="badges/stars/wailsapp--wails.svg" alt="36k stars" align="absmiddle"> [wails](https://github.com/wailsapp/wails) - Desktop applications with a Go backend and a web frontend, using the native webview.
+- <img src="badges/stars/wailsapp--wails.svg" alt="37k stars" align="absmiddle"> [wails](https://github.com/wailsapp/wails) - Desktop applications with a Go backend and a web frontend, using the native webview.
 
 ## Messaging & Queues
 
@@ -176,7 +176,7 @@ General-purpose helpers that end up in every project.
 Validating structs and inputs.
 
 - <img src="badges/stars/go-playground--validator.svg" alt="20k stars" align="absmiddle"> [validator](https://github.com/go-playground/validator) - Struct and field validation using tags, with cross-field rules, custom validators and translations.
-- <img src="badges/stars/go-ozzo--ozzo-validation.svg" alt="4.1k stars" align="absmiddle"> [ozzo-validation](https://github.com/go-ozzo/ozzo-validation) - Validation rules written as code rather than tags, with conditional rules and field-keyed errors.
+- <img src="badges/stars/go-ozzo--ozzo-validation.svg" alt="4.2k stars" align="absmiddle"> [ozzo-validation](https://github.com/go-ozzo/ozzo-validation) - Validation rules written as code rather than tags, with conditional rules and field-keyed errors.
 - <img src="badges/stars/santhosh-tekuri--jsonschema.svg" alt="1.3k stars" align="absmiddle"> [jsonschema](https://github.com/santhosh-tekuri/jsonschema) - Validation against JSON Schema drafts 4 through 2020-12, with detailed errors and custom formats.
 - <img src="badges/stars/oudwins--zog.svg" alt="1.2k stars" align="absmiddle"> [zog](https://github.com/Oudwins/zog) - Schema builder that parses untyped input into structs and validates it in one step, like Zod.
 
