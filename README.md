@@ -11,7 +11,7 @@
 
 > A short, hand-curated list of Go libraries and tools that are actually worth using. Not a directory of everything that exists.
 
-50 projects in 19 categories. Every entry is added by a human through a pull request and checked against the [entry rules](CONTRIBUTING.md#entry-rules) by CI. An entry earns its place by covering something no listed project does, or by doing it better. Within each category the 10 most-starred projects are shown first and the rest are folded under More. Archived repositories are removed automatically. Stars were last refreshed on 2026-10-24.
+50 projects in 19 categories. Every entry is added by a human through a pull request and checked against the [entry rules](CONTRIBUTING.md#entry-rules) by CI. An entry earns its place by covering something no listed project does, or by doing it better. Within each category the 10 most-starred projects are shown first and the rest are folded under More. Archived repositories are removed automatically. Stars were last refreshed on 2026-10-25.
 
 Search, filter and sort the full list at [floatdrop.github.io/awesome-go](https://floatdrop.github.io/awesome-go/).
 
@@ -62,7 +62,7 @@ In-memory caches and eviction policies.
 
 Argument parsing, terminal UIs and everything else for building CLIs.
 
-- <img src="badges/stars/charmbracelet--bubbletea.svg" alt="45k stars" align="absmiddle"> [bubbletea](https://github.com/charmbracelet/bubbletea) - Framework for terminal user interfaces based on The Elm Architecture.
+- <img src="badges/stars/charmbracelet--bubbletea.svg" alt="46k stars" align="absmiddle"> [bubbletea](https://github.com/charmbracelet/bubbletea) - Framework for terminal user interfaces based on The Elm Architecture.
 - <img src="badges/stars/spf13--cobra.svg" alt="45k stars" align="absmiddle"> [cobra](https://github.com/spf13/cobra) - Framework for CLI applications with subcommands, flags, shell completions and generated docs.
 - <img src="badges/stars/charmbracelet--log.svg" alt="3.4k stars" align="absmiddle"> [log](https://github.com/charmbracelet/log) - Minimal, colorful logger with a slog handler and structured key-value output.
 - <img src="badges/stars/alecthomas--kong.svg" alt="3.2k stars" align="absmiddle"> [kong](https://github.com/alecthomas/kong) - Command-line parser where the whole grammar is a struct and commands are typed Run methods.
@@ -117,7 +117,7 @@ Linters, build tools, debuggers, code generators and terminal tools for daily de
 - <img src="badges/stars/go-delve--delve.svg" alt="25k stars" align="absmiddle"> [delve](https://github.com/go-delve/delve) - Debugger with goroutine-aware breakpoints, core dump analysis and remote debugging over DAP.
 - <img src="badges/stars/air-verse--air.svg" alt="24k stars" align="absmiddle"> [air](https://github.com/air-verse/air) - Live reload that watches the tree, rebuilds and restarts the binary with a single config file.
 - <img src="badges/stars/golangci--golangci-lint.svg" alt="19k stars" align="absmiddle"> [golangci-lint](https://github.com/golangci/golangci-lint) - Linters runner that aggregates dozens of linters with caching, parallelism and a single config.
-- <img src="badges/stars/janosmiko--lfk.svg" alt="918 stars" align="absmiddle"> [lfk](https://github.com/janosmiko/lfk) - Kubernetes TUI with yazi-style Miller columns over the owner hierarchy, plus Helm and trivy.
+- <img src="badges/stars/janosmiko--lfk.svg" alt="920 stars" align="absmiddle"> [lfk](https://github.com/janosmiko/lfk) - Kubernetes TUI with yazi-style Miller columns over the owner hierarchy, plus Helm and trivy.
 
 ## Embedded & Hardware
 
