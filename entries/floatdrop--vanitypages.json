@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "repo": "floatdrop/vanitypages",
+  "description": "Generates static sites for vanity import paths with module and package pages.",
+  "category": "developer-tools",
+  "exempt": [
+    "age",
+    "stars"
+  ]
+}
