@@ -3,6 +3,7 @@
   "repo": "floatdrop/vanitypages",
   "description": "Generates static sites for vanity import paths with module and package pages.",
   "category": "developer-tools",
+  "added": "2026-11-10",
   "exempt": [
     "age",
     "stars"
