@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "repo": "floatdrop/debounce",
+  "description": "Debouncer with leading and trailing edges and limits so bursts cannot delay calls forever.",
+  "category": "resilience",
+  "exempt": [
+    "fork",
+    "stars"
+  ]
+}
