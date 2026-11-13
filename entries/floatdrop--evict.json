@@ -3,6 +3,7 @@
   "repo": "floatdrop/evict",
   "description": "Fixed-capacity in-memory caches with LRU, 2Q, SIEVE, S3-FIFO and TinyLFU eviction.",
   "category": "caching",
+  "added": "2026-11-13",
   "exempt": [
     "stars",
     "age"

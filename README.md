@@ -11,7 +11,7 @@
 
 > A short, hand-curated list of Go libraries and tools that are actually worth using. Not a directory of everything that exists.
 
-51 projects in 19 categories. Every entry is added by a human through a pull request and checked against the [entry rules](CONTRIBUTING.md#entry-rules) by CI. An entry earns its place by covering something no listed project does, or by doing it better. Within each category the 10 most-starred projects are shown first and the rest are folded under More. Archived repositories are removed automatically. Stars were last refreshed on 2026-11-12.
+53 projects in 19 categories. Every entry is added by a human through a pull request and checked against the [entry rules](CONTRIBUTING.md#entry-rules) by CI. An entry earns its place by covering something no listed project does, or by doing it better. Within each category the 10 most-starred projects are shown first and the rest are folded under More. Archived repositories are removed automatically. Stars were last refreshed on 2026-11-13.
 
 Search, filter and sort the full list at [floatdrop.github.io/awesome-go](https://floatdrop.github.io/awesome-go/).
 
@@ -54,9 +54,10 @@ Codecs, containers and media processing.
 
 In-memory caches and eviction policies.
 
+- <img src="badges/stars/golang--groupcache.svg" alt="13k stars" align="absmiddle"> [groupcache](https://github.com/golang/groupcache) - Distributed caching and cache-filling library, often used in place of memcached.
 - <img src="badges/stars/allegro--bigcache.svg" alt="8.2k stars" align="absmiddle"> [bigcache](https://github.com/allegro/bigcache) - Efficient in-memory cache for gigabytes of data without GC overhead.
 - <img src="badges/stars/maypok86--otter.svg" alt="2.7k stars" align="absmiddle"> [otter](https://github.com/maypok86/otter) - Concurrent in-memory cache tuned for high hit ratio and low contention.
-- <img src="badges/stars/opencoff--go-sieve.svg" alt="41 stars" align="absmiddle"> [go-sieve](https://github.com/opencoff/go-sieve) - Generic in-memory cache with SIEVE eviction and a lock-free read path.
+- <img src="badges/stars/floatdrop--evict.svg" alt="1 stars" align="absmiddle"> [evict](https://github.com/floatdrop/evict) - Fixed-capacity in-memory caches with LRU, 2Q, SIEVE, S3-FIFO and TinyLFU eviction.
 
 ## Command Line
 
@@ -157,6 +158,7 @@ Retries, backoff, circuit breakers and other patterns for surviving failing depe
 
 - <img src="badges/stars/cenkalti--backoff.svg" alt="4.1k stars" align="absmiddle"> [backoff](https://github.com/cenkalti/backoff) - Exponential backoff with jitter for retries, honoring context cancellation and permanent errors.
 - <img src="badges/stars/sony--gobreaker.svg" alt="3.7k stars" align="absmiddle"> [gobreaker](https://github.com/sony/gobreaker) - Circuit breaker with configurable trip conditions, state change hooks and a generic two-step API.
+- <img src="badges/stars/floatdrop--debounce.svg" alt="37 stars" align="absmiddle"> [debounce](https://github.com/floatdrop/debounce) - Debouncer with leading and trailing edges and limits so bursts cannot delay calls forever.
 
 ## Testing
 

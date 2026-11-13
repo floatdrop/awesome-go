@@ -3,6 +3,7 @@
   "repo": "floatdrop/debounce",
   "description": "Debouncer with leading and trailing edges and limits so bursts cannot delay calls forever.",
   "category": "resilience",
+  "added": "2026-11-13",
   "exempt": [
     "fork",
     "stars"
