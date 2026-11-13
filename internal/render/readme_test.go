@@ -143,6 +143,15 @@ func TestFormatStars(t *testing.T) {
 	}
 }
 
+func TestStarWord(t *testing.T) {
+	cases := map[int]string{0: "stars", 1: "star", 2: "stars", 1000: "stars"}
+	for n, want := range cases {
+		if got := StarWord(n); got != want {
+			t.Errorf("StarWord(%d) = %q, want %q", n, got, want)
+		}
+	}
+}
+
 func TestSlugify(t *testing.T) {
 	cases := map[string]string{"Web Frameworks": "web-frameworks", "Web & HTTP": "web--http", "gRPC/RPC": "grpcrpc"}
 	for in, want := range cases {
