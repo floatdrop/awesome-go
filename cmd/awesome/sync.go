@@ -203,7 +203,7 @@ func runGenerate(args []string) error {
 		rm, known := meta.Repos[e.Repo]
 		title := "Stars not fetched yet"
 		if known {
-			title = fmt.Sprintf("%s has %d stars on GitHub", e.Repo, rm.Stars)
+			title = fmt.Sprintf("%s has %d %s on GitHub", e.Repo, rm.Stars, render.StarWord(rm.Stars))
 		}
 		pill := badge.Stars(render.StarsText(rm.Stars, known), title)
 		if err := os.WriteFile(filepath.Join(p.root, render.StarsPath(e.Repo)), pill, 0o644); err != nil {

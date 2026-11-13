@@ -167,9 +167,18 @@ func README(l *list.List, m *list.Metadata, now time.Time) []byte {
 func item(r ranked) string {
 	alt := "new"
 	if r.known {
-		alt = FormatStars(r.stars) + " stars"
+		alt = FormatStars(r.stars) + " " + StarWord(r.stars)
 	}
 	return fmt.Sprintf(`<img src="%s" alt="%s" align="absmiddle"> [%s](%s) - %s`, StarsPath(r.entry.Repo), alt, r.entry.DisplayName(), r.entry.URL(), r.entry.Description)
+}
+
+// StarWord is the noun that follows a star count: "star" for exactly one,
+// "stars" otherwise.
+func StarWord(n int) string {
+	if n == 1 {
+		return "star"
+	}
+	return "stars"
 }
 
 // FormatStars renders 1234 as "1.2k" and 80123 as "80k".
