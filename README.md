@@ -57,7 +57,7 @@ In-memory caches and eviction policies.
 - <img src="badges/stars/golang--groupcache.svg" alt="13k stars" align="absmiddle"> [groupcache](https://github.com/golang/groupcache) - Distributed caching and cache-filling library, often used in place of memcached.
 - <img src="badges/stars/allegro--bigcache.svg" alt="8.2k stars" align="absmiddle"> [bigcache](https://github.com/allegro/bigcache) - Efficient in-memory cache for gigabytes of data without GC overhead.
 - <img src="badges/stars/maypok86--otter.svg" alt="2.7k stars" align="absmiddle"> [otter](https://github.com/maypok86/otter) - Concurrent in-memory cache tuned for high hit ratio and low contention.
-- <img src="badges/stars/floatdrop--evict.svg" alt="1 stars" align="absmiddle"> [evict](https://github.com/floatdrop/evict) - Fixed-capacity in-memory caches with LRU, 2Q, SIEVE, S3-FIFO and TinyLFU eviction.
+- <img src="badges/stars/floatdrop--evict.svg" alt="1 star" align="absmiddle"> [evict](https://github.com/floatdrop/evict) - Fixed-capacity in-memory caches with LRU, 2Q, SIEVE, S3-FIFO and TinyLFU eviction.
 
 ## Command Line
 
@@ -119,7 +119,7 @@ Linters, build tools, debuggers, code generators and terminal tools for daily de
 - <img src="badges/stars/air-verse--air.svg" alt="24k stars" align="absmiddle"> [air](https://github.com/air-verse/air) - Live reload that watches the tree, rebuilds and restarts the binary with a single config file.
 - <img src="badges/stars/golangci--golangci-lint.svg" alt="20k stars" align="absmiddle"> [golangci-lint](https://github.com/golangci/golangci-lint) - Linters runner that aggregates dozens of linters with caching, parallelism and a single config.
 - <img src="badges/stars/janosmiko--lfk.svg" alt="931 stars" align="absmiddle"> [lfk](https://github.com/janosmiko/lfk) - Kubernetes TUI with yazi-style Miller columns over the owner hierarchy, plus Helm and trivy.
-- <img src="badges/stars/floatdrop--vanitypages.svg" alt="1 stars" align="absmiddle"> [vanitypages](https://github.com/floatdrop/vanitypages) - Generates static sites for vanity import paths with module and package pages.
+- <img src="badges/stars/floatdrop--vanitypages.svg" alt="1 star" align="absmiddle"> [vanitypages](https://github.com/floatdrop/vanitypages) - Generates static sites for vanity import paths with module and package pages.
 
 ## Embedded & Hardware
 
