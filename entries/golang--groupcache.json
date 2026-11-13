@@ -1,0 +1,9 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "repo": "golang/groupcache",
+  "description": "Distributed caching and cache-filling library, often used in place of memcached.",
+  "category": "caching",
+  "exempt": [
+    "inactive"
+  ]
+}
