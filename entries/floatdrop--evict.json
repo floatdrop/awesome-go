@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "repo": "floatdrop/evict",
+  "description": "Fixed-capacity in-memory caches with LRU, 2Q, SIEVE, S3-FIFO and TinyLFU eviction.",
+  "category": "caching",
+  "exempt": [
+    "stars",
+    "age"
+  ]
+}
