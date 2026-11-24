@@ -11,7 +11,7 @@
 
 > A short, hand-curated list of Go libraries and tools that are actually worth using. Not a directory of everything that exists.
 
-53 projects in 19 categories. Every entry is added by a human through a pull request and checked against the [entry rules](CONTRIBUTING.md#entry-rules) by CI. An entry earns its place by covering something no listed project does, or by doing it better. Within each category the 10 most-starred projects are shown first and the rest are folded under More. Archived repositories are removed automatically. Stars were last refreshed on 2026-11-23.
+53 projects in 19 categories. Every entry is added by a human through a pull request and checked against the [entry rules](CONTRIBUTING.md#entry-rules) by CI. An entry earns its place by covering something no listed project does, or by doing it better. Within each category the 10 most-starred projects are shown first and the rest are folded under More. Archived repositories are removed automatically. Stars were last refreshed on 2026-11-24.
 
 Search, filter and sort the full list at [floatdrop.github.io/awesome-go](https://floatdrop.github.io/awesome-go/).
 
@@ -46,8 +46,8 @@ Search, filter and sort the full list at [floatdrop.github.io/awesome-go](https:
 
 Codecs, containers and media processing.
 
-- <img src="badges/stars/pion--opus.svg" alt="563 stars" align="absmiddle"> [opus](https://github.com/pion/opus) - Implementation of the Opus audio codec per RFC 6716, with bitstream internals exported for analysis.
-- <img src="badges/stars/eyevinn--hi264.svg" alt="27 stars" align="absmiddle"> [hi264](https://github.com/Eyevinn/hi264) - Decoder for H.264 IDR frames and generator of test bitstreams, with fMP4 fragment extension.
+- <img src="badges/stars/pion--opus.svg" alt="562 stars" align="absmiddle"> [opus](https://github.com/pion/opus) - Implementation of the Opus audio codec per RFC 6716, with bitstream internals exported for analysis.
+- <img src="badges/stars/eyevinn--hi264.svg" alt="28 stars" align="absmiddle"> [hi264](https://github.com/Eyevinn/hi264) - Decoder for H.264 IDR frames and generator of test bitstreams, with fMP4 fragment extension.
 - <img src="badges/stars/tphakala--go-flac.svg" alt="5 stars" align="absmiddle"> [go-flac](https://github.com/tphakala/go-flac) - FLAC encoder and decoder with SIMD acceleration, no cgo, and output bit-exact with libFLAC.
 
 ## Caching
@@ -57,7 +57,7 @@ In-memory caches and eviction policies.
 - <img src="badges/stars/golang--groupcache.svg" alt="13k stars" align="absmiddle"> [groupcache](https://github.com/golang/groupcache) - Distributed caching and cache-filling library, often used in place of memcached.
 - <img src="badges/stars/allegro--bigcache.svg" alt="8.2k stars" align="absmiddle"> [bigcache](https://github.com/allegro/bigcache) - Efficient in-memory cache for gigabytes of data without GC overhead.
 - <img src="badges/stars/maypok86--otter.svg" alt="2.7k stars" align="absmiddle"> [otter](https://github.com/maypok86/otter) - Concurrent in-memory cache tuned for high hit ratio and low contention.
-- <img src="badges/stars/floatdrop--evict.svg" alt="1 star" align="absmiddle"> [evict](https://github.com/floatdrop/evict) - Fixed-capacity in-memory caches with LRU, 2Q, SIEVE, S3-FIFO and TinyLFU eviction.
+- <img src="badges/stars/floatdrop--evict.svg" alt="2 stars" align="absmiddle"> [evict](https://github.com/floatdrop/evict) - Fixed-capacity in-memory caches with LRU, 2Q, SIEVE, S3-FIFO and TinyLFU eviction.
 
 ## Command Line
 
@@ -99,9 +99,9 @@ Drivers, query builders, ORMs, migrations, embedded and distributed stores.
 - <img src="badges/stars/sqlc-dev--sqlc.svg" alt="18k stars" align="absmiddle"> [sqlc](https://github.com/sqlc-dev/sqlc) - Compiler that generates type-safe code from SQL queries.
 - <img src="badges/stars/jackc--pgx.svg" alt="14k stars" align="absmiddle"> [pgx](https://github.com/jackc/pgx) - PostgreSQL driver and toolkit with a native API, connection pool, binary protocol and COPY support.
 - <img src="badges/stars/uptrace--bun.svg" alt="5k stars" align="absmiddle"> [bun](https://github.com/uptrace/bun) - SQL-first ORM over database/sql with a query builder, relations, hooks and migrations.
-- <img src="badges/stars/blockloop--scan.svg" alt="614 stars" align="absmiddle"> [scan](https://github.com/blockloop/scan) - Map database/sql rows onto structs, slices and primitives using struct tags.
+- <img src="badges/stars/blockloop--scan.svg" alt="613 stars" align="absmiddle"> [scan](https://github.com/blockloop/scan) - Map database/sql rows onto structs, slices and primitives using struct tags.
 - <img src="badges/stars/duckdb--duckdb-go.svg" alt="319 stars" align="absmiddle"> [duckdb-go](https://github.com/duckdb/duckdb-go) - Official database/sql driver for DuckDB, the embedded analytical engine, with Appender and Arrow.
-- <img src="badges/stars/modernc-org--sqlite.svg" alt="128 stars" align="absmiddle"> [modernc.org/sqlite](https://github.com/modernc-org/sqlite) - SQLite translated from C, so database/sql gets an embedded database without cgo or a C toolchain.
+- <img src="badges/stars/modernc-org--sqlite.svg" alt="129 stars" align="absmiddle"> [modernc.org/sqlite](https://github.com/modernc-org/sqlite) - SQLite translated from C, so database/sql gets an embedded database without cgo or a C toolchain.
 
 ## Dependency Injection
 
